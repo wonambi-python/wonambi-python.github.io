@@ -1,0 +1,7 @@
+wonambi.ioeeg.eeglab module
+===========================
+
+.. automodule:: wonambi.ioeeg.eeglab
+   :members:
+   :undoc-members:
+   :show-inheritance:

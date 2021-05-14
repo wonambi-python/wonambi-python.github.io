@@ -1,0 +1,28 @@
+wonambi.widgets package
+=======================
+
+.. automodule:: wonambi.widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.widgets.analysis
+   wonambi.widgets.channels
+   wonambi.widgets.creation
+   wonambi.widgets.detect_dialogs
+   wonambi.widgets.info
+   wonambi.widgets.labels
+   wonambi.widgets.modal_widgets
+   wonambi.widgets.notes
+   wonambi.widgets.overview
+   wonambi.widgets.settings
+   wonambi.widgets.spectrum
+   wonambi.widgets.traces
+   wonambi.widgets.utils
+   wonambi.widgets.video

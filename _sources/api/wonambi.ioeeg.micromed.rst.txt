@@ -1,0 +1,7 @@
+wonambi.ioeeg.micromed module
+=============================
+
+.. automodule:: wonambi.ioeeg.micromed
+   :members:
+   :undoc-members:
+   :show-inheritance:

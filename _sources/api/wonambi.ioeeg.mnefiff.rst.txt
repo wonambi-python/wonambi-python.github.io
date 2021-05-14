@@ -1,0 +1,7 @@
+wonambi.ioeeg.mnefiff module
+============================
+
+.. automodule:: wonambi.ioeeg.mnefiff
+   :members:
+   :undoc-members:
+   :show-inheritance:

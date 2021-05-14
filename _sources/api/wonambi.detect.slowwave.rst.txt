@@ -1,0 +1,7 @@
+wonambi.detect.slowwave module
+==============================
+
+.. automodule:: wonambi.detect.slowwave
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+wonambi.detect.arousal module
+=============================
+
+.. automodule:: wonambi.detect.arousal
+   :members:
+   :undoc-members:
+   :show-inheritance:

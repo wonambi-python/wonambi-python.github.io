@@ -1,0 +1,7 @@
+wonambi.bin.convert module
+==========================
+
+.. automodule:: wonambi.bin.convert
+   :members:
+   :undoc-members:
+   :show-inheritance:

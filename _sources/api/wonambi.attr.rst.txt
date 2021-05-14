@@ -1,0 +1,17 @@
+wonambi.attr package
+====================
+
+.. automodule:: wonambi.attr
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.attr.anat
+   wonambi.attr.annotations
+   wonambi.attr.chan

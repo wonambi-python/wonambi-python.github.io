@@ -1,0 +1,7 @@
+wonambi.utils.simulate module
+=============================
+
+.. automodule:: wonambi.utils.simulate
+   :members:
+   :undoc-members:
+   :show-inheritance:

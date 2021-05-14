@@ -1,0 +1,7 @@
+wonambi.bids.find module
+========================
+
+.. automodule:: wonambi.bids.find
+   :members:
+   :undoc-members:
+   :show-inheritance:

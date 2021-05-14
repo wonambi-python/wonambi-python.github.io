@@ -1,0 +1,7 @@
+wonambi.widgets.traces module
+=============================
+
+.. automodule:: wonambi.widgets.traces
+   :members:
+   :undoc-members:
+   :show-inheritance:

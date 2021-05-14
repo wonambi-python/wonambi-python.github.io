@@ -1,0 +1,7 @@
+wonambi.trans.select module
+===========================
+
+.. automodule:: wonambi.trans.select
+   :members:
+   :undoc-members:
+   :show-inheritance:

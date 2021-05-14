@@ -1,0 +1,7 @@
+wonambi.datatype module
+=======================
+
+.. automodule:: wonambi.datatype
+   :members:
+   :undoc-members:
+   :show-inheritance:

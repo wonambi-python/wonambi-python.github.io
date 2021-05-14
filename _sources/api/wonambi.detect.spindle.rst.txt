@@ -1,0 +1,7 @@
+wonambi.detect.spindle module
+=============================
+
+.. automodule:: wonambi.detect.spindle
+   :members:
+   :undoc-members:
+   :show-inheritance:

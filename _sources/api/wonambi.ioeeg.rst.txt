@@ -1,0 +1,32 @@
+wonambi.ioeeg package
+=====================
+
+.. automodule:: wonambi.ioeeg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.ioeeg.abf
+   wonambi.ioeeg.bci2000
+   wonambi.ioeeg.bids
+   wonambi.ioeeg.blackrock
+   wonambi.ioeeg.brainvision
+   wonambi.ioeeg.edf
+   wonambi.ioeeg.eeglab
+   wonambi.ioeeg.egimff
+   wonambi.ioeeg.fieldtrip
+   wonambi.ioeeg.ktlx
+   wonambi.ioeeg.lyonrri
+   wonambi.ioeeg.micromed
+   wonambi.ioeeg.mnefiff
+   wonambi.ioeeg.moberg
+   wonambi.ioeeg.openephys
+   wonambi.ioeeg.text
+   wonambi.ioeeg.utils
+   wonambi.ioeeg.wonambi

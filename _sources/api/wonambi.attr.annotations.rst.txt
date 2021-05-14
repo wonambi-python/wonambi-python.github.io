@@ -1,0 +1,7 @@
+wonambi.attr.annotations module
+===============================
+
+.. automodule:: wonambi.attr.annotations
+   :members:
+   :undoc-members:
+   :show-inheritance:

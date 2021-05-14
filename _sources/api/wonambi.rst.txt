@@ -1,0 +1,33 @@
+wonambi package
+===============
+
+.. automodule:: wonambi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.attr
+   wonambi.bids
+   wonambi.bin
+   wonambi.detect
+   wonambi.ioeeg
+   wonambi.source
+   wonambi.trans
+   wonambi.utils
+   wonambi.widgets
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.dataset
+   wonambi.datatype
+   wonambi.graphoelement

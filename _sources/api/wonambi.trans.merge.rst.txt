@@ -1,0 +1,7 @@
+wonambi.trans.merge module
+==========================
+
+.. automodule:: wonambi.trans.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:

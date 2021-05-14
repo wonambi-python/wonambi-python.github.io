@@ -1,0 +1,7 @@
+wonambi.source.linear module
+============================
+
+.. automodule:: wonambi.source.linear
+   :members:
+   :undoc-members:
+   :show-inheritance:

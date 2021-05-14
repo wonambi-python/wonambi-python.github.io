@@ -1,0 +1,7 @@
+wonambi.trans.peaks module
+==========================
+
+.. automodule:: wonambi.trans.peaks
+   :members:
+   :undoc-members:
+   :show-inheritance:

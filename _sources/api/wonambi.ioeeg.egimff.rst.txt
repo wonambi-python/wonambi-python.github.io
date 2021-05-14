@@ -1,0 +1,7 @@
+wonambi.ioeeg.egimff module
+===========================
+
+.. automodule:: wonambi.ioeeg.egimff
+   :members:
+   :undoc-members:
+   :show-inheritance:

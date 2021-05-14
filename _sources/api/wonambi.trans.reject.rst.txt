@@ -1,0 +1,7 @@
+wonambi.trans.reject module
+===========================
+
+.. automodule:: wonambi.trans.reject
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+wonambi.trans.filter module
+===========================
+
+.. automodule:: wonambi.trans.filter
+   :members:
+   :undoc-members:
+   :show-inheritance:

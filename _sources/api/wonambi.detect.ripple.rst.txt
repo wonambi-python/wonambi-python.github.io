@@ -1,0 +1,7 @@
+wonambi.detect.ripple module
+============================
+
+.. automodule:: wonambi.detect.ripple
+   :members:
+   :undoc-members:
+   :show-inheritance:

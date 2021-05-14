@@ -1,0 +1,7 @@
+wonambi.ioeeg.utils module
+==========================
+
+.. automodule:: wonambi.ioeeg.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
