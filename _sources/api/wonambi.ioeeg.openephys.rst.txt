@@ -1,0 +1,7 @@
+wonambi.ioeeg.openephys module
+==============================
+
+.. automodule:: wonambi.ioeeg.openephys
+   :members:
+   :undoc-members:
+   :show-inheritance:

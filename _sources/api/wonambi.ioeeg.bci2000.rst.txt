@@ -1,0 +1,7 @@
+wonambi.ioeeg.bci2000 module
+============================
+
+.. automodule:: wonambi.ioeeg.bci2000
+   :members:
+   :undoc-members:
+   :show-inheritance:

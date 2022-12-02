@@ -1,0 +1,7 @@
+wonambi.trans.analyze module
+============================
+
+.. automodule:: wonambi.trans.analyze
+   :members:
+   :undoc-members:
+   :show-inheritance:

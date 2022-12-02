@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.widgets.utils module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.widgets.video module" href="wonambi.widgets.video.html" />
+    <link rel="prev" title="wonambi.widgets.traces module" href="wonambi.widgets.traces.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.widgets.html">wonambi.widgets package</a></li>
+      <li class="breadcrumb-item active">wonambi.widgets.utils module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.widgets.utils">
+<span id="wonambi-widgets-utils-module"></span><h1>wonambi.widgets.utils module<a class="headerlink" href="#module-wonambi.widgets.utils" title="Permalink to this heading"></a></h1>
+<p>Various functions used for the GUI.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormBool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormBool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checkbox_label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormBool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormBool" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QCheckBox</span></code></p>
+<p>Subclass QCheckBox to have a more consistent API across widgets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>checkbox_label</strong> (<em>str</em>) – label next to checkbox</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormBool.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormBool.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormBool.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when user ticks the box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormBool.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormBool.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormBool.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get the value of the QCheckBox, as boolean.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>bool</em>) – not used</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>bool</em> – state of the checkbox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormBool.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormBool.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormBool.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the checkbox.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>bool</em>) – value for the checkbox</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormDir">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormDir</span></span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormDir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormDir" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QPushButton</span></code></p>
+<p>Subclass QPushButton for str to have a more consistent API across widgets.</p>
+<p class="rubric">Notes</p>
+<p>It calls to open the directory three times, but I don’t understand why</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormDir.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormDir.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormDir.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when the text was changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>There is something wrong here. When you run this function, it calls
+for opening a directory three or four times. This is obviously wrong
+but I don’t understand why this happens three times. Traceback did not
+help.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormDir.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormDir.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormDir.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get int from widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>str</em>) – not used</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>str</em> – the value in text</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormDir.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormDir.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormDir.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – value for the line edit</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormFloat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormFloat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">significant_digits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormFloat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormFloat" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QLineEdit</span></code></p>
+<p>Subclass QLineEdit for float to have a more consistent API across
+widgets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>significant_digits</strong> (<em>int</em>) – number of significant digits</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormFloat.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormFloat.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormFloat.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when the text was changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormFloat.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormFloat.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormFloat.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get float from widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>float</em>) – default value for the parameter in case it fails</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>float</em> – the value in text or default</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormFloat.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormFloat.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormFloat.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the float.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>float</em>) – value for the line edit</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormInt">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormInt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormInt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormInt" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QLineEdit</span></code></p>
+<p>Subclass QLineEdit for int to have a more consistent API across widgets.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormInt.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormInt.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormInt.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when the text was changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormInt.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormInt.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormInt.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get int from widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>int</em>) – default value for the parameter in case it fails</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>int</em> – the value in text or default</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormInt.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormInt.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormInt.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the int.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – value for the line edit</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormList</span></span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormList" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QLineEdit</span></code></p>
+<p>Subclass QLineEdit for lists to have a more consistent API across
+widgets.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormList.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormList.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormList.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when the text was changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormList.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormList.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormList.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get int from widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>list</em>) – list with widgets</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list</em> – list that might contain int or str or float etc</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormList.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormList.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormList.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>list</em>) – value for the line edit</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormMenu">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormMenu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormMenu" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QComboBox</span></code></p>
+<p>Subclass QComboBox for dropdown menus to have a more consistent API
+across widgets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input_list</strong> (<em>list</em><em> of </em><em>str</em>) – items to include in the dropdown menu / combobox</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormMenu.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormMenu.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormMenu.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when the selection was changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormMenu.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormMenu.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormMenu.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get selection from widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>str</em>) – str for use by widget</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>str</em> – selected item from the combobox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormMenu.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormMenu.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormMenu.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – value for the combobox</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormRadio">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormRadio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checkbox_label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormRadio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormRadio" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QRadioButton</span></code></p>
+<p>Subclass QRadioButton to have a more consistent API across widgets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>checkbox_label</strong> (<em>str</em>) – label next to checkbox</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormRadio.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormRadio.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormRadio.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when user ticks the box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormRadio.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormRadio.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormRadio.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get the value of the QCheckBox, as boolean.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>bool</em>) – not used</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>bool</em> – state of the checkbox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormRadio.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormRadio.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormRadio.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the checkbox.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>bool</em>) – value for the checkbox</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormSpin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormSpin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormSpin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormSpin" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QSpinBox</span></code></p>
+<p>Subclass QSpinBox for int to have a more consistent API across widgets.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormSpin.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormSpin.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormSpin.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when the text was changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormSpin.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormSpin.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormSpin.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get int from widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>int</em>) – default value for the parameter in case it fails</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>int</em> – the value in text or default</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormSpin.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormSpin.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormSpin.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the int.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – value for the line edit</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormStr">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">FormStr</span></span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormStr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormStr" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QLineEdit</span></code></p>
+<p>Subclass QLineEdit for str to have a more consistent API across widgets.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormStr.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funct</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormStr.connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormStr.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Call funct when the text was changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>funct</strong> (<em>function</em>) – function that broadcasts a change.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormStr.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormStr.get_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormStr.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Get int from widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>default</strong> (<em>str</em>) – not used</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>str</em> – the value in text</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.FormStr.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#FormStr.set_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.FormStr.set_value" title="Permalink to this definition"></a></dt>
+<dd><p>Set value of the string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – value for the line edit</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.Path">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">Path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#Path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.Path" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QPainterPath</span></code></p>
+<p>Paint a line in the simplest possible way.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>ndarray</em><em> or </em><em>list</em>) – x-coordinates</p></li>
+<li><p><strong>y</strong> (<em>ndarray</em><em> or </em><em>list</em>) – y-coordinates</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.RectMarker">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">RectMarker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zvalue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#RectMarker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.RectMarker" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QGraphicsRectItem</span></code></p>
+<p>Class to draw a rectangular, coloured item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x position in scene</p></li>
+<li><p><strong>y</strong> (<em>gloat</em>) – y position in scene</p></li>
+<li><p><strong>width</strong> (<em>float</em>) – length in seconds</p></li>
+<li><p><strong>height</strong> (<em>float</em>) – height in scene units</p></li>
+<li><p><strong>color</strong> (<em>str</em><em> or </em><em>QColor</em><em>, </em><em>optional</em>) – color of the rectangle</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.RectMarker.boundingRect">
+<span class="sig-name descname"><span class="pre">boundingRect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">QRectF</span></span></span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#RectMarker.boundingRect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.RectMarker.boundingRect" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.RectMarker.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">Union[QPointF,</span> <span class="pre">QPoint]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#RectMarker.contains"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.RectMarker.contains" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.RectMarker.paint">
+<span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QPainter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QStyleOptionGraphicsItem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QWidget</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#RectMarker.paint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.RectMarker.paint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.TextItem_with_BG">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">TextItem_with_BG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bg_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'black'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#TextItem_with_BG"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.TextItem_with_BG" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QGraphicsSimpleTextItem</span></code></p>
+<p>Class to draw text with dark background (easier to read).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bg_color</strong> (<em>str</em><em> or </em><em>QColor</em><em>, </em><em>optional</em>) – color to use as background</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.TextItem_with_BG.paint">
+<span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QPainter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QStyleOptionGraphicsItem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QWidget</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#TextItem_with_BG.paint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.TextItem_with_BG.paint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.choose_file_or_dir">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">choose_file_or_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#choose_file_or_dir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.choose_file_or_dir" title="Permalink to this definition"></a></dt>
+<dd><p>Create a simple message box to see if the user wants to open dir or file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>str</em> – ‘dir’ or ‘file’ or ‘abort’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.convert_name_to_color">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">convert_name_to_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#convert_name_to_color"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.convert_name_to_color" title="Permalink to this definition"></a></dt>
+<dd><p>Convert any string to an RGB color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>str</em>) – string to convert</p></li>
+<li><p><strong>selection</strong> (<em>bool</em><em>, </em><em>optional</em>) – if an event is being selected, it’s lighter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of QColor</em> – one of the possible color</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>It takes any string and converts it to RGB color. The same string always
+returns the same color. The numbers are a bit arbitrary but not completely.
+h is the baseline color (keep it high to have brighter colors). Make sure
+that the max module + h is less than 256 (RGB limit).</p>
+<p>The number you multiply ord for is necessary to differentiate the letters
+(otherwise ‘r’ and ‘s’ are too close to each other).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.export_graphics">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">export_graphics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MAIN</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#export_graphics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.export_graphics" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.export_graphics_to_svg">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">export_graphics_to_svg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#export_graphics_to_svg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.export_graphics_to_svg" title="Permalink to this definition"></a></dt>
+<dd><p>Export graphics to svg</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widget</strong> (<em>instance</em><em> of </em><em>QGraphicsView</em>) – traces or overview</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – path to save svg</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.freq_from_str">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">freq_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq_str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#freq_from_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.freq_from_str" title="Permalink to this definition"></a></dt>
+<dd><p>Obtain frequency ranges from input string, either as list or dynamic
+notation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>freq_str</strong> (<em>str</em>) – String with frequency ranges, either as a list:
+e.g. [[1-3], [3-5], [5-8]];
+or with a dynamic definition: (start, stop, width, step).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of tuple of float or None</em> – Every tuple of float represents a frequency band. If input is invalid,
+returns None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.keep_recent_datasets">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">keep_recent_datasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_dataset_history</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#keep_recent_datasets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.keep_recent_datasets" title="Permalink to this definition"></a></dt>
+<dd><p>Keep track of the most recent recordings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_dataset_history</strong> (<em>int</em>) – maximum number of datasets to remember</p></li>
+<li><p><strong>info</strong> (<em>str</em><em>, </em><em>optional TODO</em>) – path to file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of str</em> – paths to most recent datasets (only if you don’t specify
+new_dataset)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.select_session">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">select_session</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sessions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#select_session"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.select_session" title="Permalink to this definition"></a></dt>
+<dd><p>Select one session out of a list of sessions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sessions</strong> (<em>list</em>) – list of integers</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>None or int</em> – index of the session being chosen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.short_strings">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">short_strings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/utils.html#short_strings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.utils.short_strings" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.utils.stdicon">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.utils.</span></span><span class="sig-name descname"><span class="pre">stdicon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wonambi.widgets.utils.stdicon" title="Permalink to this definition"></a></dt>
+<dd><p>standardIcon(self, QStyle.StandardPixmap, option: QStyleOption = None, widget: QWidget = None) -&gt; QIcon</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.widgets.traces.html" class="btn btn-neutral float-left" title="wonambi.widgets.traces module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.widgets.video.html" class="btn btn-neutral float-right" title="wonambi.widgets.video module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

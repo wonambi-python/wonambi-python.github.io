@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.attr.annotations module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.attr.chan module" href="wonambi.attr.chan.html" />
+    <link rel="prev" title="wonambi.attr.anat module" href="wonambi.attr.anat.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.attr.html">wonambi.attr package</a></li>
+      <li class="breadcrumb-item active">wonambi.attr.annotations module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.attr.annotations">
+<span id="wonambi-attr-annotations-module"></span><h1>wonambi.attr.annotations module<a class="headerlink" href="#module-wonambi.attr.annotations" title="Permalink to this heading"></a></h1>
+<p>Module to keep track of the user-made annotations and sleep scoring.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.attr.annotations.</span></span><span class="sig-name descname"><span class="pre">Annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rater_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to return nicely formatted information from xml.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xml_file</strong> (<em>path to xml file</em>) – Annotation xml file</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.add_bookmark">
+<span class="sig-name descname"><span class="pre">add_bookmark</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.add_bookmark"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.add_bookmark" title="Permalink to this definition"></a></dt>
+<dd><p>Add a new bookmark</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – name of the bookmark</p></li>
+<li><p><strong>time</strong> (<em>(</em><em>float</em><em>, </em><em>float</em><em>)</em>) – float with start and end time in s</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – When there is no selected rater</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.add_event">
+<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.add_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.add_event" title="Permalink to this definition"></a></dt>
+<dd><p>Add event to annotations file.
+:param name: Event type name.
+:type name: str
+:param time: Start and end times of event, in seconds from recording start.
+:type time: tuple/list of float
+:param chan: Channel or channels associated with event.
+:type chan: str or list of str, optional</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>IndexError</strong> – When there is no rater / epochs at all</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.add_event_type">
+<span class="sig-name descname"><span class="pre">add_event_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.add_event_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.add_event_type" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>IndexError</strong> – When there is no selected rater</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.add_events">
+<span class="sig-name descname"><span class="pre">add_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.add_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.add_events" title="Permalink to this definition"></a></dt>
+<dd><p>Add series of events. Faster than calling add_event in a loop.
+:param event_list: each dict is an event with ‘start’ and ‘end’ times
+:type event_list: list of dict
+:param name: save events to this event type.
+:type name: str, optional
+:param chan: save events to this or these channel(s). If None, channel will be</p>
+<blockquote>
+<div><p>read from the event list dict under ‘chan’</p>
+</div></blockquote>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.add_rater">
+<span class="sig-name descname"><span class="pre">add_rater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rater_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.add_rater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.add_rater" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.clear_cycles">
+<span class="sig-name descname"><span class="pre">clear_cycles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.clear_cycles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.clear_cycles" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all cycle markers in current rater.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.create_epochs">
+<span class="sig-name descname"><span class="pre">create_epochs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epoch_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_second</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.create_epochs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.create_epochs" title="Permalink to this definition"></a></dt>
+<dd><p>Create epochs in annotation file.
+:param epoch_length: duration in seconds of each epoch
+:type epoch_length: int
+:param first_second: Time, in seconds from record start, at which the epochs begin
+:type first_second: int, optional</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.current_rater">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_rater</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.current_rater" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.dataset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dataset</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.dataset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.epoch_length">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epoch_length</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.epoch_length" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.epochs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epochs</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.epochs" title="Permalink to this definition"></a></dt>
+<dd><p>Get epochs as generator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>list of dict</em> – each epoch is defined by start_time and end_time (in s in reference
+to the start of the recordings) and a string of the sleep stage,
+and a string of the signal quality.
+If you specify stages_of_interest, only epochs belonging to those
+stages will be included (can be an empty list).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – When there is no rater / epochs at all</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.event_types">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">event_types</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.event_types" title="Permalink to this definition"></a></dt>
+<dd><p>raises IndexError: When there is no selected rater</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.export">
+<span class="sig-name descname"><span class="pre">export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_to_export</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'csv'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.export"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.export" title="Permalink to this definition"></a></dt>
+<dd><p>Export epochwise annotations to csv file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_to_export</strong> (<em>path to file</em>) – file to write to</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.export_events">
+<span class="sig-name descname"><span class="pre">export_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evt_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.export_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.export_events" title="Permalink to this definition"></a></dt>
+<dd><p>Export events to CSV</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – path of export file</p></li>
+<li><p><strong>evt_type</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – event types to export</p></li>
+<li><p><strong>chan</strong> (<em>tuple</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – list of channels of interests</p></li>
+<li><p><strong>stage</strong> (<em>tuple</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – list of stages of interest</p></li>
+<li><p><strong>cycle</strong> (<em>list</em><em> of </em><em>int</em><em>, </em><em>optional</em>) – list of cycles of interest, numbered starting at 1</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.export_sleep_stats">
+<span class="sig-name descname"><span class="pre">export_sleep_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lights_off</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lights_on</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.export_sleep_stats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.export_sleep_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Create CSV with sleep statistics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Filename for csv export</p></li>
+<li><p><strong>lights_off</strong> (<em>float</em>) – Initial time when sleeper turns off the light (or their phone) to
+go to sleep, in seconds from recording start</p></li>
+<li><p><strong>lights_on</strong> (<em>float</em>) – Final time when sleeper rises from bed after sleep, in seconds from
+recording start</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>float or None</em> – If there are no epochs scored as sleep, returns None. Otherwise,
+returns the sleep onset latency, for testing purposes.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Total dark time and sleep efficiency does NOT subtract epochs marked as
+Undefined or Unknown.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.first_second">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">first_second</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.first_second" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.get_bookmarks">
+<span class="sig-name descname"><span class="pre">get_bookmarks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.get_bookmarks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.get_bookmarks" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>IndexError</strong> – When there is no selected rater</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.get_cycles">
+<span class="sig-name descname"><span class="pre">get_cycles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.get_cycles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.get_cycles" title="Permalink to this definition"></a></dt>
+<dd><p>Return the cycle start and end times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>list of tuple of float</em> – start and end times for each cycle, in seconds from recording start
+and the cycle index starting at 1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.get_epoch_start">
+<span class="sig-name descname"><span class="pre">get_epoch_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window_start</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.get_epoch_start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.get_epoch_start" title="Permalink to this definition"></a></dt>
+<dd><p>Get the position (seconds) of the nearest epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>window_start</strong> (<em>float</em>) – Position of the current window (seconds)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>float</em> – Position (seconds) of the nearest epoch.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.get_epochs">
+<span class="sig-name descname"><span class="pre">get_epochs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.get_epochs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.get_epochs" title="Permalink to this definition"></a></dt>
+<dd><p>Get list of events in the file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<em>tuple</em><em> of </em><em>two float</em><em>, </em><em>optional</em>) – start and end time of the period of interest</p></li>
+<li><p><strong>stage</strong> (<em>tuple</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – list of stages of interest</p></li>
+<li><p><strong>qual</strong> (<em>str</em><em>, </em><em>optional</em>) – epoch signal qualifier (Good or Poor)</p></li>
+<li><p><strong>chan</strong> (<em>None</em>) – placeholder, to maintain format similar to get_events</p></li>
+<li><p><strong>name</strong> (<em>None</em>) – placeholder, to maintain format similar to get_events</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – where each dict has ‘start’ (start time), ‘end’ (end time),
+‘stage’, ‘qual’ (signal quality)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.get_events">
+<span class="sig-name descname"><span class="pre">get_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.get_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.get_events" title="Permalink to this definition"></a></dt>
+<dd><p>Get list of events in the file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – name of the event of interest</p></li>
+<li><p><strong>time</strong> (<em>tuple</em><em> of </em><em>two float</em><em>, </em><em>optional</em>) – start and end time of the period of interest</p></li>
+<li><p><strong>chan</strong> (<em>tuple</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – list of channels of interests</p></li>
+<li><p><strong>stage</strong> (<em>tuple</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – list of stages of interest</p></li>
+<li><p><strong>qual</strong> (<em>str</em><em>, </em><em>optional</em>) – epoch signal qualifier (Good or Poor)</p></li>
+<li><p><strong>cycle</strong> (<em>list</em><em> of </em><em>int</em><em>, </em><em>optional</em>) – list of cycles of interest, numbered starting at 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – where each dict has ‘name’ (name of the event), ‘start’ (start
+time), ‘end’ (end time), ‘chan’ (channels of interest, can be
+empty), ‘stage’, ‘quality’ (signal quality), ‘cycle’ (sleep period)</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>IndexError</strong> – When there is no rater / epochs at all</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.get_rater">
+<span class="sig-name descname"><span class="pre">get_rater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rater_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.get_rater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.get_rater" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.get_stage_for_epoch">
+<span class="sig-name descname"><span class="pre">get_stage_for_epoch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epoch_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'stage'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.get_stage_for_epoch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.get_stage_for_epoch" title="Permalink to this definition"></a></dt>
+<dd><p>Return stage for one specific epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id_epoch</strong> (<em>str</em>) – index of the epoch</p></li>
+<li><p><strong>attr</strong> (<em>str</em><em>, </em><em>optional</em>) – ‘stage’ or ‘quality’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>stage</strong> (<em>str</em>) – description of the stage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.import_events">
+<span class="sig-name descname"><span class="pre">import_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'wonambi'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rec_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan_grp_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'eeg'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.import_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.import_events" title="Permalink to this definition"></a></dt>
+<dd><p>Import events from Wonambi CSV event export and write to annot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – path to file</p></li>
+<li><p><strong>source</strong> (<em>str</em>) – source program: ‘wonambi’ or ‘remlogic’</p></li>
+<li><p><strong>rec_start</strong> (<em>datetime</em>) – Date and time (year, month, day, hour, minute, second) of recording
+start. Year is ignored (New Year’s Eve celebratory recordings
+unsupported.) Only required for remlogic.</p></li>
+<li><p><strong>chan_dict</strong> (<em>dict</em>) – for prana. keys are channels as they appear in the prana input
+file, and values are channels as they appear in the Wonambi GUI
+(with reference and channel group).</p></li>
+<li><p><strong>chan_grp_name</strong> (<em>str</em>) – for prana. name of the channel group in which to store events.</p></li>
+<li><p><strong>parent</strong> (<em>QWidget</em>) – for GUI progress bar</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.import_staging">
+<span class="sig-name descname"><span class="pre">import_staging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rater_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rec_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staging_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['Artefact']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_qual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.import_staging"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.import_staging" title="Permalink to this definition"></a></dt>
+<dd><p>Import staging from an external staging text file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Staging file name.</p></li>
+<li><p><strong>source</strong> (<em>str</em>) – Name of program where staging was made. One of ‘domino’, ‘alice’,
+‘compumedics’, ‘sandman’, ‘remlogic’, ‘phillips’, ‘grael’, ‘egi’</p></li>
+<li><p><strong>rater_name</strong> (<em>str</em>) – Rater name for imported staging.</p></li>
+<li><p><strong>rec_start</strong> (<em>datetime</em>) – Date and time (year, month, day, hour, minute, second) of recording
+start. Year is ignored (New Year’s Eve celebratory recordings
+unsupported.)</p></li>
+<li><p><strong>staging_start</strong> (<em>datetime</em><em> (</em><em>default: None</em><em>)</em>) – Date and time of staging start. For use when not provided in
+staging file.</p></li>
+<li><p><strong>epoch_length</strong> (<em>int</em>) – duration in s of a scoring epoch</p></li>
+<li><p><strong>poor</strong> (<em>list</em><em> of </em><em>str</em>) – epochs with stage names in this list will be marked as Poor quality</p></li>
+<li><p><strong>as_qual</strong> (<em>bool</em>) – if True, the staging only be used to mark quality, as per poor</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.last_second">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">last_second</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.last_second" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.latency_to_consolidated">
+<span class="sig-name descname"><span class="pre">latency_to_consolidated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lights_off</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['NREM2',</span> <span class="pre">'NREM3']</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.latency_to_consolidated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.latency_to_consolidated" title="Permalink to this definition"></a></dt>
+<dd><p>Find latency to the first period of uninterrupted ‘stage’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lights_off</strong> (<em>float</em>) – lights off time, in seconds form recording start</p></li>
+<li><p><strong>duration</strong> (<em>float</em>) – duration of uninterrupted period, in minutes</p></li>
+<li><p><strong>stage</strong> (<em>list</em><em> of </em><em>str</em>) – target stage(s)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>float</em> – latency to the start of the consolidated period, in minutes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load xml from file.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.raters">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raters</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.raters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.remove_bookmark">
+<span class="sig-name descname"><span class="pre">remove_bookmark</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.remove_bookmark"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.remove_bookmark" title="Permalink to this definition"></a></dt>
+<dd><p>if you call it without arguments, it removes ALL the bookmarks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.remove_cycle_mrkr">
+<span class="sig-name descname"><span class="pre">remove_cycle_mrkr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epoch_start</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.remove_cycle_mrkr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.remove_cycle_mrkr" title="Permalink to this definition"></a></dt>
+<dd><p>Remove cycle marker at epoch_start.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>epoch_start</strong> (<em>int</em>) – start time of epoch, in seconds</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.remove_event">
+<span class="sig-name descname"><span class="pre">remove_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.remove_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.remove_event" title="Permalink to this definition"></a></dt>
+<dd><p>get events inside window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.remove_event_type">
+<span class="sig-name descname"><span class="pre">remove_event_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.remove_event_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.remove_event_type" title="Permalink to this definition"></a></dt>
+<dd><p>Remove event type based on name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.remove_rater">
+<span class="sig-name descname"><span class="pre">remove_rater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rater_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.remove_rater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.remove_rater" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.rename_event_type">
+<span class="sig-name descname"><span class="pre">rename_event_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.rename_event_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.rename_event_type" title="Permalink to this definition"></a></dt>
+<dd><p>Rename event type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.rename_rater">
+<span class="sig-name descname"><span class="pre">rename_rater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.rename_rater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.rename_rater" title="Permalink to this definition"></a></dt>
+<dd><p>Rename event type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.save" title="Permalink to this definition"></a></dt>
+<dd><p>Save xml to file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.set_cycle_mrkr">
+<span class="sig-name descname"><span class="pre">set_cycle_mrkr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epoch_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.set_cycle_mrkr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.set_cycle_mrkr" title="Permalink to this definition"></a></dt>
+<dd><p>Mark epoch start as cycle start or end.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>epoch_start</strong> (<em>int</em>) – start time of the epoch, in seconds</p></li>
+<li><p><strong>end</strong> (<em>bool</em>) – If True, marked as cycle end; otherwise, marks cycle start</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.set_stage_for_epoch">
+<span class="sig-name descname"><span class="pre">set_stage_for_epoch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epoch_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'stage'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.set_stage_for_epoch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.set_stage_for_epoch" title="Permalink to this definition"></a></dt>
+<dd><p>Change the stage for one specific epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>epoch_start</strong> (<em>int</em>) – start time of the epoch, in seconds</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – description of the stage or qualifier.</p></li>
+<li><p><strong>attr</strong> (<em>str</em><em>, </em><em>optional</em>) – either ‘stage’ or ‘quality’</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) – whether to save every time one epoch is scored</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>KeyError</strong> – When the epoch_start is not in the list of epochs.</p></li>
+<li><p><strong>IndexError</strong> – When there is no rater / epochs at all</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In the GUI, you want to save as often as possible, even if it slows
+down the program, but it’s the safer option. But if you’re converting
+a dataset, you want to save at the end. Do not forget to save!</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.slp_frag">
+<span class="sig-name descname"><span class="pre">slp_frag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.slp_frag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.slp_frag" title="Permalink to this definition"></a></dt>
+<dd><p>Obtain sleep fragmentation parameter, ie number of stage shifts to
+a lighter stage.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.start_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_time</span></span><a class="headerlink" href="#wonambi.attr.annotations.Annotations.start_time" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.switch">
+<span class="sig-name descname"><span class="pre">switch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.switch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.switch" title="Permalink to this definition"></a></dt>
+<dd><p>Obtain switch parameter, ie number of times the stage shifts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.time_in_stage">
+<span class="sig-name descname"><span class="pre">time_in_stage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'stage'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.time_in_stage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.time_in_stage" title="Permalink to this definition"></a></dt>
+<dd><p>Return time (in seconds) in the selected stage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – one of the sleep stages, or qualifiers</p></li>
+<li><p><strong>attr</strong> (<em>str</em><em>, </em><em>optional</em>) – either ‘stage’ or ‘quality’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>int</em> – time spent in one stage/qualifier, in seconds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.Annotations.to_bids">
+<span class="sig-name descname"><span class="pre">to_bids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tsv_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#Annotations.to_bids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.Annotations.to_bids" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.create_annotation">
+<span class="sig-prename descclassname"><span class="pre">wonambi.attr.annotations.</span></span><span class="sig-name descname"><span class="pre">create_annotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_fasst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lights_off</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legacy_meth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#create_annotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.create_annotation" title="Permalink to this definition"></a></dt>
+<dd><p>Create annotations by importing from FASST sleep scoring file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xml_file</strong> (<em>path to xml file</em>) – annotation file that will be created</p></li>
+<li><p><strong>from_fasst</strong> (<em>path to FASST file</em>) – .mat file containing the scores</p></li>
+<li><p><strong>lights_off</strong> (<em>bool</em>) – set to True if scoring begins at lights off</p></li>
+<li><p><strong>legacy_meth</strong> (<em>bool</em>) – old functionality; will stage epochs starting at epoch_start = 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of Annotations</em></p>
+</dd>
+</dl>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Merge create_annotation and create_empty_annotations</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.create_empty_annotations">
+<span class="sig-prename descclassname"><span class="pre">wonambi.attr.annotations.</span></span><span class="sig-name descname"><span class="pre">create_empty_annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#create_empty_annotations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.create_empty_annotations" title="Permalink to this definition"></a></dt>
+<dd><p>Create an empty annotation file.</p>
+<p class="rubric">Notes</p>
+<p>Dates are made time-zone unaware.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.parse_iso_datetime">
+<span class="sig-prename descclassname"><span class="pre">wonambi.attr.annotations.</span></span><span class="sig-name descname"><span class="pre">parse_iso_datetime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#parse_iso_datetime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.parse_iso_datetime" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.attr.annotations.update_annotation_version">
+<span class="sig-prename descclassname"><span class="pre">wonambi.attr.annotations.</span></span><span class="sig-name descname"><span class="pre">update_annotation_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/annotations.html#update_annotation_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.annotations.update_annotation_version" title="Permalink to this definition"></a></dt>
+<dd><p>Update the fields that have changed over different versions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xml_file</strong> (<em>path to file</em>) – xml file with the sleep scoring</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>new in version 4: use ‘marker_name’ instead of simply ‘name’ etc</p>
+<p>new in version 5: use ‘bookmark’ instead of ‘marker’</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.attr.anat.html" class="btn btn-neutral float-left" title="wonambi.attr.anat module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.attr.chan.html" class="btn btn-neutral float-right" title="wonambi.attr.chan module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

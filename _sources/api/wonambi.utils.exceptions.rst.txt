@@ -1,0 +1,7 @@
+wonambi.utils.exceptions module
+===============================
+
+.. automodule:: wonambi.utils.exceptions
+   :members:
+   :undoc-members:
+   :show-inheritance:

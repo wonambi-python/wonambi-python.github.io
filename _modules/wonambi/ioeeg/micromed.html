@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.ioeeg.micromed &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.ioeeg.micromed</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.ioeeg.micromed</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">SEEK_SET</span><span class="p">,</span> <span class="n">SEEK_END</span><span class="p">,</span> <span class="n">SEEK_CUR</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">from</span> <span class="nn">struct</span> <span class="kn">import</span> <span class="n">unpack</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">empty</span><span class="p">,</span> <span class="n">fromfile</span><span class="p">,</span> <span class="n">iinfo</span><span class="p">,</span> <span class="n">memmap</span><span class="p">,</span> <span class="n">NaN</span><span class="p">,</span> <span class="n">pad</span><span class="p">,</span> <span class="n">where</span>
+<span class="kn">from</span> <span class="nn">numpy.lib.recfunctions</span> <span class="kn">import</span> <span class="n">append_fields</span>
+
+<span class="n">N_ZONES</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">MAX_SAMPLE</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">MAX_CAN_VIEW</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">ENCODING</span> <span class="o">=</span> <span class="s1">&#39;iso-8859-1&#39;</span>
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Micromed"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.micromed.html#wonambi.ioeeg.micromed.Micromed">[docs]</a><span class="k">class</span> <span class="nc">Micromed</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Basic class to read Micromed data. Supports .TRC and .VWR files</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : path to file</span>
+<span class="sd">        the name of the filename or directory</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_header</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_header</span> <span class="o">=</span> <span class="n">_read_header</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+            <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">SEEK_END</span><span class="p">)</span>
+            <span class="n">EOData</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bodata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;BOData&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_chan</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;n_chan&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_bytes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;n_bytes&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_s_freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n_smp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">EOData</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bodata</span><span class="p">)</span> <span class="o">/</span>
+                          <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_chan</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_bytes</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_factors</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">ch</span><span class="p">[</span><span class="s1">&#39;factor&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;chans&#39;</span><span class="p">]])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">ch</span><span class="p">[</span><span class="s1">&#39;logical_ground&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;chans&#39;</span><span class="p">]])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_triggers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;trigger&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_videos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;dvideo&#39;</span><span class="p">]</span>
+
+<div class="viewcode-block" id="Micromed.return_hdr"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.micromed.html#wonambi.ioeeg.micromed.Micromed.return_hdr">[docs]</a>    <span class="k">def</span> <span class="nf">return_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the header for further use.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        subj_id : str</span>
+<span class="sd">            subject identification code</span>
+<span class="sd">        start_time : datetime</span>
+<span class="sd">            start time of the dataset</span>
+<span class="sd">        s_freq : float</span>
+<span class="sd">            sampling frequency</span>
+<span class="sd">        chan_name : list of str</span>
+<span class="sd">            list of all the channels</span>
+<span class="sd">        n_samples : int</span>
+<span class="sd">            number of samples in the dataset</span>
+<span class="sd">        orig : dict</span>
+<span class="sd">            additional information taken directly from the header</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">subj_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;surname&#39;</span><span class="p">]</span>
+        <span class="n">chan_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">ch</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;chans&#39;</span><span class="p">]]</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;segments&#39;</span><span class="p">][</span><span class="s1">&#39;time_in_samples&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">offset</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">subj_id</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">],</span> <span class="n">chan_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_smp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span></div>
+
+<div class="viewcode-block" id="Micromed.return_dat"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.micromed.html#wonambi.ioeeg.micromed.Micromed.return_dat">[docs]</a>    <span class="k">def</span> <span class="nf">return_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">,</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the data as 2D numpy.ndarray.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chan : int or list</span>
+<span class="sd">            index (indices) of the channels to read</span>
+<span class="sd">        begsam : int</span>
+<span class="sd">            index of the first sample</span>
+<span class="sd">        endsam : int</span>
+<span class="sd">            index of the last sample</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        numpy.ndarray</span>
+<span class="sd">            A 2d matrix, with dimension chan X samples</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>  <span class="c1"># if single value is provided it needs to be transformed to list to generate a 2d matrix</span>
+            <span class="n">chan</span> <span class="o">=</span> <span class="p">[</span><span class="n">chan</span><span class="p">,</span> <span class="p">]</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">begsam</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_smp</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">endsam</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">dat</span> <span class="o">=</span> <span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">chan</span><span class="p">),</span> <span class="n">endsam</span> <span class="o">-</span> <span class="n">begsam</span><span class="p">))</span>
+            <span class="n">dat</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">NaN</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">dat</span>
+
+        <span class="k">if</span> <span class="n">begsam</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">begpad</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">begsam</span>
+            <span class="n">begsam</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">begpad</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">endsam</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_smp</span><span class="p">:</span>
+            <span class="n">endpad</span> <span class="o">=</span> <span class="n">endsam</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_smp</span>
+            <span class="n">endsam</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_smp</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">endpad</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">dshape</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_chan</span><span class="p">,</span> <span class="n">endsam</span> <span class="o">-</span> <span class="n">begsam</span><span class="p">)</span>
+        <span class="n">sig_dtype</span> <span class="o">=</span> <span class="s1">&#39;u&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_bytes</span><span class="p">)</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bodata</span> <span class="o">+</span> <span class="n">begsam</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_bytes</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n_chan</span>
+        <span class="n">dat</span> <span class="o">=</span> <span class="n">memmap</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">sig_dtype</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span>
+                     <span class="n">shape</span><span class="o">=</span><span class="n">dshape</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+
+        <span class="n">dat</span> <span class="o">=</span> <span class="n">pad</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="n">chan</span><span class="p">,</span> <span class="p">:],</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">begpad</span><span class="p">,</span> <span class="n">endpad</span><span class="p">)),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span>
+                  <span class="n">constant_values</span><span class="o">=</span><span class="n">NaN</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">dat</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span><span class="p">[</span><span class="n">chan</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_factors</span><span class="p">[</span><span class="n">chan</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Micromed.return_markers"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.micromed.html#wonambi.ioeeg.micromed.Micromed.return_markers">[docs]</a>    <span class="k">def</span> <span class="nf">return_markers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return all the markers (also called triggers or events).</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list of dict</span>
+<span class="sd">            where each dict contains &#39;name&#39; as str, &#39;start&#39; and &#39;end&#39; as float</span>
+<span class="sd">            in seconds from the start of the recordings, and &#39;chan&#39; as list of</span>
+<span class="sd">            str with the channels involved (if not of relevance, it&#39;s None).</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        FileNotFoundError</span>
+<span class="sd">            when it cannot read the events for some reason (don&#39;t use other</span>
+<span class="sd">            exceptions).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">markers</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">triggers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_triggers</span>
+        <span class="n">DTYPE_MAX</span> <span class="o">=</span> <span class="n">iinfo</span><span class="p">(</span><span class="n">triggers</span><span class="o">.</span><span class="n">dtype</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">max</span>
+        <span class="n">triggers</span> <span class="o">=</span> <span class="n">triggers</span><span class="p">[</span><span class="n">triggers</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">DTYPE_MAX</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">trig</span> <span class="ow">in</span> <span class="n">triggers</span><span class="p">:</span>
+            <span class="n">markers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">trig</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]),</span>
+                 <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">trig</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_s_freq</span><span class="p">,</span>
+                 <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">trig</span><span class="p">[</span><span class="s1">&#39;sample&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_s_freq</span><span class="p">,</span>
+                 <span class="p">})</span>
+
+        <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_header</span><span class="p">[</span><span class="s1">&#39;notes&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">start</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="sa">b</span><span class="s1">&#39;* * * Part 1 * * *&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">markers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="o">.</span><span class="n">decode</span><span class="p">(),</span>
+                 <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">start</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_s_freq</span><span class="p">,</span>
+                 <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">start</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_s_freq</span><span class="p">,</span>
+                 <span class="p">})</span>
+
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">markers</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">k</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="Micromed.return_videos"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.micromed.html#wonambi.ioeeg.micromed.Micromed.return_videos">[docs]</a>    <span class="k">def</span> <span class="nf">return_videos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">begtime</span><span class="p">,</span> <span class="n">endtime</span><span class="p">):</span>
+        <span class="n">vid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_videos</span>
+        <span class="n">begtime</span> <span class="o">*=</span> <span class="mi">1000</span>
+        <span class="n">endtime</span> <span class="o">*=</span> <span class="mi">1000</span>
+
+        <span class="c1"># remove empty rows</span>
+        <span class="n">DTYPE_MAX</span> <span class="o">=</span> <span class="n">iinfo</span><span class="p">(</span><span class="n">vid</span><span class="o">.</span><span class="n">dtype</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">max</span>
+        <span class="n">vid</span> <span class="o">=</span> <span class="n">vid</span><span class="p">[</span><span class="n">vid</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">DTYPE_MAX</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">vid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="s1">&#39;No videos for this dataset&#39;</span><span class="p">)</span>
+
+        <span class="n">vid</span> <span class="o">=</span> <span class="n">append_fields</span><span class="p">(</span><span class="n">vid</span><span class="p">,</span> <span class="s1">&#39;absolute_end&#39;</span><span class="p">,</span> <span class="n">vid</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">vid</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">],</span> <span class="n">usemask</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># full name without number</span>
+        <span class="n">i_vid</span> <span class="o">=</span> <span class="n">where</span><span class="p">((</span><span class="n">endtime</span> <span class="o">-</span> <span class="n">vid</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">vid</span><span class="p">[</span><span class="s1">&#39;absolute_end&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">begtime</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">mpgfiles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;VID_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vid</span><span class="p">[</span><span class="s1">&#39;file_ext&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;.AVI&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">i_vid</span><span class="p">]</span>
+        <span class="n">mpgfiles</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="n">mpg</span><span class="p">)</span> <span class="k">for</span> <span class="n">mpg</span> <span class="ow">in</span> <span class="n">mpgfiles</span><span class="p">]</span>
+
+        <span class="n">video_beg</span> <span class="o">=</span> <span class="p">(</span><span class="n">begtime</span> <span class="o">-</span> <span class="n">vid</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">][</span><span class="n">i_vid</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span> <span class="o">/</span> <span class="mi">1000</span>
+        <span class="n">video_end</span> <span class="o">=</span> <span class="p">(</span><span class="n">endtime</span> <span class="o">-</span> <span class="n">vid</span><span class="p">[</span><span class="s1">&#39;delay&#39;</span><span class="p">][</span><span class="n">i_vid</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span> <span class="o">/</span> <span class="mi">1000</span>
+
+        <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;First Video (#</span><span class="si">{}</span><span class="s1">) starts at </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mpgfiles</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">video_beg</span><span class="p">))</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Last Video (#</span><span class="si">{}</span><span class="s1">) ends at </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mpgfiles</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">video_end</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">mpgfiles</span><span class="p">,</span> <span class="n">video_beg</span><span class="p">,</span> <span class="n">video_end</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_read_header</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+
+    <span class="n">orig</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;laboratory&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x00</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="c1"># patient</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;surname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;date_of_birth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1900</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;date_of_birth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="n">SEEK_CUR</span><span class="p">)</span>
+
+    <span class="c1"># recording</span>
+    <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">sec</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;bbbbbb&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1900</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">sec</span><span class="p">)</span>
+
+    <span class="n">acquisition_unit_code</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;acquisition_unit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ACQUISITION_UNIT</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">acquisition_unit_code</span><span class="p">,</span>
+                                                    <span class="nb">str</span><span class="p">(</span><span class="n">acquisition_unit_code</span><span class="p">))</span>
+    <span class="n">filetype_code</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;filetype&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">FILETYPE</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">filetype_code</span><span class="p">,</span> <span class="s1">&#39;unknown headbox&#39;</span><span class="p">)</span>
+
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;BOData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;n_chan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;multiplexer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;n_bytes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;compression&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 0 non compression, 1 compression.</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;n_montages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Montages : number of specific montages</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;dvideo_begin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Starting sample of digital video</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;mpeg_delay&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Number of frames per hour of de-synchronization in MPEG acq</span>
+
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">SEEK_CUR</span><span class="p">)</span>
+    <span class="n">header_type_code</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;header_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">HEADER_TYPE</span><span class="p">[</span><span class="n">header_type_code</span><span class="p">]</span>
+
+    <span class="n">zones</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N_ZONES</span><span class="p">):</span>
+        <span class="n">zname</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;8sII&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+        <span class="n">zname</span> <span class="o">=</span> <span class="n">zname</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">zones</span><span class="p">[</span><span class="n">zname</span><span class="p">]</span> <span class="o">=</span> <span class="n">pos</span><span class="p">,</span> <span class="n">length</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;ORDER&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;u2&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">orig</span><span class="p">[</span><span class="s1">&#39;n_chan&#39;</span><span class="p">])</span>
+
+    <span class="n">chans</span> <span class="o">=</span> <span class="n">_read_labcod</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;LABCOD&#39;</span><span class="p">],</span> <span class="n">order</span><span class="p">)</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;NOTE&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+    <span class="n">DTYPE</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;S40&#39;</span><span class="p">)])</span>
+    <span class="n">notes</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;FLAGS&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+    <span class="n">DTYPE</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;begin&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">)])</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;TRONCA&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+    <span class="n">DTYPE</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;time_in_samples&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">)])</span>
+    <span class="n">segments</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="c1"># impedance</span>
+    <span class="n">DTYPE</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;positive&#39;</span><span class="p">,</span> <span class="s1">&#39;u1&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;negative&#39;</span><span class="p">,</span> <span class="s1">&#39;u1&#39;</span><span class="p">)])</span>
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;IMPED_B&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+    <span class="n">impedance_begin</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;IMPED_E&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+    <span class="n">impedance_end</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="n">montage</span> <span class="o">=</span> <span class="n">_read_montage</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;MONTAGE&#39;</span><span class="p">])</span>
+
+    <span class="c1"># if average has been computed</span>
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;COMPRESS&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+    <span class="n">avg</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">avg</span><span class="p">[</span><span class="s1">&#39;trace&#39;</span><span class="p">],</span> <span class="n">avg</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span> <span class="n">avg</span><span class="p">[</span><span class="s1">&#39;prestim&#39;</span><span class="p">],</span> <span class="n">avg</span><span class="p">[</span><span class="s1">&#39;poststim&#39;</span><span class="p">],</span> <span class="n">avg</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;IIIII&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">avg</span><span class="p">[</span><span class="s1">&#39;free&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">108</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">history</span> <span class="o">=</span> <span class="n">_read_history</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;HISTORY&#39;</span><span class="p">])</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;DVIDEO&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">DTYPE</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;delay&#39;</span><span class="p">,</span> <span class="s1">&#39;i4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;file_ext&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;empty&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">)])</span>
+    <span class="n">dvideo</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="c1"># events</span>
+    <span class="n">DTYPE</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;begin&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">)])</span>
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;EVENT A&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">event_a</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;EVENT B&#39;</span><span class="p">]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">event_b</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="s1">&#39;TRIGGER&#39;</span><span class="p">]</span>
+    <span class="n">DTYPE</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="s1">&#39;u2&#39;</span><span class="p">)])</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">trigger</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">DTYPE</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">length</span> <span class="o">/</span> <span class="n">DTYPE</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+
+    <span class="n">orig</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+        <span class="s1">&#39;order&#39;</span><span class="p">:</span> <span class="n">order</span><span class="p">,</span>
+        <span class="s1">&#39;chans&#39;</span><span class="p">:</span> <span class="n">chans</span><span class="p">,</span>
+        <span class="s1">&#39;notes&#39;</span><span class="p">:</span> <span class="n">notes</span><span class="p">,</span>
+        <span class="s1">&#39;flags&#39;</span><span class="p">:</span> <span class="n">flags</span><span class="p">,</span>
+        <span class="s1">&#39;segments&#39;</span><span class="p">:</span> <span class="n">segments</span><span class="p">,</span>
+        <span class="s1">&#39;impedance_begin&#39;</span><span class="p">:</span> <span class="n">impedance_begin</span><span class="p">,</span>
+        <span class="s1">&#39;impedance_end&#39;</span><span class="p">:</span> <span class="n">impedance_end</span><span class="p">,</span>
+        <span class="s1">&#39;montage&#39;</span><span class="p">:</span> <span class="n">montage</span><span class="p">,</span>
+        <span class="s1">&#39;history&#39;</span><span class="p">:</span> <span class="n">history</span><span class="p">,</span>
+        <span class="s1">&#39;dvideo&#39;</span><span class="p">:</span> <span class="n">dvideo</span><span class="p">,</span>
+        <span class="s1">&#39;event_a&#39;</span><span class="p">:</span> <span class="n">event_a</span><span class="p">,</span>
+        <span class="s1">&#39;event_b&#39;</span><span class="p">:</span> <span class="n">event_b</span><span class="p">,</span>
+        <span class="s1">&#39;trigger&#39;</span><span class="p">:</span> <span class="n">trigger</span><span class="p">,</span>
+        <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">orig</span>
+
+
+<span class="n">ACQUISITION_UNIT</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;BQ124 - 24 channels headbox, Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;MS40 - Holter recorder&#39;</span><span class="p">,</span>
+    <span class="mi">6</span><span class="p">:</span> <span class="s1">&#39;BQ132S - 32 channels headbox, Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">7</span><span class="p">:</span> <span class="s1">&#39;BQ124 - 24 channels headbox, BQ CARD Interface&#39;</span><span class="p">,</span>
+    <span class="mi">8</span><span class="p">:</span> <span class="s1">&#39;SAM32 - 32 channels headbox, BQ CARD Interface&#39;</span><span class="p">,</span>
+    <span class="mi">9</span><span class="p">:</span> <span class="s1">&#39;SAM25 - 25 channels headbox, BQ CARD Interface&#39;</span><span class="p">,</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;BQ132S R - 32 channels reverse headbox, Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">11</span><span class="p">:</span> <span class="s1">&#39;SAM32 R - 32 channels reverse headbox, BQ CARD Interface&#39;</span><span class="p">,</span>
+    <span class="mi">12</span><span class="p">:</span> <span class="s1">&#39;SAM25 R - 25 channels reverse headbox, BQ CARD Interface&#39;</span><span class="p">,</span>
+    <span class="mi">13</span><span class="p">:</span> <span class="s1">&#39;SAM32 - 32 channels headbox, Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">14</span><span class="p">:</span> <span class="s1">&#39;SAM25 - 25 channels headbox, Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">15</span><span class="p">:</span> <span class="s1">&#39;SAM32 R - 32 channels reverse headbox, Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">16</span><span class="p">:</span> <span class="s1">&#39;SAM25 R - 25 channels reverse headbox, Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">17</span><span class="p">:</span> <span class="s1">&#39;SD - 32 channels headbox with jackbox, SD CARD Interface -- PCI Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">18</span><span class="p">:</span> <span class="s1">&#39;SD128 - 128 channels headbox, SD CARD Interface -- PCI Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">19</span><span class="p">:</span> <span class="s1">&#39;SD96 - 96 channels headbox, SD CARD Interface -- PCI Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">20</span><span class="p">:</span> <span class="s1">&#39;SD64 - 64 channels headbox, SD CARD Interface -- PCI Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">21</span><span class="p">:</span> <span class="s1">&#39;SD128c - 128 channels headbox with jackbox, SD CARD Interface -- PCI Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">22</span><span class="p">:</span> <span class="s1">&#39;SD64c - 64 channels headbox with jackbox, SD CARD Interface -- PCI Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">23</span><span class="p">:</span> <span class="s1">&#39;BQ132S - 32 channels headbox, PCI Internal Interface&#39;</span><span class="p">,</span>
+    <span class="mi">24</span><span class="p">:</span> <span class="s1">&#39;BQ132S R - 32 channels reverse headbox, PCI Internal Interface&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">FILETYPE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">40</span><span class="p">:</span> <span class="s1">&#39;C128 C.R., 128 EEG (headbox SD128 only)&#39;</span><span class="p">,</span>
+    <span class="mi">42</span><span class="p">:</span> <span class="s1">&#39;C84P C.R., 84 EEG, 44 poly (headbox SD128 only)&#39;</span><span class="p">,</span>
+    <span class="mi">44</span><span class="p">:</span> <span class="s1">&#39;C84 C.R., 84 EEG, 4 reference signals (named MKR,MKRB,MKRC,MKRD) (headbox SD128 only)&#39;</span><span class="p">,</span>
+    <span class="mi">46</span><span class="p">:</span> <span class="s1">&#39;C96 C.R., 96 EEG (headbox SD128 -- SD96 -- BQ123S(r))&#39;</span><span class="p">,</span>
+    <span class="mi">48</span><span class="p">:</span> <span class="s1">&#39;C63P C.R., 63 EEG, 33 poly&#39;</span><span class="p">,</span>
+    <span class="mi">50</span><span class="p">:</span> <span class="s1">&#39;C63 C.R., 63 EEG, 3 reference signals (named MKR,MKRB,MKRC)&#39;</span><span class="p">,</span>
+    <span class="mi">52</span><span class="p">:</span> <span class="s1">&#39;C64 C.R., 64 EEG&#39;</span><span class="p">,</span>
+    <span class="mi">54</span><span class="p">:</span> <span class="s1">&#39;C42P C.R., 42 EEG, 22 poly&#39;</span><span class="p">,</span>
+    <span class="mi">56</span><span class="p">:</span> <span class="s1">&#39;C42 C.R., 42 EEG, 2 reference signals (named MKR,MKRB)&#39;</span><span class="p">,</span>
+    <span class="mi">58</span><span class="p">:</span> <span class="s1">&#39;C32 C.R., 32 EEG&#39;</span><span class="p">,</span>
+    <span class="mi">60</span><span class="p">:</span> <span class="s1">&#39;C21P C.R., 21 EEG, 11 poly&#39;</span><span class="p">,</span>
+    <span class="mi">62</span><span class="p">:</span> <span class="s1">&#39;C21 C.R., 21 EEG, 1 reference signal (named MKR)&#39;</span><span class="p">,</span>
+    <span class="mi">64</span><span class="p">:</span> <span class="s1">&#39;C19P C.R., 19 EEG, variable poly&#39;</span><span class="p">,</span>
+    <span class="mi">66</span><span class="p">:</span> <span class="s1">&#39;C19 C.R., 19 EEG, 1 reference signal (named MKR)&#39;</span><span class="p">,</span>
+    <span class="mi">68</span><span class="p">:</span> <span class="s1">&#39;C12 C.R., 12 EEG&#39;</span><span class="p">,</span>
+    <span class="mi">70</span><span class="p">:</span> <span class="s1">&#39;C8P C.R., 8 EEG, variable poly&#39;</span><span class="p">,</span>
+    <span class="mi">72</span><span class="p">:</span> <span class="s1">&#39;C8 C.R., 8 EEG&#39;</span><span class="p">,</span>
+    <span class="mi">74</span><span class="p">:</span> <span class="s1">&#39;CFRE C.R., variable EEG, variable poly&#39;</span><span class="p">,</span>
+    <span class="mi">76</span><span class="p">:</span> <span class="s1">&#39;C25P C.R., 25 EEG (21 standard, 4 poly transformed to EEG channels), 7 poly -- headbox BQ132S(r) only&#39;</span><span class="p">,</span>
+    <span class="mi">78</span><span class="p">:</span> <span class="s1">&#39;C27P C.R., 27 EEG (21 standard, 6 poly transformed to EEG channels), 5 poly -- headbox BQ132S(r) only&#39;</span><span class="p">,</span>
+    <span class="mi">80</span><span class="p">:</span> <span class="s1">&#39;C24P C.R., 24 EEG (21 standard, 3 poly transformed to EEG channels), 8 poly -- headbox SAM32(r) only&#39;</span><span class="p">,</span>
+    <span class="mi">82</span><span class="p">:</span> <span class="s1">&#39;C25P C.R., 25 EEG (21 standard, 4 poly transformed to EEG channels), 7 poly -- headbox SD with headbox JB 21P&#39;</span><span class="p">,</span>
+    <span class="mi">84</span><span class="p">:</span> <span class="s1">&#39;C27P C.R., 27 EEG (21 standard, 6 poly transformed to EEG channels), 5 poly -- headbox SD with headbox JB 21P&#39;</span><span class="p">,</span>
+    <span class="mi">86</span><span class="p">:</span> <span class="s1">&#39;C31P C.R., 27 EEG (21 standard, 10 poly transformed to EEG channels), 1 poly -- headbox SD with headbox JB 21P6&#39;</span><span class="p">,</span>
+    <span class="mi">100</span><span class="p">:</span> <span class="s1">&#39;C26P C.R., 26 EEG, 6 poly (headbox SD, SD64c, SD128c with headbox JB Mini)&#39;</span><span class="p">,</span>
+    <span class="mi">101</span><span class="p">:</span> <span class="s1">&#39;C16P C.R., 16 EEG, 16 poly (headbox SD with headbox JB M12)&#39;</span><span class="p">,</span>
+    <span class="mi">102</span><span class="p">:</span> <span class="s1">&#39;C12P C.R., 12 EEG, 20 poly (headbox SD with headbox JB M12)&#39;</span><span class="p">,</span>
+    <span class="mi">103</span><span class="p">:</span> <span class="s1">&#39;32P 32 poly (headbox SD, SD64c, SD128c with headbox JB Bip)&#39;</span><span class="p">,</span>
+    <span class="mi">120</span><span class="p">:</span> <span class="s1">&#39;C48P C.R., 48 EEG, 16 poly (headbox SD64)&#39;</span><span class="p">,</span>
+    <span class="mi">121</span><span class="p">:</span> <span class="s1">&#39;C56P C.R., 56 EEG, 8 poly (headbox SD64)&#39;</span><span class="p">,</span>
+    <span class="mi">122</span><span class="p">:</span> <span class="s1">&#39;C24P C.R., 24 EEG, 8 poly (headbox SD64)&#39;</span><span class="p">,</span>
+    <span class="mi">140</span><span class="p">:</span> <span class="s1">&#39;C52P C.R., 52 EEG, 12 poly (headbox SD64c, SD128c with 2 headboxes JB Mini)&#39;</span><span class="p">,</span>
+    <span class="mi">141</span><span class="p">:</span> <span class="s1">&#39;64P 64 poly (headbox SD64c, SD128c with 2 headboxes JB Bip)&#39;</span><span class="p">,</span>
+    <span class="mi">160</span><span class="p">:</span> <span class="s1">&#39;C88P C.R., 88 EEG, 8 poly (headbox SD96)&#39;</span><span class="p">,</span>
+    <span class="mi">161</span><span class="p">:</span> <span class="s1">&#39;C80P C.R., 80 EEG, 16 poly (headbox SD96)&#39;</span><span class="p">,</span>
+    <span class="mi">162</span><span class="p">:</span> <span class="s1">&#39;C72P C.R., 72 EEG, 24 poly (headbox SD96)&#39;</span><span class="p">,</span>
+    <span class="mi">180</span><span class="p">:</span> <span class="s1">&#39;C120P C.R., 120 EEG, 8 poly (headbox SD128)&#39;</span><span class="p">,</span>
+    <span class="mi">181</span><span class="p">:</span> <span class="s1">&#39;C112P C.R., 112 EEG, 16 poly (headbox SD128)&#39;</span><span class="p">,</span>
+    <span class="mi">182</span><span class="p">:</span> <span class="s1">&#39;C104P C.R., 104 EEG, 24 poly (headbox SD128)&#39;</span><span class="p">,</span>
+    <span class="mi">183</span><span class="p">:</span> <span class="s1">&#39;C96P C.R., 96 EEG, 32 poly (headbox SD128)&#39;</span><span class="p">,</span>
+    <span class="mi">200</span><span class="p">:</span> <span class="s1">&#39;C122P C.R., 122 EEG, 6 poly (headbox SD128c with 4 headboxes JB Mini)&#39;</span><span class="p">,</span>
+    <span class="mi">201</span><span class="p">:</span> <span class="s1">&#39;C116P C.R., 116 EEG, 12 poly (headbox SD128c with 4 headboxes JB Mini)&#39;</span><span class="p">,</span>
+    <span class="mi">202</span><span class="p">:</span> <span class="s1">&#39;C110P C.R., 110 EEG, 18 poly (headbox SD128c with 4 headboxes JB Mini)&#39;</span><span class="p">,</span>
+    <span class="mi">203</span><span class="p">:</span> <span class="s1">&#39;C104P C.R., 104 EEG, 24 poly (headbox SD128c with 4 headboxes JB Mini)&#39;</span><span class="p">,</span>
+    <span class="mi">204</span><span class="p">:</span> <span class="s1">&#39;128P 128 poly (headbox SD128c with 4 headboxes JB Bip)&#39;</span><span class="p">,</span>
+    <span class="mi">205</span><span class="p">:</span> <span class="s1">&#39;96P 96 poly (headbox SD128c with 3 headboxes JB Bip)&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">HEADER_TYPE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;Micromed &quot;System 1&quot; Header type&#39;</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Micromed &quot;System 1&quot; Header type&#39;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Micromed &quot;System 2&quot; Header type&#39;</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;Micromed &quot;System98&quot; Header type&#39;</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;Micromed &quot;System98&quot; Header type&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">UNITS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;nV&#39;</span><span class="p">,</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;μV&#39;</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;mV&#39;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span>
+    <span class="mi">100</span><span class="p">:</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span>
+    <span class="mi">101</span><span class="p">:</span> <span class="s1">&#39;bpm&#39;</span><span class="p">,</span>
+    <span class="mi">102</span><span class="p">:</span> <span class="s1">&#39;dimentionless&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">_read_labcod</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">zone</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zone</span>
+    <span class="n">CHAN_LENGTH</span> <span class="o">=</span> <span class="mi">128</span>
+
+    <span class="n">chans</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i_ch</span> <span class="ow">in</span> <span class="n">order</span><span class="p">:</span>
+        <span class="n">chan</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span> <span class="o">+</span> <span class="n">i_ch</span> <span class="o">*</span> <span class="n">CHAN_LENGTH</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Status of electrode for acquisition : 0 : not acquired, 1 : acquired</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;channelType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># TODO: type of reference</span>
+
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">)</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;ground&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">)</span>
+        <span class="n">l_min</span><span class="p">,</span> <span class="n">l_max</span><span class="p">,</span> <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;logical_ground&#39;</span><span class="p">],</span> <span class="n">ph_min</span><span class="p">,</span> <span class="n">ph_max</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;iiiii&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;factor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ph_max</span> <span class="o">-</span> <span class="n">ph_min</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">l_max</span> <span class="o">-</span> <span class="n">l_min</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">k</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">UNITS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">UNITS</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;HiPass_Limit&#39;</span><span class="p">],</span> <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;HiPass_Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;HH&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;LowPass_Limit&#39;</span><span class="p">],</span> <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;LowPass_Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;HH&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;rate_coefficient&#39;</span><span class="p">],</span> <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;HH&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">],</span> <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;ff&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;presentInMap&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;isInAvg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;Description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">)</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;xyz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;fff&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;Coordinate_Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;free&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">chans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">chans</span>
+
+
+<span class="k">def</span> <span class="nf">_read_montage</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">zone</span><span class="p">):</span>
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zone</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+
+    <span class="n">montages</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">while</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">pos</span> <span class="o">+</span> <span class="n">length</span><span class="p">):</span>
+        <span class="n">montage</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;lines&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s1">&#39;sectors&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s1">&#39;base_time&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s1">&#39;notch&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">))[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s1">&#39;colour&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span><span class="p">)),</span>
+            <span class="s1">&#39;selection&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span><span class="p">)),</span>
+            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">ENCODING</span><span class="p">),</span>
+            <span class="s1">&#39;inputsNonInv&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)),</span>  <span class="c1"># NonInv : non inverting input</span>
+            <span class="s1">&#39;inputsInv&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)),</span>  <span class="c1"># Inv : inverting input</span>
+
+            <span class="s1">&#39;HiPass_Filter&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)),</span>
+            <span class="s1">&#39;LowPass_Filter&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)),</span>
+            <span class="s1">&#39;reference&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)),</span>
+            <span class="s1">&#39;free&#39;</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1720</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">),</span>
+            <span class="p">}</span>
+        <span class="n">montages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">montage</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">montages</span>
+
+
+<span class="k">def</span> <span class="nf">_read_history</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">zone</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This matches the Matlab reader from Matlab Exchange but doesn&#39;t seem</span>
+<span class="sd">    correct.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pos</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">zone</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+
+    <span class="n">histories</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">pos</span> <span class="o">+</span> <span class="n">length</span><span class="p">):</span>
+        <span class="n">history</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;nSample&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_SAMPLE</span> <span class="o">*</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_SAMPLE</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)),</span>
+            <span class="s1">&#39;lines&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span>
+            <span class="s1">&#39;sectors&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span>
+            <span class="s1">&#39;base_time&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span>
+            <span class="s1">&#39;notch&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span>
+            <span class="s1">&#39;colour&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span><span class="p">)),</span>
+            <span class="s1">&#39;selection&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span><span class="p">)),</span>
+            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;inputsNonInv&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)),</span>  <span class="c1"># NonInv : non inverting input</span>
+            <span class="s1">&#39;inputsInv&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)),</span>  <span class="c1"># Inv : inverting input</span>
+
+            <span class="s1">&#39;HiPass_Filter&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)),</span>
+            <span class="s1">&#39;LowPass_Filter&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)),</span>
+            <span class="s1">&#39;reference&#39;</span><span class="p">:</span> <span class="n">unpack</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">MAX_CAN_VIEW</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)),</span>
+            <span class="s1">&#39;free&#39;</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1720</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01\x00</span><span class="s1">&#39;</span><span class="p">),</span>
+            <span class="p">}</span>
+        <span class="n">histories</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">history</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">histories</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

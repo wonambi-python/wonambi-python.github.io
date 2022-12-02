@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change Log &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="TODO" href="todo.html" />
+    <link rel="prev" title="Development" href="testing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> wonambi
+            <img src="_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Change Log</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="change-log">
+<span id="changelog"></span><h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this heading"></a></h1>
+<section id="version-7">
+<h2>Version 7<a class="headerlink" href="#version-7" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>7.11</strong>: quick fix for Phillips staging import</p></li>
+<li><p><strong>7.10</strong>: re-re-release</p></li>
+<li><p><strong>7.09</strong>: re-release</p></li>
+<li><p><strong>7.08</strong>: import staging from Phillips CSV</p></li>
+<li><p><strong>7.07</strong>: import staging from Phillips CSV</p></li>
+<li><p><strong>7.06</strong>: use focal for travis CI</p></li>
+<li><p><strong>7.05</strong>: actually update setuptools</p></li>
+<li><p><strong>7.04</strong>: upgrade setuptools</p></li>
+<li><p><strong>7.03</strong>: fix for spindle detection with custom bands, io updates</p></li>
+<li><p><strong>7.02</strong>: event import support from RemLogic FR version</p></li>
+<li><p><strong>7.01</strong>: Release wonambi with 3-clause BSD</p></li>
+</ul>
+</section>
+<section id="version-6">
+<h2>Version 6<a class="headerlink" href="#version-6" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>6.17</strong>: major fix for event rejection</p></li>
+<li><p><strong>6.16</strong>: restore __init__.py (sorry)</p></li>
+<li><p><strong>6.15</strong>: frequency and timefrequency can handle NaN when using spectrogram</p></li>
+<li><p><strong>6.14</strong>: BIDS, Staresina2015 slow wave detector, staging import improvements</p></li>
+<li><p><strong>6.13</strong>: Ignore error when reading micromed TRC containing a non-standard montage</p></li>
+<li><p><strong>6.12</strong>: Ngo2015 slow wave detection; FOOOF 1.0 update; PRANA events import</p></li>
+<li><p><strong>6.11</strong>: create trials based on events for trial-based analysis</p></li>
+<li><p><strong>6.10</strong>: improvements to morlet analysis</p></li>
+<li><p><strong>6.09</strong>: bugfixes for data reading and staging import</p></li>
+<li><p><strong>6.08</strong>: convert data to new format (EDF, Brainvision, audio…) and other improvements and fixes</p></li>
+<li><p><strong>6.07</strong>: fix BCI2000 reading function (thanks to Schmetzler)</p></li>
+<li><p><strong>6.06</strong>: fix float for some spindle detections</p></li>
+<li><p><strong>6.05</strong>: backward compatibility for channels file</p></li>
+<li><p><strong>6.04</strong>: fix duration for dataset markers in GUI</p></li>
+<li><p><strong>6.03</strong>: added notch and demean to GUI</p></li>
+<li><p><strong>6.02</strong>: correct offset for openephys events</p></li>
+<li><p><strong>6.01</strong>: move all the test files in one location</p></li>
+</ul>
+</section>
+<section id="version-5">
+<h2>Version 5<a class="headerlink" href="#version-5" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>5.73</strong>: handle multiple videos for micromed</p></li>
+<li><p><strong>5.72</strong>: openephys; resampling by a fraction for display; fixes for remlogic staging import</p></li>
+<li><p><strong>5.71</strong>: fixes for spindle detectors: Moelle2011, Ferrarelli2007, Wamsley2012, Lacourse2018</p></li>
+<li><p><strong>5.70</strong>: remlogic staging import fix</p></li>
+<li><p><strong>5.69</strong>: changes to sleep statistics; buffer option in fetch</p></li>
+<li><p><strong>5.68</strong>: fixes for event import and Lacourse2018 spindle detector</p></li>
+<li><p><strong>5.67</strong>: remlogic event import</p></li>
+<li><p><strong>5.66</strong>: fixes for spindle detection. NOTE: spindle detection no longer merges across channels by default</p></li>
+<li><p><strong>5.65</strong>: fix for event writing</p></li>
+<li><p><strong>5.64</strong>: much faster event detection; spindle detection tweaks (Ferrarelli, Moelle, Martin)</p></li>
+<li><p><strong>5.63</strong>: tweaks for filters in Ferrarelli, Moelle and Martin spindle detectors</p></li>
+<li><p><strong>5.62</strong>: RemLogic import upgrade; fix for sleep fragmentation</p></li>
+<li><p><strong>5.61</strong>: HRVanalysis RRI import; DeltaMed staging import; fixes for staging import, epoch selection</p></li>
+<li><p><strong>5.60</strong>: online reference available as ‘_REF’</p></li>
+<li><p><strong>5.59</strong>: fill in epochs before staging start on import</p></li>
+<li><p><strong>5.58</strong>: bugfix for edf</p></li>
+<li><p><strong>5.57</strong>: allows for EDF with a negative physical range and digital range (warning instead of error)</p></li>
+<li><p><strong>5.56</strong>: sleep statistics by cycle bugfix</p></li>
+<li><p><strong>5.55</strong>: sleep statistics bugfix</p></li>
+<li><p><strong>5.54</strong>: sleep stats by cycle</p></li>
+<li><p><strong>5.53</strong>: export annotations to BIDS; lacourse normalization option</p></li>
+<li><p><strong>5.52</strong>: tolerance parameter, fixes for spindle detection</p></li>
+<li><p><strong>5.51</strong>: Martin2013 and Lacourse2018 fixes</p></li>
+<li><p><strong>5.50</strong>: event scoring agreement stats; median and log in Welch’s method</p></li>
+<li><p><strong>5.49</strong>: event consensus; Brain Vision and BIDS export fixes</p></li>
+<li><p><strong>5.48</strong>: Martin2013 spindle detection; fixes for Ray2015 and Lacourse2018</p></li>
+<li><p><strong>5.47</strong>: revamped spindle dialog; spindle detection fixes</p></li>
+<li><p><strong>5.46</strong>: Lacourse2018 spindle detection; fix for reading events</p></li>
+<li><p><strong>5.45</strong>: change event’s type in GUI</p></li>
+<li><p><strong>5.44</strong>: channel-specific artefact event marking and rejection</p></li>
+<li><p><strong>5.43</strong>: bugfix for SW tests</p></li>
+<li><p><strong>5.42</strong>: default SW detection is negative-then-positive (up-then-down); sleep stats fixes</p></li>
+<li><p><strong>5.41</strong>: improved sleep statistics</p></li>
+<li><p><strong>5.40</strong>: bci2000 bug fix</p></li>
+<li><p><strong>5.39</strong>: bci2000 sampling frequency can end with Hz</p></li>
+<li><p><strong>5.38</strong>: bci2000 sampling frequency can end with Hz</p></li>
+<li><p><strong>5.37</strong>: rename event type; detrending for detections; fixes for event merger, band power, cycles</p></li>
+<li><p><strong>5.36</strong>: fix for PRANA import</p></li>
+<li><p><strong>5.35</strong>: export RemLogic FR</p></li>
+<li><p><strong>5.34</strong>: import PRANA staging</p></li>
+<li><p><strong>5.33</strong>: min duration criterion applied after concatenation in fetch</p></li>
+<li><p><strong>5.32</strong>: faster Hilbert transform</p></li>
+<li><p><strong>5.31</strong>: bugfix</p></li>
+<li><p><strong>5.30</strong>: fix for band power</p></li>
+<li><p><strong>5.29</strong>: event parameter export from script</p></li>
+<li><p><strong>5.28</strong>: bugfix</p></li>
+<li><p><strong>5.27</strong>: improvements for event deletion</p></li>
+<li><p><strong>5.26</strong>: bugfixes; min event display duration</p></li>
+<li><p><strong>5.25</strong>: bugfixes for event selection, marker naviagation</p></li>
+<li><p><strong>5.24</strong>: event export dialog</p></li>
+<li><p><strong>5.23</strong>: improved event navigation</p></li>
+<li><p><strong>5.22</strong>: frequency and timefrequency should keep attributes</p></li>
+<li><p><strong>5.21</strong>: import and export bids</p></li>
+<li><p><strong>5.20</strong>: fixes for cycles, ferrarelli spindle detection, EDF handling</p></li>
+<li><p><strong>5.19</strong>: support to read eeglab files</p></li>
+<li><p><strong>5.18</strong>: bugfix for event data export</p></li>
+<li><p><strong>5.17</strong>: fixes for event parameter export</p></li>
+<li><p><strong>5.16</strong>: add notch filter</p></li>
+<li><p><strong>5.15</strong>: keep marker names when converting to events</p></li>
+<li><p><strong>5.14</strong>: fixes for Brain Vision, event selection in console</p></li>
+<li><p><strong>5.13</strong>: export events to Brain Vision</p></li>
+<li><p><strong>5.12</strong>: band-limited power; overlapping epochs in console</p></li>
+<li><p><strong>5.11</strong>: read openephys continuous data</p></li>
+<li><p><strong>5.10</strong>: poi on overview; import signal quality; bugfixes</p></li>
+<li><p><strong>5.09</strong>: read and write brainvision eeg, vhdr, vmrk</p></li>
+<li><p><strong>5.08</strong>: Ray2015 spindle detection</p></li>
+<li><p><strong>5.07</strong>: Parametrization of power spectra (fooof); FASST spindle detection</p></li>
+<li><p><strong>5.06</strong>: slow wave detection fixes</p></li>
+<li><p><strong>5.05</strong>: faster data fetching in detections; improved filters in spindle detection; new and improved Ferrarelli2007 detection</p></li>
+<li><p><strong>5.04</strong>: changed Moelle2011 default freqs</p></li>
+<li><p><strong>5.03</strong>: Moelle2011 spindle detection now uses ‘luebeck’ filter from article</p></li>
+<li><p><strong>5.02</strong>: bugfixes</p></li>
+<li><p><strong>5.01</strong>: Analysis Console</p></li>
+</ul>
+</section>
+<section id="version-4">
+<h2>Version 4<a class="headerlink" href="#version-4" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>4.27</strong>: hotfix: spindle frequency</p></li>
+<li><p><strong>4.26</strong>: console bugfixes, almost ready; removed evt analysis dialog</p></li>
+<li><p><strong>4.25</strong>: fix export svg</p></li>
+<li><p><strong>4.24</strong>: analysis console event export fix; ferrarelli2007 removed for now</p></li>
+<li><p><strong>4.23</strong>: export traces or overview to svg</p></li>
+<li><p><strong>4.22</strong>: improved sleep stats</p></li>
+<li><p><strong>4.21</strong>: sometimes detected events can be None</p></li>
+<li><p><strong>4.20</strong>: handle weird / unrecognized sleep stages and mark them as unknown</p></li>
+<li><p><strong>4.19</strong>: improved micromed reader</p></li>
+<li><p><strong>4.18</strong>: full documentation for sleep statistics</p></li>
+<li><p><strong>4.17</strong>: correct way to get timestamps for lights out and lights on</p></li>
+<li><p><strong>4.16</strong>: Enter relative or absolute time for lights out and on</p></li>
+<li><p><strong>4.15</strong>: improvements and fixes to detections; dataset export to edf and import from text</p></li>
+<li><p><strong>4.14</strong>: SW detection fixes</p></li>
+<li><p><strong>4.13</strong>: cycle option in detections; spindle detection fixes; sleep stats export</p></li>
+<li><p><strong>4.12</strong>: bugfix as before</p></li>
+<li><p><strong>4.11</strong>: bugfix of gui when pressing left and right button together</p></li>
+<li><p><strong>4.10</strong>: clear error messages and fix reading mff</p></li>
+<li><p><strong>4.09</strong>: improvements on analysis dialog. EDF reading more robust</p></li>
+<li><p><strong>4.08</strong>: fixed event deletion; improved i/o</p></li>
+<li><p><strong>4.07</strong>: updates and fixes for spindle detection</p></li>
+<li><p><strong>4.06</strong>: new spindle method; fix for Nir2011; epoch selection ; bugfixes</p></li>
+<li><p><strong>4.05</strong>: save and load montage when filtering is set to 0 (None)</p></li>
+<li><p><strong>4.04</strong>: use variable epoch length for scoring, better handling of ABF2 files</p></li>
+<li><p><strong>4.03</strong>: change nan to zero so we can at least plot something if there are missing data</p></li>
+<li><p><strong>4.02</strong>: you can open a dataset from the command line (and better logging)</p></li>
+<li><p><strong>4.01</strong>: frequency analysis is much more consistent and correct</p></li>
+</ul>
+</section>
+<section id="version-3">
+<h2>Version 3<a class="headerlink" href="#version-3" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>3.11</strong>: fixed event marking; stage now visible when zoomed in &lt;30s</p></li>
+<li><p><strong>3.08</strong>: list where the settings are stored</p></li>
+<li><p><strong>3.07</strong>: docs and tests for notes, analysis; some minor fixes</p></li>
+<li><p><strong>3.06</strong>: use time placeholder when abf files have empty time info</p></li>
+<li><p><strong>3.05</strong>: go to epoch gets input from user</p></li>
+<li><p><strong>3.04</strong>: support for axon abf file format</p></li>
+<li><p><strong>3.03</strong>: SW detection; import sleep scores for Alice, Compumedics, Domino, RemLogic, Sandman; merge events; bugfixes</p></li>
+<li><p><strong>3.02</strong>: bugfix when opening montage</p></li>
+<li><p><strong>3.01</strong>: merged with sleepytimes, including pretty GUI for spindle / SW detection</p></li>
+</ul>
+</section>
+<section id="version-2">
+<h2>Version 2<a class="headerlink" href="#version-2" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>2.06</strong>: import FASST sleep scores</p></li>
+<li><p><strong>2.05</strong>: full coverage of plot3 and detect</p></li>
+<li><p><strong>2.04</strong>: disable buttons in channels widget (+tests/docs)</p></li>
+<li><p><strong>2.03</strong>: use markers for channels 3d plots</p></li>
+<li><p><strong>2.02</strong>: new vispy surface for Viz3</p></li>
+<li><p><strong>2.01</strong>: use setup_wonambi.py for booking, it works in appveyor</p></li>
+</ul>
+</section>
+<section id="version-1">
+<h2>Version 1<a class="headerlink" href="#version-1" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>1.02</strong>: test with vispy (using pip instead of conda)</p></li>
+<li><p><strong>1.01</strong>: improved EDF reader (multiple frequencies and annotations)</p></li>
+<li><p><strong>1.00</strong>: phypno / sleepytimes -&gt; wonambi</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="testing.html" class="btn btn-neutral float-left" title="Development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="todo.html" class="btn btn-neutral float-right" title="TODO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

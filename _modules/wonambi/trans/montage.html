@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.trans.montage &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.trans.montage</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.trans.montage</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="p">(</span><span class="n">asarray</span><span class="p">,</span>
+                   <span class="n">c_</span><span class="p">,</span>
+                   <span class="n">dot</span><span class="p">,</span>
+                   <span class="n">nanmean</span><span class="p">,</span>
+                   <span class="n">nanmedian</span><span class="p">,</span>
+                   <span class="n">moveaxis</span><span class="p">,</span>
+                   <span class="n">where</span><span class="p">,</span>
+                   <span class="n">zeros</span><span class="p">,</span>
+                   <span class="p">)</span>
+<span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">lstsq</span>
+
+<span class="kn">from</span> <span class="nn">..attr</span> <span class="kn">import</span> <span class="n">Channels</span>
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="montage"><a class="viewcode-back" href="../../../api/wonambi.trans.montage.html#wonambi.trans.montage.montage">[docs]</a><span class="k">def</span> <span class="nf">montage</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ref_chan</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ref_to_avg</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bipolar</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">method</span><span class="o">=</span><span class="s1">&#39;average&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Apply linear transformation to the channels.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : instance of DataRaw</span>
+<span class="sd">        the data to filter</span>
+<span class="sd">    ref_chan : list of str</span>
+<span class="sd">        list of channels used as reference</span>
+<span class="sd">    ref_to_avg : bool</span>
+<span class="sd">        if re-reference to average or not</span>
+<span class="sd">    bipolar : float</span>
+<span class="sd">        distance in mm to consider two channels as neighbors and then compute</span>
+<span class="sd">        the bipolar montage between them.</span>
+<span class="sd">    method : str</span>
+<span class="sd">        &#39;average&#39; or &#39;median&#39; or &#39;regression&#39;. &#39;average&#39; / &#39;median&#39; takes the</span>
+<span class="sd">        mean / median across the channels selected as reference (it can be all) and</span>
+<span class="sd">        subtract it from each channel. &#39;regression&#39; keeps the residuals after</span>
+<span class="sd">        regressing out the mean across channels.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    filtered_data : instance of DataRaw</span>
+<span class="sd">        filtered data</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    If you don&#39;t change anything, it returns the same instance of data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">ref_to_avg</span> <span class="ow">and</span> <span class="n">ref_chan</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;You cannot specify reference to the average and &#39;</span>
+                        <span class="s1">&#39;the channels to use as reference&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ref_chan</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ref_chan</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">))</span> <span class="ow">or</span>
+            <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ref_chan</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;chan should be a list of strings&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ref_chan</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ref_chan</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># TODO: check bool for ref_chan</span>
+
+    <span class="k">if</span> <span class="n">bipolar</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="o">.</span><span class="n">attr</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Data should have Chan information in attr&#39;</span><span class="p">)</span>
+
+        <span class="n">_assert_equal_channels</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">])</span>
+        <span class="n">chan_in_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">chan</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">attr</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span>
+        <span class="n">chan</span> <span class="o">=</span> <span class="n">chan</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">label</span> <span class="ow">in</span> <span class="n">chan_in_data</span><span class="p">)</span>
+        <span class="n">chan</span><span class="p">,</span> <span class="n">trans</span> <span class="o">=</span> <span class="n">create_bipolar_chan</span><span class="p">(</span><span class="n">chan</span><span class="p">,</span> <span class="n">bipolar</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">attr</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chan</span>
+
+    <span class="k">if</span> <span class="n">ref_to_avg</span> <span class="ow">or</span> <span class="n">ref_chan</span> <span class="ow">or</span> <span class="n">bipolar</span><span class="p">:</span>
+        <span class="n">mdata</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">_copy</span><span class="p">()</span>
+
+        <span class="n">idx_chan</span> <span class="o">=</span> <span class="n">mdata</span><span class="o">.</span><span class="n">index_of</span><span class="p">(</span><span class="s1">&#39;chan&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mdata</span><span class="o">.</span><span class="n">number_of</span><span class="p">(</span><span class="s1">&#39;trial&#39;</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">ref_to_avg</span> <span class="ow">or</span> <span class="n">ref_chan</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">ref_to_avg</span><span class="p">:</span>
+                    <span class="n">ref_chan</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+
+                <span class="n">ref_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">(</span><span class="n">trial</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">chan</span><span class="o">=</span><span class="n">ref_chan</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;average&#39;</span><span class="p">:</span>
+                    <span class="n">mdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">(</span><span class="n">trial</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">nanmean</span><span class="p">(</span><span class="n">ref_data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">idx_chan</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;median&#39;</span><span class="p">:</span>
+                    <span class="n">mdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">(</span><span class="n">trial</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">nanmedian</span><span class="p">(</span><span class="n">ref_data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">idx_chan</span><span class="p">))</span>
+                <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;regression&#39;</span><span class="p">:</span>
+                    <span class="n">mdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">compute_average_regress</span><span class="p">(</span><span class="n">data</span><span class="p">(</span><span class="n">trial</span><span class="o">=</span><span class="n">i</span><span class="p">),</span> <span class="n">idx_chan</span><span class="p">)</span>
+
+            <span class="k">elif</span> <span class="n">bipolar</span><span class="p">:</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="o">.</span><span class="n">index_of</span><span class="p">(</span><span class="s1">&#39;chan&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;For matrix multiplication to work, &#39;</span>
+                                     <span class="s1">&#39;the first dimension should be chan&#39;</span><span class="p">)</span>
+                <span class="n">mdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">trans</span><span class="p">,</span> <span class="n">data</span><span class="p">(</span><span class="n">trial</span><span class="o">=</span><span class="n">i</span><span class="p">))</span>
+                <span class="n">mdata</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">chan</span><span class="o">.</span><span class="n">return_label</span><span class="p">(),</span>
+                                                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mdata</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="k">return</span> <span class="n">mdata</span></div>
+
+
+<span class="k">def</span> <span class="nf">_assert_equal_channels</span><span class="p">(</span><span class="n">axis</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check that all the trials have the same channels, in the same order.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    axis : ndarray of ndarray</span>
+<span class="sd">        one of the data axis</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i0</span> <span class="ow">in</span> <span class="n">axis</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i1</span> <span class="ow">in</span> <span class="n">axis</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">i0</span> <span class="o">==</span> <span class="n">i1</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The channels for all the trials should have &#39;</span>
+                                 <span class="s1">&#39;the same labels, in the same order.&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="create_bipolar_chan"><a class="viewcode-back" href="../../../api/wonambi.trans.montage.html#wonambi.trans.montage.create_bipolar_chan">[docs]</a><span class="k">def</span> <span class="nf">create_bipolar_chan</span><span class="p">(</span><span class="n">chan</span><span class="p">,</span> <span class="n">max_dist</span><span class="p">):</span>
+    <span class="n">chan_dist</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">chan</span><span class="o">.</span><span class="n">n_chan</span><span class="p">,</span> <span class="n">chan</span><span class="o">.</span><span class="n">n_chan</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;bool&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i0</span><span class="p">,</span> <span class="n">chan0</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chan</span><span class="o">.</span><span class="n">chan</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i1</span><span class="p">,</span> <span class="n">chan1</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chan</span><span class="o">.</span><span class="n">chan</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i0</span> <span class="o">&lt;</span> <span class="n">i1</span> <span class="ow">and</span> <span class="n">norm</span><span class="p">(</span><span class="n">chan0</span><span class="o">.</span><span class="n">xyz</span> <span class="o">-</span> <span class="n">chan1</span><span class="o">.</span><span class="n">xyz</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">max_dist</span><span class="p">:</span>
+                <span class="n">chan_dist</span><span class="p">[</span><span class="n">i0</span><span class="p">,</span> <span class="n">i1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">x_all</span><span class="p">,</span> <span class="n">y_all</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">chan_dist</span><span class="p">)</span>
+
+    <span class="n">bipolar_labels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">bipolar_xyz</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">bipolar_trans</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">x0</span><span class="p">,</span> <span class="n">x1</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x_all</span><span class="p">,</span> <span class="n">y_all</span><span class="p">):</span>
+
+        <span class="n">new_label</span> <span class="o">=</span> <span class="n">chan</span><span class="o">.</span><span class="n">chan</span><span class="p">[</span><span class="n">x0</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">chan</span><span class="o">.</span><span class="n">chan</span><span class="p">[</span><span class="n">x1</span><span class="p">]</span><span class="o">.</span><span class="n">label</span>
+        <span class="n">bipolar_labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_label</span><span class="p">)</span>
+
+        <span class="n">xyz</span> <span class="o">=</span> <span class="n">nanmean</span><span class="p">(</span><span class="n">c_</span><span class="p">[</span><span class="n">chan</span><span class="o">.</span><span class="n">chan</span><span class="p">[</span><span class="n">x0</span><span class="p">]</span><span class="o">.</span><span class="n">xyz</span><span class="p">,</span> <span class="n">chan</span><span class="o">.</span><span class="n">chan</span><span class="p">[</span><span class="n">x1</span><span class="p">]</span><span class="o">.</span><span class="n">xyz</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">bipolar_xyz</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>
+
+        <span class="n">trans</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">chan</span><span class="o">.</span><span class="n">n_chan</span><span class="p">)</span>
+        <span class="n">trans</span><span class="p">[</span><span class="n">x0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">trans</span><span class="p">[</span><span class="n">x1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">bipolar_trans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trans</span><span class="p">)</span>
+
+    <span class="n">bipolar_xyz</span> <span class="o">=</span> <span class="n">c_</span><span class="p">[</span><span class="n">bipolar_xyz</span><span class="p">]</span>
+    <span class="n">bipolar_trans</span> <span class="o">=</span> <span class="n">c_</span><span class="p">[</span><span class="n">bipolar_trans</span><span class="p">]</span>
+
+    <span class="n">bipolar</span> <span class="o">=</span> <span class="n">Channels</span><span class="p">(</span><span class="n">bipolar_labels</span><span class="p">,</span> <span class="n">bipolar_xyz</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">bipolar</span><span class="p">,</span> <span class="n">bipolar_trans</span></div>
+
+
+<div class="viewcode-block" id="compute_average_regress"><a class="viewcode-back" href="../../../api/wonambi.trans.montage.html#wonambi.trans.montage.compute_average_regress">[docs]</a><span class="k">def</span> <span class="nf">compute_average_regress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">idx_chan</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Take the mean across channels and regress out the mean from each channel</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : ndarray</span>
+<span class="sd">        2d array with channels on one dimension</span>
+<span class="sd">    idx_chan:</span>
+<span class="sd">        which axis contains channels</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndarray</span>
+<span class="sd">        same as x, but with the mean being regressed out</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The number of dimensions must be 2, not </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">moveaxis</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">idx_chan</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># move axis to the front</span>
+    <span class="n">avg</span> <span class="o">=</span> <span class="n">nanmean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">x_o</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">lstsq</span><span class="p">(</span><span class="n">avg</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:][:,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">rcond</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">x_o</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">avg</span>
+            <span class="p">)</span>
+    <span class="k">return</span> <span class="n">moveaxis</span><span class="p">(</span><span class="n">asarray</span><span class="p">(</span><span class="n">x_o</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">idx_chan</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="create_virtual_channel"><a class="viewcode-back" href="../../../api/wonambi.trans.montage.html#wonambi.trans.montage.create_virtual_channel">[docs]</a><span class="k">def</span> <span class="nf">create_virtual_channel</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">new_chan_name</span><span class="o">=</span><span class="s1">&#39;virtual&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;average&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a virtual channel by averaging several channels.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : instance of DataRaw</span>
+<span class="sd">        the data to filter</span>
+<span class="sd">    new_chan_name : str</span>
+<span class="sd">        label for the virtual channel</span>
+<span class="sd">    method : str</span>
+<span class="sd">        &#39;average&#39;</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    mdata : instance of Data</span>
+<span class="sd">        virtual data</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mdata</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">_copy</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mdata</span><span class="o">.</span><span class="n">number_of</span><span class="p">(</span><span class="s1">&#39;trial&#39;</span><span class="p">)):</span>
+        <span class="n">mdata</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">new_chan_name</span><span class="p">]</span>
+        <span class="n">mdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">nanmean</span><span class="p">(</span><span class="n">data</span><span class="p">(</span><span class="n">trial</span><span class="o">=</span><span class="n">i</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">mdata</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

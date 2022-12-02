@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.detect.slowwave module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.detect.spindle module" href="wonambi.detect.spindle.html" />
+    <link rel="prev" title="wonambi.detect.ripple module" href="wonambi.detect.ripple.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.detect.html">wonambi.detect package</a></li>
+      <li class="breadcrumb-item active">wonambi.detect.slowwave module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.detect.slowwave">
+<span id="wonambi-detect-slowwave-module"></span><h1>wonambi.detect.slowwave module<a class="headerlink" href="#module-wonambi.detect.slowwave" title="Permalink to this heading"></a></h1>
+<p>Module to detect slow waves.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.DetectSlowWave">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">DetectSlowWave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Massimini2004'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#DetectSlowWave"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.DetectSlowWave" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Design slow wave detection on a single channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>method</strong> (<em>str</em>) – one of the predefined methods</p></li>
+<li><p><strong>duration</strong> (<em>tuple</em><em> of </em><em>float</em>) – min and max duration of SWs</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.DetectSlowWave.invert">
+<span class="sig-name descname"><span class="pre">invert</span></span><a class="headerlink" href="#wonambi.detect.slowwave.DetectSlowWave.invert" title="Permalink to this definition"></a></dt>
+<dd><p>pass</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.DetectSlowWave.trough_duration">
+<span class="sig-name descname"><span class="pre">trough_duration</span></span><a class="headerlink" href="#wonambi.detect.slowwave.DetectSlowWave.trough_duration" title="Permalink to this definition"></a></dt>
+<dd><p>pass</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.detect_Massimini2004">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">detect_Massimini2004</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#detect_Massimini2004"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.detect_Massimini2004" title="Permalink to this definition"></a></dt>
+<dd><p>Slow wave detection based on Massimini et al., 2004.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSlowWave'</em>) – <dl class="simple">
+<dt>‘det_filt’<span class="classifier">dict</span></dt><dd><p>parameters for ‘butter’,</p>
+</dd>
+<dt>’duration’<span class="classifier">tuple of float</span></dt><dd><p>min and max duration of SW</p>
+</dd>
+<dt>’min_ptp’<span class="classifier">float</span></dt><dd><p>min peak-to-peak amplitude</p>
+</dd>
+<dt>’trough_duration’<span class="classifier">tuple of float</span></dt><dd><p>min and max duration of first half-wave (trough)</p>
+</dd>
+<dt>’max_trough_amp’<span class="classifier">float</span></dt><dd><p>The trough amplitude has a negative value, so this parameter sets
+the minimum depth of the trough</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected SWs</p></li>
+<li><p><em>float</em> – SW density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Massimini, M. et al. J Neurosci 24(31) 6862-70 (2004).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.detect_Ngo2015">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">detect_Ngo2015</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#detect_Ngo2015"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.detect_Ngo2015" title="Permalink to this definition"></a></dt>
+<dd><p>Slow wave detection based on Ngo et al., 2015.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSlowWave'</em>) – <dl class="simple">
+<dt>‘lowpass’<span class="classifier">dict</span></dt><dd><p>parameters for ‘low_butter’,</p>
+</dd>
+<dt>’duration’<span class="classifier">tuple of float</span></dt><dd><p>min and max duration of SW</p>
+</dd>
+<dt>’peak_thresh’<span class="classifier">float</span></dt><dd><p>mean trough amplitude is multiplied by this scalar to yield
+threshold; SWs above this threshold are kept</p>
+</dd>
+<dt>’ptp_thresh’<span class="classifier">float</span></dt><dd><p>percentile of mean ptp values, above which SW is kept</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – list of detected SWs</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Ngo, H-V. et al. J Neurosci 35(17) 6630-8 (2015).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.detect_Staresina2015">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">detect_Staresina2015</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#detect_Staresina2015"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.detect_Staresina2015" title="Permalink to this definition"></a></dt>
+<dd><p>Slow wave detection based on Ngo et al., 2015.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSlowWave'</em>) – <dl class="simple">
+<dt>‘lowpass’<span class="classifier">dict</span></dt><dd><p>parameters for ‘low_butter’,</p>
+</dd>
+<dt>’duration’<span class="classifier">tuple of float</span></dt><dd><p>min and max duration of SW</p>
+</dd>
+<dt>’ptp_thresh’<span class="classifier">float</span></dt><dd><p>percentile of mean ptp values, above which SW is kept</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – list of detected SWs</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Staresina, B. et al. 18(11) 1679-86 (2015).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.find_intervals">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">find_intervals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#find_intervals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.find_intervals" title="Permalink to this definition"></a></dt>
+<dd><p>From sample indices, find intervals within a certain duration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>indices</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – vector with the indices</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency of indices/data</p></li>
+<li><p><strong>duration</strong> (<em>tuple</em><em> of </em><em>float</em>) – min and max duration (s) of intervals</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’int’)</em> – N x 2 matrix with start and end samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.find_peaks_in_slowwwave">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">find_peaks_in_slowwwave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#find_peaks_in_slowwwave"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.find_peaks_in_slowwwave" title="Permalink to this definition"></a></dt>
+<dd><p>Find trough, - to + zero-crossing and peak from start/end times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data</p></li>
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x 2 matrix with start, end samples</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’int’)</em> – N x 5 matrix with start, trough, - to + zero crossing, peak,
+and end samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.find_zero_crossings">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">find_zero_crossings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#find_zero_crossings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.find_zero_crossings" title="Permalink to this definition"></a></dt>
+<dd><p>Find indices of zero-crossings in data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data</p></li>
+<li><p><strong>xtype</strong> (<em>str</em>) – if ‘all’, returns all zero crossings
+if ‘neg_to_pos’, returns only negative-to-positive zero-crossings
+if ‘pos_to_neg’, returns only positive-to-negative zero-crossings</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>nadarray of int</em> – indices of zero-crossings in the data</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A value of exactly 0 in data will always create a zero-crossing with
+nonzero values preceding of following it.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.make_slow_waves">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">make_slow_waves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#make_slow_waves"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.make_slow_waves" title="Permalink to this definition"></a></dt>
+<dd><p>Create dict for each slow wave, based on events of time points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x 5 matrix with start, trough, zero, peak, end samples</p></li>
+<li><p><strong>data</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with time points</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – list of all the SWs, with information about start,
+trough_time, zero_time, peak_time, end, duration (s), trough_val,
+peak_val, peak-to-peak amplitude (signal units), area_under_curve
+(signal units * s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.slowwave.select_peaks">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.slowwave.</span></span><span class="sig-name descname"><span class="pre">select_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/slowwave.html#select_peaks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.slowwave.select_peaks" title="Permalink to this definition"></a></dt>
+<dd><p>Check whether event satisfies amplitude limit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with data</p></li>
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x 2+ matrix with peak/trough in second position</p></li>
+<li><p><strong>limit</strong> (<em>float</em>) – low and high limit for spindle duration</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’int’)</em> – N x 2+ matrix with peak/trough in second position</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.detect.ripple.html" class="btn btn-neutral float-left" title="wonambi.detect.ripple module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.detect.spindle.html" class="btn btn-neutral float-right" title="wonambi.detect.spindle module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

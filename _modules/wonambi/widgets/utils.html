@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.widgets.utils &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.widgets.utils</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.widgets.utils</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Various functions used for the GUI.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">ast</span> <span class="kn">import</span> <span class="n">literal_eval</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span><span class="p">,</span> <span class="n">floor</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">arange</span><span class="p">,</span> <span class="n">NaN</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">dirname</span><span class="p">,</span> <span class="n">join</span><span class="p">,</span> <span class="n">realpath</span>
+
+<span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="kn">import</span> <span class="n">QRectF</span><span class="p">,</span> <span class="n">QSettings</span><span class="p">,</span> <span class="n">Qt</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtGui</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QBrush</span><span class="p">,</span>
+                         <span class="n">QPen</span><span class="p">,</span>
+                         <span class="n">QColor</span><span class="p">,</span>
+                         <span class="n">QPainterPath</span><span class="p">,</span>
+                         <span class="n">QPainter</span><span class="p">,</span>
+                         <span class="p">)</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtSvg</span> <span class="kn">import</span> <span class="n">QSvgGenerator</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QCheckBox</span><span class="p">,</span>
+                             <span class="n">QComboBox</span><span class="p">,</span>
+                             <span class="n">QCommonStyle</span><span class="p">,</span>
+                             <span class="n">QFileDialog</span><span class="p">,</span>
+                             <span class="n">QGraphicsItem</span><span class="p">,</span>
+                             <span class="n">QGraphicsRectItem</span><span class="p">,</span>
+                             <span class="n">QGraphicsSimpleTextItem</span><span class="p">,</span>
+                             <span class="n">QLineEdit</span><span class="p">,</span>
+                             <span class="n">QMessageBox</span><span class="p">,</span>
+                             <span class="n">QPushButton</span><span class="p">,</span>
+                             <span class="n">QRadioButton</span><span class="p">,</span>
+                             <span class="n">QSpinBox</span><span class="p">,</span>
+                             <span class="p">)</span>
+
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">LINE_WIDTH</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># COSMETIC LINE</span>
+<span class="n">LINE_COLOR</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
+<span class="c1"># TODO: this in ConfigNotes</span>
+<span class="n">STAGE_NAME</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NREM1&#39;</span><span class="p">,</span> <span class="s1">&#39;NREM2&#39;</span><span class="p">,</span> <span class="s1">&#39;NREM3&#39;</span><span class="p">,</span> <span class="s1">&#39;REM&#39;</span><span class="p">,</span> <span class="s1">&#39;Wake&#39;</span><span class="p">,</span> <span class="s1">&#39;Movement&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Undefined&#39;</span><span class="p">,</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;Artefact&#39;</span><span class="p">]</span>
+
+<span class="n">MAX_LENGTH</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">stdicon</span> <span class="o">=</span> <span class="n">QCommonStyle</span><span class="o">.</span><span class="n">standardIcon</span>
+
+
+<span class="n">icon_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s1">&#39;icons&#39;</span><span class="p">)</span>
+<span class="n">oxy_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">icon_path</span><span class="p">,</span> <span class="s1">&#39;oxygen&#39;</span><span class="p">)</span>
+
+<span class="n">ICON</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;application&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">icon_path</span><span class="p">,</span> <span class="s1">&#39;wonambi.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;open_rec&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;document-open.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;page_prev&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;go-previous-view.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;page_next&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;go-next-view.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;step_prev&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;go-previous.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;step_next&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;go-next.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;chronometer&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;chronometer.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;up&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;go-up.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;down&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;go-down.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;zoomin&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;zoom-in.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;zoomout&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;zoom-out.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;zoomnext&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;zoom-next.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;zoomprev&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;zoom-previous.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;ydist_more&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;format-line-spacing-triple.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;ydist_less&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;format-line-spacing-normal.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;selchan&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;mail-mark-task.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;widget&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;window-duplicate.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;settings&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;configure.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;quit&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;window-close.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;bookmark&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;bookmarks-organize.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;edit-table-cell-merge.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;new_eventtype&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;edit-table-insert-column-right.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;del_eventtype&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;edit-table-delete-column.png&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;help-about&#39;</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">oxy_path</span><span class="p">,</span> <span class="s1">&#39;help-about.png&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+
+<span class="n">settings</span> <span class="o">=</span> <span class="n">QSettings</span><span class="p">(</span><span class="s2">&quot;wonambi&quot;</span><span class="p">,</span> <span class="s2">&quot;wonambi&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Path"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.Path">[docs]</a><span class="k">class</span> <span class="nc">Path</span><span class="p">(</span><span class="n">QPainterPath</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Paint a line in the simplest possible way.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : ndarray or list</span>
+<span class="sd">        x-coordinates</span>
+<span class="sd">    y : ndarray or list</span>
+<span class="sd">        y-coordinates</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">moveTo</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">i_x</span><span class="p">,</span> <span class="n">i_y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lineTo</span><span class="p">(</span><span class="n">i_x</span><span class="p">,</span> <span class="n">i_y</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RectMarker"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker">[docs]</a><span class="k">class</span> <span class="nc">RectMarker</span><span class="p">(</span><span class="n">QGraphicsRectItem</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Class to draw a rectangular, coloured item.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : float</span>
+<span class="sd">        x position in scene</span>
+<span class="sd">    y : gloat</span>
+<span class="sd">        y position in scene</span>
+<span class="sd">    width : float</span>
+<span class="sd">        length in seconds</span>
+<span class="sd">    height : float</span>
+<span class="sd">        height in scene units</span>
+<span class="sd">    color : str or QColor, optional</span>
+<span class="sd">        color of the rectangle</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">zvalue</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setZValue</span><span class="p">(</span><span class="n">zvalue</span><span class="p">)</span>
+        <span class="n">buffer</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marker</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b_rect</span> <span class="o">=</span> <span class="n">QRectF</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">buffer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">buffer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">width</span> <span class="o">+</span> <span class="n">buffer</span><span class="p">,</span>
+                             <span class="n">height</span> <span class="o">+</span> <span class="n">buffer</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">zvalue</span><span class="p">,</span> <span class="n">color</span>
+
+<div class="viewcode-block" id="RectMarker.boundingRect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker.boundingRect">[docs]</a>    <span class="k">def</span> <span class="nf">boundingRect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">b_rect</span></div>
+
+<div class="viewcode-block" id="RectMarker.paint"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker.paint">[docs]</a>    <span class="k">def</span> <span class="nf">paint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">QColor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
+        <span class="n">painter</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">QBrush</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">QPen</span><span class="p">()</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setWidth</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">setColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="n">painter</span><span class="o">.</span><span class="n">setPen</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">painter</span><span class="o">.</span><span class="n">drawRect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">marker</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">paint</span><span class="p">(</span><span class="n">painter</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">widget</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RectMarker.contains"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker.contains">[docs]</a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TextItem_with_BG"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.TextItem_with_BG">[docs]</a><span class="k">class</span> <span class="nc">TextItem_with_BG</span><span class="p">(</span><span class="n">QGraphicsSimpleTextItem</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Class to draw text with dark background (easier to read).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    bg_color : str or QColor, optional</span>
+<span class="sd">        color to use as background</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bg_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bg_color</span> <span class="o">=</span> <span class="n">bg_color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setFlag</span><span class="p">(</span><span class="n">QGraphicsItem</span><span class="o">.</span><span class="n">ItemIgnoresTransformations</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">QBrush</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">white</span><span class="p">))</span>
+
+<div class="viewcode-block" id="TextItem_with_BG.paint"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.TextItem_with_BG.paint">[docs]</a>    <span class="k">def</span> <span class="nf">paint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+        <span class="n">bg_color</span> <span class="o">=</span> <span class="n">QColor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bg_color</span><span class="p">)</span>
+        <span class="n">painter</span><span class="o">.</span><span class="n">setBrush</span><span class="p">(</span><span class="n">QBrush</span><span class="p">(</span><span class="n">bg_color</span><span class="p">))</span>
+        <span class="n">painter</span><span class="o">.</span><span class="n">drawRect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">boundingRect</span><span class="p">())</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">paint</span><span class="p">(</span><span class="n">painter</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">widget</span><span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="FormBool"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool">[docs]</a><span class="k">class</span> <span class="nc">FormBool</span><span class="p">(</span><span class="n">QCheckBox</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QCheckBox to have a more consistent API across widgets.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    checkbox_label : str</span>
+<span class="sd">        label next to checkbox</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">checkbox_label</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">checkbox_label</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormBool.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the value of the QCheckBox, as boolean.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : bool</span>
+<span class="sd">            not used</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            state of the checkbox</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">checkState</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Checked</span></div>
+
+<div class="viewcode-block" id="FormBool.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the checkbox.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">            value for the checkbox</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setCheckState</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Checked</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setCheckState</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Unchecked</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FormBool.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when user ticks the box.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stateChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">funct</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="FormRadio"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormRadio">[docs]</a><span class="k">class</span> <span class="nc">FormRadio</span><span class="p">(</span><span class="n">QRadioButton</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QRadioButton to have a more consistent API across widgets.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    checkbox_label : str</span>
+<span class="sd">        label next to checkbox</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">checkbox_label</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">checkbox_label</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormRadio.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormRadio.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the value of the QCheckBox, as boolean.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : bool</span>
+<span class="sd">            not used</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            state of the checkbox</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">isChecked</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Checked</span></div>
+
+<div class="viewcode-block" id="FormRadio.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormRadio.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the checkbox.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : bool</span>
+<span class="sd">            value for the checkbox</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Checked</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Unchecked</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FormRadio.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormRadio.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when user ticks the box.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">toggled</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">funct</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="FormFloat"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat">[docs]</a><span class="k">class</span> <span class="nc">FormFloat</span><span class="p">(</span><span class="n">QLineEdit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QLineEdit for float to have a more consistent API across</span>
+<span class="sd">    widgets.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    significant_digits : int</span>
+<span class="sd">        number of significant digits</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxw</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">significant_digits</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">significant_digits</span> <span class="o">=</span> <span class="n">significant_digits</span>
+
+        <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">maxw</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="n">maxw</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormFloat.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get float from widget.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : float</span>
+<span class="sd">            default value for the parameter in case it fails</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        float</span>
+<span class="sd">            the value in text or default</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">text</span> <span class="o">==</span> <span class="s1">&#39;N/A&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">NaN</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Cannot convert &quot;&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot; to float.&#39;</span> <span class="o">+</span>
+                     <span class="s1">&#39;Using default &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">default</span><span class="p">))</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">text</span></div>
+
+<div class="viewcode-block" id="FormFloat.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the float.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : float</span>
+<span class="sd">            value for the line edit</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">or</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;N/A&#39;</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;{:.&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">significant_digits</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;f}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FormFloat.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when the text was changed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textEdited</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">funct</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="FormInt"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormInt">[docs]</a><span class="k">class</span> <span class="nc">FormInt</span><span class="p">(</span><span class="n">QLineEdit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QLineEdit for int to have a more consistent API across widgets.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormInt.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormInt.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get int from widget.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : int</span>
+<span class="sd">            default value for the parameter in case it fails</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        int</span>
+<span class="sd">            the value in text or default</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>  <span class="c1"># to convert values like 30.0</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Cannot convert &quot;&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot; to int. &#39;</span> <span class="o">+</span>
+                     <span class="s1">&#39;Using default &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">default</span><span class="p">))</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">text</span></div>
+
+<div class="viewcode-block" id="FormInt.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormInt.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the int.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : int</span>
+<span class="sd">            value for the line edit</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="FormInt.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormInt.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when the text was changed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textEdited</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">funct</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="FormList"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormList">[docs]</a><span class="k">class</span> <span class="nc">FormList</span><span class="p">(</span><span class="n">QLineEdit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QLineEdit for lists to have a more consistent API across</span>
+<span class="sd">    widgets.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormList.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormList.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get int from widget.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : list</span>
+<span class="sd">            list with widgets</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list</span>
+<span class="sd">            list that might contain int or str or float etc</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">default</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">literal_eval</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">pass</span>
+                <span class="c1"># raise ValueError</span>
+
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Cannot convert &quot;&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot; to list. &#39;</span> <span class="o">+</span>
+                     <span class="s1">&#39;Using default &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">default</span><span class="p">))</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">text</span></div>
+
+<div class="viewcode-block" id="FormList.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormList.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the list.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : list</span>
+<span class="sd">            value for the line edit</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="FormList.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormList.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when the text was changed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textEdited</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">funct</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="FormStr"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormStr">[docs]</a><span class="k">class</span> <span class="nc">FormStr</span><span class="p">(</span><span class="n">QLineEdit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QLineEdit for str to have a more consistent API across widgets.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormStr.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormStr.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get int from widget.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : str</span>
+<span class="sd">            not used</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            the value in text</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FormStr.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormStr.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the string.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : str</span>
+<span class="sd">            value for the line edit</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FormStr.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormStr.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when the text was changed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textEdited</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">funct</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="FormDir"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormDir">[docs]</a><span class="k">class</span> <span class="nc">FormDir</span><span class="p">(</span><span class="n">QPushButton</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QPushButton for str to have a more consistent API across widgets.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    It calls to open the directory three times, but I don&#39;t understand why</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormDir.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormDir.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get int from widget.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : str</span>
+<span class="sd">            not used</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            the value in text</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FormDir.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormDir.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the string.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : str</span>
+<span class="sd">            value for the line edit</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FormDir.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormDir.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when the text was changed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        There is something wrong here. When you run this function, it calls</span>
+<span class="sd">        for opening a directory three or four times. This is obviously wrong</span>
+<span class="sd">        but I don&#39;t understand why this happens three times. Traceback did not</span>
+<span class="sd">        help.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">get_directory</span><span class="p">():</span>
+            <span class="n">rec</span> <span class="o">=</span> <span class="n">QFileDialog</span><span class="o">.</span><span class="n">getExistingDirectory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                                   <span class="s1">&#39;Path to Recording&#39;</span>
+                                                   <span class="s1">&#39; Directory&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rec</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                <span class="k">return</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
+            <span class="n">funct</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">get_directory</span><span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="FormMenu"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu">[docs]</a><span class="k">class</span> <span class="nc">FormMenu</span><span class="p">(</span><span class="n">QComboBox</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QComboBox for dropdown menus to have a more consistent API</span>
+<span class="sd">    across widgets.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    input_list: list of str</span>
+<span class="sd">        items to include in the dropdown menu / combobox</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_list</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">input_list</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">input_list</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormMenu.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get selection from widget.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : str</span>
+<span class="sd">            str for use by widget</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            selected item from the combobox</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">default</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span>
+
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Cannot convert &quot;&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot; to list. &#39;</span> <span class="o">+</span>
+                     <span class="s1">&#39;Using default &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">default</span><span class="p">))</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">text</span></div>
+
+<div class="viewcode-block" id="FormMenu.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the list.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : str</span>
+<span class="sd">            value for the combobox</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCurrentText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="FormMenu.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when the selection was changed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">currentIndexChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">funct</span><span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="FormSpin"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormSpin">[docs]</a><span class="k">class</span> <span class="nc">FormSpin</span><span class="p">(</span><span class="n">QSpinBox</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Subclass QSpinBox for int to have a more consistent API across widgets.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">min_val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setMinimum</span><span class="p">(</span><span class="n">min_val</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">max_val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setMaximum</span><span class="p">(</span><span class="n">max_val</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">step</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setSingleStep</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FormSpin.get_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormSpin.get_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get int from widget.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : int</span>
+<span class="sd">            default value for the parameter in case it fails</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        int</span>
+<span class="sd">            the value in text or default</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Cannot convert &quot;&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot; to int. &#39;</span> <span class="o">+</span>
+                     <span class="s1">&#39;Using default &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">default</span><span class="p">))</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_value</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">text</span></div>
+
+<div class="viewcode-block" id="FormSpin.set_value"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormSpin.set_value">[docs]</a>    <span class="k">def</span> <span class="nf">set_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set value of the int.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : int</span>
+<span class="sd">            value for the line edit</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="FormSpin.connect"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.FormSpin.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">funct</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Call funct when the text was changed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        funct : function</span>
+<span class="sd">            function that broadcasts a change.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">funct</span><span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="keep_recent_datasets"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.keep_recent_datasets">[docs]</a><span class="k">def</span> <span class="nf">keep_recent_datasets</span><span class="p">(</span><span class="n">max_dataset_history</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Keep track of the most recent recordings.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    max_dataset_history : int</span>
+<span class="sd">        maximum number of datasets to remember</span>
+<span class="sd">    info : str, optional TODO</span>
+<span class="sd">        path to file</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list of str</span>
+<span class="sd">        paths to most recent datasets (only if you don&#39;t specify</span>
+<span class="sd">        new_dataset)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">history</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;recent_recordings&#39;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">history</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">info</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">info</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">new_dataset</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">filename</span>
+
+        <span class="k">if</span> <span class="n">new_dataset</span> <span class="ow">in</span> <span class="n">history</span><span class="p">:</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">new_dataset</span> <span class="o">+</span> <span class="s1">&#39; already present, will be replaced&#39;</span><span class="p">)</span>
+            <span class="n">history</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">new_dataset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">history</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_dataset_history</span><span class="p">:</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Removing last dataset &#39;</span> <span class="o">+</span> <span class="n">history</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">history</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+        <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Adding &#39;</span> <span class="o">+</span> <span class="n">new_dataset</span> <span class="o">+</span> <span class="s1">&#39; to list of recent datasets&#39;</span><span class="p">)</span>
+        <span class="n">history</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">new_dataset</span><span class="p">)</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s1">&#39;recent_recordings&#39;</span><span class="p">,</span> <span class="n">history</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">history</span></div>
+
+
+<div class="viewcode-block" id="choose_file_or_dir"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.choose_file_or_dir">[docs]</a><span class="k">def</span> <span class="nf">choose_file_or_dir</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Create a simple message box to see if the user wants to open dir or file</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        &#39;dir&#39; or &#39;file&#39; or &#39;abort&#39;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">(</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Information</span><span class="p">,</span> <span class="s1">&#39;Open Dataset&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;Do you want to open a file or a directory?&#39;</span><span class="p">)</span>
+    <span class="n">dir_button</span> <span class="o">=</span> <span class="n">question</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s1">&#39;Directory&#39;</span><span class="p">,</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">YesRole</span><span class="p">)</span>
+    <span class="n">file_button</span> <span class="o">=</span> <span class="n">question</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s1">&#39;File&#39;</span><span class="p">,</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">NoRole</span><span class="p">)</span>
+    <span class="n">question</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Cancel</span><span class="p">)</span>
+    <span class="n">question</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">question</span><span class="o">.</span><span class="n">clickedButton</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">response</span> <span class="o">==</span> <span class="n">dir_button</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;dir&#39;</span>
+    <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="n">file_button</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;file&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;abort&#39;</span></div>
+
+
+<div class="viewcode-block" id="select_session"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.select_session">[docs]</a><span class="k">def</span> <span class="nf">select_session</span><span class="p">(</span><span class="n">sessions</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Select one session out of a list of sessions.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    sessions : list</span>
+<span class="sd">        list of integers</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None or int</span>
+<span class="sd">        index of the session being chosen</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">(</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Question</span><span class="p">,</span> <span class="s1">&#39;Open Dataset&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;Select one session&#39;</span><span class="p">)</span>
+
+    <span class="n">buttons</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">sess</span> <span class="ow">in</span> <span class="n">sessions</span><span class="p">:</span>
+        <span class="n">buttons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">question</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="s1">&#39;Session &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sess</span><span class="p">),</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">ActionRole</span><span class="p">))</span>
+    <span class="n">button_cancel</span> <span class="o">=</span> <span class="n">question</span><span class="o">.</span><span class="n">addButton</span><span class="p">(</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Cancel</span><span class="p">)</span>
+    <span class="n">question</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">question</span><span class="o">.</span><span class="n">clickedButton</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">response</span> <span class="o">==</span> <span class="n">button_cancel</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">buttons</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="short_strings"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.short_strings">[docs]</a><span class="k">def</span> <span class="nf">short_strings</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="n">MAX_LENGTH</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
+        <span class="n">max_length</span> <span class="o">-=</span> <span class="mi">3</span>  <span class="c1"># dots</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">max_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="o">-</span><span class="n">floor</span><span class="p">(</span><span class="n">max_length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="n">start</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;...&#39;</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">s</span></div>
+
+
+<div class="viewcode-block" id="convert_name_to_color"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.convert_name_to_color">[docs]</a><span class="k">def</span> <span class="nf">convert_name_to_color</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert any string to an RGB color.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    s : str</span>
+<span class="sd">        string to convert</span>
+<span class="sd">    selection : bool, optional</span>
+<span class="sd">        if an event is being selected, it&#39;s lighter</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of QColor</span>
+<span class="sd">        one of the possible color</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    It takes any string and converts it to RGB color. The same string always</span>
+<span class="sd">    returns the same color. The numbers are a bit arbitrary but not completely.</span>
+<span class="sd">    h is the baseline color (keep it high to have brighter colors). Make sure</span>
+<span class="sd">    that the max module + h is less than 256 (RGB limit).</span>
+
+<span class="sd">    The number you multiply ord for is necessary to differentiate the letters</span>
+<span class="sd">    (otherwise &#39;r&#39; and &#39;s&#39; are too close to each other).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span> <span class="o">*</span> <span class="nb">ord</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
+    <span class="n">sum_mod</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">%</span> <span class="mi">100</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">QColor</span><span class="p">(</span><span class="n">sum_mod</span><span class="p">(</span><span class="n">v</span><span class="p">[::</span><span class="mi">3</span><span class="p">])</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">sum_mod</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">3</span><span class="p">])</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span>
+                   <span class="n">sum_mod</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">3</span><span class="p">])</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">color</span></div>
+
+
+<div class="viewcode-block" id="freq_from_str"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.freq_from_str">[docs]</a><span class="k">def</span> <span class="nf">freq_from_str</span><span class="p">(</span><span class="n">freq_str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Obtain frequency ranges from input string, either as list or dynamic</span>
+<span class="sd">    notation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    freq_str : str</span>
+<span class="sd">        String with frequency ranges, either as a list:</span>
+<span class="sd">        e.g. [[1-3], [3-5], [5-8]];</span>
+<span class="sd">        or with a dynamic definition: (start, stop, width, step).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list of tuple of float or None</span>
+<span class="sd">        Every tuple of float represents a frequency band. If input is invalid,</span>
+<span class="sd">        returns None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">freq</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">as_list</span> <span class="o">=</span> <span class="n">freq_str</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">freq_str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;[&#39;</span> <span class="ow">and</span> <span class="n">freq_str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;]&#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">as_list</span><span class="p">:</span>
+                <span class="n">one_band</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+                <span class="n">one_band</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">one_band</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">one_band</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">freq</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_band</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">freq_str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span> <span class="ow">and</span> <span class="n">freq_str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;)&#39;</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">as_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">as_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">stop</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">as_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">halfwidth</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">as_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="n">step</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">as_list</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+                <span class="n">centres</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">centres</span><span class="p">:</span>
+                    <span class="n">freq</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span> <span class="o">-</span> <span class="n">halfwidth</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">halfwidth</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">freq</span></div>
+
+
+<div class="viewcode-block" id="export_graphics"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.export_graphics">[docs]</a><span class="k">def</span> <span class="nf">export_graphics</span><span class="p">(</span><span class="n">MAIN</span><span class="p">,</span> <span class="n">checked</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+    <span class="kn">from</span> <span class="nn">.modal_widgets</span> <span class="kn">import</span> <span class="n">SVGDialog</span>  <span class="c1"># avoid circolar import</span>
+
+    <span class="k">if</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="n">MAIN</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">filename</span><span class="p">),</span> <span class="s1">&#39;*.svg&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">svg_dialog</span> <span class="o">=</span> <span class="n">SVGDialog</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">test</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">svg_dialog</span><span class="o">.</span><span class="n">exec</span><span class="p">():</span>
+            <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">svg_dialog</span><span class="o">.</span><span class="n">idx_file</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">svg_dialog</span><span class="o">.</span><span class="n">idx_list</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Traces&#39;</span><span class="p">:</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">traces</span>
+    <span class="k">elif</span> <span class="n">svg_dialog</span><span class="o">.</span><span class="n">idx_list</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Overview&#39;</span><span class="p">:</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">MAIN</span><span class="o">.</span><span class="n">overview</span>
+
+    <span class="n">svg_file</span> <span class="o">=</span> <span class="n">svg_dialog</span><span class="o">.</span><span class="n">idx_file</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">svg_file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.svg&#39;</span><span class="p">):</span>
+        <span class="n">svg_file</span> <span class="o">+=</span> <span class="s1">&#39;.svg&#39;</span>
+    <span class="n">export_graphics_to_svg</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">svg_file</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="export_graphics_to_svg"><a class="viewcode-back" href="../../../api/wonambi.widgets.utils.html#wonambi.widgets.utils.export_graphics_to_svg">[docs]</a><span class="k">def</span> <span class="nf">export_graphics_to_svg</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Export graphics to svg</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    widget : instance of QGraphicsView</span>
+<span class="sd">        traces or overview</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        path to save svg</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">generator</span> <span class="o">=</span> <span class="n">QSvgGenerator</span><span class="p">()</span>
+    <span class="n">generator</span><span class="o">.</span><span class="n">setFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">generator</span><span class="o">.</span><span class="n">setSize</span><span class="p">(</span><span class="n">widget</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+    <span class="n">generator</span><span class="o">.</span><span class="n">setViewBox</span><span class="p">(</span><span class="n">widget</span><span class="o">.</span><span class="n">rect</span><span class="p">())</span>
+
+    <span class="n">painter</span> <span class="o">=</span> <span class="n">QPainter</span><span class="p">()</span>
+    <span class="n">painter</span><span class="o">.</span><span class="n">begin</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
+    <span class="n">widget</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">painter</span><span class="p">)</span>
+    <span class="n">painter</span><span class="o">.</span><span class="n">end</span><span class="p">()</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

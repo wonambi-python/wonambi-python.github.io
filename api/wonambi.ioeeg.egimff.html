@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.ioeeg.egimff module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.ioeeg.fieldtrip module" href="wonambi.ioeeg.fieldtrip.html" />
+    <link rel="prev" title="wonambi.ioeeg.eeglab module" href="wonambi.ioeeg.eeglab.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.ioeeg.html">wonambi.ioeeg package</a></li>
+      <li class="breadcrumb-item active">wonambi.ioeeg.egimff module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.ioeeg.egimff">
+<span id="wonambi-ioeeg-egimff-module"></span><h1>wonambi.ioeeg.egimff module<a class="headerlink" href="#module-wonambi.ioeeg.egimff" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.EgiMff">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.egimff.</span></span><span class="sig-name descname"><span class="pre">EgiMff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#EgiMff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.EgiMff" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Basic class to read the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>path to file</em>) – the name of the filename or directory</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.EgiMff.return_dat">
+<span class="sig-name descname"><span class="pre">return_dat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begsam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endsam</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#EgiMff.return_dat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.EgiMff.return_dat" title="Permalink to this definition"></a></dt>
+<dd><p>Return the data as 2D numpy.ndarray.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chan</strong> (<em>list</em>) – indices of the channels to read</p></li>
+<li><p><strong>begsam</strong> (<em>int</em>) – index of the first sample</p></li>
+<li><p><strong>endsam</strong> (<em>int</em>) – index of the last sample</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>numpy.ndarray</em> – A 2d matrix, with dimension chan X samples</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This format is tricky for both channels and samples. For the samples,
+we just use the boundaries in the block header. For the channels, we
+assume that there are max two signals, one EEG and one PIB box. We
+just use the boundary between them to define if a channel belongs to
+the first group or to the second.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>use wonambi.ioeeg.utils._select_blocks here, but you need to test it
+with a PIB box.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.EgiMff.return_hdr">
+<span class="sig-name descname"><span class="pre">return_hdr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#EgiMff.return_hdr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.EgiMff.return_hdr" title="Permalink to this definition"></a></dt>
+<dd><p>Return the header for further use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>subj_id</strong> (<em>str</em>) – subject identification code</p></li>
+<li><p><strong>start_time</strong> (<em>datetime</em>) – start time of the dataset</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>chan_name</strong> (<em>list of str</em>) – list of all the channels</p></li>
+<li><p><strong>n_samples</strong> (<em>int</em>) – number of samples in the dataset</p></li>
+<li><p><strong>orig</strong> (<em>dict</em>) – additional information taken directly from the header</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.EgiMff.return_markers">
+<span class="sig-name descname"><span class="pre">return_markers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#EgiMff.return_markers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.EgiMff.return_markers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.EgiMff.return_videos">
+<span class="sig-name descname"><span class="pre">return_videos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">begtime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endtime</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#EgiMff.return_videos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.EgiMff.return_videos" title="Permalink to this definition"></a></dt>
+<dd><p>It returns the videos and beginning and end time of the video
+segment. The MFF video format is not well documented. As far as I can
+see, the manual 20150805 says that there might be multiple .mp4 files
+but I only see one .mov file (and no way to specify which video file to
+read). In addition, there is a file “po_videoSyncups.xml” which seems
+to contain some time information, but the sampleTime does not start at
+zero, but at a large number. I don’t know how to use the info in
+po_videoSyncups.xml.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>begtime</strong> (<em>float</em>) – start time of the period of interest</p></li>
+<li><p><strong>endtime</strong> (<em>float</em>) – end time of the period of interest</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of one path</em> – list with only one element</p></li>
+<li><p><em>float</em> – start time of the video</p></li>
+<li><p><em>float</em> – end time of the video</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.ns">
+<span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.egimff.</span></span><span class="sig-name descname"><span class="pre">ns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#ns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.ns" title="Permalink to this definition"></a></dt>
+<dd><p>remove namespace, but only it there is a namespace to begin with</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.parse_xml">
+<span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.egimff.</span></span><span class="sig-name descname"><span class="pre">parse_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#parse_xml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.parse_xml" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.read_all_block_hdr">
+<span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.egimff.</span></span><span class="sig-name descname"><span class="pre">read_all_block_hdr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#read_all_block_hdr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.read_all_block_hdr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.read_block_hdr">
+<span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.egimff.</span></span><span class="sig-name descname"><span class="pre">read_block_hdr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#read_block_hdr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.read_block_hdr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.xml2dict">
+<span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.egimff.</span></span><span class="sig-name descname"><span class="pre">xml2dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#xml2dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.xml2dict" title="Permalink to this definition"></a></dt>
+<dd><p>Use functions instead of Class and remove namespace based on:
+<a class="reference external" href="http://stackoverflow.com/questions/2148119">http://stackoverflow.com/questions/2148119</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.ioeeg.egimff.xml2list">
+<span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.egimff.</span></span><span class="sig-name descname"><span class="pre">xml2list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/egimff.html#xml2list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.egimff.xml2list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.ioeeg.eeglab.html" class="btn btn-neutral float-left" title="wonambi.ioeeg.eeglab module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.ioeeg.fieldtrip.html" class="btn btn-neutral float-right" title="wonambi.ioeeg.fieldtrip module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

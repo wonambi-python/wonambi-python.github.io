@@ -1,0 +1,7 @@
+wonambi.widgets.detect\_dialogs module
+======================================
+
+.. automodule:: wonambi.widgets.detect_dialogs
+   :members:
+   :undoc-members:
+   :show-inheritance:

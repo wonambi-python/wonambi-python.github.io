@@ -1,0 +1,17 @@
+wonambi.bids package
+====================
+
+.. automodule:: wonambi.bids
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.bids.find
+   wonambi.bids.structure
+   wonambi.bids.utils

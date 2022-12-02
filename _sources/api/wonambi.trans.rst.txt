@@ -1,0 +1,32 @@
+wonambi.trans package
+=====================
+
+.. automodule:: wonambi.trans
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.trans.extern
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.trans.analyze
+   wonambi.trans.baseline
+   wonambi.trans.filter
+   wonambi.trans.frequency
+   wonambi.trans.math
+   wonambi.trans.merge
+   wonambi.trans.montage
+   wonambi.trans.peaks
+   wonambi.trans.reject
+   wonambi.trans.select

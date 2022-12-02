@@ -1,0 +1,7 @@
+wonambi.ioeeg.brainvision module
+================================
+
+.. automodule:: wonambi.ioeeg.brainvision
+   :members:
+   :undoc-members:
+   :show-inheritance:

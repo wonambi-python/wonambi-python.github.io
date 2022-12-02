@@ -1,0 +1,7 @@
+wonambi.widgets.labels module
+=============================
+
+.. automodule:: wonambi.widgets.labels
+   :members:
+   :undoc-members:
+   :show-inheritance:

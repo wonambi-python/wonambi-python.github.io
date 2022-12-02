@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.ioeeg.ktlx module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.ioeeg.lyonrri module" href="wonambi.ioeeg.lyonrri.html" />
+    <link rel="prev" title="wonambi.ioeeg.fieldtrip module" href="wonambi.ioeeg.fieldtrip.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.ioeeg.html">wonambi.ioeeg package</a></li>
+      <li class="breadcrumb-item active">wonambi.ioeeg.ktlx module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.ioeeg.ktlx">
+<span id="wonambi-ioeeg-ktlx-module"></span><h1>wonambi.ioeeg.ktlx module<a class="headerlink" href="#module-wonambi.ioeeg.ktlx" title="Permalink to this heading"></a></h1>
+<dl class="simple">
+<dt>Module reads and writes header and data for KTLX data. The files are:</dt><dd><ul class="simple">
+<li><p>.eeg (patient information)</p></li>
+<li><p>.ent (notes, sometimes with a backup file called .ent.old)</p></li>
+<li><p>.erd (raw data)</p></li>
+<li><p>.etc (table of content)</p></li>
+<li><p>.snc (synchronization file)</p></li>
+<li><p>.stc (segmented table of content)</p></li>
+<li><p>.vtc (video table of content)</p></li>
+<li><p>.avi (videos)</p></li>
+</ul>
+</dd>
+</dl>
+<p>There is only one of these files in the directory, except for .erd, .etc., .avi
+These files are numbered in the format _%03d, except for the first one, which
+is not _000 but there is no extension, for backwards compatibility.</p>
+<p>This module contains functions to read each of the files, the files are called
+_read_EXT where EXT is one of the extensions.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.ioeeg.ktlx.Ktlx">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.ktlx.</span></span><span class="sig-name descname"><span class="pre">Ktlx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ktlx_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/ktlx.html#Ktlx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.ktlx.Ktlx" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.ioeeg.ktlx.Ktlx.return_dat">
+<span class="sig-name descname"><span class="pre">return_dat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begsam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endsam</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/ktlx.html#Ktlx.return_dat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.ktlx.Ktlx.return_dat" title="Permalink to this definition"></a></dt>
+<dd><p>Read the data based on begsam and endsam.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chan</strong> (<em>list</em><em> of </em><em>int</em>) – list of channel indeces</p></li>
+<li><p><strong>begsam</strong> (<em>int</em>) – index of the first sample</p></li>
+<li><p><strong>endsam</strong> – index of the last sample</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em> – 2-d matrix with data (might contain NaN)</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The sample numbering is not based on the samples in the files (i.e.
+the first sample of the first file is NOT the first sample of the
+dataset) because it depends on the stamps in the STC file. Usually, the
+recording starts and after a few millisecond (maybe one second), the
+actual acquisition starts. STC takes the offset into account. This has
+the counterintuitive result that if you call read_data, the first few
+hundreds samples are nan.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.ioeeg.ktlx.Ktlx.return_hdr">
+<span class="sig-name descname"><span class="pre">return_hdr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/ktlx.html#Ktlx.return_hdr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.ktlx.Ktlx.return_hdr" title="Permalink to this definition"></a></dt>
+<dd><p>Return the header for further use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>subj_id</strong> (<em>str</em>) – subject identification code</p></li>
+<li><p><strong>start_time</strong> (<em>datetime</em>) – start time of the dataset</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>chan_name</strong> (<em>list of str</em>) – list of all the channels</p></li>
+<li><p><strong>n_samples</strong> (<em>int</em>) – number of samples in the dataset</p></li>
+<li><p><strong>orig</strong> (<em>dict</em>) – additional information taken directly from the header</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.ioeeg.ktlx.Ktlx.return_markers">
+<span class="sig-name descname"><span class="pre">return_markers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/ktlx.html#Ktlx.return_markers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.ktlx.Ktlx.return_markers" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the notes of the Ktlx recordings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.ioeeg.ktlx.Ktlx.return_videos">
+<span class="sig-name descname"><span class="pre">return_videos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">begtime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endtime</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/ktlx.html#Ktlx.return_videos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.ktlx.Ktlx.return_videos" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.ioeeg.ktlx.convert_sample_to_video_time">
+<span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.ktlx.</span></span><span class="sig-name descname"><span class="pre">convert_sample_to_video_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orig_s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampleStamp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampleTime</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/ktlx.html#convert_sample_to_video_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.ktlx.convert_sample_to_video_time" title="Permalink to this definition"></a></dt>
+<dd><p>Convert sample number to video time, using snc information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sample</strong> (<em>int</em>) – sample that you want to convert in time</p></li>
+<li><p><strong>orig_s_freq</strong> (<em>int</em>) – sampling frequency (used as backup)</p></li>
+<li><p><strong>sampleStamp</strong> (<em>list</em><em> of </em><em>int</em>) – Sample number from start of study</p></li>
+<li><p><strong>sampleTime</strong> (<em>list</em><em> of </em><em>datetime.datetime</em>) – File time representation of sampleStamp</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of datetime</em> – absolute time of the sample.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Note that there is a discrepancy of 4 or 5 hours between the time in
+snc and the time in the header. I’m pretty sure that the time in the
+header is accurate, so we use that. I think that the time in snc does
+not take into account the time zone (that’d explain the 4 or 5
+depending on summertime). This time is only used to get the right video
+so we call this “video time”.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.ioeeg.ktlx.get_date_idx">
+<span class="sig-prename descclassname"><span class="pre">wonambi.ioeeg.ktlx.</span></span><span class="sig-name descname"><span class="pre">get_date_idx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_of_interest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/ioeeg/ktlx.html#get_date_idx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.ioeeg.ktlx.get_date_idx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.ioeeg.fieldtrip.html" class="btn btn-neutral float-left" title="wonambi.ioeeg.fieldtrip module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.ioeeg.lyonrri.html" class="btn btn-neutral float-right" title="wonambi.ioeeg.lyonrri module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

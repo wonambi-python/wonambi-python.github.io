@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.graphoelement &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> wonambi
+            <img src="../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.graphoelement</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.graphoelement</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains classes of graphoelements.</span>
+
+<span class="sd">These graphoelements can be generated by the package &quot;detect&quot;.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">csv</span> <span class="kn">import</span> <span class="n">reader</span><span class="p">,</span> <span class="n">writer</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">empty</span><span class="p">,</span> <span class="n">asarray</span><span class="p">,</span> <span class="nb">sum</span><span class="p">,</span> <span class="n">mean</span>
+
+<span class="kn">from</span> <span class="nn">.datatype</span> <span class="kn">import</span> <span class="n">Data</span>
+
+
+<div class="viewcode-block" id="Graphoelement"><a class="viewcode-back" href="../../api/wonambi.graphoelement.html#wonambi.graphoelement.Graphoelement">[docs]</a><span class="k">class</span> <span class="nc">Graphoelement</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class containing all the events of one type in one dataset.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    chan_name : ndarray (dtype=&#39;U&#39;)</span>
+<span class="sd">        list of channels</span>
+<span class="sd">        </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chan_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">one_event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">one_event</span>
+            
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">one_ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">func</span><span class="p">(</span><span class="n">one_ev</span><span class="p">):</span>
+                <span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_ev</span><span class="p">)</span>
+
+        <span class="n">output</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="n">events</span>
+
+        <span class="k">return</span> <span class="n">output</span>
+
+<div class="viewcode-block" id="Graphoelement.to_data"><a class="viewcode-back" href="../../api/wonambi.graphoelement.html#wonambi.graphoelement.Graphoelement.to_data">[docs]</a>    <span class="k">def</span> <span class="nf">to_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="n">mean</span><span class="p">):</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">()</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">axis</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="n">empty</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)}</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_name</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">one_chan</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_name</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">parameter</span> <span class="o">==</span> <span class="s1">&#39;count&#39;</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">one_chan</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">operator</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="n">parameter</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">events</span>
+                                  <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">one_chan</span><span class="p">])</span>
+            <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+    
+<div class="viewcode-block" id="Graphoelement.to_annot"><a class="viewcode-back" href="../../api/wonambi.graphoelement.html#wonambi.graphoelement.Graphoelement.to_annot">[docs]</a>    <span class="k">def</span> <span class="nf">to_annot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annot</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">chan</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Write events to Annotations file.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        annot : instance of Annotations</span>
+<span class="sd">            Annotations file</span>
+<span class="sd">        name : str</span>
+<span class="sd">            name for the event type        </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">annot</span><span class="o">.</span><span class="n">add_events</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">chan</span><span class="o">=</span><span class="n">chan</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="Ripple"><a class="viewcode-back" href="../../api/wonambi.graphoelement.html#wonambi.graphoelement.Ripple">[docs]</a><span class="k">class</span> <span class="nc">Ripple</span><span class="p">(</span><span class="n">Graphoelement</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="SlowWaves"><a class="viewcode-back" href="../../api/wonambi.graphoelement.html#wonambi.graphoelement.SlowWaves">[docs]</a><span class="k">class</span> <span class="nc">SlowWaves</span><span class="p">(</span><span class="n">Graphoelement</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Class containing all the slow waves in one dataset.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    events : list of dict</span>
+<span class="sd">        list of slow waves, where each SW contains:</span>
+<span class="sd">            - start_time : float</span>
+<span class="sd">                start time of the SW</span>
+<span class="sd">            - trough_time : float</span>
+<span class="sd">                time of the lowest value</span>
+<span class="sd">            - zero_time : float</span>
+<span class="sd">                time of the neg to pos zero-crossing</span>
+<span class="sd">            - peak_time : float</span>
+<span class="sd">                time of the highest value</span>
+<span class="sd">            - end_time : float</span>
+<span class="sd">                end time of the SW</span>
+<span class="sd">            - trough_val : float</span>
+<span class="sd">                the lowest value</span>
+<span class="sd">            - peak_val : float</span>
+<span class="sd">                the highest value</span>
+<span class="sd">            - dur: float</span>
+<span class="sd">                duration of the SW</span>
+<span class="sd">            - area_under_curve : float</span>
+<span class="sd">                sum of all values divided by duration</span>
+<span class="sd">            - ptp : float</span>
+<span class="sd">                peak-to-peak (difference between highest and lowest value)</span>
+<span class="sd">            - chan&#39;: str</span>
+<span class="sd">                channel label</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        
+        <span class="n">one_sw</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;trough_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;zero_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;peak_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;end_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;trough_val&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;peak_val&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;dur&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;area_under_curve&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;ptp&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="p">[],</span>
+                  <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_sw</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Spindles"><a class="viewcode-back" href="../../api/wonambi.graphoelement.html#wonambi.graphoelement.Spindles">[docs]</a><span class="k">class</span> <span class="nc">Spindles</span><span class="p">(</span><span class="n">Graphoelement</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Class containing all the spindles in one dataset.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mean : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        mean of each channel</span>
+<span class="sd">    std : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        standard deviation of each channel</span>
+<span class="sd">    det_value : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        value used for detection for each channel</span>
+<span class="sd">    sel_value : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        value used for selection for each channel</span>
+<span class="sd">    events : list of dict</span>
+<span class="sd">        list of spindles, where each spindle contains:</span>
+<span class="sd">            - start_time : float</span>
+<span class="sd">                start time of the spindle</span>
+<span class="sd">            - end_time : float</span>
+<span class="sd">                end time of the spindle</span>
+<span class="sd">            - peak_time : float</span>
+<span class="sd">                time of the highest value</span>
+<span class="sd">            - peak_val : float</span>
+<span class="sd">                the highest value</span>
+<span class="sd">            - chan&#39;: str</span>
+<span class="sd">                channel label</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mean</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">std</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">det_value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sel_value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">density</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">one_spindle</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                       <span class="s1">&#39;end_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                       <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="p">[],</span>
+                       <span class="s1">&#39;peak_val&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                       <span class="s1">&#39;peak_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                       <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_spindle</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Arousals"><a class="viewcode-back" href="../../api/wonambi.graphoelement.html#wonambi.graphoelement.Arousals">[docs]</a><span class="k">class</span> <span class="nc">Arousals</span><span class="p">(</span><span class="n">Graphoelement</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Class containing all the arousals in one dataset.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    events : list of dict</span>
+<span class="sd">        list of arousals, where each arousal contains:</span>
+<span class="sd">            - start_time : float</span>
+<span class="sd">                start time of the arousal</span>
+<span class="sd">            - end_time : float</span>
+<span class="sd">                end time of the arousal</span>
+<span class="sd">            - chan&#39;: str</span>
+<span class="sd">                channel label</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">one_arousal</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                       <span class="s1">&#39;end_time&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                       <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="p">[],</span>
+                       <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_arousal</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="events_from_csv"><a class="viewcode-back" href="../../api/wonambi.graphoelement.html#wonambi.graphoelement.events_from_csv">[docs]</a><span class="k">def</span> <span class="nf">events_from_csv</span><span class="p">(</span><span class="n">source_file</span><span class="p">,</span> <span class="n">stage</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="sd">&quot;&quot;&quot;Import events from Wonambi event CSV.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    source_file : str</span>
+<span class="sd">        path to file CSV file</span>
+<span class="sd">    stage : list of str (optional)</span>
+<span class="sd">        target stage, eg [&#39;NREM2&#39;, &#39;NREM3&#39;] or [&#39;REM&#39;]</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of wonambi.Graphoelement</span>
+<span class="sd">        class with events list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>    
+    <span class="n">stage_cond</span> <span class="o">=</span> <span class="kc">True</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">source_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">stage</span><span class="p">:</span>
+                    <span class="n">stage_cond</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="ow">in</span> <span class="n">stage</span>
+                <span class="k">if</span> <span class="n">stage_cond</span><span class="p">:</span>
+                    <span class="n">one_ev</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span>
+                              <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                              <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>
+                              <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">),</span>  <span class="c1"># always a list</span>
+                              <span class="s1">&#39;stage&#39;</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>
+                              <span class="s1">&#39;quality&#39;</span><span class="p">:</span> <span class="s1">&#39;Good&#39;</span>
+                              <span class="p">}</span>
+                    <span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_ev</span><span class="p">)</span>
+                
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">continue</span>
+    
+    <span class="n">grapho</span> <span class="o">=</span> <span class="n">Graphoelement</span><span class="p">()</span>
+    <span class="n">grapho</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="n">events</span>
+    <span class="n">grapho</span><span class="o">.</span><span class="n">chan_name</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">chan</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">events</span> <span class="k">for</span> <span class="n">chan</span> <span class="ow">in</span> <span class="n">e</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]]))</span>
+    
+    <span class="k">return</span> <span class="n">grapho</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

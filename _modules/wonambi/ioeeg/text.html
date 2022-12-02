@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.ioeeg.text &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.ioeeg.text</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.ioeeg.text</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Class to import straight text records.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">empty</span><span class="p">,</span> <span class="n">float64</span><span class="p">,</span> <span class="n">floor</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">splitext</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">DEFAULT_DATETIME</span>
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Text"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.text.html#wonambi.ioeeg.text.Text">[docs]</a><span class="k">class</span> <span class="nc">Text</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class to read text format records. The record consists of a directory </span>
+<span class="sd">    containing txt files. Each file is a  channel. The first line of each file </span>
+<span class="sd">    is the sampling rate, and the following lines are single data points, </span>
+<span class="sd">    in scientific notation.</span>
+<span class="sd">    Only supports a single sampling rate for all channels.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    rec_dir : path to record directory</span>
+<span class="sd">        the folder containing the record</span>
+<span class="sd">        </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Text is a very slow format for reading data. It is best to use this class</span>
+<span class="sd">    to import the record, then to export is as a Wonambi (.won) file, and use</span>
+<span class="sd">    that for reading.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rec_dir</span><span class="p">):</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Reading &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rec_dir</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">rec_dir</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hdr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_hdr</span><span class="p">()</span>
+        
+        <span class="c1"># range data are absent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dig_min</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.000512</span> <span class="c1"># estimated from min values</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dig_max</span> <span class="o">=</span> <span class="mf">0.000512</span> <span class="c1"># estimated from max values</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phys_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">800</span> <span class="c1"># estimate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phys_max</span> <span class="o">=</span> <span class="mi">800</span> <span class="c1"># estimate</span>
+        
+<div class="viewcode-block" id="Text.return_hdr"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.text.html#wonambi.ioeeg.text.Text.return_hdr">[docs]</a>    <span class="k">def</span> <span class="nf">return_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the header for further use.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        subj_id : str</span>
+<span class="sd">            subject identification code</span>
+<span class="sd">        start_time : datetime</span>
+<span class="sd">            start time of the dataset</span>
+<span class="sd">        s_freq : float</span>
+<span class="sd">            sampling frequency</span>
+<span class="sd">        chan_name : list of str</span>
+<span class="sd">            list of all the channels</span>
+<span class="sd">        n_samples : int</span>
+<span class="sd">            number of samples in the dataset</span>
+<span class="sd">        orig : dict</span>
+<span class="sd">            the full header</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">foldername</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">chan_files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_files</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">hdr</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULT_DATETIME</span>
+        
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">listdir</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">):</span>
+            <span class="n">base</span><span class="p">,</span> <span class="n">suffix</span> <span class="o">=</span> <span class="n">splitext</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.txt&#39;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">base</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span> <span class="o">==</span> <span class="s1">&#39;hyp&#39;</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">hypno_file</span> <span class="o">=</span> <span class="n">file</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">chan_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">foldername</span> <span class="o">/</span> <span class="n">file</span><span class="p">)</span>
+                    <span class="n">chan_name</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="n">base</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+                    <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chan_name</span><span class="p">)</span>
+                    <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;subj_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">base</span><span class="p">[:</span><span class="n">base</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span>
+                    
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">chan_files</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s1">&#39;No channel found.&#39;</span><span class="p">)</span>
+            <span class="k">return</span>
+        
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">chan_files</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">line0</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
+                    <span class="n">line0</span><span class="p">[</span><span class="n">line0</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Rate:&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span><span class="p">:</span><span class="n">line0</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Hz&#39;</span><span class="p">)])</span>
+            
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+                <span class="k">pass</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;n_samples&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        
+        <span class="n">output</span> <span class="o">=</span> <span class="p">(</span><span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;subj_id&#39;</span><span class="p">],</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">],</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">],</span> 
+                  <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">],</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;n_samples&#39;</span><span class="p">],</span> <span class="n">hdr</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">output</span>        </div>
+    
+<div class="viewcode-block" id="Text.return_dat"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.text.html#wonambi.ioeeg.text.Text.return_dat">[docs]</a>    <span class="k">def</span> <span class="nf">return_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">,</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the data as 2D numpy.ndarray.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chan : list of int</span>
+<span class="sd">            index (indices) of the channels to read</span>
+<span class="sd">        begsam : int</span>
+<span class="sd">            index of the first sample (inclusively)</span>
+<span class="sd">        endsam : int</span>
+<span class="sd">            index of the last sample (exclusively)</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        numpy.ndarray</span>
+<span class="sd">            A 2d matrix, with dimension chan X samples.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#n_sam = self.hdr[4]</span>
+        <span class="n">interval</span> <span class="o">=</span> <span class="n">endsam</span> <span class="o">-</span> <span class="n">begsam</span>
+        <span class="n">dat</span> <span class="o">=</span> <span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">chan</span><span class="p">),</span> <span class="n">interval</span><span class="p">))</span>
+        
+        <span class="c1">#beg_block = floor((begsam / n_sam) * n_block)</span>
+        <span class="c1">#end_block = floor((endsam / n_sam) * n_block)</span>
+                
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">chan</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chan</span><span class="p">):</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+            
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chan_files</span><span class="p">[</span><span class="n">chan</span><span class="p">],</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+                
+                <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">datum</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+                    
+                    <span class="k">if</span> <span class="n">begsam</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">endsam</span><span class="p">:</span>
+                        <span class="n">dat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">float64</span><span class="p">(</span><span class="n">datum</span><span class="p">)</span>
+                        <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="n">interval</span><span class="p">:</span>
+                            <span class="k">break</span>
+        
+        <span class="c1"># calibration</span>
+        <span class="n">phys_range</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">phys_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">phys_min</span>
+        <span class="n">dig_range</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dig_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">dig_min</span>
+        <span class="n">gain</span> <span class="o">=</span> <span class="n">phys_range</span> <span class="o">/</span> <span class="n">dig_range</span>
+        <span class="n">dat</span> <span class="o">*=</span> <span class="n">gain</span>
+        
+        <span class="k">return</span> <span class="n">dat</span></div>
+
+<div class="viewcode-block" id="Text.return_markers"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.text.html#wonambi.ioeeg.text.Text.return_markers">[docs]</a>    <span class="k">def</span> <span class="nf">return_markers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;There are no markers in this format.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[]</span></div></div>
+
+    
+<span class="c1">#==============================================================================</span>
+<span class="c1"># def split_file(filepath, lines_per_file=100):</span>
+<span class="c1">#     &quot;&quot;&quot;splits file at `filepath` into sub-files of length `lines_per_file`</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#     lpf = lines_per_file</span>
+<span class="c1">#     path, filename = split(filepath)</span>
+<span class="c1">#     with open(filepath, &#39;r&#39;) as r:</span>
+<span class="c1">#         name, ext = splitext(filename)</span>
+<span class="c1">#         try:</span>
+<span class="c1">#             w = open(join(path, &#39;{}_{}{}&#39;.format(name, 0, ext)), &#39;w&#39;)</span>
+<span class="c1">#             for i, line in enumerate(r):</span>
+<span class="c1">#                 if not i % lpf:</span>
+<span class="c1">#                     #possible enhancement: don&#39;t check modulo lpf on each pass</span>
+<span class="c1">#                     #keep a counter variable, and reset on each checkpoint lpf.</span>
+<span class="c1">#                     w.close()</span>
+<span class="c1">#                     filename = join(path,</span>
+<span class="c1">#                                     name,</span>
+<span class="c1">#                                     &#39;{}{}&#39;.format(i, ext))</span>
+<span class="c1">#                     w = open(filename, &#39;w&#39;)</span>
+<span class="c1">#                 w.write(line)</span>
+<span class="c1">#         finally:</span>
+<span class="c1">#             w.close()</span>
+<span class="c1">#==============================================================================</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

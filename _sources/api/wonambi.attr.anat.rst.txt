@@ -1,0 +1,7 @@
+wonambi.attr.anat module
+========================
+
+.. automodule:: wonambi.attr.anat
+   :members:
+   :undoc-members:
+   :show-inheritance:

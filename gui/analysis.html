@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis console &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Screenshot" href="screenshot.html" />
+    <link rel="prev" title="Detection methods" href="methods.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Graphical User Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html">Detection methods</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Graphical User Interface</a></li>
+      <li class="breadcrumb-item active">Analysis console</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="analysis-console">
+<h1>Analysis console<a class="headerlink" href="#analysis-console" title="Permalink to this heading"></a></h1>
+<p>Wonambi’s analysis console allows the flexible selection of signal for a variety of analyses, including frequency domain analyses and phase-amplitude coupling (PAC).</p>
+<p>The console is read from left to right.
+On the left-hand half of the console is the signal selection pane.
+Signal can be selected by event, epoch or longest run, and by channel, cycle and stage, with flexible concatenation options, and with artefacted signal exclusion.</p>
+<p>On the right-hand half is the analysis pane, arranged into 3 tabs: Frequency, PAC and Events.
+You may apply any or all of these analyses at once by activating them in each tab.</p>
+<p>To open the dialog, click on <code class="docutils literal notranslate"><span class="pre">Analysis</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Analysis</span> <span class="pre">console</span></code>.</p>
+<img alt="../_images/analysis_01_dialog.png" src="../_images/analysis_01_dialog.png" />
+<section id="file-location">
+<h2>File location<a class="headerlink" href="#file-location" title="Permalink to this heading"></a></h2>
+<p>Select the base name and location of the data files.
+The analysis console creates CSV files containing the raw analysis data, with suffixes for each analysis type:</p>
+<ul class="simple">
+<li><p>_freq: Frequency</p></li>
+<li><p>_pac: PAC</p></li>
+<li><p>_evtdat: Events</p></li>
+<li><p>_fooof: Spectral parametrization report</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These data files can become quite large depending on the analysis.</p>
+</div>
+</section>
+<section id="chunking">
+<h2>Chunking<a class="headerlink" href="#chunking" title="Permalink to this heading"></a></h2>
+<p>Different analyses require different lengths of signal, hence the chunking option. You may chunk by <code class="docutils literal notranslate"><span class="pre">event</span></code>, <code class="docutils literal notranslate"><span class="pre">epoch</span></code> or <code class="docutils literal notranslate"><span class="pre">longest</span> <span class="pre">run</span></code>.</p>
+<p>Chunking <code class="docutils literal notranslate"><span class="pre">by</span> <span class="pre">event</span></code> gathers all events of the type(s) selected as individual segments.
+If you wish to gather only the signal for the channel on which an event was marked, keep the <code class="docutils literal notranslate"><span class="pre">Channel-specific</span></code> box checked.
+Alternatively, you may wish to gather signal concurrent to an event on all selected channels.
+In this case uncheck <code class="docutils literal notranslate"><span class="pre">Channel-specific</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Channel-specific</span></code> will only gather events marked on the specified channels.
+If unchecked, all events of the specified types will be gathered, including those
+marked on channels other than those specified, and including “orphan” events
+with no associated channel.</p>
+</div>
+<p>Chunking <code class="docutils literal notranslate"><span class="pre">by</span> <span class="pre">epoch</span></code> gathers all relevant signal cut up into segments of equal duration.
+To obtain the epochs as segmented by the Annotation File for sleep scoring, check <code class="docutils literal notranslate"><span class="pre">Lock</span> <span class="pre">to</span> <span class="pre">staging</span> <span class="pre">epochs</span></code>.
+Alternatively, you may select a different epoch length with <code class="docutils literal notranslate"><span class="pre">Duration</span> <span class="pre">(sec)</span></code>.
+In this case, all relevant signal, after the specified concatenation, will be segmented at that duration, starting at the first sample of relevant signal.
+Any remainder is discarded.
+Discontinuous signal concatenation is unavailable with this option.
+You may also set an overlap between consecutive segments, using <code class="docutils literal notranslate"><span class="pre">Overlap</span></code> or <code class="docutils literal notranslate"><span class="pre">Step</span></code>.
+<code class="docutils literal notranslate"><span class="pre">Overlap</span></code> is expressed as a ratio of duration, between 0 and 1.
+<code class="docutils literal notranslate"><span class="pre">Step</span></code> sets the distance in seconds between each consecutive segment.</p>
+<p>Chunking <code class="docutils literal notranslate"><span class="pre">by</span> <span class="pre">longest</span> <span class="pre">run</span></code> gathers all relevant signal cut up into the longest continuous (uninterrupted) segments.
+For example, if in the sleep cycle selected there is a run of 10 minutes of REM, with another isolated 30s epoch of REM cut off from the rest, this option will return two segments, one 10 minutes long and one 30s long.</p>
+</section>
+<section id="location">
+<h2>Location<a class="headerlink" href="#location" title="Permalink to this heading"></a></h2>
+<p>Next, you will see <code class="docutils literal notranslate"><span class="pre">Channel</span> <span class="pre">group</span></code> and <code class="docutils literal notranslate"><span class="pre">Channel(s)</span></code>. You may select signal from several channels within a same group.</p>
+<p>If you have delimited cycles (see <a class="reference internal" href="notes.html#notes"><span class="std std-ref">Annotations</span></a>), the cycle indices will appear under <code class="docutils literal notranslate"><span class="pre">Cycle(s)</span></code>.
+You may select one or several cycles in which to find epochs or events.
+If no cycle is selected, data selection will ignore cycles.</p>
+<p>You may also select one or several <code class="docutils literal notranslate"><span class="pre">Stage(s)</span></code> in which to find epochs or events.
+If no stage is selected, data selection will ignore stages.</p>
+</section>
+<section id="rejection">
+<h2>Rejection<a class="headerlink" href="#rejection" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Exclude</span> <span class="pre">Poor</span> <span class="pre">signal</span> <span class="pre">epochs</span></code> removes epochs marked as <code class="docutils literal notranslate"><span class="pre">Poor</span></code> signal.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Exclude</span> <span class="pre">Artefact</span> <span class="pre">events</span></code> removes signal concurrent with <code class="docutils literal notranslate"><span class="pre">Artefact</span></code> events <em>on all channels</em>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">duration</span> <span class="pre">(sec)</span></code> sets the minimum length of segments after artefact rejection and concatenation, below which the segment is excluded.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">Poor</span></code> signal and <code class="docutils literal notranslate"><span class="pre">Artefact</span></code> event marking, see <a class="reference internal" href="notes.html#notes"><span class="std std-ref">Annotations</span></a>.</p>
+</section>
+<section id="concatenation">
+<h2>Concatenation<a class="headerlink" href="#concatenation" title="Permalink to this heading"></a></h2>
+<p>You can concatenate different stages, cycles, event types or channels.
+Discontinuous signal will only be concatenated if the <code class="docutils literal notranslate"><span class="pre">Concatenate</span> <span class="pre">discontinuous</span> <span class="pre">signal</span></code> box is checked.
+This holds for signal discontinuities introduced by artefact rejection.</p>
+<p>Channel concatenation is only available if discontinuous signal is concatenated.
+Discontinuous signal concatenation is not available for <code class="docutils literal notranslate"><span class="pre">by</span> <span class="pre">epoch</span></code> chunking.
+Concatenation is not available when the <code class="docutils literal notranslate"><span class="pre">Lock</span> <span class="pre">to</span> <span class="pre">staging</span> <span class="pre">epochs</span></code> option is selected.</p>
+</section>
+<section id="info">
+<h2>Info<a class="headerlink" href="#info" title="Permalink to this heading"></a></h2>
+<p>This box dynamically displays the number of segments relevant to your data selection.</p>
+<p>A segment is a slice of signal in time. It may contain data from one or several channels.
+Each channel in a segment is analyzed independently, and is represented by one row in the CSV output.
+For example, if you have 30 segments over 3 channels, the CSV output will have 90 rows.</p>
+</section>
+<section id="pre-processing">
+<h2>Pre-processing<a class="headerlink" href="#pre-processing" title="Permalink to this heading"></a></h2>
+<p>You may apply any or all of the following transformations to the signal before running the analyses on the right-hand side of the console.
+The selected transformations are applied in the order displayed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">1/f</span></code>: Removes the signal’s 1/f background activity, which can help bring out spectral peaks in the signal, above and beyond background activity.  In Wonambi’s implementation, this is achieved by subtracting each signal sample from the next sample, effectively resulting in a ‘change’ signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Bandpass</span></code>: You may apply a variety of bandpass filter types with the drop-down menu, with options for filter <code class="docutils literal notranslate"><span class="pre">Order</span></code>, <code class="docutils literal notranslate"><span class="pre">Lowcut</span></code> and <code class="docutils literal notranslate"><span class="pre">Highcut</span></code>. You may instead choose to only apply a lowpass or highpass filter; in this case, only type in the <code class="docutils literal notranslate"><span class="pre">Highcut</span></code> or <code class="docutils literal notranslate"><span class="pre">Lowcut</span></code>, respectively.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Notch</span></code>: You may apply up to two notch filters (a.k.a. powerline filters).  To do so, select a filter-type in the drop-down menu and enter the <code class="docutils literal notranslate"><span class="pre">Order</span></code>, <code class="docutils literal notranslate"><span class="pre">Centre</span> <span class="pre">frequency</span></code> and <code class="docutils literal notranslate"><span class="pre">Bandwidth</span></code>.  Frequencies between (centre frequency +/- (bandwidth / 2)) will be attenuated.</p></li>
+</ul>
+</section>
+<section id="frequency">
+<h2>Frequency<a class="headerlink" href="#frequency" title="Permalink to this heading"></a></h2>
+<p>Wonambi offers a highly-customizable range of frequency domain transformations.
+For an in-depth discussion of the tools, see Analysis/Frequency Domain.</p>
+<img alt="../_images/analysis_02_freq.png" src="../_images/analysis_02_freq.png" />
+<p>To activate frequency domain analysis, check <code class="docutils literal notranslate"><span class="pre">Compute</span> <span class="pre">frequency</span> <span class="pre">domain</span></code>.
+To apply the selected pre-processing before the frequency domain analysis, check <code class="docutils literal notranslate"><span class="pre">Pre-process</span></code>.
+To obtain a summary spectral plot, averaging all segments and channels, check <code class="docutils literal notranslate"><span class="pre">Plot</span> <span class="pre">mean</span> <span class="pre">spectrum</span></code>.
+To obtain a parametrization of the periodic components of the signal using the FOOOF algorithm (Haller et al., 2018), check <code class="docutils literal notranslate"><span class="pre">Parametrize</span></code>.</p>
+<p><strong>Options</strong></p>
+<p>This box controls the data export options, as well as pre-processing.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Pre-process</span></code>: if checked, the raw data will be processed according to the options selected in the Pre-processing box, before frequency analyses are applied.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Full-spectrum</span></code>: if checked, the full frequency spectrum will be exported in CSV format, with the suffix ‘_freq.csv’. Rows are segments and columns are sample frequencies from 0 to the Nyquist frequency.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Band-limited</span></code>: if checked, band-limited power will be computed for the bands specified in the Define bands box. results will be exported in CSV format, with the suffix ‘_band.csv’. Rows are segments and columns are bands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Plot</span> <span class="pre">mean</span> <span class="pre">spectrum</span></code>: if checked, a summary spectral plot will be displayed, averaging all segments.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Parametrize</span></code>: if checked, the resulting spectrum will be analyzed using the FOOOF algorithm (Haller et al., 2018). Results will be exported to CSV format, with the suffix ‘_fooof.csv’.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The full spectrum, mean spectrum plot and FOOOF parametrization can only be obtained if each transformed segment has the same number of frequency bins, i.e. the same frequency granularity.
+Frequency granularity is set by the FFT length, which in a simple periodogram is equal to the segment length.
+As a result, it is not possible to obtain the mean of a simple periodogram if the input segments vary in length, as would likely be the case if analyzing events or longest runs.
+There are a few workarounds:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Use a <code class="docutils literal notranslate"><span class="pre">Time-averaged</span></code> periodogram, a.k.a. Welch’s method; in this case, FFT length is set by the time window <code class="docutils literal notranslate"><span class="pre">Duration</span></code>. However, time-averaging is impractical for short data segments such as spindles.</p></li>
+<li><p>Set a <code class="docutils literal notranslate"><span class="pre">Fixed</span></code> FFT length; in this case, shorter segments will be zero-padded to the FFT length, but longer segments will be truncated (not recommended).</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Zero-pad</span> <span class="pre">to</span> <span class="pre">longest</span> <span class="pre">segment</span></code> to set FFT length to the longest segment and zero-pad all shorter ones. This option is recommended for short data segments such as spindles.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<p><strong>Parameters</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">Scaling</span></code> sets the type of frequency domain transformation.
+To obtain the power spectral density (PSD), set <code class="docutils literal notranslate"><span class="pre">Scaling</span></code> to ‘power’.
+For the energy spectral density (ESD), set it to ‘energy’.
+The ‘fieldtrip’ and ‘chronux’ type transformations are also provided, but note that these may violate Parseval’s theorem.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Taper</span></code> sets the type of tapering function (a.k.a. windowing function) to use.
+Commonly used tapers are ‘boxcar’, ‘hann’ and ‘dpss’ (see below for ‘dpss’).</p>
+<p><code class="docutils literal notranslate"><span class="pre">Detrend</span></code> sets the type of detrending to apply: ‘linear’, ‘constant’ or ‘none’.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">Time-averaged</span></code> is checked, the data will be windowed according to the parameters in the <em>Time averaging</em> box.
+Time averaging is used in Bartlett’s method and the closely related Welch’s method.</p>
+<p><strong>Time averaging</strong></p>
+<p>This box is activated by the <code class="docutils literal notranslate"><span class="pre">Time-averaged</span></code> checkbox in the <em>Parameters</em> box.
+It controls the length and spacing of the time windows.</p>
+<p>You must set a <code class="docutils literal notranslate"><span class="pre">Duration</span></code>, in seconds, and either an <code class="docutils literal notranslate"><span class="pre">Overlap</span></code> or <code class="docutils literal notranslate"><span class="pre">Step</span></code>.
+<code class="docutils literal notranslate"><span class="pre">Overlap</span></code> is expressed as a ratio of Duration, between 0 and 1.
+An <code class="docutils literal notranslate"><span class="pre">Overlap</span></code> greater than 0 is equivalent to Welch’s method; at 0 it is equivalent to Bartlett’s method.
+Alternatively, you may use <code class="docutils literal notranslate"><span class="pre">Step</span></code> to set the distance in seconds between each consecutive window.</p>
+<p><strong>FFT length</strong></p>
+<p>This box sets the window length for the Fourier transform.
+An FFT length that is <code class="docutils literal notranslate"><span class="pre">Same</span> <span class="pre">as</span> <span class="pre">segment</span></code> is best for most purposes.</p>
+<p>But in cases where you want to, for instance, average the spectra of data segments of varying lengths, you may want to set a fixed FFT length.
+To do this, you may either set it manually with <code class="docutils literal notranslate"><span class="pre">Fixed</span></code> or automatically with <code class="docutils literal notranslate"><span class="pre">Zero-pad</span> <span class="pre">to</span> <span class="pre">longest</span> <span class="pre">segment</span></code>.
+In the latter case, the FFT length is set to the length of the longest segment N, and zeros are added to the end of all shorter segments until they reach length N.
+Zero-padding is a computationally efficient way to effectively interpolate a coarse-grained frequency spectrum to a finer grain.</p>
+<p><strong>Multitaper (DPSS) smoothing</strong></p>
+<p>This box is activated if ‘dpss’ is selected as <code class="docutils literal notranslate"><span class="pre">Taper</span></code> in the <em>Parameters</em> box.
+Here you can set the smoothing parameters for the DPSS/Multitaper method.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Half</span> <span class="pre">bandwidth</span></code> sets the frequency smoothing from - half bandwidth to + half bandwidth.</p>
+<p>You may normalize the halfbandwidth with <code class="docutils literal notranslate"><span class="pre">Normalized</span></code> (NW = halfbandwidth * duration).
+The number of DPSS tapers is then 2 * NW - 1.</p>
+<p><strong>Define bands</strong></p>
+<p>This box is activated by the <code class="docutils literal notranslate"><span class="pre">Band-limited</span></code> checkbox in Options.</p>
+<p>You may enter bands of interest in either list or dynamic notation.</p>
+<p>List notation: [[f1,f2],[f3,f4],[f5,f6],…,[fn,fm]]</p>
+<p>e.g. [[0.5-4],[4-8],[10-16],[50-100]]</p>
+<p>Dynamic notation: (start, stop, width, step)</p>
+<p>e.g. (35, 56, 10, 5), equivalent to [[30-40],[35-45],[40-50],[45-55],[50-60]] in list notation.</p>
+<p>Note that ‘start’ and ‘stop’ are centre frequencies. Also note that ‘start’ is inclusive, while ‘stop’ is exclusive.</p>
+<p><strong>Output</strong></p>
+<p>Use this box to select a <code class="docutils literal notranslate"><span class="pre">Spectral</span> <span class="pre">density</span></code> output or a <code class="docutils literal notranslate"><span class="pre">Complex</span></code> output.</p>
+<p><strong>Normalization</strong></p>
+<p>You may normalize the resulting spectral data, either with respect to its own integral or with respect to a normalization period.
+When normalizing with respect to a normalization period, the selected frequency analyses are applied directly to the normalization period signal.</p>
+<p>To normalize a signal to its integral, select <code class="docutils literal notranslate"><span class="pre">by</span> <span class="pre">integral</span> <span class="pre">of</span> <span class="pre">each</span> <span class="pre">segment</span></code> in the drop-down menu.
+Each power value will then be divided by the average of all power values for that segment.</p>
+<p>To normalize with respect to a normalization period, you must first demarcate this period, either using Event Type(s) or Stage(s).
+For example, you may have recorded a quiet wakefulness period at the start of the recording.
+In this case, you may create a new Event Type and call it something like ‘qwak’ and mark the entire period as an event on the trace.
+You may need to increase the Window Length (in View or on the toolbar) in order to mark the entire period within one window.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Wonambi, events are channel-specific by default, but for the purposes of demarcating a normalization period, you may mark events on any channel in the channel group.
+Just make sure the channel is still in the channel group at the moment of analysis.</p>
+</div>
+<p>Once the normalization period is marked as one or several ‘qwak’ events, select <code class="docutils literal notranslate"><span class="pre">by</span> <span class="pre">mean</span> <span class="pre">of</span> <span class="pre">event</span> <span class="pre">type(s)</span></code> in the drop-down menu and select ‘qwak’ in the <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">type(s)</span></code> list.
+The power values for each segment will then be divided by the mean power values of all ‘qwak’ events.</p>
+<p>Alternatively, you may want to normalize with respect to a stage mean.
+In this case, select <code class="docutils literal notranslate"><span class="pre">by</span> <span class="pre">mean</span> <span class="pre">of</span> <span class="pre">stage(s)</span></code> and select the desired stage(s) in the <code class="docutils literal notranslate"><span class="pre">Stage(s)</span></code> list.
+The power values for each segment will then be divided by the mean power values for all 30-s epochs of the selected stage(s).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Normalizing by stage(s) may extend processing time considerably.</p>
+</div>
+<p>For event type and stage normalization, you may choose to concatenate all relevant normalization periods before applying the frequency transformation, instead of first applying the transformation and then averaging.
+To do this, check <code class="docutils literal notranslate"><span class="pre">Concatenate</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Like the mean spectral plot, normalization is only available if each segment has the same frequency granularity.
+See the note about frequency granularity above.</p>
+</div>
+<p><strong>Parametrization</strong></p>
+<p>Wonambi allows parametrization of power spectra using the FOOOF algorithm:</p>
+<p>Haller M, Donoghue T, Peterson E, Varma P, Sebastian P, Gao R, Noto T, Knight RT, Shestyuk A,
+Voytek B (2018) Parameterizing Neural Power Spectra. bioRxiv, 299859.
+doi: <a class="reference external" href="https://doi.org/10.1101/299859">https://doi.org/10.1101/299859</a></p>
+<p>From the FOOOF Github page:</p>
+<blockquote>
+<div><p>FOOOF is a fast, efficient, physiologically-informed model to parameterize neural power spectra, characterizing both the 1/f background, and overlying peaks (putative oscillations).</p>
+<p>The model conceives of the neural power spectrum as consisting of two distinct functional processes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A 1/f background, modeled with an exponential fit, with:</p></li>
+<li><p>Band-limited peaks rising above this background (modeled as Gaussians).</p></li>
+</ul>
+</div></blockquote>
+<p>With regards to examing peaks in the frequency domain, as putative oscillations, the benefit of the FOOOF approach is that these peaks are characterized in terms of their specific center frequency, amplitude and bandwidth without requiring predefining specific bands of interest.
+In particular, it separates these peaks from a dynamic, and independently interesting 1/f background.</p>
+</div></blockquote>
+<p>If selected, the algorithm will create a CSV report:</p>
+<img alt="gui/images/analysis_04_fooofreport.png" src="gui/images/analysis_04_fooofreport.png" />
+<p>You may adjust the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Min.</span> <span class="pre">frequency</span></code> and <code class="docutils literal notranslate"><span class="pre">Max.</span> <span class="pre">frequency</span></code>: set the frequency range across which to model the spectrum.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">threshold</span></code>: sets a threshold above which a peak amplitude must cross to be included in the model. This parameter is in terms of standard deviation above the noise of the flattened spectrum.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Max.</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">peaks</span></code>: sets the maximum number of peaks to fit (in decreasing order of amplitude).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Min.</span> <span class="pre">peak</span> <span class="pre">amplitude</span></code>: sets an absolute limit on the minimum amplitude (above background) for any extracted peak.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Min.</span> <span class="pre">peak</span> <span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">Max.</span> <span class="pre">peak</span> <span class="pre">width</span></code>: set the possible lower- and upper-bounds for the fitted peak widths.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Background</span> <span class="pre">fitting</span> <span class="pre">mode</span></code>: ‘knee’ allows for modelling bends, or knees, in the aperioic signal that are present in broad frequency ranges, especially in intracranial recordings. ‘fixed’ models with a zero knee parameter.</p></li>
+</ul>
+</section>
+<section id="phase-amplitude-coupling-pac">
+<h2>Phase-amplitude coupling (PAC)<a class="headerlink" href="#phase-amplitude-coupling-pac" title="Permalink to this heading"></a></h2>
+<p>Wonambi’s analysis console offers a phase-amplitude coupling analysis (PAC) GUI that ports directly to the <a class="reference external" href="https://github.com/EtienneCmb/tensorpac">Tensorpac</a> package, by Etienne Combrisson.</p>
+<p>In order to compute PAC, you must first install tensorpac from the command line (PC) or terminal (Mac):</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tensorpac</span></code></p>
+<p>In the analysis console, select <code class="docutils literal notranslate"><span class="pre">Compute</span> <span class="pre">PAC</span></code> to enable PAC analysis, and select <code class="docutils literal notranslate"><span class="pre">Pre-process</span></code> to apply the selected pre-processing transformations before analysis.</p>
+<p>Choose a <code class="docutils literal notranslate"><span class="pre">PAC</span> <span class="pre">metric</span></code> in the drop-down menu.</p>
+<p>You may enter one or several phase and amplitude frequencies. Band limits should be separated by a hyphen ‘-’, and each band enclosed in square brackets ‘[]’, separated by commas ‘,’. The entirte epression should also be enclosed in square brackets.</p>
+<p>For example, to detect coupling between delta (0.5-4 Hz) and theta (4-8 Hz) as phase frequencies, and low gamma (LG; 30-60 Hz) and high gamma (HG; 60-120 Hz) as amplitude frequencies, you would enter:</p>
+<p><code class="docutils literal notranslate"><span class="pre">[[0.5-4],[4-8]]</span></code> for <code class="docutils literal notranslate"><span class="pre">Phase</span> <span class="pre">frequencies</span></code>, and</p>
+<p><code class="docutils literal notranslate"><span class="pre">[[30-60],[60-120]]</span></code> for <code class="docutils literal notranslate"><span class="pre">Amplitude</span> <span class="pre">frequencies</span></code>.</p>
+<p>This will yield 4 PAC values per segments: delta-LG, delta-HG, theta-LG and theta-HG PAC.</p>
+<p>Alternatively, you may use dynamic notation in this format: (start, stop, width, step).</p>
+<p>For example, to get the range of amplitude bands between 30 Hz and 130 Hz in non-overlapping 20-Hz bands, you would enter:</p>
+<p><code class="docutils literal notranslate"><span class="pre">(40,140,20,20)</span></code>.</p>
+<p>Notice that start and stop are centre frequencies. Notice also that start is inclusive but stop is exclusive, so in order to capture 110-130 Hz, stop must be set after the centre frequency, i.e. 121-140.</p>
+<p>For more information, see the <a class="reference external" href="https://etiennecmb.github.io/tensorpac/">Tensorpac documentation</a>.</p>
+</section>
+<section id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this heading"></a></h2>
+<p>The console’s Events tab allows the extraction of a suite of commonly studied parameters.
+Event parameters are divided into global parameters, local parameters and slow wave parameters.</p>
+<img alt="../_images/analysis_03_event.png" src="../_images/analysis_03_event.png" />
+<p><strong>Global</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Count</span></code> simply returns the number of segments.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Density,</span> <span class="pre">per</span></code> returns the number of segments divided by the number of epochs of relevant signal. The relevant signal is all epochs corresponding to the cycle(s) and stage(s) selected in the Location box. You may set the epoch length in seconds with the text box.</p></li>
+</ul>
+<p><strong>Band of interest</strong></p>
+<p>For <code class="docutils literal notranslate"><span class="pre">Power</span></code>, <code class="docutils literal notranslate"><span class="pre">Energy</span></code>, <code class="docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">power</span> <span class="pre">frequency</span></code> and <code class="docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">energy</span> <span class="pre">frequency</span></code>, you may set a band of interest.
+These analyses are then carried out only over that spectral band.
+If no frequencies are specified, analyses are applied to the entire spectrum.</p>
+<p><strong>Local</strong></p>
+<p>For each parameter, check the box next to it to extract it, and select the corresponding box in the <code class="docutils literal notranslate"><span class="pre">Pre-process</span></code> column in order to apply the selected pre-processing before analysis.
+Note that for all parameters except <code class="docutils literal notranslate"><span class="pre">Duration</span></code>, the output will contain one value per channel per segment.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Duration</span></code>: The segment duration, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Min.</span> <span class="pre">amplitude</span></code>: The lowest amplitude value in the signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Max.</span> <span class="pre">amplitude</span></code>: The highest amplitude value in the signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Peak-to-peak</span> <span class="pre">amplitude</span></code>: The absolute difference between the lowest and highest amplitude values in the signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RMS</span></code>: The square root of the mean of the squares of each amplitude value in the signal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Power</span></code>: The average power (from a simple periodogram) of the signal over the band of interest. Best used for stationary signals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Energy</span></code>: The average energy (from a simple periodogram) of the signal over the band of interest. Best used for signals with a clear beginning and end, i.e. events.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">power</span> <span class="pre">frequency</span></code>: The frequency corresponding to the highest power value in the band of interest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">energy</span> <span class="pre">frequency</span></code>: The frequency corresponding to the highest energy value in the band of interest.</p></li>
+</ul>
+<p><strong>Slow wave</strong></p>
+<p>These are local parameters that apply only to slow waves.
+You may still apply these analyses to any signal, but if the signal does not have the morphological characteristics of a slow wave, the output will be nan (not a number).</p>
+<p><code class="docutils literal notranslate"><span class="pre">Average</span> <span class="pre">slopes</span></code> and <code class="docutils literal notranslate"><span class="pre">Max.</span> <span class="pre">slopes</span></code> each return 5 values: one per slow wave quadrant and a fifth for the combination of quadrants 2 and 3:</p>
+<ul class="simple">
+<li><p>Q1: First zero-crossing to negative trough</p></li>
+<li><p>Q2: Negative trough to second zero-crossing</p></li>
+<li><p>Q3: Second zero-crossing to positive peak</p></li>
+<li><p>Q4: Positive peak to third zero-crossing</p></li>
+<li><p>Q23: Negative trough to positive peak.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Average</span> <span class="pre">slopes</span></code> is the amplitude difference between the quadrant start and end divided by the quadrant duration, in μV/s.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Max.</span> <span class="pre">slopes</span></code> is the maximum value of the derivative of the smoothed signal (50-ms moving average) of the quadrant, in μV/s<sup>2</sup>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="methods.html" class="btn btn-neutral float-left" title="Detection methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="screenshot.html" class="btn btn-neutral float-right" title="Screenshot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

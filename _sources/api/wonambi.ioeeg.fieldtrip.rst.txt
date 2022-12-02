@@ -1,0 +1,7 @@
+wonambi.ioeeg.fieldtrip module
+==============================
+
+.. automodule:: wonambi.ioeeg.fieldtrip
+   :members:
+   :undoc-members:
+   :show-inheritance:

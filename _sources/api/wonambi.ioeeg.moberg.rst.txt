@@ -1,0 +1,7 @@
+wonambi.ioeeg.moberg module
+===========================
+
+.. automodule:: wonambi.ioeeg.moberg
+   :members:
+   :undoc-members:
+   :show-inheritance:

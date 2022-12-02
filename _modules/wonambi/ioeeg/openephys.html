@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.ioeeg.openephys &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.ioeeg.openephys</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.ioeeg.openephys</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module to read open-ephys .continuous files</span>
+
+<span class="sd">TODO</span>
+<span class="sd">----</span>
+<span class="sd">It assumes that the lenght of a block (i.e. record) is 1024 data points but this</span>
+<span class="sd">might change in the future.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">import</span> <span class="nn">locale</span>
+<span class="kn">from</span> <span class="nn">struct</span> <span class="kn">import</span> <span class="n">unpack</span><span class="p">,</span> <span class="n">calcsize</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span>
+<span class="kn">from</span> <span class="nn">re</span> <span class="kn">import</span> <span class="n">search</span><span class="p">,</span> <span class="n">match</span>
+<span class="kn">from</span> <span class="nn">xml.etree</span> <span class="kn">import</span> <span class="n">ElementTree</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">empty</span><span class="p">,</span> <span class="n">NaN</span><span class="p">,</span> <span class="n">fromfile</span><span class="p">,</span> <span class="n">unique</span><span class="p">,</span> <span class="n">where</span><span class="p">,</span> <span class="n">arange</span><span class="p">,</span> <span class="n">hstack</span><span class="p">,</span> <span class="n">vstack</span><span class="p">,</span> <span class="n">concatenate</span>
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="n">HDR_LENGTH</span> <span class="o">=</span> <span class="mi">1024</span>  <span class="c1"># this is fixed</span>
+<span class="n">BLK_LENGTH</span> <span class="o">=</span> <span class="mi">1024</span>  <span class="c1"># this is currently fixed but might change in the future</span>
+<span class="n">BEG_BLK</span> <span class="o">=</span> <span class="s1">&#39;&lt;qHH&#39;</span>  <span class="c1"># time information and indices</span>
+<span class="n">DAT_FMT</span> <span class="o">=</span> <span class="s1">&#39;&gt;&#39;</span> <span class="o">+</span> <span class="n">BLK_LENGTH</span> <span class="o">*</span> <span class="s1">&#39;h&#39;</span>  <span class="c1"># actual data, big-endian</span>
+<span class="n">END_BLK</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="s1">&#39;B&#39;</span>  <span class="c1"># control values</span>
+
+<span class="n">BEG_BLK_SIZE</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="n">BEG_BLK</span><span class="p">)</span>
+<span class="n">DAT_FMT_SIZE</span> <span class="o">=</span> <span class="n">calcsize</span><span class="p">(</span><span class="n">DAT_FMT</span><span class="p">)</span>
+<span class="n">BLK_SIZE</span> <span class="o">=</span> <span class="n">BEG_BLK_SIZE</span> <span class="o">+</span> <span class="n">DAT_FMT_SIZE</span> <span class="o">+</span> <span class="n">calcsize</span><span class="p">(</span><span class="n">END_BLK</span><span class="p">)</span>
+
+<span class="n">EVENT_TYPES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;TTL Event&#39;</span><span class="p">,</span>
+    <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Network Event&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="n">IGNORE_EVENTS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Network Event&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+
+<div class="viewcode-block" id="OpenEphys"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.openephys.html#wonambi.ioeeg.openephys.OpenEphys">[docs]</a><span class="k">class</span> <span class="nc">OpenEphys</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Provide class OpenEphys, which can be used to read the folder</span>
+<span class="sd">    containing Open-Ephys .continuous files</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : Path</span>
+<span class="sd">        Full path for the OpenEphys folder</span>
+<span class="sd">    session : int</span>
+<span class="sd">        session number (starting at 1, based on open-ephys convention)</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    channels : list of dict</span>
+<span class="sd">        list of filenames referring to channels which are actually on disk</span>
+<span class="sd">    blocks : 1D array</span>
+<span class="sd">        length of each block, in samples (currently 1024)</span>
+<span class="sd">    gain : 1D array</span>
+<span class="sd">        gain to convert digital to microvolts (one value per channel)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">session</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;_</span><span class="si">{</span><span class="n">session</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1">&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">openephys_file</span> <span class="o">=</span> <span class="n">filename</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;Continuous_Data</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="si">}</span><span class="s1">.openephys&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings_xml</span> <span class="o">=</span> <span class="n">filename</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;settings</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="si">}</span><span class="s1">.xml&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">messages_file</span> <span class="o">=</span> <span class="n">filename</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;messages</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="si">}</span><span class="s1">.events&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">events_file</span> <span class="o">=</span> <span class="n">filename</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;all_channels</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="si">}</span><span class="s1">.events&#39;</span>
+
+<div class="viewcode-block" id="OpenEphys.return_hdr"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.openephys.html#wonambi.ioeeg.openephys.OpenEphys.return_hdr">[docs]</a>    <span class="k">def</span> <span class="nf">return_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the header for further use.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        subj_id : str</span>
+<span class="sd">            subject identification code</span>
+<span class="sd">        start_time : datetime</span>
+<span class="sd">            start time of the dataset</span>
+<span class="sd">        s_freq : float</span>
+<span class="sd">            sampling frequency</span>
+<span class="sd">        chan_name : list of str</span>
+<span class="sd">            list of all the channels</span>
+<span class="sd">        n_samples : int</span>
+<span class="sd">            number of samples in the dataset</span>
+<span class="sd">        orig : dict</span>
+<span class="sd">            currently empty for open-ephys</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">subj_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="o">.</span><span class="n">stem</span>  <span class="c1"># use directory name as subject name</span>
+
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">_read_date</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">settings_xml</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">recordings</span> <span class="o">=</span> <span class="n">_read_openephys</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openephys_file</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recordings</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span>
+        <span class="n">channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recordings</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;channels&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">messages</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="n">_read_messages_events</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">messages_file</span><span class="p">)</span>
+
+        <span class="c1"># only use channels that are actually in the folder</span>
+        <span class="n">chan_name</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channels</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">gain</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">chan</span> <span class="ow">in</span> <span class="n">channels</span><span class="p">:</span>
+            <span class="n">channel_filename</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">/</span> <span class="n">chan</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="n">channel_filename</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                <span class="n">chan_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chan</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">channel_filename</span><span class="p">)</span>
+
+                <span class="n">ch_gain</span> <span class="o">=</span> <span class="n">_check_header</span><span class="p">(</span><span class="n">channel_filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_freq</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">)</span>
+                <span class="n">gain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch_gain</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">lg</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;could not find </span><span class="si">{</span><span class="n">chan</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> in </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gain</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">gain</span><span class="p">)</span>
+
+        <span class="c1"># read data structure (recordings can have multiple segments)</span>
+        <span class="n">data_offset</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;channels&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;position&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">recordings</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">data_offset</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">data_offset</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="n">BLK_SIZE</span> <span class="o">*</span> <span class="n">BLK_LENGTH</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;data_offset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_offset</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;data_offset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_offset</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">file_length</span> <span class="o">=</span> <span class="n">channel_filename</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">file_length</span> <span class="o">-</span> <span class="n">data_offset</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">BLK_SIZE</span> <span class="o">*</span> <span class="n">BLK_LENGTH</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">seg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">:</span>
+            <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span>
+
+        <span class="n">n_samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;end&#39;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">blocks_dat</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks_offset</span> <span class="o">=</span> <span class="n">_prepare_blocks</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">)</span>
+
+        <span class="n">orig</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">return</span> <span class="n">subj_id</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_freq</span><span class="p">,</span> <span class="n">chan_name</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">,</span> <span class="n">orig</span></div>
+
+<div class="viewcode-block" id="OpenEphys.return_dat"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.openephys.html#wonambi.ioeeg.openephys.OpenEphys.return_dat">[docs]</a>    <span class="k">def</span> <span class="nf">return_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">,</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Read the data for some/all of the channels</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chan : list of int</span>
+<span class="sd">            indices of the channels to read</span>
+<span class="sd">        begsam : int</span>
+<span class="sd">            start sample to read</span>
+<span class="sd">        endsam : int</span>
+<span class="sd">            end sample to read (exclusive)</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        2D array</span>
+<span class="sd">            chan X samples recordings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data_length</span> <span class="o">=</span> <span class="n">endsam</span> <span class="o">-</span> <span class="n">begsam</span>
+        <span class="n">dat</span> <span class="o">=</span> <span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">chan</span><span class="p">),</span> <span class="n">data_length</span><span class="p">))</span>
+        <span class="n">dat</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">NaN</span><span class="p">)</span>
+
+        <span class="n">all_blocks</span> <span class="o">=</span> <span class="n">_select_blocks</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blocks_dat</span><span class="p">,</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i_chan</span><span class="p">,</span> <span class="n">sel_chan</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chan</span><span class="p">):</span>
+            <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">channels</span><span class="p">[</span><span class="n">sel_chan</span><span class="p">]</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i_block</span> <span class="ow">in</span> <span class="n">all_blocks</span><span class="p">:</span>
+                    <span class="n">i_dat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks_dat</span><span class="p">[</span><span class="n">i_block</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">begsam</span>
+                    <span class="n">i_disk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks_offset</span><span class="p">[</span><span class="n">i_block</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+
+                    <span class="c1"># read only data (no timestamp or record marker)</span>
+                    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">i_disk</span><span class="p">)</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">unpack</span><span class="p">(</span><span class="n">DAT_FMT</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">DAT_FMT_SIZE</span><span class="p">)))</span>
+                    <span class="n">beg_dat</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">i_dat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">end_dat</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">i_dat</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">data_length</span><span class="p">)</span>
+                    <span class="n">beg_x</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span> <span class="n">i_dat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">segment_length</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">i_dat</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">data_length</span><span class="p">)</span> <span class="o">-</span> <span class="n">i_dat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">end_x</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">segment_length</span><span class="p">)</span>
+                    <span class="n">dat</span><span class="p">[</span><span class="n">i_chan</span><span class="p">,</span> <span class="n">beg_dat</span><span class="p">:</span><span class="n">end_dat</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">beg_x</span><span class="p">:</span><span class="n">end_x</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">dat</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain</span><span class="p">[</span><span class="n">chan</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="OpenEphys.return_markers"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.openephys.html#wonambi.ioeeg.openephys.OpenEphys.return_markers">[docs]</a>    <span class="k">def</span> <span class="nf">return_markers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Read the markers from the .events file</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">all_markers</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">messages</span>
+            <span class="o">+</span> <span class="n">_segments_to_markers</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">_read_all_channels_events</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">events_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_freq</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_markers</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">])</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_read_openephys</span><span class="p">(</span><span class="n">openephys_file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Read the channel labels and their respective files from the</span>
+<span class="sd">    &#39;Continuous_Data.openephys&#39; file</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    openephys_file : Path</span>
+<span class="sd">        path to Continuous_Data.openephys inside the open-ephys folder</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        sampling frequency</span>
+<span class="sd">    list of dict</span>
+<span class="sd">        list of channels containing the label, the filename and the gain</span>
+
+<span class="sd">    TODO</span>
+<span class="sd">    ----</span>
+<span class="sd">    Check that all the recordings have the same channels and frequency</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">ElementTree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">openephys_file</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+
+    <span class="n">recordings</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">recording</span> <span class="ow">in</span> <span class="n">root</span><span class="p">:</span>
+        <span class="n">recordings</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;s_freq&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">recording</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;samplerate&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;number&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">recording</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;channels&#39;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="p">})</span>
+        <span class="n">channels</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">processor</span> <span class="ow">in</span> <span class="n">recording</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="n">processor</span><span class="p">:</span>
+                <span class="n">channels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">channel</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span>
+        <span class="n">recordings</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;channels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">channels</span>
+
+    <span class="k">return</span> <span class="n">recordings</span>
+
+
+<span class="k">def</span> <span class="nf">_read_date</span><span class="p">(</span><span class="n">settings_file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the data from the settings.xml file</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    settings_file : Path</span>
+<span class="sd">        path to settings.xml inside open-ephys folder</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    datetime</span>
+<span class="sd">        start time of the recordings</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The start time is present in the header of each file. This might be useful</span>
+<span class="sd">    if &#39;settings.xml&#39; is not present.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_TIME</span><span class="p">,</span> <span class="s1">&#39;en_US.utf-8&#39;</span><span class="p">)</span>
+
+    <span class="n">root</span> <span class="o">=</span> <span class="n">ElementTree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">settings_file</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">e0</span> <span class="ow">in</span> <span class="n">root</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e0</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s1">&#39;INFO&#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">e1</span> <span class="ow">in</span> <span class="n">e0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">e1</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s1">&#39;DATE&#39;</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">e1</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> %b %Y %H:%M:%S&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_read_header</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Read the text header for each file</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    channel_file : Path</span>
+<span class="sd">        path to single filename with the header</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dict</span>
+<span class="sd">        header</span>
+<span class="sd">    int</span>
+<span class="sd">        the timestamp of the first sample in the data. It&#39;s like an offset for</span>
+<span class="sd">        the data. It&#39;s necessary to align with the clock time and the markers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">filename</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">HDR_LENGTH</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+
+        <span class="n">header</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">h</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s1">&#39;=&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; = &#39;</span><span class="p">)</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">strip</span><span class="p">()[</span><span class="mi">7</span><span class="p">:]</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">header</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="n">first_timestamp</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">8</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">header</span><span class="p">,</span> <span class="n">first_timestamp</span>
+
+
+<span class="k">def</span> <span class="nf">_check_header</span><span class="p">(</span><span class="n">channel_file</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;For each file, make sure that the header is consistent with the</span>
+<span class="sd">    information in the text file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    channel_file : Path</span>
+<span class="sd">        path to single filename with the header</span>
+<span class="sd">    s_freq : int</span>
+<span class="sd">        sampling frequency</span>
+<span class="sd">    offset : int</span>
+<span class="sd">        offset of the first timestamp</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        gain from digital to microvolts (the same information is stored in</span>
+<span class="sd">        the Continuous_Data.openephys but I trust the header for each file more.</span>
+<span class="sd">    int</span>
+<span class="sd">        the timestamp of the first sample in the data. It&#39;s like an offset for</span>
+<span class="sd">        the data. It&#39;s necessary to align with the clock time and the markers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">hdr</span><span class="p">,</span> <span class="n">first_timestamp</span> <span class="o">=</span> <span class="n">_read_header</span><span class="p">(</span><span class="n">channel_file</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;header_bytes&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="n">HDR_LENGTH</span>
+    <span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;blockLength&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="n">BLK_LENGTH</span>
+    <span class="k">assert</span> <span class="nb">int</span><span class="p">(</span><span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;sampleRate&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="n">s_freq</span>
+    <span class="k">assert</span> <span class="n">first_timestamp</span> <span class="o">==</span> <span class="n">offset</span>
+
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;bitVolts&#39;</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">_segments_to_markers</span><span class="p">(</span><span class="n">segments</span><span class="p">,</span> <span class="n">first_timestamp</span><span class="p">):</span>
+    <span class="n">mrk</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">seg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">segments</span><span class="p">):</span>
+        <span class="n">mrk</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;START RECORDING #</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">],</span>
+        <span class="p">})</span>
+        <span class="n">mrk</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;END RECORDING #</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">],</span>
+        <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">mrk</span>
+
+<span class="k">def</span> <span class="nf">_read_messages_events</span><span class="p">(</span><span class="n">messages_file</span><span class="p">):</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">segments</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">with</span> <span class="n">messages_file</span><span class="o">.</span><span class="n">open</span><span class="p">()</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+
+            <span class="n">m_time</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+ Software time: (\d+)@\d+Hz&#39;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+            <span class="n">m_start</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;start time: (\d+)@(\d+)Hz&#39;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+            <span class="n">m_event</span> <span class="o">=</span> <span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d+) (.+)&#39;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">m_time</span><span class="p">:</span>
+                <span class="c1"># ignore Software time</span>
+                <span class="k">pass</span>
+
+            <span class="k">elif</span> <span class="n">m_start</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">header</span><span class="p">:</span>
+                    <span class="n">offset</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m_start</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+                    <span class="n">s_freq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m_start</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+                    <span class="n">header</span> <span class="o">=</span> <span class="kc">False</span>
+
+                <span class="n">segments</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">m_start</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
+                    <span class="s1">&#39;s_freq&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">m_start</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span>
+                    <span class="p">})</span>
+
+            <span class="k">elif</span> <span class="n">m_event</span><span class="p">:</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m_event</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+                <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">m_event</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+                    <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">time</span> <span class="o">-</span> <span class="n">offset</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq</span><span class="p">,</span>
+                    <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">time</span> <span class="o">-</span> <span class="n">offset</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq</span><span class="p">,</span>
+                    <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">segments</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="n">offset</span>
+
+
+<span class="k">def</span> <span class="nf">_read_all_channels_events</span><span class="p">(</span><span class="n">events_file</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+
+    <span class="n">file_read</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;timestamps&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i8&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;sampleNum&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i2&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;eventType&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;u1&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;nodeId&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;u1&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;eventId&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;u1&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;channel&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;u1&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;recordingNumber&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;u2&#39;</span><span class="p">),</span>
+        <span class="p">]</span>
+
+    <span class="k">with</span> <span class="n">events_file</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">HDR_LENGTH</span><span class="p">)</span>
+        <span class="n">evt</span> <span class="o">=</span> <span class="n">fromfile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">file_read</span><span class="p">)</span>
+
+    <span class="n">mrk</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">evt_type</span> <span class="ow">in</span> <span class="n">unique</span><span class="p">(</span><span class="n">evt</span><span class="p">[</span><span class="s1">&#39;eventType&#39;</span><span class="p">]):</span>
+        <span class="n">timestamps</span> <span class="o">=</span> <span class="n">evt</span><span class="p">[</span><span class="n">evt</span><span class="p">[</span><span class="s1">&#39;eventType&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">evt_type</span><span class="p">][</span><span class="s1">&#39;timestamps&#39;</span><span class="p">]</span>
+        <span class="n">onsets</span> <span class="o">=</span> <span class="n">timestamps</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">offsets</span> <span class="o">=</span> <span class="n">timestamps</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">i_on</span><span class="p">,</span> <span class="n">i_off</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">onsets</span><span class="p">,</span> <span class="n">offsets</span><span class="p">):</span>
+            <span class="n">mrk</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">EVENT_TYPES</span><span class="p">[</span><span class="n">evt_type</span><span class="p">],</span>
+                <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">i_on</span> <span class="o">-</span> <span class="n">offset</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq</span><span class="p">,</span>
+                <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">i_off</span> <span class="o">-</span> <span class="n">offset</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq</span><span class="p">,</span>
+                <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="p">})</span>
+
+    <span class="c1"># skip some events (like Network Events) which are not very useful</span>
+    <span class="n">mrk</span> <span class="o">=</span> <span class="p">[</span><span class="n">evt</span> <span class="k">for</span> <span class="n">evt</span> <span class="ow">in</span> <span class="n">mrk</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">evt</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">IGNORE_EVENTS</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">mrk</span>
+
+
+<span class="k">def</span> <span class="nf">_prepare_blocks</span><span class="p">(</span><span class="n">segments</span><span class="p">):</span>
+
+    <span class="n">blocks_dat</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">blocks_offset</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">seg</span> <span class="ow">in</span> <span class="n">segments</span><span class="p">:</span>
+        <span class="n">n_blocks</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">seg</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">BLK_LENGTH</span><span class="p">)</span>
+
+        <span class="n">blocks_dat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vstack</span><span class="p">((</span>
+            <span class="n">arange</span><span class="p">(</span><span class="n">n_blocks</span><span class="p">)</span> <span class="o">*</span> <span class="n">BLK_LENGTH</span> <span class="o">+</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">],</span>
+            <span class="n">arange</span><span class="p">(</span><span class="n">n_blocks</span><span class="p">)</span> <span class="o">*</span> <span class="n">BLK_LENGTH</span> <span class="o">+</span> <span class="n">BLK_LENGTH</span> <span class="o">+</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">],</span>
+            <span class="p">)))</span>
+        <span class="n">blocks_offset</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">arange</span><span class="p">(</span><span class="n">n_blocks</span><span class="p">)</span> <span class="o">*</span> <span class="n">BLK_SIZE</span> <span class="o">+</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;data_offset&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">BEG_BLK_SIZE</span><span class="p">)</span>
+
+    <span class="n">blocks_dat</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">(</span><span class="n">blocks_dat</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">blocks_offset</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">(</span><span class="n">blocks_offset</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">blocks_dat</span><span class="p">,</span> <span class="n">blocks_offset</span>
+
+
+<span class="k">def</span> <span class="nf">_select_blocks</span><span class="p">(</span><span class="n">blocks_dat</span><span class="p">,</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">):</span>
+    <span class="n">all_blocks</span> <span class="o">=</span> <span class="p">((</span><span class="n">blocks_dat</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">begsam</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">((</span><span class="n">endsam</span> <span class="o">-</span> <span class="n">blocks_dat</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">where</span><span class="p">(</span><span class="n">all_blocks</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

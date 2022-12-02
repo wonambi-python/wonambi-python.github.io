@@ -1,0 +1,7 @@
+wonambi.graphoelement module
+============================
+
+.. automodule:: wonambi.graphoelement
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.detect.agreement &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.detect.agreement</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.detect.agreement</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module for agreement and consensus analysis between raters&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="p">(</span><span class="n">arange</span><span class="p">,</span> <span class="n">argmax</span><span class="p">,</span> <span class="n">asarray</span><span class="p">,</span> <span class="n">concatenate</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">invert</span><span class="p">,</span> 
+                   <span class="n">logical_and</span><span class="p">,</span> <span class="n">maximum</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">minimum</span><span class="p">,</span> <span class="n">newaxis</span><span class="p">,</span> <span class="n">ones</span><span class="p">,</span> <span class="n">repeat</span><span class="p">,</span> 
+                   <span class="nb">sum</span><span class="p">,</span> <span class="n">vstack</span><span class="p">,</span> <span class="n">where</span><span class="p">,</span> <span class="n">zeros</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">Graphoelement</span>
+
+<div class="viewcode-block" id="MatchedEvents"><a class="viewcode-back" href="../../../api/wonambi.detect.agreement.html#wonambi.detect.agreement.MatchedEvents">[docs]</a><span class="k">class</span> <span class="nc">MatchedEvents</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class for storing matched events and producing statistics.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    tp : ndarray</span>
+<span class="sd">        true positives as boolean array of shape len(detection) x len(standard)</span>
+<span class="sd">    fp : ndarray</span>
+<span class="sd">        indices of false positives in detection</span>
+<span class="sd">    fn : ndarray</span>
+<span class="sd">        indices of false negatives in standard</span>
+<span class="sd">    detection : list of dict</span>
+<span class="sd">        list of detected events tested against the standard, with &#39;start&#39;, </span>
+<span class="sd">        &#39;end&#39; and &#39;chan&#39;</span>
+<span class="sd">    standard : list of dict</span>
+<span class="sd">        list of ground-truth events, with &#39;start&#39;, &#39;end&#39; and &#39;chan&#39;</span>
+<span class="sd">    threshold : float</span>
+<span class="sd">        minimum intersection-union score for events to be considered </span>
+<span class="sd">        overlapping</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tp</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">detection</span><span class="p">,</span> <span class="n">standard</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tp</span> <span class="o">=</span> <span class="n">tp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fn</span> <span class="o">=</span> <span class="n">fn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">detection</span> <span class="o">=</span> <span class="n">detection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">standard</span> <span class="o">=</span> <span class="n">standard</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threshold</span> <span class="o">=</span> <span class="n">threshold</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_tp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fp</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fn</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recall</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">tp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_tp</span>
+        <span class="n">fn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_fn</span>
+        <span class="k">if</span> <span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">tp</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">precision</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">tp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_tp</span>
+        <span class="n">fp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_fp</span>
+        <span class="k">if</span> <span class="n">tp</span> <span class="o">+</span> <span class="n">fp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">tp</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fp</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">f1score</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>     
+        <span class="n">recall</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recall</span>
+        <span class="n">precision</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">precision</span>
+        <span class="k">if</span> <span class="n">precision</span> <span class="o">+</span> <span class="n">recall</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">precision</span> <span class="o">*</span> <span class="n">recall</span> <span class="o">/</span> <span class="p">(</span><span class="n">precision</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span>
+    
+<div class="viewcode-block" id="MatchedEvents.to_annot"><a class="viewcode-back" href="../../../api/wonambi.detect.agreement.html#wonambi.detect.agreement.MatchedEvents.to_annot">[docs]</a>    <span class="k">def</span> <span class="nf">to_annot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annot</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">s_freq</span><span class="o">=</span><span class="mi">512</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Write matched events to Wonambi XML file for visualization.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        annot : instance of Annotations</span>
+<span class="sd">            Annotations file</span>
+<span class="sd">        category : str</span>
+<span class="sd">            &#39;tp_cons&#39;, &#39;tp_det&#39;, &#39;tp_std&#39;, &#39;fp&#39; or &#39;fn&#39;</span>
+<span class="sd">        name : str</span>
+<span class="sd">            name for the event type</span>
+<span class="sd">        s_freq : int</span>
+<span class="sd">            sampling frequency, in Hz, only required for &#39;tp_cons&#39; category</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s1">&#39;tp_cons&#39;</span> <span class="o">==</span> <span class="n">category</span><span class="p">:</span>
+            <span class="n">cons</span> <span class="o">=</span> <span class="n">consensus</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">detection</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">standard</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">)</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="n">cons</span><span class="o">.</span><span class="n">events</span>
+        
+        <span class="k">elif</span> <span class="s1">&#39;tp_det&#39;</span> <span class="o">==</span> <span class="n">category</span><span class="p">:</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">detection</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">tp</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
+            
+        <span class="k">elif</span> <span class="s1">&#39;tp_std&#39;</span> <span class="o">==</span> <span class="n">category</span><span class="p">:</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">standard</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">tp</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span> 
+            
+        <span class="k">elif</span> <span class="s1">&#39;fp&#39;</span> <span class="o">==</span> <span class="n">category</span><span class="p">:</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">detection</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="p">]</span>
+        
+        <span class="k">elif</span> <span class="s1">&#39;fn&#39;</span> <span class="o">==</span> <span class="n">category</span><span class="p">:</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">standard</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">]</span>
+        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid category.&quot;</span><span class="p">)</span>
+        
+        <span class="n">annot</span><span class="o">.</span><span class="n">add_events</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">chan</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></div>
+            
+<div class="viewcode-block" id="MatchedEvents.all_to_annot"><a class="viewcode-back" href="../../../api/wonambi.detect.agreement.html#wonambi.detect.agreement.MatchedEvents.all_to_annot">[docs]</a>    <span class="k">def</span> <span class="nf">all_to_annot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annot</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;TPd&#39;</span><span class="p">,</span> <span class="s1">&#39;TPs&#39;</span><span class="p">,</span> <span class="s1">&#39;FP&#39;</span><span class="p">,</span> <span class="s1">&#39;FN&#39;</span><span class="p">]):</span>
+        <span class="sd">&quot;&quot;&quot;Convenience function to write all events to XML by category, showing</span>
+<span class="sd">        overlapping TP detection and TP standard.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">to_annot</span><span class="p">(</span><span class="n">annot</span><span class="p">,</span> <span class="s1">&#39;tp_det&#39;</span><span class="p">,</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">to_annot</span><span class="p">(</span><span class="n">annot</span><span class="p">,</span> <span class="s1">&#39;tp_std&#39;</span><span class="p">,</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">to_annot</span><span class="p">(</span><span class="n">annot</span><span class="p">,</span> <span class="s1">&#39;fp&#39;</span><span class="p">,</span> <span class="n">names</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">to_annot</span><span class="p">(</span><span class="n">annot</span><span class="p">,</span> <span class="s1">&#39;fn&#39;</span><span class="p">,</span> <span class="n">names</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span></div></div>
+
+
+<div class="viewcode-block" id="consensus"><a class="viewcode-back" href="../../../api/wonambi.detect.agreement.html#wonambi.detect.agreement.consensus">[docs]</a><span class="k">def</span> <span class="nf">consensus</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">min_duration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Take two or more event lists and output a merged list based on </span>
+<span class="sd">    consensus.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    events: tuple of lists of dict</span>
+<span class="sd">        two or more lists of events from different raters, with &#39;start&#39;, &#39;end&#39;</span>
+<span class="sd">        and &#39;chan&#39;</span>
+<span class="sd">    threshold : float</span>
+<span class="sd">        value between 0 and 1 to threshold consensus. Consensus is computed on</span>
+<span class="sd">        a per-sample basis. For a given rater, if an event is present at a </span>
+<span class="sd">        sample, that rater-sample is assigned the value 1; otherwise it is </span>
+<span class="sd">        assigned 0. The arithmetic mean is taken per sample across all raters, </span>
+<span class="sd">        and if this mean exceeds &#39;threshold&#39;, the sample is counted as </span>
+<span class="sd">        belonging to a merged event.</span>
+<span class="sd">    s_freq : int</span>
+<span class="sd">        sampling frequency, in Hz</span>
+<span class="sd">    min_duration : float, optional</span>
+<span class="sd">        minimum duration for merged events, in s.</span>
+<span class="sd">    weights : list of float</span>
+<span class="sd">        a vector of relative weights of each event type</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of wonambi.Graphoelement</span>
+<span class="sd">        events merged by consensus</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">chan</span> <span class="o">=</span> <span class="p">[</span><span class="n">one_rater</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">one_rater</span> <span class="ow">in</span> <span class="n">events</span> <span class="k">if</span> <span class="n">one_rater</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">beg</span> <span class="o">=</span> <span class="nb">min</span><span class="p">([</span><span class="n">one_rater</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">one_rater</span> <span class="ow">in</span> <span class="n">events</span> <span class="k">if</span> <span class="n">one_rater</span><span class="p">])</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="n">one_rater</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">one_rater</span> <span class="ow">in</span> <span class="n">events</span> <span class="k">if</span> <span class="n">one_rater</span><span class="p">])</span>
+    <span class="n">n_samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">end</span> <span class="o">-</span> <span class="n">beg</span><span class="p">)</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">)</span>
+    <span class="n">times</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">s_freq</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">s_freq</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">))</span>
+    
+    <span class="n">positives</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">),</span> <span class="n">n_samples</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">one_rater</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">weights</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="n">one_rater</span><span class="p">:</span>
+            <span class="n">n_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ev</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">beg</span><span class="p">)</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">)</span>
+            <span class="n">n_end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ev</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">beg</span><span class="p">)</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">)</span>
+            <span class="n">positives</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">n_start</span><span class="p">:</span><span class="n">n_end</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">wt</span><span class="p">)</span>
+                
+    <span class="n">consensus</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">positives</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">consensus</span><span class="p">[</span><span class="n">consensus</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">consensus</span><span class="p">[</span><span class="n">consensus</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">consensus</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">(([</span><span class="mi">0</span><span class="p">],</span> <span class="n">consensus</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">on_off</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">consensus</span><span class="p">)</span>
+    <span class="n">onsets</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">on_off</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">offsets</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">on_off</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">start_times</span> <span class="o">=</span> <span class="n">times</span><span class="p">[</span><span class="n">onsets</span><span class="p">]</span>
+    <span class="n">end_times</span> <span class="o">=</span> <span class="n">times</span><span class="p">[</span><span class="n">offsets</span><span class="p">]</span>
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">vstack</span><span class="p">((</span><span class="n">start_times</span><span class="p">,</span> <span class="n">end_times</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="n">min_duration</span><span class="p">:</span>
+        <span class="n">merged</span> <span class="o">=</span> <span class="n">merged</span><span class="p">[:,</span> <span class="n">merged</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">merged</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&gt;=</span> <span class="n">min_duration</span><span class="p">]</span>
+        
+    <span class="n">out</span> <span class="o">=</span> <span class="n">Graphoelement</span><span class="p">()</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">merged</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">],</span> 
+                   <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">merged</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">],</span>
+                   <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="n">chan</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+
+    <span class="k">return</span> <span class="n">out</span>     </div>
+
+<div class="viewcode-block" id="consensus_exact"><a class="viewcode-back" href="../../../api/wonambi.detect.agreement.html#wonambi.detect.agreement.consensus_exact">[docs]</a><span class="k">def</span> <span class="nf">consensus_exact</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_duration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Take two or more event lists and output a merged list based on </span>
+<span class="sd">    consensus, where agreement is exactly equal to a threshold.</span>
+<span class="sd">    This is useful when combining &gt;2 event types, and creating a </span>
+<span class="sd">    consensus event type based on some combination of these events.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    events: tuple of lists of dict</span>
+<span class="sd">        two or more lists of events from different raters, with &#39;start&#39;, &#39;end&#39;</span>
+<span class="sd">        and &#39;chan&#39;</span>
+<span class="sd">    threshold : float</span>
+<span class="sd">        value between 0 and 1 to threshold consensus. Consensus is computed on</span>
+<span class="sd">        a per-sample basis. For a given rater, if an event is present at a </span>
+<span class="sd">        sample, that rater-sample is assigned the value 1; otherwise it is </span>
+<span class="sd">        assigned 0. The arithmetic sum is taken per sample across all raters, </span>
+<span class="sd">        and if this exactly equals &#39;threshold&#39;, the sample is counted as </span>
+<span class="sd">        belonging to a merged event.</span>
+<span class="sd">    s_freq : int</span>
+<span class="sd">        sampling frequency, in Hz</span>
+<span class="sd">    min_duration : float, optional</span>
+<span class="sd">        minimum duration for merged events, in s.</span>
+<span class="sd">    weights : a dict containing event names (str) and their corresponding </span>
+<span class="sd">        weighting (int) e.g. {&#39;low&#39; : 1,&#39;med&#39; : 2,&#39;high&#39; : 3}</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of wonambi.Graphoelement</span>
+<span class="sd">        events merged by consensus and named by confidence rating</span>
+<span class="sd">        </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function is a modification of agreement.consensus contributed by </span>
+<span class="sd">    Nathan Cross.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">chan</span> <span class="o">=</span> <span class="p">[</span><span class="n">one_rater</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">one_rater</span> <span class="ow">in</span> <span class="n">events</span> <span class="k">if</span> <span class="n">one_rater</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">window</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">beg</span> <span class="o">=</span> <span class="nb">min</span><span class="p">([</span><span class="n">one_rater</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">one_rater</span> <span class="ow">in</span> <span class="n">events</span> <span class="k">if</span> <span class="n">one_rater</span><span class="p">])</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="n">one_rater</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">one_rater</span> <span class="ow">in</span> <span class="n">events</span> <span class="k">if</span> <span class="n">one_rater</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">beg</span> <span class="o">=</span> <span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">window</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+   
+    <span class="n">n_samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">end</span> <span class="o">-</span> <span class="n">beg</span><span class="p">)</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">)</span>
+    <span class="n">times</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">s_freq</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">s_freq</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;low&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;med&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;high&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+    
+    <span class="n">positives</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">),</span> <span class="n">n_samples</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">one_rater</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">events</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="n">one_rater</span><span class="p">:</span>
+            <span class="n">n_start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ev</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">beg</span><span class="p">)</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">)</span>
+            <span class="n">n_end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ev</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">beg</span><span class="p">)</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ev</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;low&#39;</span><span class="p">:</span>
+                <span class="n">positives</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">n_start</span><span class="p">:</span><span class="n">n_end</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">ev</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;med&#39;</span><span class="p">:</span>
+                <span class="n">positives</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">n_start</span><span class="p">:</span><span class="n">n_end</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;med&#39;</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">ev</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;high&#39;</span><span class="p">:</span>
+                <span class="n">positives</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">n_start</span><span class="p">:</span><span class="n">n_end</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;high&#39;</span><span class="p">])</span>
+                
+    <span class="n">consensus</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">positives</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">consensus</span><span class="p">[</span><span class="n">consensus</span> <span class="o">!=</span> <span class="n">threshold</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">consensus</span><span class="p">[</span><span class="n">consensus</span> <span class="o">==</span> <span class="n">threshold</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>  
+    <span class="n">consensus</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">(([</span><span class="mi">0</span><span class="p">],</span> <span class="n">consensus</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">on_off</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">consensus</span><span class="p">)</span>
+    <span class="n">onsets</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">on_off</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">offsets</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">on_off</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">start_times</span> <span class="o">=</span> <span class="n">times</span><span class="p">[</span><span class="n">onsets</span><span class="p">]</span>
+    <span class="n">end_times</span> <span class="o">=</span> <span class="n">times</span><span class="p">[</span><span class="n">offsets</span><span class="p">]</span>
+    <span class="n">merged</span> <span class="o">=</span> <span class="n">vstack</span><span class="p">((</span><span class="n">start_times</span><span class="p">,</span> <span class="n">end_times</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="n">min_duration</span><span class="p">:</span>
+        <span class="n">merged</span> <span class="o">=</span> <span class="n">merged</span><span class="p">[:,</span> <span class="n">merged</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">merged</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&gt;=</span> <span class="n">min_duration</span><span class="p">]</span>
+        
+    <span class="n">out</span> <span class="o">=</span> <span class="n">Graphoelement</span><span class="p">()</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">merged</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">],</span> 
+                   <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">merged</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">],</span>
+                   <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="n">chan</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+
+    <span class="k">return</span> <span class="n">out</span> </div>
+            
+<div class="viewcode-block" id="match_events"><a class="viewcode-back" href="../../../api/wonambi.detect.agreement.html#wonambi.detect.agreement.match_events">[docs]</a><span class="k">def</span> <span class="nf">match_events</span><span class="p">(</span><span class="n">detection</span><span class="p">,</span> <span class="n">standard</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Find best matches between detected and standard events, by a thresholded</span>
+<span class="sd">    intersection-union rule.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    detection : list of dict</span>
+<span class="sd">        list of detected events to be tested against the standard, with </span>
+<span class="sd">        &#39;start&#39;, &#39;end&#39; and &#39;chan&#39;</span>
+<span class="sd">    standard : list of dict</span>
+<span class="sd">        list of ground-truth events, with &#39;start&#39;, &#39;end&#39; and &#39;chan&#39;</span>
+<span class="sd">    threshold : float</span>
+<span class="sd">        minimum intersection-union score to match a pair, between 0 and 1</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of MatchedEvents</span>
+<span class="sd">        indices of true positives, false positives and false negatives, with</span>
+<span class="sd">        statistics (recall, precision, F1)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Vectorize start and end times and set up for broadcasting</span>
+    <span class="n">det_beg</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">detection</span><span class="p">])[:,</span> <span class="n">newaxis</span><span class="p">]</span>
+    <span class="n">det_end</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">detection</span><span class="p">])[:,</span> <span class="n">newaxis</span><span class="p">]</span>
+    <span class="n">std_beg</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">standard</span><span class="p">])[</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="n">std_end</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">standard</span><span class="p">])[</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+
+    <span class="c1"># Get durations and broadcast them</span>
+    <span class="n">det_dur</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">(</span><span class="n">det_end</span> <span class="o">-</span> <span class="n">det_beg</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">standard</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">std_dur</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">(</span><span class="n">std_end</span> <span class="o">-</span> <span class="n">std_beg</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">detection</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    
+    <span class="c1"># Subtract every end by every start and find overlaps</span>
+    <span class="n">det_minus_std</span> <span class="o">=</span> <span class="n">det_end</span> <span class="o">-</span> <span class="n">std_beg</span> <span class="c1"># array of shape (len(det), len(std))</span>
+    <span class="n">std_minus_det</span> <span class="o">=</span> <span class="n">std_end</span> <span class="o">-</span> <span class="n">det_beg</span>    
+    <span class="n">overlapping</span> <span class="o">=</span> <span class="n">logical_and</span><span class="p">(</span><span class="n">det_minus_std</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">std_minus_det</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    
+    <span class="c1"># Find intersection and union</span>
+    <span class="n">shorter_diff</span> <span class="o">=</span> <span class="n">minimum</span><span class="p">(</span><span class="n">det_minus_std</span><span class="p">,</span> <span class="n">std_minus_det</span><span class="p">)</span>
+    <span class="n">longer_diff</span> <span class="o">=</span> <span class="n">maximum</span><span class="p">(</span><span class="n">det_minus_std</span><span class="p">,</span> <span class="n">std_minus_det</span><span class="p">)</span>
+    
+    <span class="n">shorter_dur</span> <span class="o">=</span> <span class="n">minimum</span><span class="p">(</span><span class="n">det_dur</span><span class="p">,</span> <span class="n">std_dur</span><span class="p">)</span>
+    <span class="n">longer_dur</span> <span class="o">=</span> <span class="n">maximum</span><span class="p">(</span><span class="n">det_dur</span><span class="p">,</span> <span class="n">std_dur</span><span class="p">)</span>
+    
+    <span class="n">interx</span> <span class="o">=</span> <span class="n">minimum</span><span class="p">(</span><span class="n">shorter_diff</span><span class="p">,</span> <span class="n">shorter_dur</span><span class="p">)</span>
+    <span class="n">union</span> <span class="o">=</span> <span class="n">maximum</span><span class="p">(</span><span class="n">longer_diff</span><span class="p">,</span> <span class="n">longer_dur</span><span class="p">)</span>
+        
+    <span class="c1"># Compute intersection-union score and set non-overlapping pairs to 0</span>
+    <span class="n">iu</span> <span class="o">=</span> <span class="n">interx</span> <span class="o">/</span> <span class="n">union</span>
+    <span class="n">iu</span><span class="p">[</span><span class="n">invert</span><span class="p">(</span><span class="n">overlapping</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># Threshold IU score to yield  True Positive candidates</span>
+    <span class="n">iu</span><span class="p">[</span><span class="n">iu</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># If no events, tp and fp are empty, fn is all events</span>
+    <span class="k">if</span> <span class="n">iu</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">tp</span> <span class="o">=</span> <span class="n">fp</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">([])</span>
+        <span class="n">fn</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">standard</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+    
+        <span class="c1"># Find partial matches, round 1</span>
+        <span class="n">det_match1</span> <span class="o">=</span> <span class="n">argmax</span><span class="p">(</span><span class="n">iu</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">std_match1</span> <span class="o">=</span> <span class="n">argmax</span><span class="p">(</span><span class="n">iu</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        
+        <span class="c1"># Find full matches, round 1, then remove them from IU</span>
+        <span class="n">tp</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">iu</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">std_match1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">det_match1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
+                <span class="n">tp</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">iu</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">iu</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        
+        <span class="c1"># Round 2</span>
+        <span class="n">det_match2</span> <span class="o">=</span> <span class="n">argmax</span><span class="p">(</span><span class="n">iu</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">std_match2</span> <span class="o">=</span> <span class="n">argmax</span><span class="p">(</span><span class="n">iu</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">std_match2</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">det_match2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
+                <span class="n">tp</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    
+        <span class="c1"># Find false positives and false negatives</span>
+        <span class="n">fp</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">logical_and</span><span class="p">(</span><span class="n">det_match1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">det_match2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">fn</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">logical_and</span><span class="p">(</span><span class="n">std_match1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">std_match2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="c1"># Store in MatchedEvents class, which computes statistics</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">MatchedEvents</span><span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">detection</span><span class="p">,</span> <span class="n">standard</span><span class="p">,</span> <span class="n">threshold</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">match</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

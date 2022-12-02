@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annotations &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Event detection" href="detect.html" />
+    <link rel="prev" title="Navigation" href="traces.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Graphical User Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traces.html">Navigation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Graphical User Interface</a></li>
+      <li class="breadcrumb-item active">Annotations</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="annotations">
+<span id="notes"></span><h1>Annotations<a class="headerlink" href="#annotations" title="Permalink to this heading"></a></h1>
+<p>Wonambi allows you to add annotations to your signal, such as sleep staging and signal quality (epochwise), highlighted events, cycle markers and bookmarks.</p>
+<p>You must first create an Annotation File, by clicking on <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Annotations</span></code>.</p>
+<p>You will be asked to provide a rater name. Annotation Files are divided into separate raters. Use the <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Rater</span></code> menu to create new raters and switch between them.</p>
+<p>To load previously created annotations, click on <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Annotations</span></code>:</p>
+<img alt="../_images/notes_03_load.png" src="../_images/notes_03_load.png" />
+<section id="import-sleep-staging-from-an-external-source">
+<h2>Import sleep staging from an external source<a class="headerlink" href="#import-sleep-staging-from-an-external-source" title="Permalink to this heading"></a></h2>
+<p>Wonambi can import sleep staging from files generated by Alice, Compumedics, Domino, FASST, PRANA, RemLogic or Sandman.</p>
+<p>To import external sleep staging, click on <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">staging</span></code>, and select the source program:</p>
+<img alt="../_images/notes_04_import_fasst.png" src="../_images/notes_04_import_fasst.png" />
+<p>For Compumedics staging, you will be prompted to provide the staging start time.</p>
+<p>For all sources but FASST, you will be asked to provide a rater name, under which to save the staging in the Annotation File. You may create a new rater or overwrite the staging in an existing one.</p>
+<p>For FASST staging, you’ll first be asked to load the <code class="docutils literal notranslate"><span class="pre">.mat</span></code> file containing the FASST sleep scores. Then you’ll need to indicate where to save the annotations in <code class="docutils literal notranslate"><span class="pre">.xml</span></code> format.</p>
+<p>If importation is successful, the converted sleep staging will appear in the <code class="docutils literal notranslate"><span class="pre">Overview</span></code> panel:</p>
+<img alt="../_images/notes_05_show_imported.png" src="../_images/notes_05_show_imported.png" />
+<p>For RemLogic staging, make sure you select the following options when exporting from RemLogic:</p>
+<img alt="gui/images/notes_21_remlogic_options.png" src="gui/images/notes_21_remlogic_options.png" />
+</section>
+<section id="stage-sleep">
+<h2>Stage sleep<a class="headerlink" href="#stage-sleep" title="Permalink to this heading"></a></h2>
+<p>You can also stage sleep within Wonambi. First, make sure you are lined up with an epoch. Make sure you are zoomed to the 30-s view with <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Window</span> <span class="pre">length</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">to</span> <span class="pre">30.0</span></code>.</p>
+<p>If you are not lined up with the epoch start, click on <code class="docutils literal notranslate"><span class="pre">Navigation</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">Up</span> <span class="pre">with</span> <span class="pre">Epoch</span></code>.</p>
+<p>Now you can use the <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Score</span></code> menu or the associated keyboard shortcuts to stage sleep per epoch.
+Alternatively, you can select a stage from the <code class="docutils literal notranslate"><span class="pre">Stage</span> <span class="pre">Box</span></code>:</p>
+<img alt="../_images/notes_09_stage_box.png" src="../_images/notes_09_stage_box.png" />
+<p>The <code class="docutils literal notranslate"><span class="pre">Stage</span> <span class="pre">Box</span></code> always displays the stage of the current epoch (as long as you are lined up with one).</p>
+<p>Wonambi provides two parallel sleep scoring tracks: one for sleep stages, the other for signal quality.
+The idea is to keep sleep annotation separate from signal annotation, so that signal quality does not affect physiological parameters like sleep efficiency and relative stage durations.</p>
+<p>We recommend that you first stage sleep, disregarding signal quality
+(except of course when it is unintelligible, in which case you can mark it as <code class="docutils literal notranslate"><span class="pre">Artefact</span></code>).
+Then, you can make a second pass only evaluating signal quality, using the <code class="docutils literal notranslate"><span class="pre">o</span></code> and <code class="docutils literal notranslate"><span class="pre">p</span></code> keys for <code class="docutils literal notranslate"><span class="pre">Good</span></code> and <code class="docutils literal notranslate"><span class="pre">Poor</span></code> signal, respectively.
+Similarly to the <code class="docutils literal notranslate"><span class="pre">Stage</span> <span class="pre">Box</span></code>, the <code class="docutils literal notranslate"><span class="pre">Quality</span> <span class="pre">Box</span></code> displays the quality of the current epoch, and can be used to change it:</p>
+<img alt="../_images/notes_10_quality_box.png" src="../_images/notes_10_quality_box.png" />
+<p>Epochs marked as <code class="docutils literal notranslate"><span class="pre">Poor</span></code> signal are excluded from <code class="docutils literal notranslate"><span class="pre">Analysis</span></code>, namely event detections and tools in the analysis console.</p>
+<p>Epochs staged as <code class="docutils literal notranslate"><span class="pre">Artefact</span></code> are automatically marked as <code class="docutils literal notranslate"><span class="pre">Poor</span></code> signal.</p>
+<p>You can view staging and signal quality summary parameters by clicking <code class="docutils literal notranslate"><span class="pre">Summary</span></code> in the <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> panel.</p>
+</section>
+<section id="mark-cycles">
+<h2>Mark cycles<a class="headerlink" href="#mark-cycles" title="Permalink to this heading"></a></h2>
+<p>The stages of sleep are normally segregated into cycles (N1; N2; N3; then REM). After staging, you can segment the hypnogram into cycles for use in analysis.</p>
+<p>To mark a cycle start, line yourself up with the first epoch of the cycle and click on <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Cycle</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">cycle</span> <span class="pre">start</span></code>.</p>
+<img alt="../_images/notes_11_set_cycle_start.png" src="../_images/notes_11_set_cycle_start.png" />
+<p>A cycle start marker will appear as a red square bracket on the <code class="docutils literal notranslate"><span class="pre">Overview</span></code> panel:</p>
+<img alt="../_images/notes_12_cycle_marker.png" src="../_images/notes_12_cycle_marker.png" />
+<p>To mark a cycle end, line yourself up with the first epoch after the end of the cycle. Here, you can either use <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">cycle</span> <span class="pre">end</span></code> or, if this epoch is the start of the next cycle, simply use <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">cycle</span> <span class="pre">start</span></code> again.</p>
+<p>Repeat for each cycle, and make sure to mark the end of the last cycle with <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">cycle</span> <span class="pre">end</span></code>. Omitting this will result in illegible cycle data.</p>
+<img alt="../_images/notes_13_all_cycle_markers.png" src="../_images/notes_13_all_cycle_markers.png" />
+<p>To remove a cycle marker, line yourself up with that epoch and click <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Cycle</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">cycle</span> <span class="pre">marker</span></code>.</p>
+<p>You can clear all cycle markers in the rater profile with <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Cycle</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Clear</span> <span class="pre">cycle</span> <span class="pre">markers</span></code>.</p>
+</section>
+<section id="mark-events">
+<h2>Mark events<a class="headerlink" href="#mark-events" title="Permalink to this heading"></a></h2>
+<p>In addition to epoch annotation, Wonambi allows you to mark events of varying duration directly on the trace.</p>
+<p>To mark an event on the trace, enter <em>event edit mode</em> by clicking on the <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">Mode</span></code> icon:</p>
+<img alt="../_images/notes_07_event_mode.png" src="../_images/notes_07_event_mode.png" />
+<p>Next, select an event type in the <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">Type</span> <span class="pre">box</span></code>:</p>
+<img alt="../_images/notes_08_evt_type_box.png" src="../_images/notes_08_evt_type_box.png" />
+<p>You can create a new event type with <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Event</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Event</span> <span class="pre">Type</span></code>.</p>
+<p>Now, click and drag along a segment of the signal from the desired channel to create a new event:</p>
+<img alt="../_images/notes_14_mark_event.png" src="../_images/notes_14_mark_event.png" />
+<p>Events belong to the channel on which they were marked, and appear as a darker colour on that channel. The colours themselves are automatically generated from the event label text.</p>
+<p>By default, the events are also highlighted on all other channels in a lighter colour. You can disable this option by toggling <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Full-length</span> <span class="pre">markers</span></code>.</p>
+<p>To delete an event, make sure you are in <em>event edit mode</em>, and click on it, so that it becomes highlighted in bright yellow:</p>
+<img alt="../_images/notes_15_highlight_event.png" src="../_images/notes_15_highlight_event.png" />
+<p>Now press the <code class="docutils literal notranslate"><span class="pre">Delete</span></code> key. Note: The event will be removed from both the trace and the Annotation File.</p>
+<p>Events are visible both highlighted on the trace and in table form in the <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> tab of the <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> panel.</p>
+<p>Double-click on an event in the table to jump to its position on the trace.</p>
+<p>You can also delete an event from the table by clicking it and pressing the <code class="docutils literal notranslate"><span class="pre">Delete</span></code> button below the table.</p>
+</section>
+<section id="mark-artefacts">
+<h2>Mark artefacts<a class="headerlink" href="#mark-artefacts" title="Permalink to this heading"></a></h2>
+<p>Events marked using the event type <code class="docutils literal notranslate"><span class="pre">Artefact</span></code> are used for data exclusion in analysis.</p>
+<p>For detections and analysis, if the artefact exclusion option is selected, artefacts marked on any channel will exclude concurrent signal on all channels.</p>
+<p>To mark <code class="docutils literal notranslate"><span class="pre">Artefact</span></code> events, click on <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Event</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Event</span> <span class="pre">Type</span></code> and type in <em>Artefact</em>.
+Then in <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">Mode</span></code>, mark the artefacts on any channel in the channel group.
+This channel must still be in the channel group at the moment of detection or analysis in order for the artefact events to be found.</p>
+</section>
+<section id="export-sleep-scores-as-csv">
+<h2>Export sleep scores as csv<a class="headerlink" href="#export-sleep-scores-as-csv" title="Permalink to this heading"></a></h2>
+<p>You can export the current sleep scores as <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file to disk.
+To do so, click on <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">staging</span></code>:</p>
+<img alt="../_images/notes_06_export.png" src="../_images/notes_06_export.png" />
+<p>then select the file where you want to store the sleep scores.</p>
+</section>
+<section id="export-sleep-statistics-as-csv">
+<h2>Export sleep statistics as csv<a class="headerlink" href="#export-sleep-statistics-as-csv" title="Permalink to this heading"></a></h2>
+<p>You can export some sleep statistics (such as Total Sleep Time, WASO, etc)  as <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file to disk.
+To do so, click on <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">statistics</span></code>:</p>
+<img alt="../_images/analysis_02_statistics.png" src="../_images/analysis_02_statistics.png" />
+<p>then select the file where you want to store the sleep scores.</p>
+<p>In addition, you need to specify at what time the lights went off (<code class="docutils literal notranslate"><span class="pre">Lights</span> <span class="pre">OUT</span></code>) and when the lights went on (<code class="docutils literal notranslate"><span class="pre">Lights</span> <span class="pre">ON</span></code>):</p>
+<img alt="../_images/analysis_02_timedialog.png" src="../_images/analysis_02_timedialog.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Lights</span> <span class="pre">OUT</span></code> and <code class="docutils literal notranslate"><span class="pre">Lights</span> <span class="pre">ON</span></code> are to be used as delimiters of the <em>time spent intending to sleep</em>, not as markers of actual luminosity change in the room.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If any epochs are scored as sleep before <code class="docutils literal notranslate"><span class="pre">Lights</span> <span class="pre">OUT</span></code> or after <code class="docutils literal notranslate"><span class="pre">Lights</span> <span class="pre">ON</span></code>, sleep efficiency may exceed 1.</p>
+</div>
+</section>
+<section id="import-markers-as-events">
+<h2>Import markers as events<a class="headerlink" href="#import-markers-as-events" title="Permalink to this heading"></a></h2>
+<p>Some EEG file formats such as Brain Vision come with timeline markers, and these are automatically displayed in Wonambi.
+Markers are immutable, so if you would like to modify them in Wonambi, you’ll need to convert them to events, which are saved in the Annotations File.</p>
+<p>To do this, make sure you have an Annotations File loaded. Now click <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Event</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Markers</span> <span class="pre">to</span> <span class="pre">events</span></code> and choose among the options.</p>
+<p>To convert all markers into a single event type, select <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">name</span></code>, and enter the event type name when prompted.</p>
+<p>To convert markers into new event types named from the marker labels, select <code class="docutils literal notranslate"><span class="pre">Keep</span> <span class="pre">marker</span> <span class="pre">names</span></code>.
+A new event type will be created for each unique marker label.</p>
+</section>
+<section id="merge-events">
+<h2>Merge events<a class="headerlink" href="#merge-events" title="Permalink to this heading"></a></h2>
+<p>You may want to merge events outside of the automatic detection process.
+For instance, you may want to merge spindles detected by different algorithms, or you may want to merge manually marked events with automatically detected ones.</p>
+<p>To do this, click on <code class="docutils literal notranslate"><span class="pre">Annotations</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Event</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">Events...</span></code> to open the <em>merge events dialog</em>:</p>
+<img alt="../_images/notes_19_mergedialog.png" src="../_images/notes_19_mergedialog.png" />
+<p>You may choose to merge events from one or several event types using the <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">type(s)</span></code> box.
+If you select several, you will be prompted to provide a label for the new event type created by the merger.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The selected event types will be deleted and replaced with the new event type.</p>
+</div>
+<p>Events marked within a same channel will be merged if they are separated by up to a certain interval.
+This interval is set with <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">interval</span></code>.</p>
+<p>In addition to merging events from within a same channel, you may choose to merge events marked on different channels.
+To do so, check the <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">across</span> <span class="pre">channels</span></code> box.
+With this option checked, events on any channel separated by <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">interval</span></code> or less will be merged.</p>
+<p>When events are merged across channels, only one channel keeps the event.
+That channel can either be the one that had the earliest onset event, or the longest event.
+You can choose the channel selection rule with the <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">to...</span></code> drop-down menu.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="traces.html" class="btn btn-neutral float-left" title="Navigation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="detect.html" class="btn btn-neutral float-right" title="Event detection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+wonambi.widgets.spectrum module
+===============================
+
+.. automodule:: wonambi.widgets.spectrum
+   :members:
+   :undoc-members:
+   :show-inheritance:

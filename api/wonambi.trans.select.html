@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.trans.select module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.utils package" href="wonambi.utils.html" />
+    <link rel="prev" title="wonambi.trans.reject module" href="wonambi.trans.reject.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.trans.html">wonambi.trans package</a></li>
+      <li class="breadcrumb-item active">wonambi.trans.select module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.trans.select">
+<span id="wonambi-trans-select-module"></span><h1>wonambi.trans.select module<a class="headerlink" href="#module-wonambi.trans.select" title="Permalink to this heading"></a></h1>
+<p>Module to select periods of interest, based on number of trials or any of
+the axes.</p>
+<p>There is some overlap between Select and the Data.__call__(). The main
+difference is that Select takes an instance of Data as input and returns
+another instance of Data as output, whil Data.__call__() returns the actual
+content of the data.</p>
+<p>Select should be as flexible as possible. There are quite a few cases, which
+will be added as we need them.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.trans.select.Segments">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.trans.select.</span></span><span class="sig-name descname"><span class="pre">Segments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/select.html#Segments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.select.Segments" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class containing a set of data segments for analysis, with metadata.
+Only contains metadata until .read_data is called.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.trans.select.Segments.dataset">
+<span class="sig-name descname"><span class="pre">dataset</span></span><a class="headerlink" href="#wonambi.trans.select.Segments.dataset" title="Permalink to this definition"></a></dt>
+<dd><p>metadata for the associated record</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of wonambi.dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.trans.select.Segments.segments">
+<span class="sig-name descname"><span class="pre">segments</span></span><a class="headerlink" href="#wonambi.trans.select.Segments.segments" title="Permalink to this definition"></a></dt>
+<dd><p>chronological list of segment metadata. Each segment dict contains info
+about start and end times, stage, cycle, channel and event name, if
+applicable. Once read_data is called, the signal data are added to each
+segment dictionary under ‘data’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.trans.select.Segments.read_data">
+<span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grp_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concat_chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_s_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/select.html#Segments.read_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.select.Segments.read_data" title="Permalink to this definition"></a></dt>
+<dd><p>Read data for analysis. Adds data as ‘data’ in each dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chan</strong> (<em>list</em><em> of </em><em>str</em>) – active channel names as they appear in record, without ref or group
+If given an empty list, the channel specified in seg[‘chan’] will
+be read for each segment</p></li>
+<li><p><strong>ref_chan</strong> (<em>list</em><em> of </em><em>str</em>) – reference channel names as they appear in record, without group</p></li>
+<li><p><strong>grp_name</strong> (<em>str</em>) – name of the channel group, required in GUI</p></li>
+<li><p><strong>concat_chan</strong> (<em>bool</em>) – if True, data from all channels will be concatenated</p></li>
+<li><p><strong>average_channels</strong> (<em>bool</em>) – if True, all channels will be averaged into a single virtual
+channel with label ‘avg_chan’</p></li>
+<li><p><strong>max_s_freq</strong> (<em>: int</em>) – maximum sampling frequency</p></li>
+<li><p><strong>parent</strong> (<em>QWidget</em>) – for GUI only. Identifies parent widget for display of progress
+dialog.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.select.fetch">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.select.</span></span><span class="sig-name descname"><span class="pre">fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evt_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan_full</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch_dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch_overlap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reject_epoch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reject_artf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/select.html#fetch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.select.fetch" title="Permalink to this definition"></a></dt>
+<dd><p>Create instance of Segments for analysis, complete with info about
+stage, cycle, channel, event type. Segments contains only metadata until
+.read_data is called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.dataset.html#wonambi.dataset.Dataset" title="wonambi.dataset.Dataset"><em>Dataset</em></a>) – info about record</p></li>
+<li><p><strong>annot</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.attr.annotations.html#wonambi.attr.annotations.Annotations" title="wonambi.attr.annotations.Annotations"><em>Annotations</em></a>) – scoring info</p></li>
+<li><p><strong>cat</strong> (<em>tuple</em><em> of </em><em>int</em>) – Determines where the signal is concatenated.
+If cat[0] is 1, cycles will be concatenated.
+If cat[1] is 1, different stages will be concatenated.
+If cat[2] is 1, discontinuous signal within a same condition
+(stage, cycle, event type) will be concatenated.
+If cat[3] is 1, events of different types will be concatenated.
+0 in any position indicates no concatenation.</p></li>
+<li><p><strong>evt_type</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – Enter a list of event types to get events; otherwise, epochs will
+be returned.</p></li>
+<li><p><strong>stage</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – Stage(s) of interest. If None, stage is ignored.</p></li>
+<li><p><strong>cycle</strong> (<em>list</em><em> of </em><em>tuple</em><em> of </em><em>two float</em><em>, </em><em>optional</em>) – Cycle(s) of interest, as start and end times in seconds from record
+start. If None, cycles are ignored.</p></li>
+<li><p><strong>chan_full</strong> (<em>list</em><em> of </em><em>str</em><em> or </em><em>None</em>) – Channel(s) of interest, only used for events (epochs have no
+channel). Channel format is ‘chan_name (group_name)’.
+If used for epochs, separate segments will be returned for each
+channel; this is necessary for channel-specific artefact removal (see
+reject_artf below). If None, channel is ignored.</p></li>
+<li><p><strong>epoch</strong> (<em>str</em><em>, </em><em>optional</em>) – If ‘locked’, returns epochs locked to staging. If ‘unlocked’, divides
+signal (with specified concatenation) into epochs of duration epoch_dur
+starting at first sample of every segment and discarding any remainder.
+If None, longest run of signal is returned.</p></li>
+<li><p><strong>epoch_dur</strong> (<em>float</em>) – only for epoch=’unlocked’. Duration of epochs returned, in seconds.</p></li>
+<li><p><strong>epoch_overlap</strong> (<em>float</em>) – only for epoch=’unlocked’. Ratio of overlap between two consecutive
+segments. Value between 0 and 1. Overriden by step.</p></li>
+<li><p><strong>epoch_step</strong> (<em>float</em>) – only for epoch=’unlocked’. Time between consecutive epoch starts, in
+seconds. Overrides epoch_overlap/</p></li>
+<li><p><strong>reject_epoch</strong> (<em>bool</em>) – If True, epochs marked as ‘Poor’ quality or staged as ‘Artefact’ will
+be rejected (and the signal segmented in consequence). Has no effect on
+event selection.</p></li>
+<li><p><strong>reject_artf</strong> (<em>bool</em><em> or </em><em>str</em><em> or </em><em>list</em><em> of </em><em>str</em>) – If True, excludes events marked as ‘Artefact’. If chan_full is
+specified, only artefacts marked on a given channel are removed from
+that channel. Signal is segmented in consequence.
+If None, Artefact events are ignored.
+If str or list of str, will reject the specified event types only.</p></li>
+<li><p><strong>min_dur</strong> (<em>float</em>) – Minimum duration of segments returned, in seconds.</p></li>
+<li><p><strong>buffer</strong> (<em>float</em>) – adds this many seconds of signal before and after each segment</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of Segments</em> – metadata for all analysis segments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.select.get_times">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.select.</span></span><span class="sig-name descname"><span class="pre">get_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evt_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/select.html#get_times"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.select.get_times" title="Permalink to this definition"></a></dt>
+<dd><p>Get start and end times for selected segments of data, bundled
+together with info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annot</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.attr.annotations.html#wonambi.attr.annotations.Annotations" title="wonambi.attr.annotations.Annotations"><em>Annotations</em></a>) – The annotation file containing events and epochs</p></li>
+<li><p><strong>evt_type</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – Enter a list of event types to get events; otherwise, epochs will
+be returned.</p></li>
+<li><p><strong>stage</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – Stage(s) of interest. If None, stage is ignored.</p></li>
+<li><p><strong>cycle</strong> (<em>list</em><em> of </em><em>tuple</em><em> of </em><em>two float</em><em>, </em><em>optional</em>) – Cycle(s) of interest, as start and end times in seconds from record
+start. If None, cycles are ignored.</p></li>
+<li><p><strong>chan</strong> (<em>list</em><em> of </em><em>str</em><em> or </em><em>tuple</em><em> of </em><em>None</em>) – Channel(s) of interest. Channel format is ‘chan_name (group_name)’.
+If None, channel is ignored.</p></li>
+<li><p><strong>exclude</strong> (<em>bool</em>) – Exclude epochs by quality. If True, epochs marked as ‘Poor’ quality
+or staged as ‘Artefact’ will be rejected (and the signal segmented
+in consequence). Has no effect on event selection.</p></li>
+<li><p><strong>buffer</strong> (<em>float</em>) – adds this many seconds of signal before and after each segment</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – Each dict has times (the start and end times of each segment, as
+list of tuple of float), stage, cycle, chan, name (event type,
+if applicable)</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function returns epoch or event start and end times, bundled
+together according to the specified parameters.
+Presently, setting exclude to True does not exclude events found in Poor
+signal epochs. The rationale is that events would never be marked in Poor
+signal epochs. If they were automatically detected, these epochs would
+have been left out during detection. If they were manually marked, then
+it must have been Good signal. At the moment, in the GUI, the exclude epoch
+option is disabled when analyzing events, but we could fix the code if we
+find a use case for rejecting events based on the quality of the epoch
+signal.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.select.resample">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.select.</span></span><span class="sig-name descname"><span class="pre">resample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'time'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/select.html#resample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.select.resample" title="Permalink to this definition"></a></dt>
+<dd><p>Downsample the data after applying a filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.Data" title="wonambi.datatype.Data"><em>Data</em></a>) – data to downsample</p></li>
+<li><p><strong>s_freq</strong> (<em>int</em><em> or </em><em>float</em>) – desired sampling frequency</p></li>
+<li><p><strong>axis</strong> (<em>str</em>) – axis you want to apply downsample on (most likely ‘time’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of Data</em> – downsampled data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.select.select">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.select.</span></span><span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">axes_to_select</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/select.html#select"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.select.select" title="Permalink to this definition"></a></dt>
+<dd><p>Define the selection of trials, using ranges or actual values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.Data" title="wonambi.datatype.Data"><em>Data</em></a>) – data to select from.</p></li>
+<li><p><strong>trial</strong> (<em>list</em><em> of </em><em>int</em><em> or </em><em>ndarray</em><em> (</em><em>dtype='i'</em><em>)</em><em>, </em><em>optional</em>) – index of trials of interest</p></li>
+<li><p><strong>**axes_to_select</strong> – Values need to be tuple or list. If the values in one axis are string,
+then you need to specify all the strings that you want. If the values
+are numeric, then you should specify the range. To select only up to one
+point, you can use (None, value_of_interest). To select multiple
+values, you can pass a numpy array with dtype bool</p></li>
+<li><p><strong>optional</strong> – Values need to be tuple or list. If the values in one axis are string,
+then you need to specify all the strings that you want. If the values
+are numeric, then you should specify the range. To select only up to one
+point, you can use (None, value_of_interest). To select multiple
+values, you can pass a numpy array with dtype bool</p></li>
+<li><p><strong>invert</strong> (<em>bool</em>) – take the opposite selection</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance, same class as input</em> – data where selection has been applied.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.select.smart_chan">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.select.</span></span><span class="sig-name descname"><span class="pre">smart_chan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simple_chan_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/select.html#smart_chan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.select.smart_chan" title="Permalink to this definition"></a></dt>
+<dd><p>From a list of simple channel names, attempts to find the corresponding
+channel names in the dataset and returns a list (with same order).
+:param dataset: info about record
+:type dataset: instance of Dataset
+:param simple_chan_name: simple names for channels, e.g. [‘F3’, ‘Fp2’, ‘ECG’]
+:type simple_chan_name: list of str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>list</em> – corresponding channel labels as they appear in dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.trans.reject.html" class="btn btn-neutral float-left" title="wonambi.trans.reject module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.utils.html" class="btn btn-neutral float-right" title="wonambi.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

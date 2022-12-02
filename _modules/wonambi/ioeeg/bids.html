@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.ioeeg.bids &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.ioeeg.bids</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.ioeeg.bids</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">json</span> <span class="kn">import</span> <span class="n">dump</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span>
+
+<span class="kn">from</span> <span class="nn">.brainvision</span> <span class="kn">import</span> <span class="n">write_brainvision</span>
+<span class="kn">from</span> <span class="nn">.edf</span> <span class="kn">import</span> <span class="n">Edf</span>
+<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="n">MissingDependency</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">bidso</span> <span class="kn">import</span> <span class="n">iEEG</span>
+    <span class="kn">from</span> <span class="nn">bidso.utils</span> <span class="kn">import</span> <span class="n">replace_extension</span><span class="p">,</span> <span class="n">replace_underscore</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="n">iEEG</span> <span class="o">=</span> <span class="n">replace_extension</span> <span class="o">=</span> <span class="n">MissingDependency</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="BIDS"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.bids.html#wonambi.ioeeg.bids.BIDS">[docs]</a><span class="k">class</span> <span class="nc">BIDS</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Basic class to read the data.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : path to file</span>
+<span class="sd">        the name of the filename or directory</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">..dataset</span> <span class="kn">import</span> <span class="n">Dataset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task</span> <span class="o">=</span> <span class="n">iEEG</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">baseformat</span> <span class="o">=</span> <span class="n">Dataset</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BIDS.return_hdr"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.bids.html#wonambi.ioeeg.bids.BIDS.return_hdr">[docs]</a>    <span class="k">def</span> <span class="nf">return_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sf_from_bids</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the header for further use.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        subj_id : str</span>
+<span class="sd">            subject identification code</span>
+<span class="sd">        start_time : datetime</span>
+<span class="sd">            start time of the dataset</span>
+<span class="sd">        s_freq : float</span>
+<span class="sd">            sampling frequency</span>
+<span class="sd">        chan_name : list of str</span>
+<span class="sd">            list of all the channels</span>
+<span class="sd">        n_samples : int</span>
+<span class="sd">            number of samples in the dataset</span>
+<span class="sd">        orig : dict</span>
+<span class="sd">            additional information taken directly from the header</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">subj_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">subject</span>
+
+        <span class="n">chan_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">map_lambda</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chan_name</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">chan_name</span><span class="p">)</span>
+
+        <span class="c1"># read these values directly from dataset</span>
+        <span class="n">orig</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">baseformat</span><span class="o">.</span><span class="n">header</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span>
+        <span class="n">n_samples</span> <span class="o">=</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;n_samples&#39;</span><span class="p">]</span>
+
+        <span class="c1"># s_freq is present in the bids twice (json and channels.tsv) and in the header file, however I trust the header of the file the most</span>
+        <span class="k">if</span> <span class="n">sf_from_bids</span><span class="p">:</span>
+            <span class="n">sampling_freq</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">map_lambda</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;sampling_frequency&#39;</span><span class="p">]))</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sampling_freq</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Multiple sampling frequencies not supported&#39;</span><span class="p">)</span>
+
+            <span class="n">s_freq</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">sampling_freq</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">s_freq</span> <span class="o">=</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">subj_id</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">chan_name</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">,</span> <span class="n">orig</span></div>
+
+<div class="viewcode-block" id="BIDS.return_dat"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.bids.html#wonambi.ioeeg.bids.BIDS.return_dat">[docs]</a>    <span class="k">def</span> <span class="nf">return_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">,</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the data as 2D numpy.ndarray.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chan : int or list</span>
+<span class="sd">            index (indices) of the channels to read</span>
+<span class="sd">        begsam : int</span>
+<span class="sd">            index of the first sample</span>
+<span class="sd">        endsam : int</span>
+<span class="sd">            index of the last sample</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        numpy.ndarray</span>
+<span class="sd">            A 2d matrix, with dimension chan X samples</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">baseformat</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">return_dat</span><span class="p">(</span><span class="n">chan</span><span class="p">,</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BIDS.return_markers"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.bids.html#wonambi.ioeeg.bids.BIDS.return_markers">[docs]</a>    <span class="k">def</span> <span class="nf">return_markers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return all the markers (also called triggers or events).</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list of dict</span>
+<span class="sd">            where each dict contains &#39;name&#39; as str, &#39;start&#39; and &#39;end&#39; as float</span>
+<span class="sd">            in seconds from the start of the recordings, and &#39;chan&#39; as list of</span>
+<span class="sd">            str with the channels involved (if not of relevance, it&#39;s None).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">markers</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">mrk</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">tsv</span><span class="p">:</span>
+            <span class="n">markers</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">mrk</span><span class="p">[</span><span class="s1">&#39;onset&#39;</span><span class="p">]),</span>
+                <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">mrk</span><span class="p">[</span><span class="s1">&#39;onset&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">mrk</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]),</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">mrk</span><span class="p">[</span><span class="s1">&#39;trial_type&#39;</span><span class="p">]</span>
+            <span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">markers</span></div></div>
+
+
+<div class="viewcode-block" id="write_bids"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.bids.html#wonambi.ioeeg.bids.write_bids">[docs]</a><span class="k">def</span> <span class="nf">write_bids</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">write_brainvision</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">markers</span><span class="p">)</span>
+    <span class="n">_write_ieeg_json</span><span class="p">(</span>
+        <span class="n">replace_extension</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;.json&#39;</span><span class="p">))</span>
+    <span class="n">_write_ieeg_channels</span><span class="p">(</span>
+        <span class="n">replace_underscore</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;channels.tsv&#39;</span><span class="p">),</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">_write_ieeg_events</span><span class="p">(</span>
+        <span class="n">replace_underscore</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;events.tsv&#39;</span><span class="p">),</span> <span class="n">markers</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_write_ieeg_json</span><span class="p">(</span><span class="n">output_file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Use only required fields</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dataset_info</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;TaskName&quot;</span><span class="p">:</span> <span class="s2">&quot;unknown&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Manufacturer&quot;</span><span class="p">:</span> <span class="s2">&quot;n/a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;PowerLineFrequency&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;iEEGReference&quot;</span><span class="p">:</span> <span class="s2">&quot;n/a&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="k">with</span> <span class="n">output_file</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">dump</span><span class="p">(</span><span class="n">dataset_info</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_write_ieeg_channels</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    TODO</span>
+<span class="sd">    ----</span>
+<span class="sd">    Make sure that the channels in all the trials are the same.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">CHAN_TYPE</span> <span class="o">=</span> <span class="s1">&#39;ECOG&#39;</span>
+    <span class="n">CHAN_UNIT</span> <span class="o">=</span> <span class="s1">&#39;µV&#39;</span>
+
+    <span class="k">with</span> <span class="n">output_file</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;name</span><span class="se">\t</span><span class="s1">type</span><span class="se">\t</span><span class="s1">units</span><span class="se">\t</span><span class="s1">sampling_frequency</span><span class="se">\t</span><span class="s1">low_cutoff</span><span class="se">\t</span><span class="s1">high_cutoff</span><span class="se">\t</span><span class="s1">notch</span><span class="se">\t</span><span class="s1">reference</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">one_chan</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">chan</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+                <span class="n">one_chan</span><span class="p">,</span>
+                <span class="n">CHAN_TYPE</span><span class="p">,</span>
+                <span class="n">CHAN_UNIT</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">s_freq</span><span class="si">:</span><span class="s1">f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;n/a&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;n/a&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;n/a&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;n/a&#39;</span><span class="p">,</span>
+                <span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_write_ieeg_events</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">markers</span><span class="p">):</span>
+
+    <span class="k">with</span> <span class="n">output_file</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;onset</span><span class="se">\t</span><span class="s1">duration</span><span class="se">\t</span><span class="s1">trial_type</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">mrk</span> <span class="ow">in</span> <span class="n">markers</span><span class="p">:</span>
+            <span class="n">onset</span> <span class="o">=</span> <span class="n">mrk</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span>
+            <span class="n">duration</span> <span class="o">=</span> <span class="n">mrk</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mrk</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">onset</span><span class="si">:</span><span class="s1">f</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">duration</span><span class="si">:</span><span class="s1">f</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">mrk</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="write_bids_channels"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.bids.html#wonambi.ioeeg.bids.write_bids_channels">[docs]</a><span class="k">def</span> <span class="nf">write_bids_channels</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Export BIDS channels TSV from Dataset.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    output_file : path to file</span>
+<span class="sd">        file to export to (use &#39;.tsv&#39; as extension)</span>
+<span class="sd">    dataset : instance of wonambi.Dataset</span>
+<span class="sd">        Dataset with record metadata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">IOClass</span> <span class="ow">is</span> <span class="n">Edf</span><span class="p">:</span>
+        <span class="n">hdr</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;orig&#39;</span><span class="p">]</span>
+        <span class="n">channels</span> <span class="o">=</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+        <span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xef\xbf\xbd</span><span class="s1">&#39;</span> <span class="k">else</span> <span class="s1">&#39;?&#39;</span> \
+                 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;physical_dim&#39;</span><span class="p">]]</span>
+        <span class="n">low_cut</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;HP:&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Hz&#39;</span><span class="p">)]</span> \
+                     <span class="k">if</span> <span class="s1">&#39;HP:&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;prefiltering&#39;</span><span class="p">]]</span>
+        <span class="n">high_cut</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;LP:&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;LP:&#39;</span><span class="p">):]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Hz&#39;</span><span class="p">)</span> \
+                      <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;LP:&#39;</span><span class="p">)]</span> \
+                      <span class="k">if</span> <span class="s1">&#39;LP:&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">else</span> <span class="s1">&#39;Inf&#39;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;prefiltering&#39;</span><span class="p">]]</span>
+        <span class="n">notch</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;N:&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> \
+                      <span class="k">if</span> <span class="s1">&#39;N:&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">else</span> <span class="s1">&#39;n/a&#39;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;prefiltering&#39;</span><span class="p">]]</span>
+        <span class="n">s_freq</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">/</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;record_length&#39;</span><span class="p">]</span> \
+                  <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;n_samples_per_record&#39;</span><span class="p">]]</span>
+
+        <span class="n">chan_type</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">one_chan</span> <span class="ow">in</span> <span class="n">channels</span><span class="p">:</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="n">one_chan</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="s1">&#39;eog&#39;</span> <span class="ow">in</span> <span class="n">ch</span> <span class="ow">or</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39;e1&#39;</span> <span class="ow">or</span> <span class="n">ch</span> <span class="o">==</span> <span class="s1">&#39;e2&#39;</span><span class="p">:</span>
+                <span class="n">chan_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;EOG&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">ch</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ecg&#39;</span><span class="p">,</span> <span class="s1">&#39;ekg&#39;</span><span class="p">]):</span>
+                <span class="n">chan_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;ECG&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">ch</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;emg&#39;</span><span class="p">,</span> <span class="s1">&#39;chin&#39;</span><span class="p">,</span> <span class="s1">&#39;leg&#39;</span><span class="p">]):</span>
+                <span class="n">chan_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;EMG&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">ch</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;sp&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">ch</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span>
+                <span class="c1"># not a perfect test</span>
+                <span class="c1">#print(f&#39;yessir, {ch} fits the bill alright!&#39;)</span>
+                <span class="n">chan_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;EEG&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">chan_type</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;MISC&#39;</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">output_file</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;name</span><span class="se">\t</span><span class="s1">type</span><span class="se">\t</span><span class="s1">units</span><span class="se">\t</span><span class="s1">sampling_frequency</span><span class="se">\t</span><span class="s1">low_cutoff&#39;</span>
+                    <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">high_cutoff</span><span class="se">\t</span><span class="s1">notch</span><span class="se">\t</span><span class="s1">reference</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">one_chan</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">channels</span><span class="p">):</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+                    <span class="n">one_chan</span><span class="p">,</span>
+                    <span class="n">chan_type</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                    <span class="n">units</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">s_freq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s1">f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">low_cut</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                    <span class="n">high_cut</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                    <span class="n">notch</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                    <span class="s1">&#39;n/a&#39;</span><span class="p">,</span>
+                    <span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">IOClass</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; not currently supported.&#39;</span><span class="p">)</span></div>
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.attr.anat module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.attr.annotations module" href="wonambi.attr.annotations.html" />
+    <link rel="prev" title="wonambi.attr package" href="wonambi.attr.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.attr.html">wonambi.attr package</a></li>
+      <li class="breadcrumb-item active">wonambi.attr.anat module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.attr.anat">
+<span id="wonambi-attr-anat-module"></span><h1>wonambi.attr.anat module<a class="headerlink" href="#module-wonambi.attr.anat" title="Permalink to this heading"></a></h1>
+<p>Module to read and return anatomical information, such as:
+- surfaces, with class Surf
+- brains, with class BrainSurf (both hemispheres)</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Brain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.attr.anat.</span></span><span class="sig-name descname"><span class="pre">Brain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freesurfer_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surf_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pial'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/anat.html#Brain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.anat.Brain" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class that contains the left and right hemispheres.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>freesurfer_dir</strong> (<em>str</em>) – subject-specific directory created by freesurfer</p></li>
+<li><p><strong>surf_type</strong> (<em>str</em>) – ‘pial’, ‘smoothwm’, ‘inflated’, ‘white’, or ‘sphere’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Freesurfer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.attr.anat.</span></span><span class="sig-name descname"><span class="pre">Freesurfer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freesurfer_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs_lut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/anat.html#Freesurfer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.anat.Freesurfer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provide class Freesurfer, with the information from freesurfer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>freesurfer_dir</strong> (<em>str</em><em> or </em><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.Path" title="wonambi.widgets.utils.Path"><em>Path</em></a>) – subject-specific directory created by freesurfer</p></li>
+<li><p><strong>fs_lut</strong> (<em>str</em><em> or </em><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.Path" title="wonambi.widgets.utils.Path"><em>Path</em></a>) – path to file called FreeSurferColorLUT.txt</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>It’s necessary that Freesurfer is installed and that the environmental
+variable ‘FREESURFER_HOME’ is present.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Freesurfer.find_brain_region">
+<span class="sig-name descname"><span class="pre">find_brain_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abs_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parc_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'aparc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_approx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_regions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/anat.html#Freesurfer.find_brain_region"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.anat.Freesurfer.find_brain_region" title="Permalink to this definition"></a></dt>
+<dd><p>Find the name of the brain region in which an electrode is located.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>abs_pos</strong> (<em>numpy.ndarray</em>) – 3x0 vector with the position of interest.</p></li>
+<li><p><strong>parc_type</strong> (<em>str</em>) – ‘aparc’, ‘aparc.a2009s’, ‘BA’, ‘BA.thresh’, or ‘aparc.DKTatlas40’
+‘aparc.DKTatlas40’ is only for recent freesurfer versions</p></li>
+<li><p><strong>max_approx</strong> (<em>int</em><em>, </em><em>optional</em>) – max approximation to define position of the electrode.</p></li>
+<li><p><strong>exclude_regions</strong> (<em>list</em><em> of </em><em>str</em><em> or </em><em>empty list</em>) – do not report regions if they contain these substrings. None means
+that it does not exclude any region.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>It determines the possible brain region in which one electrode is
+present, based on Freesurfer segmentation. You can imagine that
+sometimes one electrode is not perfectly located within one region,
+but it’s a few mm away. The parameter “approx” specifies this tolerance
+where each value is one mm. It keeps on searching in larger and larger
+spots until it finds at least one region which is not white matter. If
+there are multiple regions, it returns the region with the most
+detection.
+Minimal value is 0, which means only if the electrode is in the
+precise location.</p>
+<dl class="simple">
+<dt>If you want to exclude white matter regions with ‘aparc’, use</dt><dd><p>exclude_regions = (‘White’, ‘WM’, ‘Unknown’)</p>
+</dd>
+<dt>and with ‘aparc.a2009s’, use:</dt><dd><p>exclude_regions = (‘White-Matter’)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Freesurfer.read_brain">
+<span class="sig-name descname"><span class="pre">read_brain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surf_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pial'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/anat.html#Freesurfer.read_brain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.anat.Freesurfer.read_brain" title="Permalink to this definition"></a></dt>
+<dd><p>Read the surface of both hemispheres.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>surf_type</strong> (<em>str</em>) – ‘pial’, ‘smoothwm’, ‘inflated’, ‘white’, or ‘sphere’</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of Brain</em> – the surfaces of both brain hemispheres</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Freesurfer.read_label">
+<span class="sig-name descname"><span class="pre">read_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hemi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parc_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'aparc'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/anat.html#Freesurfer.read_label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.anat.Freesurfer.read_label" title="Permalink to this definition"></a></dt>
+<dd><p>Read the labels (annotations) for each hemisphere.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hemi</strong> (<em>str</em>) – ‘lh’ or ‘rh’</p></li>
+<li><p><strong>parc_type</strong> (<em>str</em>) – ‘aparc’, ‘aparc.a2009s’, ‘BA’, ‘BA.thresh’, or ‘aparc.DKTatlas40’
+‘aparc.DKTatlas40’ is only for recent freesurfer versions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>numpy.ndarray</em> – value at each vertex, indicating the label</p></li>
+<li><p><em>numpy.ndarray</em> – RGB + alpha colors for each label</p></li>
+<li><p><em>list of str</em> – names of the labels</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Freesurfer.read_seg">
+<span class="sig-name descname"><span class="pre">read_seg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parc_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'aparc'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/anat.html#Freesurfer.read_seg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.anat.Freesurfer.read_seg" title="Permalink to this definition"></a></dt>
+<dd><p>Read the MRI segmentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>parc_type</strong> (<em>str</em>) – ‘aparc’ or ‘aparc.a2009s’</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>numpy.ndarray</em> – 3d matrix with values</p></li>
+<li><p><em>numpy.ndarray</em> – 4x4 affine matrix</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Freesurfer.surface_ras_shift">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">surface_ras_shift</span></span><a class="headerlink" href="#wonambi.attr.anat.Freesurfer.surface_ras_shift" title="Permalink to this definition"></a></dt>
+<dd><p>one for volumes (“RAS”) and
+one for surfaces (“tkReg”, “tkRAS”, and “Surface RAS”).
+To get from surface to volume coordinates, add this numbers.
+To get from volume to surface coordinates, substract this numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Freesurfer uses two coordinate systems</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Surf">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.attr.anat.</span></span><span class="sig-name descname"><span class="pre">Surf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surf_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/anat.html#Surf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.anat.Surf" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provide class Surf, with the positions and connections of vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>surf_file</strong> (<em>str</em><em> or </em><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.Path" title="wonambi.widgets.utils.Path"><em>Path</em></a>) – freesurfer file containing the surface</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Surf.surf_file">
+<span class="sig-name descname"><span class="pre">surf_file</span></span><a class="headerlink" href="#wonambi.attr.anat.Surf.surf_file" title="Permalink to this definition"></a></dt>
+<dd><p>freesurfer file containing the surface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>path to file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Surf.vert">
+<span class="sig-name descname"><span class="pre">vert</span></span><a class="headerlink" href="#wonambi.attr.anat.Surf.vert" title="Permalink to this definition"></a></dt>
+<dd><p>vertices of the mesh</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.attr.anat.Surf.tri">
+<span class="sig-name descname"><span class="pre">tri</span></span><a class="headerlink" href="#wonambi.attr.anat.Surf.tri" title="Permalink to this definition"></a></dt>
+<dd><p>triangulation of the mesh</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.attr.anat.import_freesurfer_LUT">
+<span class="sig-prename descclassname"><span class="pre">wonambi.attr.anat.</span></span><span class="sig-name descname"><span class="pre">import_freesurfer_LUT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs_lut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/attr/anat.html#import_freesurfer_LUT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.attr.anat.import_freesurfer_LUT" title="Permalink to this definition"></a></dt>
+<dd><p>Import Look-up Table with colors and labels for anatomical regions.</p>
+<p>It’s necessary that Freesurfer is installed and that the environmental
+variable ‘FREESURFER_HOME’ is present.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fs_lut</strong> (<em>str</em><em> or </em><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.Path" title="wonambi.widgets.utils.Path"><em>Path</em></a>) – path to file called FreeSurferColorLUT.txt</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>idx</strong> (<em>list of int</em>) – indices of regions</p></li>
+<li><p><strong>label</strong> (<em>list of str</em>) – names of the brain regions</p></li>
+<li><p><strong>rgba</strong> (<em>numpy.ndarray</em>) – one row is a brain region and the columns are the RGB + alpha colors</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.attr.html" class="btn btn-neutral float-left" title="wonambi.attr package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.attr.annotations.html" class="btn btn-neutral float-right" title="wonambi.attr.annotations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+wonambi.widgets.analysis module
+===============================
+
+.. automodule:: wonambi.widgets.analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:

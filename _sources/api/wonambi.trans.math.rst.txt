@@ -1,0 +1,7 @@
+wonambi.trans.math module
+=========================
+
+.. automodule:: wonambi.trans.math
+   :members:
+   :undoc-members:
+   :show-inheritance:

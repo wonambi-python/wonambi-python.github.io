@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.widgets.analysis module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.widgets.channels module" href="wonambi.widgets.channels.html" />
+    <link rel="prev" title="wonambi.widgets package" href="wonambi.widgets.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.widgets.html">wonambi.widgets package</a></li>
+      <li class="breadcrumb-item active">wonambi.widgets.analysis module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.widgets.analysis">
+<span id="wonambi-widgets-analysis-module"></span><h1>wonambi.widgets.analysis module<a class="headerlink" href="#module-wonambi.widgets.analysis" title="Permalink to this heading"></a></h1>
+<p>Dialogs for analyses, such as power spectra, PAC, event parameters</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.analysis.</span></span><span class="sig-name descname"><span class="pre">AnalysisDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog" title="wonambi.widgets.modal_widgets.ChannelDialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChannelDialog</span></code></a></p>
+<p>Dialog for specifying various types of analyses: per event, per epoch or
+per entire segments of signal. PSD, PAC, event metrics. Option to transform
+signal before analysis. Creates a pickle object.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.parent" title="Permalink to this definition"></a></dt>
+<dd><p>the main window</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of QMainWindow</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.nseg">
+<span class="sig-name descname"><span class="pre">nseg</span></span><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.nseg" title="Permalink to this definition"></a></dt>
+<dd><p>number of segments in current selection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.band_help">
+<span class="sig-name descname"><span class="pre">band_help</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.band_help"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.band_help" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.button_clicked">
+<span class="sig-name descname"><span class="pre">button_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.button_clicked"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.button_clicked" title="Permalink to this definition"></a></dt>
+<dd><p>Action when button was clicked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>button</strong> (<em>instance</em><em> of </em><em>QPushButton</em>) – which button was pressed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.check_all_local">
+<span class="sig-name descname"><span class="pre">check_all_local</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.check_all_local"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.check_all_local" title="Permalink to this definition"></a></dt>
+<dd><p>Check or uncheck all local event parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.check_all_local_prep">
+<span class="sig-name descname"><span class="pre">check_all_local_prep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.check_all_local_prep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.check_all_local_prep" title="Permalink to this definition"></a></dt>
+<dd><p>Check or uncheck all enabled event pre-processing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.compute_evt_params">
+<span class="sig-name descname"><span class="pre">compute_evt_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.compute_evt_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.compute_evt_params" title="Permalink to this definition"></a></dt>
+<dd><p>Compute event parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.compute_freq">
+<span class="sig-name descname"><span class="pre">compute_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.compute_freq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.compute_freq" title="Permalink to this definition"></a></dt>
+<dd><p>Compute frequency domain analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>list of dict</em> – each item is a dict where ‘data’ is an instance of ChanFreq for a
+single segment of signal, ‘name’ is the event type, if applicable,
+‘times’ is a tuple of the start and end times in sec, ‘duration’ is
+the actual duration of the segment, in seconds (can be dissociated
+from ‘times’ if the signal was concatenated)
+and with ‘chan’ (str), ‘stage’ (str) and ‘cycle’ (int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.compute_freq_cross">
+<span class="sig-name descname"><span class="pre">compute_freq_cross</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'coherence'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.compute_freq_cross"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.compute_freq_cross" title="Permalink to this definition"></a></dt>
+<dd><p>Compute cross-spectrum, gain, phase shift and/or coherence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csd</strong> (<em>list</em><em> of </em><em>dict with 'data' key as instance</em><em> of </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.ChanFreq" title="wonambi.datatype.ChanFreq"><em>ChanFreq</em></a>) – cross-spectral density, one channel</p></li>
+<li><p><strong>asd</strong> (<em>list</em><em> of </em><em>dict with 'data' key as instance</em><em> of </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.ChanFreq" title="wonambi.datatype.ChanFreq"><em>ChanFreq</em></a>) – autospectral density, two channels</p></li>
+<li><p><strong>output</strong> (<em>str</em>) – ‘coherence’ or ‘gainphase’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p><em>tuple of list of dict with ‘data’ key as instance of ChanFreq</em> – if coherence, tuple contains one dict
+if gainphase, tuple contains: xgain, ygain, phase</p>
+<blockquote>
+<div><p>where xgain is gain with x as input and y as output</p>
+</div></blockquote>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.compute_pac">
+<span class="sig-name descname"><span class="pre">compute_pac</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.compute_pac"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.compute_pac" title="Permalink to this definition"></a></dt>
+<dd><p>Compute phase-amplitude coupling values from data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.create_dialog">
+<span class="sig-name descname"><span class="pre">create_dialog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.create_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.create_dialog" title="Permalink to this definition"></a></dt>
+<dd><p>Create the dialog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.export_pac">
+<span class="sig-name descname"><span class="pre">export_pac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpac</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">famp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.export_pac"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.export_pac" title="Permalink to this definition"></a></dt>
+<dd><p>Write PAC analysis data to CSV.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.get_segments">
+<span class="sig-name descname"><span class="pre">get_segments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.get_segments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.get_segments" title="Permalink to this definition"></a></dt>
+<dd><p>Get segments for analysis. Creates instance of trans.Segments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.make_title">
+<span class="sig-name descname"><span class="pre">make_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evt_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.make_title"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.make_title" title="Permalink to this definition"></a></dt>
+<dd><p>Make a title for plots, etc.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.plot_freq">
+<span class="sig-name descname"><span class="pre">plot_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'semilogy'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.plot_freq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.plot_freq" title="Permalink to this definition"></a></dt>
+<dd><p>Plot mean frequency spectrum and display in dialog.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>list</em>) – vector with frequencies</p></li>
+<li><p><strong>y</strong> (<em>ndarray</em>) – vector with amplitudes</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – plot title</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em>) – plot y label</p></li>
+<li><p><strong>scale</strong> (<em>str</em>) – semilogy, loglog or linear</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.report_fooof">
+<span class="sig-name descname"><span class="pre">report_fooof</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.report_fooof"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.report_fooof" title="Permalink to this definition"></a></dt>
+<dd><p>Create FOOOF (fitting oscillations and 1/f) report.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>ndarray</em>) – vector with frequencies</p></li>
+<li><p><strong>y</strong> (<em>ndarray</em>) – vector with amplitudes</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.save_as">
+<span class="sig-name descname"><span class="pre">save_as</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.save_as"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.save_as" title="Permalink to this definition"></a></dt>
+<dd><p>Dialog for getting name, location of data export file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.toggle_buttons">
+<span class="sig-name descname"><span class="pre">toggle_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.toggle_buttons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.toggle_buttons" title="Permalink to this definition"></a></dt>
+<dd><p>Enable and disable buttons, according to options selected.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.toggle_concatenate">
+<span class="sig-name descname"><span class="pre">toggle_concatenate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.toggle_concatenate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.toggle_concatenate" title="Permalink to this definition"></a></dt>
+<dd><p>Enable and disable concatenation options.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.toggle_freq">
+<span class="sig-name descname"><span class="pre">toggle_freq</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.toggle_freq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.toggle_freq" title="Permalink to this definition"></a></dt>
+<dd><p>Enable and disable frequency domain options.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.toggle_pac">
+<span class="sig-name descname"><span class="pre">toggle_pac</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.toggle_pac"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.toggle_pac" title="Permalink to this definition"></a></dt>
+<dd><p>Enable and disable PAC options.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.transform_data">
+<span class="sig-name descname"><span class="pre">transform_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.transform_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.transform_data" title="Permalink to this definition"></a></dt>
+<dd><p>Apply pre-processing transformation to data, and add it to data
+dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.trans.select.html#wonambi.trans.select.Segments" title="wonambi.trans.select.Segments"><em>Segments</em></a>) – segments including ‘data’ (ChanTime)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of Segments</em> – same object with transformed data as ‘trans_data’ (ChanTime)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.uncheck_all_local">
+<span class="sig-name descname"><span class="pre">uncheck_all_local</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.uncheck_all_local"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.uncheck_all_local" title="Permalink to this definition"></a></dt>
+<dd><p>Uncheck ‘all local’ box when a local event is unchecked.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.update_evt_types">
+<span class="sig-name descname"><span class="pre">update_evt_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.update_evt_types"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.update_evt_types" title="Permalink to this definition"></a></dt>
+<dd><p>Update the event types list when dialog is opened.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.AnalysisDialog.update_nseg">
+<span class="sig-name descname"><span class="pre">update_nseg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#AnalysisDialog.update_nseg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.AnalysisDialog.update_nseg" title="Permalink to this definition"></a></dt>
+<dd><p>Update the number of segments, displayed in the dialog.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.PlotCanvas">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.analysis.</span></span><span class="sig-name descname"><span class="pre">PlotCanvas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#PlotCanvas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.PlotCanvas" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Widget for showing plots.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.PlotCanvas.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'semilogy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx_lim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">-1)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#PlotCanvas.plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.PlotCanvas.plot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>ndarray</em>) – vector with frequencies</p></li>
+<li><p><strong>y</strong> (<em>ndarray</em>) – vector with amplitudes</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – title of the plot, to appear above it</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em>) – label for the y-axis</p></li>
+<li><p><strong>scale</strong> (<em>str</em>) – ‘log y-axis’, ‘log both axes’ or ‘linear’, to set axis scaling</p></li>
+<li><p><strong>idx_lim</strong> (<em>tuple</em><em> of </em><em>(</em><em>int</em><em> or </em><em>None</em><em>)</em>) – indices of the data to plot. by default, the first value is left
+out, because of assymptotic tendencies near 0 Hz.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.PlotDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.analysis.</span></span><span class="sig-name descname"><span class="pre">PlotDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#PlotDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.PlotDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>Dialog for displaying plots.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.analysis.PlotDialog.create_dialog">
+<span class="sig-name descname"><span class="pre">create_dialog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/analysis.html#PlotDialog.create_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.analysis.PlotDialog.create_dialog" title="Permalink to this definition"></a></dt>
+<dd><p>Create the basic dialog.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.widgets.html" class="btn btn-neutral float-left" title="wonambi.widgets package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.widgets.channels.html" class="btn btn-neutral float-right" title="wonambi.widgets.channels module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

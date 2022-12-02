@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.trans.select &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.trans.select</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.trans.select</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module to select periods of interest, based on number of trials or any of</span>
+<span class="sd">the axes.</span>
+
+<span class="sd">There is some overlap between Select and the Data.__call__(). The main</span>
+<span class="sd">difference is that Select takes an instance of Data as input and returns</span>
+<span class="sd">another instance of Data as output, whil Data.__call__() returns the actual</span>
+<span class="sd">content of the data.</span>
+
+<span class="sd">Select should be as flexible as possible. There are quite a few cases, which</span>
+<span class="sd">will be added as we need them.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Iterable</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="p">(</span><span class="n">arange</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">asarray</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">empty</span><span class="p">,</span> <span class="n">hstack</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> 
+                   <span class="n">issubsctype</span><span class="p">,</span> <span class="n">linspace</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">,</span> <span class="n">ones</span><span class="p">,</span> <span class="n">ravel</span><span class="p">,</span> 
+                   <span class="n">setdiff1d</span><span class="p">,</span> <span class="n">floor</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">numpy.lib.stride_tricks</span> <span class="kn">import</span> <span class="n">as_strided</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">isclose</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">resample</span> <span class="k">as</span> <span class="n">sci_resample</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
+    <span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QProgressDialog</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">Qt</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">QProgressDialog</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">ChanTime</span>
+<span class="kn">from</span> <span class="nn">.montage</span> <span class="kn">import</span> <span class="n">montage</span>
+<span class="kn">from</span> <span class="nn">.reject</span> <span class="kn">import</span> <span class="n">remove_artf_evts</span>
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Segments"><a class="viewcode-back" href="../../../api/wonambi.trans.select.html#wonambi.trans.select.Segments">[docs]</a><span class="k">class</span> <span class="nc">Segments</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Class containing a set of data segments for analysis, with metadata.</span>
+<span class="sd">    Only contains metadata until .read_data is called.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dataset : instance of wonambi.dataset</span>
+<span class="sd">        metadata for the associated record</span>
+<span class="sd">    segments : list of dict</span>
+<span class="sd">        chronological list of segment metadata. Each segment dict contains info</span>
+<span class="sd">        about start and end times, stage, cycle, channel and event name, if</span>
+<span class="sd">        applicable. Once read_data is called, the signal data are added to each</span>
+<span class="sd">        segment dictionary under &#39;data&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">one_event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">one_event</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+<div class="viewcode-block" id="Segments.read_data"><a class="viewcode-back" href="../../../api/wonambi.trans.select.html#wonambi.trans.select.Segments.read_data">[docs]</a>    <span class="k">def</span> <span class="nf">read_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="o">=</span><span class="p">[],</span> <span class="n">ref_chan</span><span class="o">=</span><span class="p">[],</span> <span class="n">grp_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">concat_chan</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">average_channels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_s_freq</span><span class="o">=</span><span class="mi">30000</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Read data for analysis. Adds data as &#39;data&#39; in each dict.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chan : list of str</span>
+<span class="sd">            active channel names as they appear in record, without ref or group</span>
+<span class="sd">            If given an empty list, the channel specified in seg[&#39;chan&#39;] will</span>
+<span class="sd">            be read for each segment</span>
+<span class="sd">        ref_chan : list of str</span>
+<span class="sd">            reference channel names as they appear in record, without group</span>
+<span class="sd">        grp_name : str</span>
+<span class="sd">            name of the channel group, required in GUI</span>
+<span class="sd">        concat_chan : bool</span>
+<span class="sd">            if True, data from all channels will be concatenated</span>
+<span class="sd">        average_channels : bool</span>
+<span class="sd">            if True, all channels will be averaged into a single virtual </span>
+<span class="sd">            channel with label &#39;avg_chan&#39;</span>
+<span class="sd">        max_s_freq: : int</span>
+<span class="sd">            maximum sampling frequency</span>
+<span class="sd">        parent : QWidget</span>
+<span class="sd">            for GUI only. Identifies parent widget for display of progress</span>
+<span class="sd">            dialog.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Set up Progress Bar</span>
+        <span class="k">if</span> <span class="n">parent</span><span class="p">:</span>
+            <span class="n">n_subseg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">])</span>
+            <span class="n">progress</span> <span class="o">=</span> <span class="n">QProgressDialog</span><span class="p">(</span><span class="s1">&#39;Fetching signal&#39;</span><span class="p">,</span> <span class="s1">&#39;Abort&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n_subseg</span><span class="p">,</span>
+                                       <span class="n">parent</span><span class="p">)</span>
+            <span class="n">progress</span><span class="o">.</span><span class="n">setWindowModality</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">ApplicationModal</span><span class="p">)</span>
+            <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># Begin bundle loop; will yield one segment per loop</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">seg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">segments</span><span class="p">):</span>
+            <span class="n">one_segment</span> <span class="o">=</span> <span class="n">ChanTime</span><span class="p">()</span>
+            <span class="n">one_segment</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+            <span class="n">one_segment</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+            <span class="n">one_segment</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+            <span class="n">subseg</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="c1"># Subsegment loop; subsegments will be concatenated</span>
+            <span class="k">for</span> <span class="n">t0</span><span class="p">,</span> <span class="n">t1</span> <span class="ow">in</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">parent</span><span class="p">:</span>
+                    <span class="n">progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+                    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+                <span class="c1"># if channel not specified, use segment channel</span>
+                <span class="k">if</span> <span class="n">chan</span><span class="p">:</span>
+                    <span class="n">active_chan</span> <span class="o">=</span> <span class="n">chan</span>
+                <span class="k">elif</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]:</span>
+                    <span class="n">active_chan</span> <span class="o">=</span> <span class="p">[</span><span class="n">seg</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; (&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;No channel was specified and the &#39;</span>
+                                     <span class="s1">&#39;segment at </span><span class="si">{}</span><span class="s1">-</span><span class="si">{}</span><span class="s1"> has no channel.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                                             <span class="n">t0</span><span class="p">,</span> <span class="n">t1</span><span class="p">))</span>
+                <span class="n">active_chan</span> <span class="o">=</span> <span class="n">chan</span> <span class="k">if</span> <span class="n">chan</span> <span class="k">else</span> <span class="p">[</span><span class="n">seg</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; (&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">active_chan</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">active_chan</span> <span class="o">=</span> <span class="p">[</span><span class="n">active_chan</span><span class="p">]</span> 
+                <span class="n">chan_to_read</span> <span class="o">=</span> <span class="n">active_chan</span> <span class="o">+</span> <span class="n">ref_chan</span>
+
+                <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">read_data</span><span class="p">(</span><span class="n">chan</span><span class="o">=</span><span class="n">chan_to_read</span><span class="p">,</span> <span class="n">begtime</span><span class="o">=</span><span class="n">t0</span><span class="p">,</span>
+                                         <span class="n">endtime</span><span class="o">=</span><span class="n">t1</span><span class="p">)</span>
+
+                <span class="c1"># Downsample if necessary</span>
+                <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">&gt;</span> <span class="n">max_s_freq</span><span class="p">:</span>
+                    <span class="n">q</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">/</span> <span class="n">max_s_freq</span><span class="p">)</span>
+                    <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Decimate (no low-pass filter) at &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+
+                    <span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">q</span><span class="p">)]</span>
+                    <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="nb">slice</span><span class="p">(</span>
+                            <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">q</span><span class="p">)]</span>
+                    <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">/</span> <span class="n">q</span><span class="p">)</span>
+
+                <span class="c1"># read data from disk</span>
+                <span class="n">subseg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_create_data</span><span class="p">(</span>
+                    <span class="n">data</span><span class="p">,</span> <span class="n">active_chan</span><span class="p">,</span> <span class="n">ref_chan</span><span class="o">=</span><span class="n">ref_chan</span><span class="p">,</span> <span class="n">grp_name</span><span class="o">=</span><span class="n">grp_name</span><span class="p">))</span>
+
+            <span class="n">one_segment</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">=</span> <span class="n">s_freq</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span>
+            <span class="n">one_segment</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">chs</span> <span class="o">=</span> <span class="n">subseg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">one_segment</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">timeline</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">(</span>
+                    <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">subseg</span><span class="p">])</span>
+            <span class="n">one_segment</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">active_chan</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">timeline</span><span class="p">)),</span>
+                                        <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+            <span class="n">n_stitch</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">asarray</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">timeline</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">/</span><span class="n">s_freq</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">))</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">subseg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]):</span>
+                    <span class="n">one_segment</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">(</span>
+                            <span class="p">[</span><span class="n">x</span><span class="p">(</span><span class="n">chan</span><span class="o">=</span><span class="n">ch</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">subseg</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="n">average_channels</span><span class="p">:</span>
+                <span class="n">one_segment</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">one_segment</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> 
+                                                               <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">one_segment</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="s1">&#39;avg_chan&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;&lt;U2&#39;</span><span class="p">)</span>
+                <span class="n">active_chan</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;avg_chan&#39;</span><span class="p">]</span>
+
+            <span class="c1"># For channel concatenation</span>
+            <span class="k">elif</span> <span class="n">concat_chan</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">chs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">one_segment</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ravel</span><span class="p">(</span><span class="n">one_segment</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">one_segment</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">([(</span><span class="s1">&#39;, &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chs</span><span class="p">)],</span>
+                                <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
+                <span class="c1"># axis[&#39;time&#39;] should not be used in this case</span>
+
+            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="n">one_segment</span><span class="p">,</span>
+                           <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="n">active_chan</span><span class="p">,</span>
+                           <span class="s1">&#39;stage&#39;</span><span class="p">:</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">],</span>
+                           <span class="s1">&#39;cycle&#39;</span><span class="p">:</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;cycle&#39;</span><span class="p">],</span>
+                           <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>
+                           <span class="s1">&#39;n_stitch&#39;</span><span class="p">:</span> <span class="n">n_stitch</span>
+                           <span class="p">})</span>
+
+            <span class="k">if</span> <span class="n">parent</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">progress</span><span class="o">.</span><span class="n">wasCanceled</span><span class="p">():</span>
+                    <span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">statusBar</span><span class="p">()</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s1">&#39;Process canceled by&#39;</span>
+                                           <span class="s1">&#39; user.&#39;</span><span class="p">)</span>
+                    <span class="k">return</span>
+
+        <span class="k">if</span> <span class="n">parent</span><span class="p">:</span>
+            <span class="n">progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="n">output</span>
+
+        <span class="k">return</span> <span class="mi">1</span> <span class="c1"># for GUI</span></div></div>
+
+
+<div class="viewcode-block" id="select"><a class="viewcode-back" href="../../../api/wonambi.trans.select.html#wonambi.trans.select.select">[docs]</a><span class="k">def</span> <span class="nf">select</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">trial</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">axes_to_select</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Define the selection of trials, using ranges or actual values.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : instance of Data</span>
+<span class="sd">        data to select from.</span>
+<span class="sd">    trial : list of int or ndarray (dtype=&#39;i&#39;), optional</span>
+<span class="sd">        index of trials of interest</span>
+<span class="sd">    **axes_to_select, optional</span>
+<span class="sd">        Values need to be tuple or list. If the values in one axis are string,</span>
+<span class="sd">        then you need to specify all the strings that you want. If the values</span>
+<span class="sd">        are numeric, then you should specify the range. To select only up to one</span>
+<span class="sd">        point, you can use (None, value_of_interest). To select multiple</span>
+<span class="sd">        values, you can pass a numpy array with dtype bool</span>
+<span class="sd">    invert : bool</span>
+<span class="sd">        take the opposite selection</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance, same class as input</span>
+<span class="sd">        data where selection has been applied.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">trial</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Trial needs to be iterable.&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">axis_to_select</span><span class="p">,</span> <span class="n">values_to_select</span> <span class="ow">in</span> <span class="n">axes_to_select</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">values_to_select</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">)</span> <span class="ow">or</span>
+           <span class="nb">isinstance</span><span class="p">(</span><span class="n">values_to_select</span><span class="p">,</span> <span class="nb">str</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">axis_to_select</span> <span class="o">+</span> <span class="s1">&#39; needs to be iterable.&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">trial</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">trial</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">number_of</span><span class="p">(</span><span class="s1">&#39;trial&#39;</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">trial</span> <span class="o">=</span> <span class="n">trial</span>
+        <span class="k">if</span> <span class="n">invert</span><span class="p">:</span>
+            <span class="n">trial</span> <span class="o">=</span> <span class="n">setdiff1d</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">number_of</span><span class="p">(</span><span class="s1">&#39;trial&#39;</span><span class="p">)),</span> <span class="n">trial</span><span class="p">)</span>
+
+    <span class="c1"># create empty axis</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">_copy</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">one_axis</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">:</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">one_axis</span><span class="p">]</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">trial</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">trial</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+
+    <span class="n">to_select</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">cnt</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Selection on trial </span><span class="si">{0: 6}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">one_axis</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">:</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">one_axis</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">one_axis</span> <span class="ow">in</span> <span class="n">axes_to_select</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">values_to_select</span> <span class="o">=</span> <span class="n">axes_to_select</span><span class="p">[</span><span class="n">one_axis</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">values_to_select</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">selected_values</span> <span class="o">=</span> <span class="p">()</span>
+
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">values_to_select</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">selected_values</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">values_to_select</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">values_to_select</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">issubsctype</span><span class="p">(</span><span class="n">values_to_select</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                        <span class="n">bool_values</span> <span class="o">=</span> <span class="n">values_to_select</span>
+                    <span class="k">elif</span> <span class="p">(</span><span class="n">values_to_select</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+                       <span class="n">values_to_select</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+                        <span class="n">bool_values</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">values_to_select</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">bool_values</span> <span class="o">=</span> <span class="n">values</span> <span class="o">&lt;</span> <span class="n">values_to_select</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="k">elif</span> <span class="n">values_to_select</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">bool_values</span> <span class="o">=</span> <span class="n">values_to_select</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">values</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">bool_values</span> <span class="o">=</span> <span class="p">((</span><span class="n">values_to_select</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">values</span><span class="p">)</span> <span class="o">&amp;</span>
+                                       <span class="p">(</span><span class="n">values</span> <span class="o">&lt;</span> <span class="n">values_to_select</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+                    <span class="n">selected_values</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">bool_values</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">invert</span><span class="p">:</span>
+                    <span class="n">selected_values</span> <span class="o">=</span> <span class="n">setdiff1d</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">selected_values</span><span class="p">)</span>
+
+                <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;In axis </span><span class="si">{0}</span><span class="s1">, selecting </span><span class="si">{1: 6}</span><span class="s1"> &#39;</span>
+                         <span class="s1">&#39;values&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">one_axis</span><span class="p">,</span>
+                                         <span class="nb">len</span><span class="p">(</span><span class="n">selected_values</span><span class="p">)))</span>
+                <span class="n">to_select</span><span class="p">[</span><span class="n">one_axis</span><span class="p">]</span> <span class="o">=</span> <span class="n">selected_values</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;In axis &#39;</span> <span class="o">+</span> <span class="n">one_axis</span> <span class="o">+</span> <span class="s1">&#39;, selecting all the &#39;</span>
+                         <span class="s1">&#39;values&#39;</span><span class="p">)</span>
+                <span class="n">selected_values</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">one_axis</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+
+            <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">one_axis</span><span class="p">][</span><span class="n">cnt</span><span class="p">]</span> <span class="o">=</span> <span class="n">selected_values</span>
+
+        <span class="n">output</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">cnt</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">(</span><span class="n">trial</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="o">**</span><span class="n">to_select</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">output</span></div>
+
+
+<div class="viewcode-block" id="resample"><a class="viewcode-back" href="../../../api/wonambi.trans.select.html#wonambi.trans.select.resample">[docs]</a><span class="k">def</span> <span class="nf">resample</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Downsample the data after applying a filter.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : instance of Data</span>
+<span class="sd">        data to downsample</span>
+<span class="sd">    s_freq : int or float</span>
+<span class="sd">        desired sampling frequency</span>
+<span class="sd">    axis : str</span>
+<span class="sd">        axis you want to apply downsample on (most likely &#39;time&#39;)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of Data</span>
+<span class="sd">        downsampled data</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">_copy</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">number_of</span><span class="p">(</span><span class="s1">&#39;trial&#39;</span><span class="p">)):</span>
+        <span class="c1"># check if the ratio between old and new data is not an integer</span>
+        <span class="n">out_samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">number_of</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">))</span>
+        <span class="n">orig_samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">out_samples</span> <span class="o">/</span> <span class="n">s_freq</span> <span class="o">*</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span><span class="p">)</span>
+
+        <span class="c1"># if so, then skip the last data points</span>
+        <span class="n">interval</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">axis</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">axis</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">orig_samples</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">(</span><span class="n">trial</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">interval</span><span class="p">)</span>
+
+        <span class="n">output</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sci_resample</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+            <span class="n">out_samples</span><span class="p">,</span>
+            <span class="n">axis</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">index_of</span><span class="p">(</span><span class="n">axis</span><span class="p">))</span>
+
+        <span class="n">n_samples</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">index_of</span><span class="p">(</span><span class="n">axis</span><span class="p">)]</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">axis</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">axis</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                                        <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">axis</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                                        <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span><span class="p">,</span>
+                                        <span class="n">n_samples</span><span class="p">)</span>
+
+    <span class="n">output</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">=</span> <span class="n">s_freq</span>
+
+    <span class="k">return</span> <span class="n">output</span></div>
+
+
+<div class="viewcode-block" id="smart_chan"><a class="viewcode-back" href="../../../api/wonambi.trans.select.html#wonambi.trans.select.smart_chan">[docs]</a><span class="k">def</span> <span class="nf">smart_chan</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">simple_chan_name</span><span class="p">,</span> <span class="n">test_chan</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>    
+    <span class="sd">&quot;&quot;&quot;From a list of simple channel names, attempts to find the corresponding</span>
+<span class="sd">    channel names in the dataset and returns a list (with same order).</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dataset : instance of Dataset</span>
+<span class="sd">        info about record</span>
+<span class="sd">    simple_chan_name : list of str</span>
+<span class="sd">        simple names for channels, e.g. [&#39;F3&#39;, &#39;Fp2&#39;, &#39;ECG&#39;]</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list</span>
+<span class="sd">        corresponding channel labels as they appear in dataset</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">chan_key</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="k">if</span> <span class="n">test_chan</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">orig_chan_name</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">orig_chan_name</span> <span class="o">=</span> <span class="n">test_chan</span>
+    
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">simple_chan_name</span><span class="p">:</span>
+        <span class="c1"># look for exact matches</span>
+        <span class="n">candidates</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">orig_chan_name</span> <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">x</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">chan_key</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">candidates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span> <span class="sa">f</span><span class="s1">&#39;The record contains </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span><span class="si">}</span><span class="s1"> &#39;</span>
+                             <span class="sa">f</span><span class="s1">&#39;duplicates of channel label </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># look for s in first position</span>
+        <span class="n">candidates</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">orig_chan_name</span> <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">x</span><span class="p">[:</span><span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> 
+                                                               <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))]]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">chan_key</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">candidates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># s appears in first position more than once</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s1">&#39;Too many candidates corresponding to </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">candidates</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># look for unique occurrences of s somewhere in chan label</span>
+        <span class="n">candidates</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">orig_chan_name</span> <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">chan_key</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">candidates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># remove from candidates all instances of chan as reference</span>
+            <span class="n">no_dash</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">candidates</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;-&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">no_dash</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">chan_key</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">no_dash</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;Too many candidates corresponding to </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">candidates</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unable to find channel containing </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="p">[</span><span class="n">chan_key</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">simple_chan_name</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="fetch"><a class="viewcode-back" href="../../../api/wonambi.trans.select.html#wonambi.trans.select.fetch">[docs]</a><span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">annot</span><span class="p">,</span> <span class="n">cat</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">evt_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stage</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+          <span class="n">cycle</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">chan_full</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">epoch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">epoch_dur</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+          <span class="n">epoch_overlap</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">epoch_step</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reject_epoch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+          <span class="n">reject_artf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">min_dur</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create instance of Segments for analysis, complete with info about</span>
+<span class="sd">    stage, cycle, channel, event type. Segments contains only metadata until</span>
+<span class="sd">    .read_data is called.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dataset : instance of Dataset</span>
+<span class="sd">        info about record</span>
+<span class="sd">    annot : instance of Annotations</span>
+<span class="sd">        scoring info</span>
+<span class="sd">    cat : tuple of int</span>
+<span class="sd">        Determines where the signal is concatenated.</span>
+<span class="sd">        If cat[0] is 1, cycles will be concatenated.</span>
+<span class="sd">        If cat[1] is 1, different stages will be concatenated.</span>
+<span class="sd">        If cat[2] is 1, discontinuous signal within a same condition</span>
+<span class="sd">        (stage, cycle, event type) will be concatenated.</span>
+<span class="sd">        If cat[3] is 1, events of different types will be concatenated.</span>
+<span class="sd">        0 in any position indicates no concatenation.</span>
+<span class="sd">    evt_type: list of str, optional</span>
+<span class="sd">        Enter a list of event types to get events; otherwise, epochs will</span>
+<span class="sd">        be returned.</span>
+<span class="sd">    stage: list of str, optional</span>
+<span class="sd">        Stage(s) of interest. If None, stage is ignored.</span>
+<span class="sd">    cycle: list of tuple of two float, optional</span>
+<span class="sd">        Cycle(s) of interest, as start and end times in seconds from record</span>
+<span class="sd">        start. If None, cycles are ignored.</span>
+<span class="sd">    chan_full: list of str or None</span>
+<span class="sd">        Channel(s) of interest, only used for events (epochs have no</span>
+<span class="sd">        channel). Channel format is &#39;chan_name (group_name)&#39;.</span>
+<span class="sd">        If used for epochs, separate segments will be returned for each</span>
+<span class="sd">        channel; this is necessary for channel-specific artefact removal (see</span>
+<span class="sd">        reject_artf below). If None, channel is ignored.</span>
+<span class="sd">    epoch : str, optional</span>
+<span class="sd">        If &#39;locked&#39;, returns epochs locked to staging. If &#39;unlocked&#39;, divides</span>
+<span class="sd">        signal (with specified concatenation) into epochs of duration epoch_dur</span>
+<span class="sd">        starting at first sample of every segment and discarding any remainder.</span>
+<span class="sd">        If None, longest run of signal is returned.</span>
+<span class="sd">    epoch_dur : float</span>
+<span class="sd">        only for epoch=&#39;unlocked&#39;. Duration of epochs returned, in seconds.</span>
+<span class="sd">    epoch_overlap : float</span>
+<span class="sd">        only for epoch=&#39;unlocked&#39;. Ratio of overlap between two consecutive</span>
+<span class="sd">        segments. Value between 0 and 1. Overriden by step.</span>
+<span class="sd">    epoch_step : float</span>
+<span class="sd">        only for epoch=&#39;unlocked&#39;. Time between consecutive epoch starts, in</span>
+<span class="sd">        seconds. Overrides epoch_overlap/</span>
+<span class="sd">    reject_epoch: bool</span>
+<span class="sd">        If True, epochs marked as &#39;Poor&#39; quality or staged as &#39;Artefact&#39; will</span>
+<span class="sd">        be rejected (and the signal segmented in consequence). Has no effect on</span>
+<span class="sd">        event selection.</span>
+<span class="sd">    reject_artf : bool or str or list of str</span>
+<span class="sd">        If True, excludes events marked as &#39;Artefact&#39;. If chan_full is</span>
+<span class="sd">        specified, only artefacts marked on a given channel are removed from</span>
+<span class="sd">        that channel. Signal is segmented in consequence.</span>
+<span class="sd">        If None, Artefact events are ignored.</span>
+<span class="sd">        If str or list of str, will reject the specified event types only.</span>
+<span class="sd">    min_dur : float</span>
+<span class="sd">        Minimum duration of segments returned, in seconds.</span>
+<span class="sd">    buffer : float</span>
+<span class="sd">        adds this many seconds of signal before and after each segment</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of Segments</span>
+<span class="sd">        metadata for all analysis segments</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bundles</span> <span class="o">=</span> <span class="n">get_times</span><span class="p">(</span><span class="n">annot</span><span class="p">,</span> <span class="n">evt_type</span><span class="o">=</span><span class="n">evt_type</span><span class="p">,</span> <span class="n">stage</span><span class="o">=</span><span class="n">stage</span><span class="p">,</span> <span class="n">cycle</span><span class="o">=</span><span class="n">cycle</span><span class="p">,</span>
+                        <span class="n">chan</span><span class="o">=</span><span class="n">chan_full</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="n">reject_epoch</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">buffer</span><span class="p">)</span>
+
+    <span class="c1"># Remove artefacts</span>
+    <span class="k">if</span> <span class="n">bundles</span> <span class="ow">and</span> <span class="n">reject_artf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="n">s_freq</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span>
+        <span class="n">two_sample_dur</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">s_freq</span> <span class="c1"># min length to prevent begsam == endsam</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reject_artf</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+            <span class="n">evt_type_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">evt_type_name</span> <span class="o">=</span> <span class="n">reject_artf</span>
+
+        <span class="k">for</span> <span class="n">bund</span> <span class="ow">in</span> <span class="n">bundles</span><span class="p">:</span>
+            <span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">remove_artf_evts</span><span class="p">(</span><span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">],</span> <span class="n">annot</span><span class="p">,</span>
+                <span class="n">chan</span><span class="o">=</span><span class="n">bund</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">evt_type_name</span><span class="p">,</span> <span class="n">min_dur</span><span class="o">=</span><span class="n">two_sample_dur</span><span class="p">)</span>
+
+    <span class="c1"># Divide bundles into segments to be concatenated</span>
+    <span class="k">if</span> <span class="n">bundles</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="s1">&#39;locked&#39;</span> <span class="o">==</span> <span class="n">epoch</span><span class="p">:</span>
+            <span class="n">bundles</span> <span class="o">=</span> <span class="n">_divide_bundles</span><span class="p">(</span><span class="n">bundles</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="s1">&#39;unlocked&#39;</span> <span class="o">==</span> <span class="n">epoch</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">epoch_step</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">step</span> <span class="o">=</span> <span class="n">epoch_step</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">step</span> <span class="o">=</span> <span class="n">epoch_dur</span> <span class="o">-</span> <span class="p">(</span><span class="n">epoch_dur</span> <span class="o">*</span> <span class="n">epoch_overlap</span><span class="p">)</span>
+
+            <span class="n">bundles</span> <span class="o">=</span> <span class="n">_concat</span><span class="p">(</span><span class="n">bundles</span><span class="p">,</span> <span class="n">cat</span><span class="p">)</span>
+            <span class="n">bundles</span> <span class="o">=</span> <span class="n">_find_intervals</span><span class="p">(</span><span class="n">bundles</span><span class="p">,</span> <span class="n">epoch_dur</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">epoch</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">evt_type</span><span class="p">:</span>
+                <span class="n">bundles</span> <span class="o">=</span> <span class="n">_concat</span><span class="p">(</span><span class="n">bundles</span><span class="p">,</span> <span class="n">cat</span><span class="p">,</span> <span class="n">concat_continuous</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">bundles</span> <span class="o">=</span> <span class="n">_concat</span><span class="p">(</span><span class="n">bundles</span><span class="p">,</span> <span class="n">cat</span><span class="p">)</span>
+
+        <span class="c1"># Minimum duration</span>
+        <span class="n">bundles</span> <span class="o">=</span> <span class="n">_longer_than</span><span class="p">(</span><span class="n">bundles</span><span class="p">,</span> <span class="n">min_dur</span><span class="p">)</span>
+
+    <span class="n">segments</span> <span class="o">=</span> <span class="n">Segments</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="n">segments</span><span class="o">.</span><span class="n">segments</span> <span class="o">=</span> <span class="n">bundles</span>
+
+    <span class="k">return</span> <span class="n">segments</span></div>
+
+
+<div class="viewcode-block" id="get_times"><a class="viewcode-back" href="../../../api/wonambi.trans.select.html#wonambi.trans.select.get_times">[docs]</a><span class="k">def</span> <span class="nf">get_times</span><span class="p">(</span><span class="n">annot</span><span class="p">,</span> <span class="n">evt_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stage</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cycle</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">chan</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+              <span class="n">exclude</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get start and end times for selected segments of data, bundled</span>
+<span class="sd">    together with info.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    annot: instance of Annotations</span>
+<span class="sd">        The annotation file containing events and epochs</span>
+<span class="sd">    evt_type: list of str, optional</span>
+<span class="sd">        Enter a list of event types to get events; otherwise, epochs will</span>
+<span class="sd">        be returned.</span>
+<span class="sd">    stage: list of str, optional</span>
+<span class="sd">        Stage(s) of interest. If None, stage is ignored.</span>
+<span class="sd">    cycle: list of tuple of two float, optional</span>
+<span class="sd">        Cycle(s) of interest, as start and end times in seconds from record</span>
+<span class="sd">        start. If None, cycles are ignored.</span>
+<span class="sd">    chan: list of str or tuple of None</span>
+<span class="sd">        Channel(s) of interest. Channel format is &#39;chan_name (group_name)&#39;.</span>
+<span class="sd">        If None, channel is ignored.</span>
+<span class="sd">    exclude: bool</span>
+<span class="sd">        Exclude epochs by quality. If True, epochs marked as &#39;Poor&#39; quality</span>
+<span class="sd">        or staged as &#39;Artefact&#39; will be rejected (and the signal segmented</span>
+<span class="sd">        in consequence). Has no effect on event selection.</span>
+<span class="sd">    buffer : float</span>
+<span class="sd">        adds this many seconds of signal before and after each segment</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list of dict</span>
+<span class="sd">        Each dict has times (the start and end times of each segment, as</span>
+<span class="sd">        list of tuple of float), stage, cycle, chan, name (event type,</span>
+<span class="sd">        if applicable)</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function returns epoch or event start and end times, bundled</span>
+<span class="sd">    together according to the specified parameters.</span>
+<span class="sd">    Presently, setting exclude to True does not exclude events found in Poor</span>
+<span class="sd">    signal epochs. The rationale is that events would never be marked in Poor</span>
+<span class="sd">    signal epochs. If they were automatically detected, these epochs would</span>
+<span class="sd">    have been left out during detection. If they were manually marked, then</span>
+<span class="sd">    it must have been Good signal. At the moment, in the GUI, the exclude epoch</span>
+<span class="sd">    option is disabled when analyzing events, but we could fix the code if we</span>
+<span class="sd">    find a use case for rejecting events based on the quality of the epoch</span>
+<span class="sd">    signal.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">getter</span> <span class="o">=</span> <span class="n">annot</span><span class="o">.</span><span class="n">get_epochs</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="n">annot</span><span class="o">.</span><span class="n">last_second</span>
+
+    <span class="k">if</span> <span class="n">stage</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">stage</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,)</span>
+    <span class="k">if</span> <span class="n">cycle</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">cycle</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,)</span>
+    <span class="k">if</span> <span class="n">chan</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">chan</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,)</span>
+    <span class="k">if</span> <span class="n">evt_type</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">evt_type</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">evt_type</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">getter</span> <span class="o">=</span> <span class="n">annot</span><span class="o">.</span><span class="n">get_events</span>
+        <span class="k">if</span> <span class="n">chan</span> <span class="o">!=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,):</span>
+            <span class="n">chan</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># also retrieve events marked on all channels</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Event type must be list/tuple of str or None&#39;</span><span class="p">)</span>
+
+    <span class="n">qual</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">exclude</span><span class="p">:</span>
+        <span class="n">qual</span> <span class="o">=</span> <span class="s1">&#39;Good&#39;</span>
+
+    <span class="n">bundles</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">et</span> <span class="ow">in</span> <span class="n">evt_type</span><span class="p">:</span>
+
+        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">chan</span><span class="p">:</span>
+
+            <span class="k">for</span> <span class="n">cyc</span> <span class="ow">in</span> <span class="n">cycle</span><span class="p">:</span>
+
+                <span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">stage</span><span class="p">:</span>
+
+                    <span class="n">st_input</span> <span class="o">=</span> <span class="n">ss</span>
+                    <span class="k">if</span> <span class="n">ss</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">st_input</span> <span class="o">=</span> <span class="p">(</span><span class="n">ss</span><span class="p">,)</span>
+
+                    <span class="n">evochs</span> <span class="o">=</span> <span class="n">getter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">et</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">cyc</span><span class="p">,</span> <span class="n">chan</span><span class="o">=</span><span class="p">(</span><span class="n">ch</span><span class="p">,),</span>
+                                    <span class="n">stage</span><span class="o">=</span><span class="n">st_input</span><span class="p">,</span> <span class="n">qual</span><span class="o">=</span><span class="n">qual</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">evochs</span><span class="p">:</span>
+                        <span class="n">times</span> <span class="o">=</span> <span class="p">[(</span>
+                                <span class="nb">max</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">buffer</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                                <span class="nb">min</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">last</span><span class="p">))</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">evochs</span><span class="p">]</span>
+                        <span class="n">times</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                        <span class="n">one_bundle</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;times&#39;</span><span class="p">:</span> <span class="n">times</span><span class="p">,</span>
+                                      <span class="s1">&#39;stage&#39;</span><span class="p">:</span> <span class="n">ss</span><span class="p">,</span>
+                                      <span class="s1">&#39;cycle&#39;</span><span class="p">:</span> <span class="n">cyc</span><span class="p">,</span>
+                                      <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="n">ch</span><span class="p">,</span>
+                                      <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">et</span><span class="p">}</span>
+                        <span class="n">bundles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_bundle</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">bundles</span></div>
+
+
+<span class="k">def</span> <span class="nf">_longer_than</span><span class="p">(</span><span class="n">segments</span><span class="p">,</span> <span class="n">min_dur</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove segments longer than min_dur.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">min_dur</span> <span class="o">&lt;=</span> <span class="mf">0.</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">segments</span>
+
+    <span class="n">long_enough</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">seg</span> <span class="ow">in</span> <span class="n">segments</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="nb">sum</span><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]])</span> <span class="o">&gt;=</span> <span class="n">min_dur</span><span class="p">:</span>
+            <span class="n">long_enough</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seg</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">long_enough</span>
+
+
+<span class="k">def</span> <span class="nf">_concat</span><span class="p">(</span><span class="n">bundles</span><span class="p">,</span> <span class="n">cat</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">concat_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Prepare event or epoch start and end times for concatenation.&quot;&quot;&quot;</span>
+    <span class="n">chan</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bundles</span><span class="p">]))</span>
+    <span class="n">cycle</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;cycle&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bundles</span><span class="p">]))</span>
+    <span class="n">stage</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bundles</span><span class="p">]))</span>
+    <span class="n">evt_type</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bundles</span><span class="p">]))</span>
+
+    <span class="n">all_cycle</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">all_stage</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">all_evt_type</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">cycle</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">all_cycle</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cycle</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">stage</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">all_stage</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stage</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">evt_type</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">all_evt_type</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">evt_type</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="n">cycle</span> <span class="o">=</span> <span class="p">[</span><span class="n">all_cycle</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">cat</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">stage</span> <span class="o">=</span> <span class="p">[</span><span class="n">all_stage</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">cat</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span>
+        <span class="n">evt_type</span> <span class="o">=</span> <span class="p">[</span><span class="n">all_evt_type</span><span class="p">]</span>
+
+    <span class="n">to_concat</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">chan</span><span class="p">:</span>
+
+        <span class="k">for</span> <span class="n">cyc</span> <span class="ow">in</span> <span class="n">cycle</span><span class="p">:</span>
+
+            <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">stage</span><span class="p">:</span>
+
+                <span class="k">for</span> <span class="n">et</span> <span class="ow">in</span> <span class="n">evt_type</span><span class="p">:</span>
+                    <span class="n">new_times</span> <span class="o">=</span> <span class="p">[]</span>
+
+                    <span class="k">for</span> <span class="n">bund</span> <span class="ow">in</span> <span class="n">bundles</span><span class="p">:</span>
+                        <span class="n">chan_cond</span> <span class="o">=</span> <span class="n">ch</span> <span class="o">==</span> <span class="n">bund</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span>
+                        <span class="n">cyc_cond</span> <span class="o">=</span> <span class="n">cyc</span> <span class="ow">in</span> <span class="p">(</span><span class="n">bund</span><span class="p">[</span><span class="s1">&#39;cycle&#39;</span><span class="p">],</span> <span class="n">all_cycle</span><span class="p">)</span>
+                        <span class="n">st_cond</span> <span class="o">=</span> <span class="n">st</span> <span class="ow">in</span> <span class="p">(</span><span class="n">bund</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">],</span> <span class="n">all_stage</span><span class="p">)</span>
+                        <span class="n">et_cond</span> <span class="o">=</span> <span class="n">et</span> <span class="ow">in</span> <span class="p">(</span><span class="n">bund</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">all_evt_type</span><span class="p">)</span>
+
+                        <span class="k">if</span> <span class="n">chan_cond</span> <span class="ow">and</span> <span class="n">cyc_cond</span> <span class="ow">and</span> <span class="n">st_cond</span> <span class="ow">and</span> <span class="n">et_cond</span><span class="p">:</span>
+                            <span class="n">new_times</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">])</span>
+
+                    <span class="n">new_times</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">new_times</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">new_bund</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;times&#39;</span><span class="p">:</span> <span class="n">new_times</span><span class="p">,</span>
+                              <span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="n">ch</span><span class="p">,</span>
+                              <span class="s1">&#39;cycle&#39;</span><span class="p">:</span> <span class="n">cyc</span><span class="p">,</span>
+                              <span class="s1">&#39;stage&#39;</span><span class="p">:</span> <span class="n">st</span><span class="p">,</span>
+                              <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">et</span>
+                              <span class="p">}</span>
+                    <span class="n">to_concat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_bund</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cat</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+        <span class="n">to_concat_new</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">bund</span> <span class="ow">in</span> <span class="n">to_concat</span><span class="p">:</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">inf</span><span class="p">,</span><span class="n">inf</span><span class="p">))</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]):</span>
+
+                <span class="k">if</span> <span class="n">last</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">isclose</span><span class="p">(</span><span class="n">j</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">last</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span> \
+                        <span class="ow">or</span> <span class="ow">not</span> <span class="n">concat_continuous</span><span class="p">:</span>
+                        <span class="n">new_times</span> <span class="o">=</span> <span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">][</span><span class="n">start</span><span class="p">:</span><span class="n">i</span><span class="p">]</span>
+                        <span class="n">new_bund</span> <span class="o">=</span> <span class="n">bund</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                        <span class="n">new_bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_times</span>
+                        <span class="n">to_concat_new</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_bund</span><span class="p">)</span>
+                        <span class="n">start</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="n">last</span> <span class="o">=</span> <span class="n">j</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">to_concat</span> <span class="o">=</span> <span class="n">to_concat_new</span>
+
+    <span class="n">to_concat</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">to_concat</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]]</span>
+
+    <span class="k">return</span> <span class="n">to_concat</span>
+
+
+<span class="k">def</span> <span class="nf">_divide_bundles</span><span class="p">(</span><span class="n">bundles</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Take each subsegment inside a bundle and put it in its own bundle,</span>
+<span class="sd">    copying the bundle metadata.&quot;&quot;&quot;</span>
+    <span class="n">divided</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">bund</span> <span class="ow">in</span> <span class="n">bundles</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]:</span>
+            <span class="n">new_bund</span> <span class="o">=</span> <span class="n">bund</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">new_bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="p">]</span>
+            <span class="n">divided</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_bund</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">divided</span>
+
+
+<span class="k">def</span> <span class="nf">_find_intervals</span><span class="p">(</span><span class="n">bundles</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Divide bundles into segments of a certain duration and a certain step,</span>
+<span class="sd">    discarding any remainder.&quot;&quot;&quot;</span>
+    <span class="n">segments</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">bund</span> <span class="ow">in</span> <span class="n">bundles</span><span class="p">:</span>
+        <span class="n">beg</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">bund</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">end</span> <span class="o">-</span> <span class="n">beg</span> <span class="o">&gt;=</span> <span class="n">duration</span><span class="p">:</span>
+            <span class="n">new_begs</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">duration</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">new_begs</span><span class="p">:</span>
+                <span class="n">seg</span> <span class="o">=</span> <span class="n">bund</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="n">seg</span><span class="p">[</span><span class="s1">&#39;times&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="n">duration</span><span class="p">)]</span>
+                <span class="n">segments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seg</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">segments</span>
+
+
+<span class="k">def</span> <span class="nf">_create_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">active_chan</span><span class="p">,</span> <span class="n">ref_chan</span><span class="o">=</span><span class="p">[],</span> <span class="n">grp_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create data after montage.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : instance of ChanTime</span>
+<span class="sd">        the raw data</span>
+<span class="sd">    active_chan : list of str</span>
+<span class="sd">        the channel(s) of interest, without reference or group</span>
+<span class="sd">    ref_chan : list of str</span>
+<span class="sd">        reference channel(s), without group</span>
+<span class="sd">    grp_name : str</span>
+<span class="sd">        name of channel group, if applicable</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of ChanTime</span>
+<span class="sd">        the re-referenced data</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">ChanTime</span><span class="p">()</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">start_time</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">start_time</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">active_chan</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">number_of</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]),</span>
+                           <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+
+    <span class="n">sel_data</span> <span class="o">=</span> <span class="n">_select_channels</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">active_chan</span> <span class="o">+</span> <span class="n">ref_chan</span><span class="p">)</span>
+    <span class="n">data1</span> <span class="o">=</span> <span class="n">montage</span><span class="p">(</span><span class="n">sel_data</span><span class="p">,</span> <span class="n">ref_chan</span><span class="o">=</span><span class="n">ref_chan</span><span class="p">)</span>
+    <span class="n">data1</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">nan_to_num</span><span class="p">(</span><span class="n">data1</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">all_chan_grp_name</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">chan</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">active_chan</span><span class="p">):</span>
+        <span class="n">chan_grp_name</span> <span class="o">=</span> <span class="n">chan</span>
+        <span class="k">if</span> <span class="n">grp_name</span><span class="p">:</span>
+            <span class="n">chan_grp_name</span> <span class="o">=</span> <span class="n">chan</span> <span class="o">+</span> <span class="s1">&#39; (&#39;</span> <span class="o">+</span> <span class="n">grp_name</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+        <span class="n">all_chan_grp_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chan_grp_name</span><span class="p">)</span>
+
+        <span class="n">dat</span> <span class="o">=</span> <span class="n">data1</span><span class="p">(</span><span class="n">chan</span><span class="o">=</span><span class="n">chan</span><span class="p">,</span> <span class="n">trial</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">dat</span>
+
+    <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">all_chan_grp_name</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">output</span>
+
+
+<span class="k">def</span> <span class="nf">_create_subepochs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">nperseg</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transform the data into a matrix for easy manipulation</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : 1d ndarray</span>
+<span class="sd">        actual data values</span>
+<span class="sd">    nperseg : int</span>
+<span class="sd">        number of samples in each row to create</span>
+<span class="sd">    step : int</span>
+<span class="sd">        distance in samples between rows</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    2d ndarray</span>
+<span class="sd">        a view (i.e. doesn&#39;t copy data) of the original x, with shape</span>
+<span class="sd">        determined by nperseg and step. You should use the last dimension</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">axis</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># last dim</span>
+    <span class="n">nsmp</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span>
+    <span class="n">stride</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">strides</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span>
+    <span class="n">noverlap</span> <span class="o">=</span> <span class="n">nperseg</span> <span class="o">-</span> <span class="n">step</span>
+    <span class="n">v_shape</span> <span class="o">=</span> <span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="n">axis</span><span class="p">],</span> <span class="p">(</span><span class="n">nsmp</span> <span class="o">-</span> <span class="n">noverlap</span><span class="p">)</span> <span class="o">//</span> <span class="n">step</span><span class="p">,</span> <span class="n">nperseg</span>
+    <span class="n">v_strides</span> <span class="o">=</span> <span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">strides</span><span class="p">[:</span><span class="n">axis</span><span class="p">],</span> <span class="n">stride</span> <span class="o">*</span> <span class="n">step</span><span class="p">,</span> <span class="n">stride</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">as_strided</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">v_shape</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="n">v_strides</span><span class="p">,</span>
+                   <span class="n">writeable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># much safer</span>
+    <span class="k">return</span> <span class="n">v</span>
+
+
+<span class="k">def</span> <span class="nf">_select_channels</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">channels</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Select channels.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : instance of ChanTime</span>
+<span class="sd">        data with all the channels</span>
+<span class="sd">    channels : list</span>
+<span class="sd">        channels of interest</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    instance of ChanTime</span>
+<span class="sd">        data with only channels of interest</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function does the same as wonambi.trans.select, but it&#39;s much faster.</span>
+<span class="sd">    wonambi.trans.Select needs to flexible for any data type, here we assume</span>
+<span class="sd">    that we have one trial, and that channel is the first dimension.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">_copy</span><span class="p">()</span>
+    <span class="n">chan_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">idx_chan</span> <span class="o">=</span> <span class="p">[</span><span class="n">chan_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">i_chan</span><span class="p">)</span> <span class="k">for</span> <span class="n">i_chan</span> <span class="ow">in</span> <span class="n">channels</span><span class="p">]</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">idx_chan</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">channels</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">output</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

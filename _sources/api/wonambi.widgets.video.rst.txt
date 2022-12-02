@@ -1,0 +1,7 @@
+wonambi.widgets.video module
+============================
+
+.. automodule:: wonambi.widgets.video
+   :members:
+   :undoc-members:
+   :show-inheritance:

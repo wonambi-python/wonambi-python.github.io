@@ -1,0 +1,7 @@
+wonambi.ioeeg.bids module
+=========================
+
+.. automodule:: wonambi.ioeeg.bids
+   :members:
+   :undoc-members:
+   :show-inheritance:

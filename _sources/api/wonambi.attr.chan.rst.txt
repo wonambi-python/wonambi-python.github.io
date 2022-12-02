@@ -1,0 +1,7 @@
+wonambi.attr.chan module
+========================
+
+.. automodule:: wonambi.attr.chan
+   :members:
+   :undoc-members:
+   :show-inheritance:

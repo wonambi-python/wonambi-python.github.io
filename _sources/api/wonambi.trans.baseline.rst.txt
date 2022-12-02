@@ -1,0 +1,7 @@
+wonambi.trans.baseline module
+=============================
+
+.. automodule:: wonambi.trans.baseline
+   :members:
+   :undoc-members:
+   :show-inheritance:

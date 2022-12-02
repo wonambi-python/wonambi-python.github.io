@@ -1,0 +1,7 @@
+wonambi.dataset module
+======================
+
+.. automodule:: wonambi.dataset
+   :members:
+   :undoc-members:
+   :show-inheritance:

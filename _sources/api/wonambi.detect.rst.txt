@@ -1,0 +1,19 @@
+wonambi.detect package
+======================
+
+.. automodule:: wonambi.detect
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   wonambi.detect.agreement
+   wonambi.detect.arousal
+   wonambi.detect.ripple
+   wonambi.detect.slowwave
+   wonambi.detect.spindle

@@ -1,0 +1,7 @@
+wonambi.trans.montage module
+============================
+
+.. automodule:: wonambi.trans.montage
+   :members:
+   :undoc-members:
+   :show-inheritance:

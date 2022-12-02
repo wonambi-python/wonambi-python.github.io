@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.datatype module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.graphoelement module" href="wonambi.graphoelement.html" />
+    <link rel="prev" title="wonambi.dataset module" href="wonambi.dataset.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+      <li class="breadcrumb-item active">wonambi.datatype module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.datatype">
+<span id="wonambi-datatype-module"></span><h1>wonambi.datatype module<a class="headerlink" href="#module-wonambi.datatype" title="Permalink to this heading"></a></h1>
+<p>Module contains the different types of data formats.</p>
+<p>The main class is Data, all the other classes should depend on it. The other
+classes are given only as convenience, but they should not overwride
+Data.__call__, which needs to be very general.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.datatype.ChanFreq">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.datatype.</span></span><span class="sig-name descname"><span class="pre">ChanFreq</span></span><a class="reference internal" href="../_modules/wonambi/datatype.html#ChanFreq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.datatype.ChanFreq" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#wonambi.datatype.Data" title="wonambi.datatype.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
+<p>Specific class for channel-frequency recordings, with axes:</p>
+<dl class="simple">
+<dt>chan<span class="classifier">ndarray (dtype=’O’)</span></dt><dd><p>for each trial, channels in the data (dtype=’U’)</p>
+</dd>
+<dt>freq<span class="classifier">ndarray (dtype=’O’)</span></dt><dd><p>for each trial, 1d matrix with the frequency (dtype=’f’)</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Conceptually, it is reasonable that each trial has the same frequency band,
+so it might be more convenient to use only one array, but it can happen
+that different trials have different frequency bands, so we keep the format
+more open.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.datatype.ChanTime">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.datatype.</span></span><span class="sig-name descname"><span class="pre">ChanTime</span></span><a class="reference internal" href="../_modules/wonambi/datatype.html#ChanTime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.datatype.ChanTime" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#wonambi.datatype.Data" title="wonambi.datatype.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
+<p>Specific class for chan-time recordings, with axes:</p>
+<dl class="simple">
+<dt>chan<span class="classifier">ndarray (dtype=’O’)</span></dt><dd><p>for each trial, channels in the data (dtype=’U’)</p>
+</dd>
+<dt>time<span class="classifier">ndarray (dtype=’O’)</span></dt><dd><p>for each trial, 1d matrix with the time stamp (dtype=’f’)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.datatype.ChanTimeFreq">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.datatype.</span></span><span class="sig-name descname"><span class="pre">ChanTimeFreq</span></span><a class="reference internal" href="../_modules/wonambi/datatype.html#ChanTimeFreq"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.datatype.ChanTimeFreq" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#wonambi.datatype.Data" title="wonambi.datatype.Data"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
+<p>Specific class for channel-time-frequency representation, with axes:</p>
+<dl class="simple">
+<dt>chan<span class="classifier">ndarray (dtype=’O’)</span></dt><dd><p>for each trial, channels in the data (dtype=’U’)</p>
+</dd>
+<dt>time<span class="classifier">ndarray (dtype=’O’)</span></dt><dd><p>for each trial, 1d matrix with the time stamp (dtype=’f’)</p>
+</dd>
+<dt>freq<span class="classifier">ndarray (dtype=’O’)</span></dt><dd><p>for each trial, 1d matrix with the frequency (dtype=’f’)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.datatype.Data">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.datatype.</span></span><span class="sig-name descname"><span class="pre">Data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/datatype.html#Data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.datatype.Data" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>General class containing recordings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>ndarray</em>) – one matrix with dimension matching the number of axes. You can pass
+only one trial.</p></li>
+<li><p><strong>s_freq</strong> (<em>int</em>) – sampling frequency</p></li>
+<li><p><strong>axes</strong> (<em>dict</em>) – dictionary where the key is the name of the axis and the values must be
+a numpy vector with the actual values.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#wonambi.datatype.Data.data" title="Permalink to this definition"></a></dt>
+<dd><p>the data as trials. Each trial is a ndarray (dtype=’d’ or ‘f’)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray (dtype=’O’)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.axis">
+<span class="sig-name descname"><span class="pre">axis</span></span><a class="headerlink" href="#wonambi.datatype.Data.axis" title="Permalink to this definition"></a></dt>
+<dd><p>dictionary with axiss (standard names are ‘chan’, ‘time’, ‘freq’);
+values should be numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>OrderedDict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.s_freq">
+<span class="sig-name descname"><span class="pre">s_freq</span></span><a class="headerlink" href="#wonambi.datatype.Data.s_freq" title="Permalink to this definition"></a></dt>
+<dd><p>sampling frequency</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.start_time">
+<span class="sig-name descname"><span class="pre">start_time</span></span><a class="headerlink" href="#wonambi.datatype.Data.start_time" title="Permalink to this definition"></a></dt>
+<dd><p>the start time of the recording</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of datetime.datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.attr">
+<span class="sig-name descname"><span class="pre">attr</span></span><a class="headerlink" href="#wonambi.datatype.Data.attr" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>contains additional information about the dataset, with keys:</dt><dd><ul class="simple">
+<li><p>surf</p></li>
+<li><p>chan</p></li>
+<li><p>scores</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<p>Something which is not immediately clear for chan. dtype=’U’ (meaning
+Unicode) actually creates string of type str_, while if you use dtype=’S’
+(meaning String) it creates strings of type bytes_.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.export">
+<span class="sig-name descname"><span class="pre">export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'FieldTrip'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/datatype.html#Data.export"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.datatype.Data.export" title="Permalink to this definition"></a></dt>
+<dd><p>Export data in other formats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>path to file</em>) – file to write</p></li>
+<li><p><strong>export_format</strong> (<em>str</em><em>, </em><em>optional</em>) – supported export format is currently FieldTrip, EDF, FIFF, Wonambi,
+BrainVision</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>‘edf’ takes an optional argument “physical_max”, see write_edf.</p>
+<p>‘wonambi’ takes an optional argument “subj_id”, see write_wonambi.
+wonambi format creates two files, one .won with the dataset info as json
+file and one .dat with the memmap recordings.</p>
+<p>‘brainvision’ takes an additional argument (“markers”) which is a list
+of dictionaries with fields:</p>
+<blockquote>
+<div><p>“name” : str (name of the marker),
+“start” : float (start time in seconds)
+“end” : float (end time in seconds)</p>
+</div></blockquote>
+<p>‘bids’ has an optional argument “markers”, like in ‘brainvision’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.index_of">
+<span class="sig-name descname"><span class="pre">index_of</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/datatype.html#Data.index_of"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.datatype.Data.index_of" title="Permalink to this definition"></a></dt>
+<dd><p>Return the index of a axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>axis</strong> (<em>str</em>) – Name of the axis (such as ‘trial’, ‘time’, etc)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>int or ndarray (dtype=’int’)</em> – number of trial (as int) or number of element in the selected
+axis (if any of the other axiss) as 1d array.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the requested axis is not in the data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.list_of_axes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_of_axes</span></span><a class="headerlink" href="#wonambi.datatype.Data.list_of_axes" title="Permalink to this definition"></a></dt>
+<dd><p>Return the name of all the axes in the data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.datatype.Data.number_of">
+<span class="sig-name descname"><span class="pre">number_of</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/datatype.html#Data.number_of"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.datatype.Data.number_of" title="Permalink to this definition"></a></dt>
+<dd><p>Return the number of in one axis, as generally as possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>axis</strong> (<em>str</em>) – Name of the axis (such as ‘trial’, ‘time’, etc)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>int or ndarray (dtype=’int’)</em> – number of trial (as int) or number of element in the selected
+axis (if any of the other axiss) as 1d array.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>KeyError</strong> – If the requested axis is not in the data.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>or is it better to catch the exception?</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.dataset.html" class="btn btn-neutral float-left" title="wonambi.dataset module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.graphoelement.html" class="btn btn-neutral float-right" title="wonambi.graphoelement module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

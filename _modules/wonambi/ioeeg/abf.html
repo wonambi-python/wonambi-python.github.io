@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.ioeeg.abf &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.ioeeg.abf</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.ioeeg.abf</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Class to import ABF2.</span>
+<span class="sd">Adapted from axonrawio.py in python-neo. Strongly simplified.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">c_</span><span class="p">,</span> <span class="n">empty</span><span class="p">,</span> <span class="n">float64</span><span class="p">,</span> <span class="n">NaN</span><span class="p">,</span> <span class="n">memmap</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">newaxis</span><span class="p">,</span> <span class="n">array</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">SEEK_SET</span>
+<span class="kn">from</span> <span class="nn">struct</span> <span class="kn">import</span> <span class="n">unpack</span><span class="p">,</span> <span class="n">calcsize</span>
+
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">DEFAULT_DATETIME</span>
+
+<span class="n">BLOCKSIZE</span> <span class="o">=</span> <span class="mi">512</span>
+
+
+<div class="viewcode-block" id="Abf"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.abf.html#wonambi.ioeeg.abf.Abf">[docs]</a><span class="k">class</span> <span class="nc">Abf</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class to read abf file.</span>
+<span class="sd">    Only for ABF2, when the data has no gaps (no episodes).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : path to file</span>
+<span class="sd">        the name of the filename with extension .won</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+
+<div class="viewcode-block" id="Abf.return_hdr"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.abf.html#wonambi.ioeeg.abf.Abf.return_hdr">[docs]</a>    <span class="k">def</span> <span class="nf">return_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the header for further use.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        subj_id : str</span>
+<span class="sd">            subject identification code</span>
+<span class="sd">        start_time : datetime</span>
+<span class="sd">            start time of the dataset</span>
+<span class="sd">        s_freq : float</span>
+<span class="sd">            sampling frequency</span>
+<span class="sd">        chan_name : list of str</span>
+<span class="sd">            list of all the channels</span>
+<span class="sd">        n_samples : int</span>
+<span class="sd">            number of samples in the dataset</span>
+<span class="sd">        orig : dict</span>
+<span class="sd">            the full header</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;br&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">orig</span> <span class="o">=</span> <span class="n">_read_header</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;protocol&#39;</span><span class="p">][</span><span class="s1">&#39;nOperationMode&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Only continuous no-gap recordings are supported&#39;</span>
+        <span class="k">assert</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;sections&#39;</span><span class="p">][</span><span class="s1">&#39;SynchArraySection&#39;</span><span class="p">][</span><span class="s1">&#39;llNumEntries&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;sections&#39;</span><span class="p">][</span><span class="s1">&#39;SynchArraySection&#39;</span><span class="p">][</span><span class="s1">&#39;uBlockIndex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+
+        <span class="c1"># file format</span>
+        <span class="k">if</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;nDataFormat&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;i2&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;nDataFormat&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">)</span>
+
+        <span class="n">chan_name</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">gain</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;listADCInfo&#39;</span><span class="p">]:</span>
+            <span class="n">chan_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="s1">&#39;ADCChNames&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+            <span class="c1"># compute the gain and offset</span>
+            <span class="n">ch_gain</span> <span class="o">=</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;protocol&#39;</span><span class="p">][</span><span class="s1">&#39;lADCResolution&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;protocol&#39;</span><span class="p">][</span><span class="s1">&#39;fADCRange&#39;</span><span class="p">]</span>
+            <span class="n">ch_gain</span> <span class="o">*=</span> <span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="s1">&#39;fInstrumentScaleFactor&#39;</span><span class="p">]</span> <span class="o">*</span>
+                        <span class="n">ch</span><span class="p">[</span><span class="s1">&#39;fSignalGain&#39;</span><span class="p">]</span> <span class="o">*</span>
+                        <span class="n">ch</span><span class="p">[</span><span class="s1">&#39;fADCProgrammableGain&#39;</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">ch</span><span class="p">[</span><span class="s1">&#39;nTelegraphEnable&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">ch_gain</span> <span class="o">*=</span> <span class="n">ch</span><span class="p">[</span><span class="s1">&#39;fTelegraphAdditGain&#39;</span><span class="p">]</span>
+            <span class="n">gain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">ch_gain</span><span class="p">)</span>
+
+            <span class="n">offset</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="s1">&#39;fInstrumentOffset&#39;</span><span class="p">]</span> <span class="o">-</span>
+                          <span class="n">ch</span><span class="p">[</span><span class="s1">&#39;fSignalOffset&#39;</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">offset</span><span class="p">)[:,</span> <span class="n">newaxis</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gain</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">gain</span><span class="p">)[:,</span> <span class="n">newaxis</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;sections&#39;</span><span class="p">][</span><span class="s1">&#39;DataSection&#39;</span><span class="p">][</span><span class="s1">&#39;uBlockIndex&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">BLOCKSIZE</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_chan</span> <span class="o">=</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;sections&#39;</span><span class="p">][</span><span class="s1">&#39;ADCSection&#39;</span><span class="p">][</span><span class="s1">&#39;llNumEntries&#39;</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_chan</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">chan_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">orig</span><span class="p">[</span><span class="s1">&#39;sections&#39;</span><span class="p">][</span><span class="s1">&#39;DataSection&#39;</span><span class="p">][</span><span class="s1">&#39;llNumEntries&#39;</span><span class="p">]</span> <span class="o">/</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">n_chan</span><span class="p">)</span>
+
+        <span class="n">subj_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="o">.</span><span class="n">stem</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">start_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">orig</span><span class="p">[</span><span class="s1">&#39;uFileStartDate&#39;</span><span class="p">]),</span> <span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> <span class="o">+</span>
+                          <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">orig</span><span class="p">[</span><span class="s1">&#39;uFileStartTimeMS&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>  <span class="c1"># no time given, use placeholder</span>
+            <span class="n">start_time</span> <span class="o">=</span> <span class="n">DEFAULT_DATETIME</span>
+
+        <span class="n">s_freq</span> <span class="o">=</span> <span class="mf">1.e6</span> <span class="o">/</span> <span class="n">orig</span><span class="p">[</span><span class="s1">&#39;protocol&#39;</span><span class="p">][</span><span class="s1">&#39;fADCSequenceInterval&#39;</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">subj_id</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">chan_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">orig</span></div>
+
+<div class="viewcode-block" id="Abf.return_dat"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.abf.html#wonambi.ioeeg.abf.Abf.return_dat">[docs]</a>    <span class="k">def</span> <span class="nf">return_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">,</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the data as 2D numpy.ndarray.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chan : int or list</span>
+<span class="sd">            index (indices) of the channels to read</span>
+<span class="sd">        begsam : int</span>
+<span class="sd">            index of the first sample</span>
+<span class="sd">        endsam : int</span>
+<span class="sd">            index of the last sample</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        numpy.ndarray</span>
+<span class="sd">            A 2d matrix, with dimension chan X samples. To save memory, the</span>
+<span class="sd">            data are memory-mapped, and you cannot change the values on disk.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        When asking for an interval outside the data boundaries, it returns NaN</span>
+<span class="sd">        for those values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">memmap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">,</span>
+                      <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_chan</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">),</span> <span class="n">offset</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">)</span>
+
+        <span class="n">dat</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">chan</span><span class="p">,</span> <span class="nb">max</span><span class="p">((</span><span class="n">begsam</span><span class="p">,</span> <span class="mi">0</span><span class="p">)):</span><span class="nb">min</span><span class="p">((</span><span class="n">endsam</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">))]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">dat</span> <span class="o">=</span> <span class="p">(</span><span class="n">dat</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">offset</span><span class="p">[</span><span class="n">chan</span><span class="p">,</span> <span class="p">:])</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain</span><span class="p">[</span><span class="n">chan</span><span class="p">,</span> <span class="p">:]</span>
+
+        <span class="k">if</span> <span class="n">begsam</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="n">pad</span> <span class="o">=</span> <span class="n">empty</span><span class="p">((</span><span class="n">dat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">begsam</span><span class="p">))</span>
+            <span class="n">pad</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">NaN</span><span class="p">)</span>
+            <span class="n">dat</span> <span class="o">=</span> <span class="n">c_</span><span class="p">[</span><span class="n">pad</span><span class="p">,</span> <span class="n">dat</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">endsam</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">:</span>
+
+            <span class="n">pad</span> <span class="o">=</span> <span class="n">empty</span><span class="p">((</span><span class="n">dat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">endsam</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">))</span>
+            <span class="n">pad</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">NaN</span><span class="p">)</span>
+            <span class="n">dat</span> <span class="o">=</span> <span class="n">c_</span><span class="p">[</span><span class="n">dat</span><span class="p">,</span> <span class="n">pad</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">dat</span></div>
+
+<div class="viewcode-block" id="Abf.return_markers"><a class="viewcode-back" href="../../../api/wonambi.ioeeg.abf.html#wonambi.ioeeg.abf.Abf.return_markers">[docs]</a>    <span class="k">def</span> <span class="nf">return_markers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;I don&#39;t know if the ABF contains markers at all.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[]</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_read_header</span><span class="p">(</span><span class="n">fid</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Based on neo/rawio/axonrawio.py, but I only kept of data with no-gaps</span>
+<span class="sd">    and in one segment.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fid</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+    <span class="n">fFileSignature</span> <span class="o">=</span> <span class="n">fid</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">fFileSignature</span> <span class="o">==</span> <span class="sa">b</span><span class="s1">&#39;ABF2&#39;</span><span class="p">,</span> <span class="s1">&#39;only format ABF2 is currently supported&#39;</span>
+
+    <span class="n">header</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">fmt</span> <span class="ow">in</span> <span class="n">headerDescriptionV2</span><span class="p">:</span>
+        <span class="n">fid</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">SEEK_SET</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="n">fmt</span><span class="p">,</span> <span class="n">fid</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">calcsize</span><span class="p">(</span><span class="n">fmt</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">header</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">header</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+
+    <span class="c1"># sections</span>
+    <span class="n">sections</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">sectionName</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sectionNames</span><span class="p">):</span>
+        <span class="n">fid</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">76</span> <span class="o">+</span> <span class="n">s</span> <span class="o">*</span> <span class="mi">16</span><span class="p">)</span>
+        <span class="n">uBlockIndex</span><span class="p">,</span> <span class="n">uBytes</span><span class="p">,</span> <span class="n">llNumEntries</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;IIl&#39;</span><span class="p">,</span> <span class="n">fid</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">calcsize</span><span class="p">(</span><span class="s1">&#39;IIl&#39;</span><span class="p">)))</span>
+        <span class="n">sections</span><span class="p">[</span><span class="n">sectionName</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">sections</span><span class="p">[</span><span class="n">sectionName</span><span class="p">][</span><span class="s1">&#39;uBlockIndex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">uBlockIndex</span>
+        <span class="n">sections</span><span class="p">[</span><span class="n">sectionName</span><span class="p">][</span><span class="s1">&#39;uBytes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">uBytes</span>
+        <span class="n">sections</span><span class="p">[</span><span class="n">sectionName</span><span class="p">][</span><span class="s1">&#39;llNumEntries&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">llNumEntries</span>
+    <span class="n">header</span><span class="p">[</span><span class="s1">&#39;sections&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sections</span>
+
+    <span class="c1"># strings sections</span>
+    <span class="c1"># hack for reading channels names and units</span>
+    <span class="n">fid</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;StringsSection&#39;</span><span class="p">][</span><span class="s1">&#39;uBlockIndex&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">BLOCKSIZE</span><span class="p">)</span>
+    <span class="n">big_string</span> <span class="o">=</span> <span class="n">fid</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;StringsSection&#39;</span><span class="p">][</span><span class="s1">&#39;uBytes&#39;</span><span class="p">])</span>
+    <span class="n">goodstart</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="sa">b</span><span class="s1">&#39;AXENGN&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;clampex&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;Clampex&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;CLAMPEX&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;axoscope&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;Clampfit&#39;</span><span class="p">]:</span>
+        <span class="n">goodstart</span> <span class="o">=</span> <span class="n">big_string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">goodstart</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">assert</span> <span class="n">goodstart</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;This file does not contain clampex, axoscope or clampfit in the header&#39;</span>
+    <span class="n">big_string</span> <span class="o">=</span> <span class="n">big_string</span><span class="p">[</span><span class="n">goodstart</span><span class="p">:]</span>
+    <span class="n">strings</span> <span class="o">=</span> <span class="n">big_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x00</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="c1"># ADC sections</span>
+    <span class="n">header</span><span class="p">[</span><span class="s1">&#39;listADCInfo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;ADCSection&#39;</span><span class="p">][</span><span class="s1">&#39;llNumEntries&#39;</span><span class="p">]):</span>
+        <span class="c1"># read ADCInfo</span>
+        <span class="n">fid</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;ADCSection&#39;</span><span class="p">][</span><span class="s1">&#39;uBlockIndex&#39;</span><span class="p">]</span> <span class="o">*</span>
+                 <span class="n">BLOCKSIZE</span> <span class="o">+</span> <span class="n">sections</span><span class="p">[</span><span class="s1">&#39;ADCSection&#39;</span><span class="p">][</span><span class="s1">&#39;uBytes&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">ADCInfo</span> <span class="o">=</span> <span class="n">_read_info_as_dict</span><span class="p">(</span><span class="n">fid</span><span class="p">,</span> <span class="n">ADCInfoDescription</span><span class="p">)</span>
+        <span class="n">ADCInfo</span><span class="p">[</span><span class="s1">&#39;ADCChNames&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">strings</span><span class="p">[</span><span class="n">ADCInfo</span><span class="p">[</span><span class="s1">&#39;lADCChannelNameIndex&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">ADCInfo</span><span class="p">[</span><span class="s1">&#39;ADCChUnits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">strings</span><span class="p">[</span><span class="n">ADCInfo</span><span class="p">[</span><span class="s1">&#39;lADCUnitsIndex&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">header</span><span class="p">[</span><span class="s1">&#39;listADCInfo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ADCInfo</span><span class="p">)</span>
+
+    <span class="c1"># protocol sections</span>
+    <span class="n">fid</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;ProtocolSection&#39;</span><span class="p">][</span><span class="s1">&#39;uBlockIndex&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">BLOCKSIZE</span><span class="p">)</span>
+    <span class="n">header</span><span class="p">[</span><span class="s1">&#39;protocol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_read_info_as_dict</span><span class="p">(</span><span class="n">fid</span><span class="p">,</span> <span class="n">protocolInfoDescription</span><span class="p">)</span>
+    <span class="n">header</span><span class="p">[</span><span class="s1">&#39;sProtocolPath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">strings</span><span class="p">[</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;uProtocolPathIndex&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># DAC sections</span>
+    <span class="n">header</span><span class="p">[</span><span class="s1">&#39;listDACInfo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;DACSection&#39;</span><span class="p">][</span><span class="s1">&#39;llNumEntries&#39;</span><span class="p">]):</span>
+        <span class="c1"># read DACInfo</span>
+        <span class="n">fid</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;DACSection&#39;</span><span class="p">][</span><span class="s1">&#39;uBlockIndex&#39;</span><span class="p">]</span> <span class="o">*</span>
+                 <span class="n">BLOCKSIZE</span> <span class="o">+</span> <span class="n">sections</span><span class="p">[</span><span class="s1">&#39;DACSection&#39;</span><span class="p">][</span><span class="s1">&#39;uBytes&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">DACInfo</span> <span class="o">=</span> <span class="n">_read_info_as_dict</span><span class="p">(</span><span class="n">fid</span><span class="p">,</span> <span class="n">DACInfoDescription</span><span class="p">)</span>
+        <span class="n">DACInfo</span><span class="p">[</span><span class="s1">&#39;DACChNames&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">strings</span><span class="p">[</span><span class="n">DACInfo</span><span class="p">[</span><span class="s1">&#39;lDACChannelNameIndex&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">DACInfo</span><span class="p">[</span><span class="s1">&#39;DACChUnits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">strings</span><span class="p">[</span>
+            <span class="n">DACInfo</span><span class="p">[</span><span class="s1">&#39;lDACChannelUnitsIndex&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">header</span><span class="p">[</span><span class="s1">&#39;listDACInfo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DACInfo</span><span class="p">)</span>
+
+    <span class="sd">&quot;&quot;&quot; Not present in test file. No tests, no code.</span>
+<span class="sd">    # tags</span>
+<span class="sd">    listTag = []</span>
+<span class="sd">    for i in range(sections[&#39;TagSection&#39;][&#39;llNumEntries&#39;]):</span>
+<span class="sd">        fid.seek(sections[&#39;TagSection&#39;][&#39;uBlockIndex&#39;] *</span>
+<span class="sd">                 BLOCKSIZE + sections[&#39;TagSection&#39;][&#39;uBytes&#39;] * i)</span>
+<span class="sd">        tag = _read_info_as_dict(fid, TagInfoDescription)</span>
+<span class="sd">        listTag.append(tag)</span>
+
+<span class="sd">    header[&#39;listTag&#39;] = listTag</span>
+
+<span class="sd">    # EpochPerDAC  sections</span>
+<span class="sd">    # header[&#39;dictEpochInfoPerDAC&#39;] is dict of dicts:</span>
+<span class="sd">    #  - the first index is the DAC number</span>
+<span class="sd">    #  - the second index is the epoch number</span>
+<span class="sd">    # It has to be done like that because data may not exist</span>
+<span class="sd">    # and may not be in sorted order</span>
+<span class="sd">    header[&#39;dictEpochInfoPerDAC&#39;] = {}</span>
+<span class="sd">    for i in range(sections[&#39;EpochPerDACSection&#39;][&#39;llNumEntries&#39;]):</span>
+<span class="sd">        #  read DACInfo</span>
+<span class="sd">        fid.seek(sections[&#39;EpochPerDACSection&#39;][&#39;uBlockIndex&#39;] *</span>
+<span class="sd">                 BLOCKSIZE +</span>
+<span class="sd">                 sections[&#39;EpochPerDACSection&#39;][&#39;uBytes&#39;] * i)</span>
+<span class="sd">        EpochInfoPerDAC = _read_info_as_dict(fid, EpochInfoPerDACDescription)</span>
+<span class="sd">        DACNum = EpochInfoPerDAC[&#39;nDACNum&#39;]</span>
+<span class="sd">        EpochNum = EpochInfoPerDAC[&#39;nEpochNum&#39;]</span>
+<span class="sd">        # Checking if the key exists, if not, the value is empty</span>
+<span class="sd">        # so we have to create empty dict to populate</span>
+<span class="sd">        if DACNum not in header[&#39;dictEpochInfoPerDAC&#39;]:</span>
+<span class="sd">            header[&#39;dictEpochInfoPerDAC&#39;][DACNum] = {}</span>
+
+<span class="sd">        header[&#39;dictEpochInfoPerDAC&#39;][DACNum][EpochNum] =\</span>
+<span class="sd">            EpochInfoPerDAC</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">header</span>
+
+
+<span class="k">def</span> <span class="nf">_read_info_as_dict</span><span class="p">(</span><span class="n">fid</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convenience function to read info in axon data to a nicely organized</span>
+<span class="sd">    dict.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">fmt</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="n">fmt</span><span class="p">,</span> <span class="n">fid</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">calcsize</span><span class="p">(</span><span class="n">fmt</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">output</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+    <span class="k">return</span> <span class="n">output</span>
+
+
+<span class="n">headerDescriptionV2</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;fFileSignature&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;4s&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fFileVersionNumber&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;4b&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uFileInfoSize&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lActualEpisodes&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uFileStartDate&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uFileStartTimeMS&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uStopwatchTime&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nFileType&#39;</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDataFormat&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nSimultaneousScan&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nCRCEnable&#39;</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uFileCRC&#39;</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;FileGUID&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uCreatorVersion&#39;</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uCreatorNameIndex&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uModifierVersion&#39;</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uModifierNameIndex&#39;</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uProtocolPathIndex&#39;</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+
+<span class="n">sectionNames</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;ProtocolSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ADCSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;DACSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;EpochSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ADCPerDACSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;EpochPerDACSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;UserListSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;StatsRegionSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;MathSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;StringsSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;DataSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;TagSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ScopeSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;DeltaSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;VoiceTagSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;SynchArraySection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;AnnotationSection&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;StatsSection&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+
+<span class="n">protocolInfoDescription</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;nOperationMode&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fADCSequenceInterval&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;bEnableFileCompression&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;sUnused1&#39;</span><span class="p">,</span> <span class="s1">&#39;3s&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;uFileCompressionRatio&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fSynchTimeUnit&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fSecondsPerRun&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lNumSamplesPerEpisode&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lPreTriggerSamples&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lEpisodesPerRun&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lRunsPerTrial&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lNumberOfTrials&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nAveragingMode&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nUndoRunCount&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nFirstEpisodeInRun&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fTriggerThreshold&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTriggerSource&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTriggerAction&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTriggerPolarity&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fScopeOutputInterval&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fEpisodeStartToStart&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fRunStartToStart&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lAverageCount&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fTrialStartToStart&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nAutoTriggerStrategy&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fFirstRunDelayS&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nChannelStatsStrategy&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lSamplesPerTrace&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lStartDisplayNum&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lFinishDisplayNum&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nShowPNRawData&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fStatisticsPeriod&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lStatisticsMeasurements&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nStatisticsSaveStrategy&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fADCRange&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fDACRange&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lADCResolution&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lDACResolution&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nExperimentType&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nManualInfoStrategy&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nCommentsEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lFileCommentIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nAutoAnalyseEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nSignalType&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitalEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nActiveDACChannel&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitalHolding&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitalInterEpisode&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitalDACChannel&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitalTrainActiveLogic&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nStatsEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nStatisticsClearStrategy&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nLevelHysteresis&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lTimeHysteresis&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nAllowExternalTags&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nAverageAlgorithm&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fAverageWeighting&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nUndoPromptStrategy&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTrialTriggerSource&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nStatisticsDisplayStrategy&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nExternalTagType&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nScopeTriggerOut&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nLTPType&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nAlternateDACOutputState&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nAlternateDigitalOutputState&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fCellID&#39;</span><span class="p">,</span> <span class="s1">&#39;3f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitizerADCs&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitizerDACs&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitizerTotalDigitalOuts&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitizerSynchDigitalOuts&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDigitizerType&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+
+<span class="n">ADCInfoDescription</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;nADCNum&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTelegraphEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTelegraphInstrument&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fTelegraphAdditGain&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fTelegraphFilter&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fTelegraphMembraneCap&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTelegraphMode&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fTelegraphAccessResistance&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nADCPtoLChannelMap&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nADCSamplingSeq&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fADCProgrammableGain&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fADCDisplayAmplification&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fADCDisplayOffset&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fInstrumentScaleFactor&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fInstrumentOffset&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fSignalGain&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fSignalOffset&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fSignalLowpassFilter&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fSignalHighpassFilter&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nLowpassFilterType&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nHighpassFilterType&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fPostProcessLowpassFilter&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nPostProcessLowpassFilterType&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;bEnabledDuringPN&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nStatsChannelPolarity&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lADCChannelNameIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lADCUnitsIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+
+<span class="n">TagInfoDescription</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;lTagTime&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;sComment&#39;</span><span class="p">,</span> <span class="s1">&#39;56s&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTagType&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nVoiceTagNumber_or_AnnotationIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+
+<span class="n">DACInfoDescription</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;nDACNum&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nTelegraphDACScaleFactorEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fInstrumentHoldingLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fDACScaleFactor&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fDACHoldingLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fDACCalibrationFactor&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fDACCalibrationOffset&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lDACChannelNameIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lDACChannelUnitsIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lDACFilePtr&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lDACFileNumEpisodes&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nWaveformEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nWaveformSource&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nInterEpisodeLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fDACFileScale&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fDACFileOffset&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lDACFileEpisodeNum&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDACFileADCNum&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nConditEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lConditNumPulses&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fBaselineDuration&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fBaselineLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fStepDuration&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fStepLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fPostTrainPeriod&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fPostTrainLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nMembTestEnable&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nLeakSubtractType&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nPNPolarity&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fPNHoldingLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nPNNumADCChannels&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nPNPosition&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nPNNumPulses&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fPNSettlingTime&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fPNInterpulse&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nLTPUsageOfDAC&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nLTPPresynapticPulses&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lDACFilePathIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fMembTestPreSettlingTimeMS&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fMembTestPostSettlingTimeMS&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nLeakSubtractADCIndex&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;sUnused&#39;</span><span class="p">,</span> <span class="s1">&#39;124s&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+
+<span class="n">EpochInfoPerDACDescription</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;nEpochNum&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nDACNum&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;nEpochType&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fEpochInitLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;fEpochLevelInc&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lEpochInitDuration&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lEpochDurationInc&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lEpochPulsePeriod&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;lEpochPulseWidth&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;sUnused&#39;</span><span class="p">,</span> <span class="s1">&#39;18s&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

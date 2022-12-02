@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WONAMBI &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Documentation of WONAMBI" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> wonambi
+            <img src="_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">WONAMBI</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wonambi">
+<h1>WONAMBI<a class="headerlink" href="#wonambi" title="Permalink to this heading"></a></h1>
+<p>Package for the analysis of EEG, ECoG and other electrophysiology modalities.
+Allows for visualization of the data and sleep stage scoring in a GUI.
+Provides automatic detectors for spindles and slow waves.</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Can read files of format:</p>
+<ul>
+<li><p>Axon (.abf, ABF2 only)</p></li>
+<li><p>BCI2000 (.dat)</p></li>
+<li><p>Blackrock (.nev, .ns2, .ns3, .ns5)</p></li>
+<li><p>Brain Vision (.vhdr, .vmrk, .eeg / .dat)</p></li>
+<li><p>EEGLAB (.set, .set / .fdt)</p></li>
+<li><p>European Data Format (.edf)</p></li>
+<li><p>EGI MFF (.mff)</p></li>
+<li><p>Fieldtrip (.mat)</p></li>
+<li><p>mne FIFF (.fiff)</p></li>
+<li><p>SystemPlus Micromed (.trc)</p></li>
+<li><p>Moberg (“EEG,Composite,SampleSeries,Composite,MRIAmp,data”)</p></li>
+<li><p>openephys (.continuous, .openephys)</p></li>
+<li><p>BIDS-formatted data file</p></li>
+</ul>
+</li>
+<li><p>Interface for Sleep Scoring</p></li>
+<li><p>Computes frequency analysis (spectrogram), time-frequency analysis (short-time spectrogram, Morlet wavelet)</p></li>
+<li><p>Detection of spindles and slow waves</p></li>
+<li><p>Pure Python</p></li>
+</ul>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>Install wonambi by running:</p>
+<blockquote>
+<div><p>pip3 install wonambi</p>
+</div></blockquote>
+<p>See <a class="reference external" href="http://wonambi-python.github.io/installation.html">Installation for details</a></p>
+<p>If you want to scroll recordings and do some sleep scoring (requires PyQt5)</p>
+<blockquote>
+<div><p>wonambi</p>
+</div></blockquote>
+</section>
+<section id="run-it">
+<h2>Run it!<a class="headerlink" href="#run-it" title="Permalink to this heading"></a></h2>
+<p>From the command line, simply type:</p>
+<blockquote>
+<div><p>wonambi</p>
+</div></blockquote>
+<p>To open a dataset directly, add the full path to the file you want to open:</p>
+<blockquote>
+<div><p>wonambi /home/me/sleep_recordings.edf</p>
+</div></blockquote>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading"></a></h2>
+<p>See <a class="reference external" href="http://wonambi-python.github.io/">Documentation</a></p>
+</section>
+<section id="change-log">
+<h2>Change Log<a class="headerlink" href="#change-log" title="Permalink to this heading"></a></h2>
+<p>See <a class="reference external" href="http://wonambi-python.github.io/changelog.html">Change Log</a></p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Python 3.6 or later</p></li>
+<li><p>numpy</p></li>
+<li><p>scipy</p></li>
+</ul>
+</section>
+<section id="optional-requirements">
+<h2>Optional Requirements<a class="headerlink" href="#optional-requirements" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>PyQt5 (optional for sleep scoring GUI)</p></li>
+<li><p>python-vlc (optional, to watch embedded movies)</p></li>
+<li><p>vispy (optional to plot 3D brain surfaces and electrodes)</p></li>
+<li><p>h5py (optional to read FieldTrip Matlab files)</p></li>
+<li><p>mne (optional, to export to mne FIFF files)</p></li>
+<li><p>nibabel (optional to read freesurfer)</p></li>
+<li><p>tensorpac (optional to run phase-amplitude analysis, tensorpac version should be 0.5.6)</p></li>
+<li><p>fooof 1.0 (optional to run parametrization of power spectra)</p></li>
+</ul>
+</section>
+<section id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this heading"></a></h2>
+<a class="reference external image-reference" href="https://travis-ci.com/wonambi-python/wonambi"><img alt="https://travis-ci.com/wonambi-python/wonambi.svg?branch=master" src="https://travis-ci.com/wonambi-python/wonambi.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://codecov.io/gh/wonambi-python/wonambi"><img alt="https://codecov.io/gh/wonambi-python/wonambi/branch/master/graph/badge.svg" src="https://codecov.io/gh/wonambi-python/wonambi/branch/master/graph/badge.svg" /></a>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this heading"></a></h2>
+<p>The project is licensed under the 3-clause BSD license.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentation of WONAMBI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

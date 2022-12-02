@@ -1,0 +1,7 @@
+wonambi.bids.utils module
+=========================
+
+.. automodule:: wonambi.bids.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

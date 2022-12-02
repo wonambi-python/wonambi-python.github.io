@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.detect.slowwave &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.detect.slowwave</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.detect.slowwave</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module to detect slow waves.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="p">(</span><span class="n">argmin</span><span class="p">,</span> <span class="n">concatenate</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">hstack</span><span class="p">,</span> <span class="n">logical_and</span><span class="p">,</span> <span class="n">newaxis</span><span class="p">,</span> 
+                   <span class="n">ones</span><span class="p">,</span> <span class="n">percentile</span><span class="p">,</span> <span class="n">sign</span><span class="p">,</span> <span class="nb">sum</span><span class="p">,</span> <span class="n">vstack</span><span class="p">,</span> <span class="n">where</span><span class="p">,</span> <span class="n">zeros</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
+    <span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QProgressDialog</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="kn">from</span> <span class="nn">.spindle</span> <span class="kn">import</span> <span class="p">(</span><span class="n">detect_events</span><span class="p">,</span> <span class="n">transform_signal</span><span class="p">,</span> <span class="n">within_duration</span><span class="p">,</span> 
+                      <span class="n">remove_straddlers</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">..graphoelement</span> <span class="kn">import</span> <span class="n">SlowWaves</span>
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">MAXIMUM_DURATION</span> <span class="o">=</span> <span class="mi">5</span>
+
+
+<div class="viewcode-block" id="DetectSlowWave"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.DetectSlowWave">[docs]</a><span class="k">class</span> <span class="nc">DetectSlowWave</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Design slow wave detection on a single channel.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    method : str</span>
+<span class="sd">        one of the predefined methods</span>
+<span class="sd">    duration : tuple of float</span>
+<span class="sd">        min and max duration of SWs</span>
+<span class="sd">        </span>
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    invert : bool</span>
+<span class="sd">        pass</span>
+<span class="sd">    trough_duration : float</span>
+<span class="sd">        pass</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;Massimini2004&#39;</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trough_duration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">invert</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;Massimini2004&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">det_filt</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;order&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                             <span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">4.</span><span class="p">)}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trough_duration</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_trough_amp</span> <span class="o">=</span> <span class="o">-</span><span class="mi">80</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_ptp</span> <span class="o">=</span> <span class="mi">140</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_dur</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_dur</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;AASM/Massimini2004&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">det_filt</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;order&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                             <span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">4.</span><span class="p">)}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trough_duration</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_trough_amp</span> <span class="o">=</span> <span class="o">-</span><span class="mi">40</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_ptp</span> <span class="o">=</span> <span class="mi">75</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_dur</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_dur</span> <span class="o">=</span> <span class="kc">None</span>
+            
+        <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;Ngo2015&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lowpass</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;order&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> 
+                             <span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_dur</span> <span class="o">=</span> <span class="mf">0.833</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_dur</span> <span class="o">=</span> <span class="mf">2.0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">peak_thresh</span> <span class="o">=</span> <span class="mf">1.25</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ptp_thresh</span> <span class="o">=</span> <span class="mf">1.25</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">det_filt</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.20</span><span class="p">)}</span> <span class="c1"># for repr</span>
+            
+        <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;Staresina2015&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lowpass</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;order&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> 
+                            <span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">1.25</span><span class="p">}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_dur</span> <span class="o">=</span> <span class="mf">0.8</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_dur</span> <span class="o">=</span> <span class="mf">2.0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ptp_thresh</span> <span class="o">=</span> <span class="mi">75</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">det_filt</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">)}</span> <span class="c1"># for repr</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown method&#39;</span><span class="p">)</span>
+            
+        <span class="k">if</span> <span class="n">duration</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">min_dur</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_dur</span><span class="p">)</span>
+        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="n">duration</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;detsw_</span><span class="si">{0}</span><span class="s1">_</span><span class="si">{1:04.2f}</span><span class="s1">-</span><span class="si">{2:04.2f}</span><span class="s1">Hz&#39;</span>
+                <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">det_filt</span><span class="p">[</span><span class="s1">&#39;freq&#39;</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Detect slow waves on the data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        data : instance of Data</span>
+<span class="sd">            data used for detection</span>
+<span class="sd">        parent : QWidget</span>
+<span class="sd">            for use with GUI, as parent widget for the progress bar</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        instance of graphoelement.SlowWaves</span>
+<span class="sd">            description of the detected SWs</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">progress</span> <span class="o">=</span> <span class="n">QProgressDialog</span><span class="p">(</span><span class="s1">&#39;Finding slow waves&#39;</span><span class="p">,</span> <span class="s1">&#39;Abort&#39;</span><span class="p">,</span> 
+                                       <span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">number_of</span><span class="p">(</span><span class="s1">&#39;chan&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parent</span><span class="p">)</span>
+            <span class="n">progress</span><span class="o">.</span><span class="n">setWindowModality</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">ApplicationModal</span><span class="p">)</span>
+            
+        <span class="n">slowwave</span> <span class="o">=</span> <span class="n">SlowWaves</span><span class="p">()</span>
+        <span class="n">slowwave</span><span class="o">.</span><span class="n">chan_name</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">all_slowwaves</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">chan</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]):</span>
+            
+            <span class="n">lg</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Detecting slow waves on chan </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">chan</span><span class="p">)</span>
+            <span class="n">time</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">])</span>
+            <span class="n">dat_orig</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">(</span><span class="n">data</span><span class="p">(</span><span class="n">chan</span><span class="o">=</span><span class="n">chan</span><span class="p">))</span>
+            <span class="n">dat_orig</span> <span class="o">=</span> <span class="n">dat_orig</span> <span class="o">-</span> <span class="n">dat_orig</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>  <span class="c1"># demean</span>
+
+            <span class="k">if</span> <span class="s1">&#39;Massimini2004&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">:</span>
+                <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="n">detect_Massimini2004</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span>
+                                                  <span class="bp">self</span><span class="p">)</span>
+                
+            <span class="k">elif</span> <span class="s1">&#39;Ngo2015&#39;</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">:</span>
+                <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="n">detect_Ngo2015</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+                
+            <span class="k">elif</span> <span class="s1">&#39;Staresina2015&#39;</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">:</span>
+                <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="n">detect_Staresina2015</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> 
+                                                  <span class="bp">self</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown method&#39;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">sw</span> <span class="ow">in</span> <span class="n">sw_in_chan</span><span class="p">:</span>
+                <span class="n">sw</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;chan&#39;</span><span class="p">:</span> <span class="n">chan</span><span class="p">})</span>
+            <span class="n">all_slowwaves</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">sw_in_chan</span><span class="p">)</span>
+            
+            <span class="k">if</span> <span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">progress</span><span class="o">.</span><span class="n">wasCanceled</span><span class="p">():</span>
+                    <span class="k">return</span>
+            <span class="c1"># end of loop over chan</span>
+
+        <span class="n">slowwave</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_slowwaves</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">slowwave</span></div>
+
+<div class="viewcode-block" id="detect_Massimini2004"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.detect_Massimini2004">[docs]</a><span class="k">def</span> <span class="nf">detect_Massimini2004</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Slow wave detection based on Massimini et al., 2004.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dat_orig : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the data for one channel</span>
+<span class="sd">    s_freq : float</span>
+<span class="sd">        sampling frequency</span>
+<span class="sd">    time : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the time points for each sample</span>
+<span class="sd">    opts : instance of &#39;DetectSlowWave&#39;</span>
+<span class="sd">        &#39;det_filt&#39; : dict</span>
+<span class="sd">            parameters for &#39;butter&#39;,</span>
+<span class="sd">        &#39;duration&#39; : tuple of float</span>
+<span class="sd">            min and max duration of SW</span>
+<span class="sd">        &#39;min_ptp&#39; : float</span>
+<span class="sd">            min peak-to-peak amplitude</span>
+<span class="sd">        &#39;trough_duration&#39; : tuple of float</span>
+<span class="sd">            min and max duration of first half-wave (trough)</span>
+<span class="sd">        &#39;max_trough_amp&#39; : float</span>
+<span class="sd">            The trough amplitude has a negative value, so this parameter sets </span>
+<span class="sd">            the minimum depth of the trough</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list of dict</span>
+<span class="sd">        list of detected SWs</span>
+<span class="sd">    float</span>
+<span class="sd">        SW density, per 30-s epoch</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Massimini, M. et al. J Neurosci 24(31) 6862-70 (2004).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">invert</span><span class="p">:</span>
+        <span class="n">dat_orig</span> <span class="o">=</span> <span class="o">-</span><span class="n">dat_orig</span>
+
+    <span class="n">dat_det</span> <span class="o">=</span> <span class="n">transform_signal</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="s1">&#39;double_butter&#39;</span><span class="p">,</span> 
+                               <span class="n">opts</span><span class="o">.</span><span class="n">det_filt</span><span class="p">)</span>
+    <span class="n">above_zero</span> <span class="o">=</span> <span class="n">detect_events</span><span class="p">(</span><span class="n">dat_det</span><span class="p">,</span> <span class="s1">&#39;above_thresh&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.</span><span class="p">)</span>
+
+    <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">above_zero</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">troughs</span> <span class="o">=</span> <span class="n">within_duration</span><span class="p">(</span><span class="n">above_zero</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">trough_duration</span><span class="p">)</span>
+        <span class="c1">#lg.info(&#39;troughs within duration: &#39; + str(troughs.shape))</span>
+
+        <span class="k">if</span> <span class="n">troughs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">troughs</span> <span class="o">=</span> <span class="n">select_peaks</span><span class="p">(</span><span class="n">dat_det</span><span class="p">,</span> <span class="n">troughs</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">max_trough_amp</span><span class="p">)</span>
+            <span class="c1">#lg.info(&#39;troughs deep enough: &#39; + str(troughs.shape))</span>
+
+            <span class="k">if</span> <span class="n">troughs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">events</span> <span class="o">=</span> <span class="n">_add_halfwave</span><span class="p">(</span><span class="n">dat_det</span><span class="p">,</span> <span class="n">troughs</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
+                <span class="c1">#lg.info(&#39;SWs high enough: &#39; + str(events.shape))</span>
+
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">):</span>
+                    <span class="n">events</span> <span class="o">=</span> <span class="n">within_duration</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">duration</span><span class="p">)</span>
+                    <span class="n">events</span> <span class="o">=</span> <span class="n">remove_straddlers</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">)</span>
+                    <span class="c1">#lg.info(&#39;SWs within duration: &#39; + str(events.shape))</span>
+
+                    <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="n">make_slow_waves</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">dat_det</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sw_in_chan</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;No slow wave found&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sw_in_chan</span></div>
+
+<div class="viewcode-block" id="detect_Ngo2015"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.detect_Ngo2015">[docs]</a><span class="k">def</span> <span class="nf">detect_Ngo2015</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Slow wave detection based on Ngo et al., 2015.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dat_orig : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the data for one channel</span>
+<span class="sd">    s_freq : float</span>
+<span class="sd">        sampling frequency</span>
+<span class="sd">    time : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the time points for each sample</span>
+<span class="sd">    opts : instance of &#39;DetectSlowWave&#39;</span>
+<span class="sd">        &#39;lowpass&#39; : dict</span>
+<span class="sd">            parameters for &#39;low_butter&#39;,</span>
+<span class="sd">        &#39;duration&#39; : tuple of float</span>
+<span class="sd">            min and max duration of SW</span>
+<span class="sd">        &#39;peak_thresh&#39; : float</span>
+<span class="sd">            mean trough amplitude is multiplied by this scalar to yield </span>
+<span class="sd">            threshold; SWs above this threshold are kept</span>
+<span class="sd">        &#39;ptp_thresh&#39; : float</span>
+<span class="sd">            percentile of mean ptp values, above which SW is kept</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list of dict</span>
+<span class="sd">        list of detected SWs</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Ngo, H-V. et al. J Neurosci 35(17) 6630-8 (2015).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">invert</span><span class="p">:</span>
+        <span class="n">dat_orig</span> <span class="o">=</span> <span class="o">-</span><span class="n">dat_orig</span>
+
+    <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># filter to SO band:</span>
+    <span class="n">dat_det</span> <span class="o">=</span> <span class="n">transform_signal</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="s1">&#39;low_butter&#39;</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">lowpass</span><span class="p">)</span>
+    <span class="c1"># detect positive-to-negative zero crossings:</span>
+    <span class="n">idx_zx</span> <span class="o">=</span> <span class="n">find_zero_crossings</span><span class="p">(</span><span class="n">dat_det</span><span class="p">,</span> <span class="n">xtype</span><span class="o">=</span><span class="s1">&#39;pos_to_neg&#39;</span><span class="p">)</span> 
+    <span class="c1"># find zero-crossing intervals within duration:</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="n">find_intervals</span><span class="p">(</span><span class="n">idx_zx</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">duration</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># find start, trough, -to+ zero crossing, peak and end:</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">find_peaks_in_slowwwave</span><span class="p">(</span><span class="n">dat_det</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Negative peak threshold</span>
+            <span class="n">idx_neg_peak</span> <span class="o">=</span> <span class="n">events</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="c1"># Trough threshhold is set as peak_thresh (float) times the mean trough amplitude over all events:</span>
+            <span class="n">neg_peak_thresh</span> <span class="o">=</span> <span class="n">dat_det</span><span class="p">[</span><span class="n">idx_neg_peak</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="n">opts</span><span class="o">.</span><span class="n">peak_thresh</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="n">dat_det</span><span class="p">[</span><span class="n">idx_neg_peak</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">neg_peak_thresh</span><span class="p">,</span> <span class="p">:]</span> 
+            
+            <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1"># Peak-to-peak amplitude threshold</span>
+                <span class="n">ptp</span> <span class="o">=</span> <span class="n">dat_det</span><span class="p">[</span><span class="n">events</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]]</span> <span class="o">-</span> <span class="n">dat_det</span><span class="p">[</span><span class="n">events</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]]</span>
+                <span class="c1"># Peak-to-peak threshold is set as a percentile of the mean ptp amplitude:</span>
+                <span class="n">ptp_thresh</span> <span class="o">=</span> <span class="n">ptp</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="n">opts</span><span class="o">.</span><span class="n">ptp_thresh</span>
+                <span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="n">ptp</span> <span class="o">&gt;</span> <span class="n">ptp_thresh</span><span class="p">,</span> <span class="p">:]</span>
+                
+                <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">events</span> <span class="o">=</span> <span class="n">remove_straddlers</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">)</span>
+                    <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="n">make_slow_waves</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">dat_det</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="n">sw_in_chan</span><span class="p">:</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;No slow waves found&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sw_in_chan</span></div>
+
+<div class="viewcode-block" id="detect_Staresina2015"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.detect_Staresina2015">[docs]</a><span class="k">def</span> <span class="nf">detect_Staresina2015</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Slow wave detection based on Ngo et al., 2015.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    dat_orig : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the data for one channel</span>
+<span class="sd">    s_freq : float</span>
+<span class="sd">        sampling frequency</span>
+<span class="sd">    time : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the time points for each sample</span>
+<span class="sd">    opts : instance of &#39;DetectSlowWave&#39;</span>
+<span class="sd">        &#39;lowpass&#39; : dict</span>
+<span class="sd">            parameters for &#39;low_butter&#39;,</span>
+<span class="sd">        &#39;duration&#39; : tuple of float</span>
+<span class="sd">            min and max duration of SW</span>
+<span class="sd">        &#39;ptp_thresh&#39; : float</span>
+<span class="sd">            percentile of mean ptp values, above which SW is kept</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list of dict</span>
+<span class="sd">        list of detected SWs</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Staresina, B. et al. 18(11) 1679-86 (2015).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">invert</span><span class="p">:</span>
+        <span class="n">dat_orig</span> <span class="o">=</span> <span class="o">-</span><span class="n">dat_orig</span>
+
+    <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dat_det</span> <span class="o">=</span> <span class="n">transform_signal</span><span class="p">(</span><span class="n">dat_orig</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="s1">&#39;low_butter&#39;</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">lowpass</span><span class="p">)</span>
+    <span class="n">idx_zx</span> <span class="o">=</span> <span class="n">find_zero_crossings</span><span class="p">(</span><span class="n">dat_det</span><span class="p">,</span> <span class="n">xtype</span><span class="o">=</span><span class="s1">&#39;pos_to_neg&#39;</span><span class="p">)</span> 
+    <span class="n">events</span> <span class="o">=</span> <span class="n">find_intervals</span><span class="p">(</span><span class="n">idx_zx</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">duration</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">find_peaks_in_slowwwave</span><span class="p">(</span><span class="n">dat_det</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Peak-to-peak amplitude threshold</span>
+            <span class="n">ptp</span> <span class="o">=</span> <span class="n">dat_det</span><span class="p">[</span><span class="n">events</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]]</span> <span class="o">-</span> <span class="n">dat_det</span><span class="p">[</span><span class="n">events</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]]</span>
+            <span class="n">ptp_thresh</span> <span class="o">=</span> <span class="n">percentile</span><span class="p">(</span><span class="n">ptp</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">ptp_thresh</span><span class="p">)</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="n">ptp</span> <span class="o">&gt;=</span> <span class="n">ptp_thresh</span><span class="p">,</span> <span class="p">:]</span> 
+            
+            <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">events</span> <span class="o">=</span> <span class="n">remove_straddlers</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">)</span>
+                <span class="n">sw_in_chan</span> <span class="o">=</span> <span class="n">make_slow_waves</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">dat_det</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="n">sw_in_chan</span><span class="p">:</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;No slow waves found&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sw_in_chan</span></div>
+
+<div class="viewcode-block" id="select_peaks"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.select_peaks">[docs]</a><span class="k">def</span> <span class="nf">select_peaks</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">events</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check whether event satisfies amplitude limit.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with data</span>
+<span class="sd">    events : ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        N x 2+ matrix with peak/trough in second position</span>
+<span class="sd">    limit : float</span>
+<span class="sd">        low and high limit for spindle duration</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        N x 2+ matrix with peak/trough in second position</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">events</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]])</span> <span class="o">&gt;=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">events</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="p">:]</span></div>
+
+
+<div class="viewcode-block" id="make_slow_waves"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.make_slow_waves">[docs]</a><span class="k">def</span> <span class="nf">make_slow_waves</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create dict for each slow wave, based on events of time points.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    events : ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        N x 5 matrix with start, trough, zero, peak, end samples</span>
+<span class="sd">    data : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the data</span>
+<span class="sd">    time : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with time points</span>
+<span class="sd">    s_freq : float</span>
+<span class="sd">        sampling frequency</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list of dict</span>
+<span class="sd">        list of all the SWs, with information about start,</span>
+<span class="sd">        trough_time, zero_time, peak_time, end, duration (s), trough_val,</span>
+<span class="sd">        peak_val, peak-to-peak amplitude (signal units), area_under_curve</span>
+<span class="sd">        (signal units * s)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">slow_waves</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+        <span class="n">one_sw</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="n">time</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span>
+                  <span class="s1">&#39;trough_time&#39;</span><span class="p">:</span> <span class="n">time</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                  <span class="s1">&#39;zero_time&#39;</span><span class="p">:</span> <span class="n">time</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span>
+                  <span class="s1">&#39;peak_time&#39;</span><span class="p">:</span> <span class="n">time</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span>
+                  <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="n">time</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span>
+                  <span class="s1">&#39;trough_val&#39;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                  <span class="s1">&#39;peak_val&#39;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span>
+                  <span class="s1">&#39;dur&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">ev</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">-</span> <span class="n">ev</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">s_freq</span><span class="p">,</span>
+                  <span class="s1">&#39;ptp&#39;</span><span class="p">:</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ev</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">ev</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                  <span class="p">}</span>
+        <span class="n">slow_waves</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_sw</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">slow_waves</span></div>
+
+
+<span class="k">def</span> <span class="nf">_add_halfwave</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">events</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Find the next zero crossing and the intervening peak and add</span>
+<span class="sd">    them to events. If no zero found before max_dur, event is discarded. If</span>
+<span class="sd">    peak-to-peak is smaller than min_ptp, the event is discarded.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the data</span>
+<span class="sd">    events : ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        N x 3 matrix with start, trough, end samples</span>
+<span class="sd">    s_freq : float</span>
+<span class="sd">        sampling frequency</span>
+<span class="sd">    opts : instance of &#39;DetectSlowWave&#39;</span>
+<span class="sd">        &#39;duration&#39; : tuple of float</span>
+<span class="sd">            min and max duration of SW</span>
+<span class="sd">        &#39;min_ptp&#39; : float</span>
+<span class="sd">            min peak-to-peak amplitude</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        N x 5 matrix with start, trough, - to + zero crossing, peak, </span>
+<span class="sd">        and end samples</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">max_dur</span> <span class="o">=</span> <span class="n">opts</span><span class="o">.</span><span class="n">duration</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">max_dur</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">max_dur</span> <span class="o">=</span> <span class="n">MAXIMUM_DURATION</span>
+    
+    <span class="n">window</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s_freq</span> <span class="o">*</span> <span class="n">max_dur</span><span class="p">)</span>
+
+    <span class="n">peak_and_end</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">events</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">events</span><span class="p">,</span> <span class="n">peak_and_end</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+        <span class="n">zero_crossings</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">sign</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="n">ev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">window</span><span class="p">])))[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">zero_crossings</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+            <span class="n">ev</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">ev</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">zero_crossings</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="c1">#lg.info(&#39;0cross is at &#39; + str(ev[4]))</span>
+            
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">selected</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="c1">#lg.info(&#39;no 0cross, rejected&#39;)</span>
+            <span class="k">continue</span>
+
+        <span class="n">ev</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">ev</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">argmin</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="n">ev</span><span class="p">[</span><span class="mi">4</span><span class="p">]])</span>
+
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">-</span> <span class="n">data</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span> <span class="o">&lt;</span> <span class="n">opts</span><span class="o">.</span><span class="n">min_ptp</span><span class="p">:</span>
+            <span class="n">selected</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="c1">#lg.info(&#39;ptp too low, rejected: &#39; + str(abs(data[ev[1]] - data[ev[3]])))</span>
+            <span class="k">continue</span>
+
+        <span class="n">selected</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1">#lg.info(&#39;SW checks out, accepted! ptp is &#39; + str(abs(data[ev[1]] - data[ev[3]])))</span>
+
+    <span class="k">return</span> <span class="n">events</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="p">:]</span>
+
+<div class="viewcode-block" id="find_zero_crossings"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.find_zero_crossings">[docs]</a><span class="k">def</span> <span class="nf">find_zero_crossings</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">xtype</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Find indices of zero-crossings in data.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the data</span>
+<span class="sd">    xtype : str</span>
+<span class="sd">        if &#39;all&#39;, returns all zero crossings</span>
+<span class="sd">        if &#39;neg_to_pos&#39;, returns only negative-to-positive zero-crossings</span>
+<span class="sd">        if &#39;pos_to_neg&#39;, returns only positive-to-negative zero-crossings</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    nadarray of int</span>
+<span class="sd">        indices of zero-crossings in the data</span>
+<span class="sd">        </span>
+<span class="sd">    Note</span>
+<span class="sd">    ----</span>
+<span class="sd">    A value of exactly 0 in data will always create a zero-crossing with </span>
+<span class="sd">    nonzero values preceding of following it.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">xtype</span> <span class="o">==</span> <span class="s1">&#39;all&#39;</span><span class="p">:</span>
+        <span class="n">zx</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">sign</span><span class="p">(</span><span class="n">data</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">xtype</span> <span class="o">==</span> <span class="s1">&#39;neg_to_pos&#39;</span><span class="p">:</span>
+        <span class="n">zx</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">sign</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">xtype</span> <span class="o">==</span> <span class="s1">&#39;pos_to_neg&#39;</span><span class="p">:</span>
+        <span class="n">zx</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">sign</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Invalid xtype. Choose &#39;all&#39;, &#39;neg_to_pos&#39; or &#39;pos_to_neg&#39;.&quot;</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">zx</span></div>
+
+<div class="viewcode-block" id="find_intervals"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.find_intervals">[docs]</a><span class="k">def</span> <span class="nf">find_intervals</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">s_freq</span><span class="p">,</span> <span class="n">duration</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;From sample indices, find intervals within a certain duration.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    indices : ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        vector with the indices</span>
+<span class="sd">    s_freq : float</span>
+<span class="sd">        sampling frequency of indices/data</span>
+<span class="sd">    duration: tuple of float</span>
+<span class="sd">        min and max duration (s) of intervals</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        N x 2 matrix with start and end samples</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">intervals</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq</span>
+    <span class="n">idx_event_starts</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">logical_and</span><span class="p">(</span>
+        <span class="n">intervals</span> <span class="o">&gt;=</span> <span class="n">duration</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">intervals</span> <span class="o">&lt;</span> <span class="n">duration</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                                         <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">idx_event_ends</span> <span class="o">=</span> <span class="n">idx_event_starts</span> <span class="o">+</span> <span class="mi">1</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">idx_event_starts</span><span class="p">):</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">vstack</span><span class="p">((</span><span class="n">indices</span><span class="p">[</span><span class="n">idx_event_starts</span><span class="p">],</span> 
+                         <span class="n">indices</span><span class="p">[</span><span class="n">idx_event_ends</span><span class="p">]</span>
+                         <span class="p">))</span><span class="o">.</span><span class="n">T</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">events</span></div>
+
+<div class="viewcode-block" id="find_peaks_in_slowwwave"><a class="viewcode-back" href="../../../api/wonambi.detect.slowwave.html#wonambi.detect.slowwave.find_peaks_in_slowwwave">[docs]</a><span class="k">def</span> <span class="nf">find_peaks_in_slowwwave</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">events</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Find trough, - to + zero-crossing and peak from start/end times.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : ndarray (dtype=&#39;float&#39;)</span>
+<span class="sd">        vector with the data</span>
+<span class="sd">    events : ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        N x 2 matrix with start, end samples</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndarray (dtype=&#39;int&#39;)</span>
+<span class="sd">        N x 5 matrix with start, trough, - to + zero crossing, peak, </span>
+<span class="sd">        and end samples</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">new_events</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">((</span>
+        <span class="n">events</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">newaxis</span><span class="p">],</span> 
+        <span class="n">zeros</span><span class="p">((</span><span class="n">events</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">),</span> 
+        <span class="n">events</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">newaxis</span><span class="p">]),</span> 
+                        <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">selected</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="n">events</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;bool&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ev</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">events</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ev_dat</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">ev</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">ev</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+            <span class="n">new_events</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">ev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">ev_dat</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span> <span class="c1"># trough</span>
+            <span class="n">new_events</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">ev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">where</span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">sign</span><span class="p">(</span><span class="n">ev_dat</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># -to+</span>
+            <span class="n">new_events</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">ev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">ev_dat</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span> <span class="c1"># peak</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="n">selected</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        
+    <span class="k">return</span> <span class="n">new_events</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="p">:]</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

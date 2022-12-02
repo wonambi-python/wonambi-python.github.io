@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.bin.scroll_data &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.bin.scroll_data</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.bin.scroll_data</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s1">&#39;You need to install PyQt5 to run GUI&#39;</span><span class="p">)</span>
+
+
+<span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">ArgumentParser</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span><span class="p">,</span> <span class="n">StreamHandler</span><span class="p">,</span> <span class="n">Formatter</span><span class="p">,</span> <span class="n">INFO</span><span class="p">,</span> <span class="n">DEBUG</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">MethodType</span>
+
+<span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="kn">import</span> <span class="n">QSettings</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QMessageBox</span>
+<span class="kn">from</span> <span class="nn">PyQt5.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">__version__</span>
+<span class="kn">from</span> <span class="nn">..widgets.creation</span> <span class="kn">import</span> <span class="p">(</span><span class="n">create_menubar</span><span class="p">,</span> <span class="n">create_toolbar</span><span class="p">,</span>
+                                <span class="n">create_actions</span><span class="p">,</span> <span class="n">create_widgets</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">..widgets.settings</span> <span class="kn">import</span> <span class="n">DEFAULTS</span>
+<span class="kn">from</span> <span class="nn">..widgets.utils</span> <span class="kn">import</span> <span class="n">keep_recent_datasets</span><span class="p">,</span> <span class="n">ICON</span>
+
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;wonambi&#39;</span><span class="p">)</span>
+
+
+<span class="n">DESCRIPTION</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Package to analyze EEG, ECoG and other electrophysiology formats. It</span>
+<span class="s2">    allows for visualization of the results and for a GUI that can be used to</span>
+<span class="s2">    score sleep stages.</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+<span class="n">settings</span> <span class="o">=</span> <span class="n">QSettings</span><span class="p">(</span><span class="s2">&quot;wonambi&quot;</span><span class="p">,</span> <span class="s2">&quot;wonambi&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="MainWindow"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow">[docs]</a><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create an instance of the main window.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="n">lg</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;WONAMBI v</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">__version__</span><span class="p">))</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Reading settings from </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">fileName</span><span class="p">()))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channels</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spectrum</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">overview</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traces</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">action</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># actions was already taken</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">menu_window</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># I prefer to have these functions in a separate module, for clarify</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_widgets</span> <span class="o">=</span> <span class="n">MethodType</span><span class="p">(</span><span class="n">create_widgets</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_actions</span> <span class="o">=</span> <span class="n">MethodType</span><span class="p">(</span><span class="n">create_actions</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_menubar</span> <span class="o">=</span> <span class="n">MethodType</span><span class="p">(</span><span class="n">create_menubar</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_toolbar</span> <span class="o">=</span> <span class="n">MethodType</span><span class="p">(</span><span class="n">create_toolbar</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_widgets</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_actions</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_menubar</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_toolbar</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">statusBar</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s1">&#39;WONAMBI v&#39;</span> <span class="o">+</span> <span class="n">__version__</span><span class="p">)</span>
+
+        <span class="n">window_geometry</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;window/geometry&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">window_geometry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">restoreGeometry</span><span class="p">(</span><span class="n">window_geometry</span><span class="p">)</span>
+        <span class="n">window_state</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;window/state&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">window_state</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">restoreState</span><span class="p">(</span><span class="n">window_state</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<div class="viewcode-block" id="MainWindow.refresh"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.refresh">[docs]</a>    <span class="k">def</span> <span class="nf">refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Functions to re-run once settings have been changed.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_menubar</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.value"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.value">[docs]</a>    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">new_value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This function is a shortcut for any parameter. Instead of calling</span>
+<span class="sd">        the widget, its config and its values, you can call directly the</span>
+<span class="sd">        parameter.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        parameter : str</span>
+<span class="sd">            name of the parameter of interest</span>
+<span class="sd">        new_value : str or float, optional</span>
+<span class="sd">            new value for the parameter</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str or float</span>
+<span class="sd">            if you didn&#39;t specify new_value, it returns the current value.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        It&#39;s important to maintain an organized dict in DEFAULTS which has to</span>
+<span class="sd">        correspond to the values in the widgets, also the name of the widget.</span>
+<span class="sd">        DEFAULTS is used like a look-up table.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">widget_name</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">DEFAULTS</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">values</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">widget</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget_name</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">new_value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">widget</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="n">parameter</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;setting value </span><span class="si">{0}</span><span class="s1"> of </span><span class="si">{1}</span><span class="s1"> to </span><span class="si">{2}</span><span class="s1">&#39;</span>
+                             <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">parameter</span><span class="p">,</span> <span class="n">widget_name</span><span class="p">,</span> <span class="n">new_value</span><span class="p">))</span>
+                    <span class="n">widget</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="n">parameter</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_value</span></div>
+
+<div class="viewcode-block" id="MainWindow.update"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Once you open a dataset, it activates all the widgets.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">display_dataset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">overview</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">markers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">read_markers</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;No notes/markers present in the header of the file&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="o">.</span><span class="n">update_dataset_marker</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.reset"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove all the information from previous dataset before loading a</span>
+<span class="sd">        new dataset.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># store current dataset</span>
+        <span class="n">max_dataset_history</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;max_dataset_history&#39;</span><span class="p">)</span>
+        <span class="n">keep_recent_datasets</span><span class="p">(</span><span class="n">max_dataset_history</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">)</span>
+
+        <span class="c1"># reset all the widgets</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">overview</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traces</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_settings"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_settings">[docs]</a>    <span class="k">def</span> <span class="nf">show_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Open the Setting windows, after updating the values in GUI. &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">put_values</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">overview</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">put_values</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">put_values</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spectrum</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">put_values</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traces</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">put_values</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">put_values</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_merge_dialog"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_merge_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_merge_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the event merging dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">merge_dialog</span><span class="o">.</span><span class="n">update_event_types</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">merge_dialog</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_export_events_dialog"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_export_events_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_export_events_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the events export dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">export_events_dialog</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">export_events_dialog</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_export_dataset_dialog"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_export_dataset_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_export_dataset_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the dataset export dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">export_dataset_dialog</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">export_dataset_dialog</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_spindle_dialog"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_spindle_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_spindle_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the spindle detection dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spindle_dialog</span><span class="o">.</span><span class="n">update_groups</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spindle_dialog</span><span class="o">.</span><span class="n">update_cycles</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spindle_dialog</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_slow_wave_dialog"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_slow_wave_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_slow_wave_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the SW detection dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slow_wave_dialog</span><span class="o">.</span><span class="n">update_groups</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slow_wave_dialog</span><span class="o">.</span><span class="n">update_cycles</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slow_wave_dialog</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_event_analysis_dialog"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_event_analysis_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_event_analysis_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the event analysis dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_analysis_dialog</span><span class="o">.</span><span class="n">update_types</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_analysis_dialog</span><span class="o">.</span><span class="n">update_groups</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_analysis_dialog</span><span class="o">.</span><span class="n">update_cycles</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_analysis_dialog</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_analysis_dialog"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_analysis_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_analysis_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the analysis dialog.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">analysis_dialog</span><span class="o">.</span><span class="n">update_evt_types</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">analysis_dialog</span><span class="o">.</span><span class="n">update_groups</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">analysis_dialog</span><span class="o">.</span><span class="n">update_cycles</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">analysis_dialog</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.show_plot_dialog"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.show_plot_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_plot_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the plot frame widget.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot_dialog</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MainWindow.about"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.about">[docs]</a>    <span class="k">def</span> <span class="nf">about</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&lt;b&gt;WONAMBI Version </span><span class="si">{version}</span><span class="s1">&lt;/b&gt;&lt;br /&gt;&#39;</span>
+             <span class="s1">&#39;&lt;p&gt;You can download the latest version at &#39;</span>
+             <span class="s1">&#39;&lt;a href=&quot;https://github.com/wonambi-python/wonambi&quot;&gt;&#39;</span>
+             <span class="s1">&#39;https://github.com/wonambi-python/wonambi&lt;/a&gt; &#39;</span>
+             <span class="s1">&#39;or you can upgrade to the latest release with:&#39;</span>
+             <span class="s1">&#39;&lt;/p&gt;&lt;p&gt;&#39;</span>
+             <span class="s1">&#39;&lt;code&gt;pip install --upgrade wonambi&lt;/code&gt;&#39;</span>
+             <span class="s1">&#39;&lt;/p&gt;&lt;p&gt;&#39;</span>
+             <span class="s1">&#39;Copyright &amp;copy; 2013-</span><span class="si">{year}</span><span class="s1"> &#39;</span>
+             <span class="s1">&#39;&lt;a href=&quot;http://www.gpiantoni.com&quot;&gt;Gio Piantoni&lt;/a&gt;, &#39;</span>
+             <span class="s2">&quot;Jordan O&#39;Byrne&quot;</span>
+             <span class="s1">&#39;&lt;/p&gt;&lt;p&gt;&#39;</span>
+             <span class="s1">&#39;This program is free software: you can redistribute it &#39;</span>
+             <span class="s1">&#39;and/or modify it under the terms of the GNU General Public &#39;</span>
+             <span class="s1">&#39;License as published by the Free Software Foundation, either &#39;</span>
+             <span class="s1">&#39;version 3 of the License, or (at your option) any later version.&#39;</span>
+             <span class="s1">&#39;&lt;/p&gt;&lt;p&gt;&#39;</span>
+             <span class="s1">&#39;This program is distributed in the hope that it will be useful, &#39;</span>
+             <span class="s1">&#39;but WITHOUT ANY WARRANTY; without even the implied warranty of &#39;</span>
+             <span class="s1">&#39;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the &#39;</span>
+             <span class="s1">&#39;GNU General Public License for more details.&#39;</span>
+             <span class="s1">&#39;&lt;/p&gt;&lt;p&gt;&#39;</span>
+             <span class="s1">&#39;You should have received a copy of the GNU General Public &#39;</span>
+             <span class="s1">&#39;License along with this program.  If not, see &#39;</span>
+             <span class="s1">&#39;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&#39;</span>
+             <span class="s1">&#39;http://www.gnu.org/licenses/&lt;/a&gt;.&#39;</span>
+             <span class="s1">&#39;&lt;/p&gt;&lt;p&gt;&#39;</span>
+             <span class="s1">&#39;Other licenses available, contact the author&#39;</span>
+             <span class="s1">&#39;&lt;/p&gt;&#39;</span><span class="p">)</span>
+        <span class="n">QMessageBox</span><span class="o">.</span><span class="n">about</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;WONAMBI&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="n">__version__</span><span class="p">,</span>
+                                                    <span class="n">year</span><span class="o">=</span><span class="n">now</span><span class="o">.</span><span class="n">year</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="MainWindow.closeEvent"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.MainWindow.closeEvent">[docs]</a>    <span class="k">def</span> <span class="nf">closeEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;save the name of the last open dataset.&quot;&quot;&quot;</span>
+        <span class="n">max_dataset_history</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;max_dataset_history&#39;</span><span class="p">)</span>
+        <span class="n">keep_recent_datasets</span><span class="p">(</span><span class="n">max_dataset_history</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">)</span>
+
+        <span class="n">settings</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s1">&#39;window/geometry&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">saveGeometry</span><span class="p">())</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s1">&#39;window/state&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">saveState</span><span class="p">())</span>
+
+        <span class="n">event</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span></div></div>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../api/wonambi.bin.scroll_data.html#wonambi.bin.scroll_data.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="k">global</span> <span class="n">app</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">([])</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="n">ICON</span><span class="p">[</span><span class="s1">&#39;application&#39;</span><span class="p">]))</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">ArgumentParser</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s1">&#39;wonambi&#39;</span><span class="p">,</span>
+                            <span class="n">description</span><span class="o">=</span><span class="n">DESCRIPTION</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-v&#39;</span><span class="p">,</span> <span class="s1">&#39;--version&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Return version&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-l&#39;</span><span class="p">,</span> <span class="s1">&#39;--log&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;info&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Logging level: info (default), debug&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--reset&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Reset (clear) configuration file&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--bids&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Read the information stored in the BIDS format&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;?&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;full path to dataset to open&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;annot&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;?&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;full path to annotations file to open&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;montage&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;?&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;full path to montage file to open&#39;</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="n">DATE_FORMAT</span> <span class="o">=</span> <span class="s1">&#39;%H:%M:%S&#39;</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">log</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span><span class="p">:</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">INFO</span><span class="p">)</span>
+        <span class="n">FORMAT</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{asctime:&lt;10}{message}</span><span class="s1">&#39;</span>
+
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">log</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">DEBUG</span><span class="p">)</span>
+        <span class="n">FORMAT</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{asctime:&lt;10}{levelname:&lt;10}{filename:&lt;40}</span><span class="s1">(l. </span><span class="si">{lineno: 6d}</span><span class="s1">)/ </span><span class="si">{funcName:&lt;40}</span><span class="s1">: </span><span class="si">{message}</span><span class="s1">&#39;</span>
+
+    <span class="n">formatter</span> <span class="o">=</span> <span class="n">Formatter</span><span class="p">(</span><span class="n">fmt</span><span class="o">=</span><span class="n">FORMAT</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="n">DATE_FORMAT</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;{&#39;</span><span class="p">)</span>
+    <span class="n">handler</span> <span class="o">=</span> <span class="n">StreamHandler</span><span class="p">()</span>
+    <span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+
+    <span class="n">lg</span><span class="o">.</span><span class="n">handlers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">lg</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">reset</span><span class="p">:</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">version</span><span class="p">:</span>
+        <span class="n">lg</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;WONAMBI v</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">__version__</span><span class="p">))</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
+        <span class="n">q</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">dataset</span><span class="p">:</span>
+            <span class="n">q</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">dataset</span><span class="p">,</span> <span class="n">bids</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">bids</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">annot</span><span class="p">:</span>
+            <span class="n">q</span><span class="o">.</span><span class="n">notes</span><span class="o">.</span><span class="n">update_notes</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">annot</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">montage</span><span class="p">:</span>
+            <span class="n">q</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">load_channels</span><span class="p">(</span><span class="n">test_name</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">montage</span><span class="p">)</span>
+
+        <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

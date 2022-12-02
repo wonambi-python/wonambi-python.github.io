@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.widgets package &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.widgets.analysis module" href="wonambi.widgets.analysis.html" />
+    <link rel="prev" title="wonambi.utils.simulate module" href="wonambi.utils.simulate.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+      <li class="breadcrumb-item active">wonambi.widgets package</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.widgets">
+<span id="wonambi-widgets-package"></span><h1>wonambi.widgets package<a class="headerlink" href="#module-wonambi.widgets" title="Permalink to this heading"></a></h1>
+<p>Package containing Qt widgets.</p>
+<p>The program is organized in widgets.
+Roughly one widget is stored in one module.</p>
+<p>A module should start by importing:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>packages that are in the Python library</p></li>
+<li><p>additional packages (in this order: numpy, scipy, PyQt5)</p></li>
+<li><p>relative imports</p></li>
+</ul>
+</div></blockquote>
+<p>Leave an empty line between each group of imports.
+Then make sure that the logging works:</p>
+<blockquote>
+<div><p>from logging import getLogger
+lg = getLogger(__name__)</p>
+</div></blockquote>
+<p>In code add important messages with:</p>
+<blockquote>
+<div><p>lg.info(‘Important message’)</p>
+</div></blockquote>
+<p>and messages useful for debugging:</p>
+<blockquote>
+<div><p>lg.debug(‘Message for debugging’)</p>
+</div></blockquote>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.analysis.html">wonambi.widgets.analysis module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.parent"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.nseg"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.nseg</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.band_help"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.band_help()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.check_all_local"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.check_all_local()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.check_all_local_prep"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.check_all_local_prep()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.compute_evt_params"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.compute_evt_params()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.compute_freq"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.compute_freq()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.compute_freq_cross"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.compute_freq_cross()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.compute_pac"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.compute_pac()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.create_dialog"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.create_dialog()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.export_pac"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.export_pac()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.get_segments"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.get_segments()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.make_title"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.make_title()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.plot_freq"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.plot_freq()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.report_fooof"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.report_fooof()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.save_as"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.save_as()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.toggle_buttons"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.toggle_buttons()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.toggle_concatenate"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.toggle_concatenate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.toggle_freq"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.toggle_freq()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.toggle_pac"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.toggle_pac()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.transform_data"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.transform_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.uncheck_all_local"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.uncheck_all_local()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.update_evt_types"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.update_evt_types()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.AnalysisDialog.update_nseg"><code class="docutils literal notranslate"><span class="pre">AnalysisDialog.update_nseg()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.PlotCanvas"><code class="docutils literal notranslate"><span class="pre">PlotCanvas</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.PlotCanvas.plot"><code class="docutils literal notranslate"><span class="pre">PlotCanvas.plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.PlotDialog"><code class="docutils literal notranslate"><span class="pre">PlotDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.analysis.html#wonambi.widgets.analysis.PlotDialog.create_dialog"><code class="docutils literal notranslate"><span class="pre">PlotDialog.create_dialog()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.channels.html">wonambi.widgets.channels module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels"><code class="docutils literal notranslate"><span class="pre">Channels</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.parent"><code class="docutils literal notranslate"><span class="pre">Channels.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.config"><code class="docutils literal notranslate"><span class="pre">Channels.config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.filename"><code class="docutils literal notranslate"><span class="pre">Channels.filename</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.groups"><code class="docutils literal notranslate"><span class="pre">Channels.groups</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.tabs"><code class="docutils literal notranslate"><span class="pre">Channels.tabs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.apply"><code class="docutils literal notranslate"><span class="pre">Channels.apply()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.color_group"><code class="docutils literal notranslate"><span class="pre">Channels.color_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.create"><code class="docutils literal notranslate"><span class="pre">Channels.create()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.create_action"><code class="docutils literal notranslate"><span class="pre">Channels.create_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.del_group"><code class="docutils literal notranslate"><span class="pre">Channels.del_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.load_channels"><code class="docutils literal notranslate"><span class="pre">Channels.load_channels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.new_group"><code class="docutils literal notranslate"><span class="pre">Channels.new_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.read_group_info"><code class="docutils literal notranslate"><span class="pre">Channels.read_group_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.reset"><code class="docutils literal notranslate"><span class="pre">Channels.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.save_channels"><code class="docutils literal notranslate"><span class="pre">Channels.save_channels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.Channels.update"><code class="docutils literal notranslate"><span class="pre">Channels.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.chan_name"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.chan_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.idx_l0"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.idx_l0</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.idx_l1"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.idx_l1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.idx_hp"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.idx_hp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.idx_lp"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.idx_lp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.idx_scale"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.idx_scale</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.idx_reref"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.idx_reref</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.idx_color"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.idx_color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.add_channels_to_list"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.add_channels_to_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.get_info"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.get_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.highlight_channels"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.highlight_channels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ChannelsGroup.rereference"><code class="docutils literal notranslate"><span class="pre">ChannelsGroup.rereference()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ConfigChannels"><code class="docutils literal notranslate"><span class="pre">ConfigChannels</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.channels.html#wonambi.widgets.channels.ConfigChannels.create_config"><code class="docutils literal notranslate"><span class="pre">ConfigChannels.create_config()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.creation.html">wonambi.widgets.creation module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.creation.html#wonambi.widgets.creation.create_actions"><code class="docutils literal notranslate"><span class="pre">create_actions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.creation.html#wonambi.widgets.creation.create_menubar"><code class="docutils literal notranslate"><span class="pre">create_menubar()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.creation.html#wonambi.widgets.creation.create_toolbar"><code class="docutils literal notranslate"><span class="pre">create_toolbar()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.creation.html#wonambi.widgets.creation.create_widgets"><code class="docutils literal notranslate"><span class="pre">create_widgets()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html">wonambi.widgets.detect_dialogs module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SWDialog"><code class="docutils literal notranslate"><span class="pre">SWDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SWDialog.name"><code class="docutils literal notranslate"><span class="pre">SWDialog.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SWDialog.method"><code class="docutils literal notranslate"><span class="pre">SWDialog.method</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SWDialog.idx_method"><code class="docutils literal notranslate"><span class="pre">SWDialog.idx_method</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SWDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">SWDialog.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SWDialog.create_dialog"><code class="docutils literal notranslate"><span class="pre">SWDialog.create_dialog()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SWDialog.update_values"><code class="docutils literal notranslate"><span class="pre">SWDialog.update_values()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SpindleDialog"><code class="docutils literal notranslate"><span class="pre">SpindleDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SpindleDialog.name"><code class="docutils literal notranslate"><span class="pre">SpindleDialog.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SpindleDialog.method"><code class="docutils literal notranslate"><span class="pre">SpindleDialog.method</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SpindleDialog.idx_method"><code class="docutils literal notranslate"><span class="pre">SpindleDialog.idx_method</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SpindleDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">SpindleDialog.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SpindleDialog.count_channels"><code class="docutils literal notranslate"><span class="pre">SpindleDialog.count_channels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SpindleDialog.create_dialog"><code class="docutils literal notranslate"><span class="pre">SpindleDialog.create_dialog()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.detect_dialogs.html#wonambi.widgets.detect_dialogs.SpindleDialog.update_values"><code class="docutils literal notranslate"><span class="pre">SpindleDialog.update_values()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.info.html">wonambi.widgets.info module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.ExportDatasetDialog"><code class="docutils literal notranslate"><span class="pre">ExportDatasetDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.ExportDatasetDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">ExportDatasetDialog.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.ExportDatasetDialog.create_dialog"><code class="docutils literal notranslate"><span class="pre">ExportDatasetDialog.create_dialog()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.ExportDatasetDialog.get_channels"><code class="docutils literal notranslate"><span class="pre">ExportDatasetDialog.get_channels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.ExportDatasetDialog.save_as"><code class="docutils literal notranslate"><span class="pre">ExportDatasetDialog.save_as()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.ExportDatasetDialog.toggle_buttons"><code class="docutils literal notranslate"><span class="pre">ExportDatasetDialog.toggle_buttons()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.ExportDatasetDialog.update"><code class="docutils literal notranslate"><span class="pre">ExportDatasetDialog.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info"><code class="docutils literal notranslate"><span class="pre">Info</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.parent"><code class="docutils literal notranslate"><span class="pre">Info.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.filename"><code class="docutils literal notranslate"><span class="pre">Info.filename</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.dataset"><code class="docutils literal notranslate"><span class="pre">Info.dataset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.markers"><code class="docutils literal notranslate"><span class="pre">Info.markers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_filename"><code class="docutils literal notranslate"><span class="pre">Info.idx_filename</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_s_freq"><code class="docutils literal notranslate"><span class="pre">Info.idx_s_freq</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_n_chan"><code class="docutils literal notranslate"><span class="pre">Info.idx_n_chan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_start_time"><code class="docutils literal notranslate"><span class="pre">Info.idx_start_time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_end_time"><code class="docutils literal notranslate"><span class="pre">Info.idx_end_time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_start"><code class="docutils literal notranslate"><span class="pre">Info.idx_start</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_length"><code class="docutils literal notranslate"><span class="pre">Info.idx_length</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_scaling"><code class="docutils literal notranslate"><span class="pre">Info.idx_scaling</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.idx_distance"><code class="docutils literal notranslate"><span class="pre">Info.idx_distance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.create"><code class="docutils literal notranslate"><span class="pre">Info.create()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.create_action"><code class="docutils literal notranslate"><span class="pre">Info.create_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.display_dataset"><code class="docutils literal notranslate"><span class="pre">Info.display_dataset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.display_view"><code class="docutils literal notranslate"><span class="pre">Info.display_view()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.export"><code class="docutils literal notranslate"><span class="pre">Info.export()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.open_dataset"><code class="docutils literal notranslate"><span class="pre">Info.open_dataset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.info.html#wonambi.widgets.info.Info.reset"><code class="docutils literal notranslate"><span class="pre">Info.reset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.labels.html">wonambi.widgets.labels module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels"><code class="docutils literal notranslate"><span class="pre">Labels</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels.chan_name"><code class="docutils literal notranslate"><span class="pre">Labels.chan_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels.apply"><code class="docutils literal notranslate"><span class="pre">Labels.apply()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels.check_labels"><code class="docutils literal notranslate"><span class="pre">Labels.check_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels.create"><code class="docutils literal notranslate"><span class="pre">Labels.create()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels.load_labels"><code class="docutils literal notranslate"><span class="pre">Labels.load_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels.reset"><code class="docutils literal notranslate"><span class="pre">Labels.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels.save_labels"><code class="docutils literal notranslate"><span class="pre">Labels.save_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.labels.html#wonambi.widgets.labels.Labels.update"><code class="docutils literal notranslate"><span class="pre">Labels.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.modal_widgets.html">wonambi.widgets.modal_widgets module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog"><code class="docutils literal notranslate"><span class="pre">ChannelDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.parent"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.groups"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.groups</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.index"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.bbox"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.bbox</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.idx_group"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.idx_group</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.idx_chan"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.idx_chan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.idx_stage"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.idx_stage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.idx_cycle"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.idx_cycle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.one_grp"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.one_grp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.create_widgets"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.create_widgets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.get_channels"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.get_channels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.get_cycles"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.get_cycles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.update_channels"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.update_channels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.update_cycles"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.update_cycles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.ChannelDialog.update_groups"><code class="docutils literal notranslate"><span class="pre">ChannelDialog.update_groups()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.DateTimeDialog"><code class="docutils literal notranslate"><span class="pre">DateTimeDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.DateTimeDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">DateTimeDialog.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.DateTimeDialog.changed_datetime"><code class="docutils literal notranslate"><span class="pre">DateTimeDialog.changed_datetime()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.DateTimeDialog.changed_spin"><code class="docutils literal notranslate"><span class="pre">DateTimeDialog.changed_spin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.SVGDialog"><code class="docutils literal notranslate"><span class="pre">SVGDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.SVGDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">SVGDialog.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.modal_widgets.html#wonambi.widgets.modal_widgets.SVGDialog.select_filename"><code class="docutils literal notranslate"><span class="pre">SVGDialog.select_filename()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.notes.html">wonambi.widgets.notes module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.ConfigNotes"><code class="docutils literal notranslate"><span class="pre">ConfigNotes</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.ConfigNotes.create_config"><code class="docutils literal notranslate"><span class="pre">ConfigNotes.create_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.ExportEventsDialog"><code class="docutils literal notranslate"><span class="pre">ExportEventsDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.ExportEventsDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">ExportEventsDialog.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.ExportEventsDialog.create_dialog"><code class="docutils literal notranslate"><span class="pre">ExportEventsDialog.create_dialog()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.ExportEventsDialog.save_as"><code class="docutils literal notranslate"><span class="pre">ExportEventsDialog.save_as()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.ExportEventsDialog.toggle_buttons"><code class="docutils literal notranslate"><span class="pre">ExportEventsDialog.toggle_buttons()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.ExportEventsDialog.update"><code class="docutils literal notranslate"><span class="pre">ExportEventsDialog.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog"><code class="docutils literal notranslate"><span class="pre">MergeDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.parent"><code class="docutils literal notranslate"><span class="pre">MergeDialog.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.idx_evt_type"><code class="docutils literal notranslate"><span class="pre">MergeDialog.idx_evt_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.idx_merge_to"><code class="docutils literal notranslate"><span class="pre">MergeDialog.idx_merge_to</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.merge_to"><code class="docutils literal notranslate"><span class="pre">MergeDialog.merge_to</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.min_interval"><code class="docutils literal notranslate"><span class="pre">MergeDialog.min_interval</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.cross_chan"><code class="docutils literal notranslate"><span class="pre">MergeDialog.cross_chan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">MergeDialog.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.create_dialog"><code class="docutils literal notranslate"><span class="pre">MergeDialog.create_dialog()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.MergeDialog.update_event_types"><code class="docutils literal notranslate"><span class="pre">MergeDialog.update_event_types()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.NewUserDialog"><code class="docutils literal notranslate"><span class="pre">NewUserDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.NewUserDialog.button_clicked"><code class="docutils literal notranslate"><span class="pre">NewUserDialog.button_clicked()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes"><code class="docutils literal notranslate"><span class="pre">Notes</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.parent"><code class="docutils literal notranslate"><span class="pre">Notes.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.config"><code class="docutils literal notranslate"><span class="pre">Notes.config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.annot"><code class="docutils literal notranslate"><span class="pre">Notes.annot</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_marker"><code class="docutils literal notranslate"><span class="pre">Notes.idx_marker</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_summary"><code class="docutils literal notranslate"><span class="pre">Notes.idx_summary</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_annotations"><code class="docutils literal notranslate"><span class="pre">Notes.idx_annotations</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_rater"><code class="docutils literal notranslate"><span class="pre">Notes.idx_rater</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_stats"><code class="docutils literal notranslate"><span class="pre">Notes.idx_stats</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_eventtype_scroll"><code class="docutils literal notranslate"><span class="pre">Notes.idx_eventtype_scroll</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_eventtype_list"><code class="docutils literal notranslate"><span class="pre">Notes.idx_eventtype_list</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_annot_list"><code class="docutils literal notranslate"><span class="pre">Notes.idx_annot_list</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_eventtype"><code class="docutils literal notranslate"><span class="pre">Notes.idx_eventtype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_stage"><code class="docutils literal notranslate"><span class="pre">Notes.idx_stage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.idx_quality"><code class="docutils literal notranslate"><span class="pre">Notes.idx_quality</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.add_bookmark"><code class="docutils literal notranslate"><span class="pre">Notes.add_bookmark()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.add_event"><code class="docutils literal notranslate"><span class="pre">Notes.add_event()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.change_event_type"><code class="docutils literal notranslate"><span class="pre">Notes.change_event_type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.clear_annot"><code class="docutils literal notranslate"><span class="pre">Notes.clear_annot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.clear_cycle_mrkrs"><code class="docutils literal notranslate"><span class="pre">Notes.clear_cycle_mrkrs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.create"><code class="docutils literal notranslate"><span class="pre">Notes.create()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.create_action"><code class="docutils literal notranslate"><span class="pre">Notes.create_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.delete_eventtype"><code class="docutils literal notranslate"><span class="pre">Notes.delete_eventtype()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.delete_rater"><code class="docutils literal notranslate"><span class="pre">Notes.delete_rater()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.delete_row"><code class="docutils literal notranslate"><span class="pre">Notes.delete_row()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.detect_events"><code class="docutils literal notranslate"><span class="pre">Notes.detect_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.display_eventtype"><code class="docutils literal notranslate"><span class="pre">Notes.display_eventtype()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.display_notes"><code class="docutils literal notranslate"><span class="pre">Notes.display_notes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.display_stats"><code class="docutils literal notranslate"><span class="pre">Notes.display_stats()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.enable_events"><code class="docutils literal notranslate"><span class="pre">Notes.enable_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.export"><code class="docutils literal notranslate"><span class="pre">Notes.export()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.export_sleeps_stats"><code class="docutils literal notranslate"><span class="pre">Notes.export_sleeps_stats()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.find_row"><code class="docutils literal notranslate"><span class="pre">Notes.find_row()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.get_cycle_mrkr"><code class="docutils literal notranslate"><span class="pre">Notes.get_cycle_mrkr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.get_quality"><code class="docutils literal notranslate"><span class="pre">Notes.get_quality()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.get_selected_events"><code class="docutils literal notranslate"><span class="pre">Notes.get_selected_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.get_sleepstage"><code class="docutils literal notranslate"><span class="pre">Notes.get_sleepstage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.go_to_marker"><code class="docutils literal notranslate"><span class="pre">Notes.go_to_marker()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.import_events"><code class="docutils literal notranslate"><span class="pre">Notes.import_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.import_fasst"><code class="docutils literal notranslate"><span class="pre">Notes.import_fasst()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.import_staging"><code class="docutils literal notranslate"><span class="pre">Notes.import_staging()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.load_annot"><code class="docutils literal notranslate"><span class="pre">Notes.load_annot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.markers_to_events"><code class="docutils literal notranslate"><span class="pre">Notes.markers_to_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.new_annot"><code class="docutils literal notranslate"><span class="pre">Notes.new_annot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.new_eventtype"><code class="docutils literal notranslate"><span class="pre">Notes.new_eventtype()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.new_rater"><code class="docutils literal notranslate"><span class="pre">Notes.new_rater()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.remove_bookmark"><code class="docutils literal notranslate"><span class="pre">Notes.remove_bookmark()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.remove_cycle_mrkr"><code class="docutils literal notranslate"><span class="pre">Notes.remove_cycle_mrkr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.remove_event"><code class="docutils literal notranslate"><span class="pre">Notes.remove_event()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.rename_eventtype"><code class="docutils literal notranslate"><span class="pre">Notes.rename_eventtype()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.rename_rater"><code class="docutils literal notranslate"><span class="pre">Notes.rename_rater()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.reset"><code class="docutils literal notranslate"><span class="pre">Notes.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.reset_current_row"><code class="docutils literal notranslate"><span class="pre">Notes.reset_current_row()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.select_rater"><code class="docutils literal notranslate"><span class="pre">Notes.select_rater()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.set_quality_index"><code class="docutils literal notranslate"><span class="pre">Notes.set_quality_index()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.set_stage_index"><code class="docutils literal notranslate"><span class="pre">Notes.set_stage_index()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.toggle_check_all_eventtype"><code class="docutils literal notranslate"><span class="pre">Notes.toggle_check_all_eventtype()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.toggle_eventtype"><code class="docutils literal notranslate"><span class="pre">Notes.toggle_eventtype()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.update_annotations"><code class="docutils literal notranslate"><span class="pre">Notes.update_annotations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.update_dataset_marker"><code class="docutils literal notranslate"><span class="pre">Notes.update_dataset_marker()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.update_notes"><code class="docutils literal notranslate"><span class="pre">Notes.update_notes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.notes.html#wonambi.widgets.notes.Notes.update_settings"><code class="docutils literal notranslate"><span class="pre">Notes.update_settings()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.overview.html">wonambi.widgets.overview module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.ConfigOverview"><code class="docutils literal notranslate"><span class="pre">ConfigOverview</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.ConfigOverview.create_config"><code class="docutils literal notranslate"><span class="pre">ConfigOverview.create_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview"><code class="docutils literal notranslate"><span class="pre">Overview</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.parent"><code class="docutils literal notranslate"><span class="pre">Overview.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.config"><code class="docutils literal notranslate"><span class="pre">Overview.config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.minimum"><code class="docutils literal notranslate"><span class="pre">Overview.minimum</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.maximum"><code class="docutils literal notranslate"><span class="pre">Overview.maximum</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.start_time"><code class="docutils literal notranslate"><span class="pre">Overview.start_time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.scene"><code class="docutils literal notranslate"><span class="pre">Overview.scene</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.idx_current"><code class="docutils literal notranslate"><span class="pre">Overview.idx_current</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.idx_markers"><code class="docutils literal notranslate"><span class="pre">Overview.idx_markers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.idx_annot"><code class="docutils literal notranslate"><span class="pre">Overview.idx_annot</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.add_timestamps"><code class="docutils literal notranslate"><span class="pre">Overview.add_timestamps()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.display"><code class="docutils literal notranslate"><span class="pre">Overview.display()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.display_annotations"><code class="docutils literal notranslate"><span class="pre">Overview.display_annotations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.display_current"><code class="docutils literal notranslate"><span class="pre">Overview.display_current()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.display_markers"><code class="docutils literal notranslate"><span class="pre">Overview.display_markers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.mark_cycles"><code class="docutils literal notranslate"><span class="pre">Overview.mark_cycles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.mark_poi"><code class="docutils literal notranslate"><span class="pre">Overview.mark_poi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.mark_quality"><code class="docutils literal notranslate"><span class="pre">Overview.mark_quality()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.mark_stages"><code class="docutils literal notranslate"><span class="pre">Overview.mark_stages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.mousePressEvent"><code class="docutils literal notranslate"><span class="pre">Overview.mousePressEvent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.reset"><code class="docutils literal notranslate"><span class="pre">Overview.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.update"><code class="docutils literal notranslate"><span class="pre">Overview.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.update_position"><code class="docutils literal notranslate"><span class="pre">Overview.update_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.overview.html#wonambi.widgets.overview.Overview.update_settings"><code class="docutils literal notranslate"><span class="pre">Overview.update_settings()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.settings.html">wonambi.widgets.settings module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.modified"><code class="docutils literal notranslate"><span class="pre">Config.modified</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.value"><code class="docutils literal notranslate"><span class="pre">Config.value</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.index"><code class="docutils literal notranslate"><span class="pre">Config.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.create_config"><code class="docutils literal notranslate"><span class="pre">Config.create_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.create_indices"><code class="docutils literal notranslate"><span class="pre">Config.create_indices()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.create_values"><code class="docutils literal notranslate"><span class="pre">Config.create_values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.get_values"><code class="docutils literal notranslate"><span class="pre">Config.get_values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.put_values"><code class="docutils literal notranslate"><span class="pre">Config.put_values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config.set_modified"><code class="docutils literal notranslate"><span class="pre">Config.set_modified()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.ConfigUtils"><code class="docutils literal notranslate"><span class="pre">ConfigUtils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.ConfigUtils.create_config"><code class="docutils literal notranslate"><span class="pre">ConfigUtils.create_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.HelpDialog"><code class="docutils literal notranslate"><span class="pre">HelpDialog</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.HelpDialog.create_dialog"><code class="docutils literal notranslate"><span class="pre">HelpDialog.create_dialog()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.HelpDialog.set_text"><code class="docutils literal notranslate"><span class="pre">HelpDialog.set_text()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Settings"><code class="docutils literal notranslate"><span class="pre">Settings</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Settings.button_clicked"><code class="docutils literal notranslate"><span class="pre">Settings.button_clicked()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Settings.change_widget"><code class="docutils literal notranslate"><span class="pre">Settings.change_widget()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Settings.create_settings"><code class="docutils literal notranslate"><span class="pre">Settings.create_settings()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.read_settings"><code class="docutils literal notranslate"><span class="pre">read_settings()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.spectrum.html">wonambi.widgets.spectrum module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.ConfigSpectrum"><code class="docutils literal notranslate"><span class="pre">ConfigSpectrum</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.ConfigSpectrum.create_config"><code class="docutils literal notranslate"><span class="pre">ConfigSpectrum.create_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum"><code class="docutils literal notranslate"><span class="pre">Spectrum</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.parent"><code class="docutils literal notranslate"><span class="pre">Spectrum.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.x_limit"><code class="docutils literal notranslate"><span class="pre">Spectrum.x_limit</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.y_limit"><code class="docutils literal notranslate"><span class="pre">Spectrum.y_limit</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.log"><code class="docutils literal notranslate"><span class="pre">Spectrum.log</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.idx_chan"><code class="docutils literal notranslate"><span class="pre">Spectrum.idx_chan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.idx_x_min"><code class="docutils literal notranslate"><span class="pre">Spectrum.idx_x_min</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.idx_x_max"><code class="docutils literal notranslate"><span class="pre">Spectrum.idx_x_max</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.idx_y_min"><code class="docutils literal notranslate"><span class="pre">Spectrum.idx_y_min</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.idx_y_max"><code class="docutils literal notranslate"><span class="pre">Spectrum.idx_y_max</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.idx_log"><code class="docutils literal notranslate"><span class="pre">Spectrum.idx_log</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.idx_fig"><code class="docutils literal notranslate"><span class="pre">Spectrum.idx_fig</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.scene"><code class="docutils literal notranslate"><span class="pre">Spectrum.scene</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.add_grid"><code class="docutils literal notranslate"><span class="pre">Spectrum.add_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.create"><code class="docutils literal notranslate"><span class="pre">Spectrum.create()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.display"><code class="docutils literal notranslate"><span class="pre">Spectrum.display()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.display_window"><code class="docutils literal notranslate"><span class="pre">Spectrum.display_window()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.reset"><code class="docutils literal notranslate"><span class="pre">Spectrum.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.resizeEvent"><code class="docutils literal notranslate"><span class="pre">Spectrum.resizeEvent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.show_channame"><code class="docutils literal notranslate"><span class="pre">Spectrum.show_channame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.spectrum.html#wonambi.widgets.spectrum.Spectrum.update"><code class="docutils literal notranslate"><span class="pre">Spectrum.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.traces.html">wonambi.widgets.traces module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.ConfigTraces"><code class="docutils literal notranslate"><span class="pre">ConfigTraces</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.ConfigTraces.create_config"><code class="docutils literal notranslate"><span class="pre">ConfigTraces.create_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces"><code class="docutils literal notranslate"><span class="pre">Traces</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.parent"><code class="docutils literal notranslate"><span class="pre">Traces.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.config"><code class="docutils literal notranslate"><span class="pre">Traces.config</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.y_scrollbar_value"><code class="docutils literal notranslate"><span class="pre">Traces.y_scrollbar_value</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.data"><code class="docutils literal notranslate"><span class="pre">Traces.data</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.chan"><code class="docutils literal notranslate"><span class="pre">Traces.chan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.chan_pos"><code class="docutils literal notranslate"><span class="pre">Traces.chan_pos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.chan_scale"><code class="docutils literal notranslate"><span class="pre">Traces.chan_scale</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.time_pos"><code class="docutils literal notranslate"><span class="pre">Traces.time_pos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.sel_chan"><code class="docutils literal notranslate"><span class="pre">Traces.sel_chan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.sel_xy"><code class="docutils literal notranslate"><span class="pre">Traces.sel_xy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.scene"><code class="docutils literal notranslate"><span class="pre">Traces.scene</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.idx_label"><code class="docutils literal notranslate"><span class="pre">Traces.idx_label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.idx_time"><code class="docutils literal notranslate"><span class="pre">Traces.idx_time</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.idx_sel"><code class="docutils literal notranslate"><span class="pre">Traces.idx_sel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.idx_info"><code class="docutils literal notranslate"><span class="pre">Traces.idx_info</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.idx_markers"><code class="docutils literal notranslate"><span class="pre">Traces.idx_markers</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.idx_annot"><code class="docutils literal notranslate"><span class="pre">Traces.idx_annot</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.X_length"><code class="docutils literal notranslate"><span class="pre">Traces.X_length()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.X_less"><code class="docutils literal notranslate"><span class="pre">Traces.X_less()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.X_more"><code class="docutils literal notranslate"><span class="pre">Traces.X_more()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.Y_ampl"><code class="docutils literal notranslate"><span class="pre">Traces.Y_ampl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.Y_dist"><code class="docutils literal notranslate"><span class="pre">Traces.Y_dist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.Y_less"><code class="docutils literal notranslate"><span class="pre">Traces.Y_less()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.Y_more"><code class="docutils literal notranslate"><span class="pre">Traces.Y_more()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.Y_tighter"><code class="docutils literal notranslate"><span class="pre">Traces.Y_tighter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.Y_wider"><code class="docutils literal notranslate"><span class="pre">Traces.Y_wider()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.add_chan_labels"><code class="docutils literal notranslate"><span class="pre">Traces.add_chan_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.add_time"><code class="docutils literal notranslate"><span class="pre">Traces.add_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.add_time_labels"><code class="docutils literal notranslate"><span class="pre">Traces.add_time_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.add_traces"><code class="docutils literal notranslate"><span class="pre">Traces.add_traces()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.change_event_type"><code class="docutils literal notranslate"><span class="pre">Traces.change_event_type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.create_action"><code class="docutils literal notranslate"><span class="pre">Traces.create_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.create_chan_labels"><code class="docutils literal notranslate"><span class="pre">Traces.create_chan_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.create_time_labels"><code class="docutils literal notranslate"><span class="pre">Traces.create_time_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.display"><code class="docutils literal notranslate"><span class="pre">Traces.display()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.display_annotations"><code class="docutils literal notranslate"><span class="pre">Traces.display_annotations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.display_grid"><code class="docutils literal notranslate"><span class="pre">Traces.display_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.display_markers"><code class="docutils literal notranslate"><span class="pre">Traces.display_markers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.go_to_epoch"><code class="docutils literal notranslate"><span class="pre">Traces.go_to_epoch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.highlight_event"><code class="docutils literal notranslate"><span class="pre">Traces.highlight_event()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.keyPressEvent"><code class="docutils literal notranslate"><span class="pre">Traces.keyPressEvent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.line_up_with_epoch"><code class="docutils literal notranslate"><span class="pre">Traces.line_up_with_epoch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.mouseMoveEvent"><code class="docutils literal notranslate"><span class="pre">Traces.mouseMoveEvent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.mousePressEvent"><code class="docutils literal notranslate"><span class="pre">Traces.mousePressEvent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.mouseReleaseEvent"><code class="docutils literal notranslate"><span class="pre">Traces.mouseReleaseEvent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.next_event"><code class="docutils literal notranslate"><span class="pre">Traces.next_event()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.page_next"><code class="docutils literal notranslate"><span class="pre">Traces.page_next()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.page_prev"><code class="docutils literal notranslate"><span class="pre">Traces.page_prev()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.read_data"><code class="docutils literal notranslate"><span class="pre">Traces.read_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.reset"><code class="docutils literal notranslate"><span class="pre">Traces.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.resizeEvent"><code class="docutils literal notranslate"><span class="pre">Traces.resizeEvent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.step_next"><code class="docutils literal notranslate"><span class="pre">Traces.step_next()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.Traces.step_prev"><code class="docutils literal notranslate"><span class="pre">Traces.step_prev()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.traces.html#wonambi.widgets.traces.take_raw_name"><code class="docutils literal notranslate"><span class="pre">take_raw_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.utils.html">wonambi.widgets.utils module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool"><code class="docutils literal notranslate"><span class="pre">FormBool</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool.connect"><code class="docutils literal notranslate"><span class="pre">FormBool.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool.get_value"><code class="docutils literal notranslate"><span class="pre">FormBool.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool.set_value"><code class="docutils literal notranslate"><span class="pre">FormBool.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormDir"><code class="docutils literal notranslate"><span class="pre">FormDir</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormDir.connect"><code class="docutils literal notranslate"><span class="pre">FormDir.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormDir.get_value"><code class="docutils literal notranslate"><span class="pre">FormDir.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormDir.set_value"><code class="docutils literal notranslate"><span class="pre">FormDir.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat"><code class="docutils literal notranslate"><span class="pre">FormFloat</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat.connect"><code class="docutils literal notranslate"><span class="pre">FormFloat.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat.get_value"><code class="docutils literal notranslate"><span class="pre">FormFloat.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat.set_value"><code class="docutils literal notranslate"><span class="pre">FormFloat.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormInt"><code class="docutils literal notranslate"><span class="pre">FormInt</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormInt.connect"><code class="docutils literal notranslate"><span class="pre">FormInt.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormInt.get_value"><code class="docutils literal notranslate"><span class="pre">FormInt.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormInt.set_value"><code class="docutils literal notranslate"><span class="pre">FormInt.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormList"><code class="docutils literal notranslate"><span class="pre">FormList</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormList.connect"><code class="docutils literal notranslate"><span class="pre">FormList.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormList.get_value"><code class="docutils literal notranslate"><span class="pre">FormList.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormList.set_value"><code class="docutils literal notranslate"><span class="pre">FormList.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu"><code class="docutils literal notranslate"><span class="pre">FormMenu</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu.connect"><code class="docutils literal notranslate"><span class="pre">FormMenu.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu.get_value"><code class="docutils literal notranslate"><span class="pre">FormMenu.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu.set_value"><code class="docutils literal notranslate"><span class="pre">FormMenu.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormRadio"><code class="docutils literal notranslate"><span class="pre">FormRadio</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormRadio.connect"><code class="docutils literal notranslate"><span class="pre">FormRadio.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormRadio.get_value"><code class="docutils literal notranslate"><span class="pre">FormRadio.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormRadio.set_value"><code class="docutils literal notranslate"><span class="pre">FormRadio.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormSpin"><code class="docutils literal notranslate"><span class="pre">FormSpin</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormSpin.connect"><code class="docutils literal notranslate"><span class="pre">FormSpin.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormSpin.get_value"><code class="docutils literal notranslate"><span class="pre">FormSpin.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormSpin.set_value"><code class="docutils literal notranslate"><span class="pre">FormSpin.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormStr"><code class="docutils literal notranslate"><span class="pre">FormStr</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormStr.connect"><code class="docutils literal notranslate"><span class="pre">FormStr.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormStr.get_value"><code class="docutils literal notranslate"><span class="pre">FormStr.get_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormStr.set_value"><code class="docutils literal notranslate"><span class="pre">FormStr.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.Path"><code class="docutils literal notranslate"><span class="pre">Path</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker"><code class="docutils literal notranslate"><span class="pre">RectMarker</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker.boundingRect"><code class="docutils literal notranslate"><span class="pre">RectMarker.boundingRect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker.contains"><code class="docutils literal notranslate"><span class="pre">RectMarker.contains()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker.paint"><code class="docutils literal notranslate"><span class="pre">RectMarker.paint()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.TextItem_with_BG"><code class="docutils literal notranslate"><span class="pre">TextItem_with_BG</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.TextItem_with_BG.paint"><code class="docutils literal notranslate"><span class="pre">TextItem_with_BG.paint()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.choose_file_or_dir"><code class="docutils literal notranslate"><span class="pre">choose_file_or_dir()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.convert_name_to_color"><code class="docutils literal notranslate"><span class="pre">convert_name_to_color()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.export_graphics"><code class="docutils literal notranslate"><span class="pre">export_graphics()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.export_graphics_to_svg"><code class="docutils literal notranslate"><span class="pre">export_graphics_to_svg()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.freq_from_str"><code class="docutils literal notranslate"><span class="pre">freq_from_str()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.keep_recent_datasets"><code class="docutils literal notranslate"><span class="pre">keep_recent_datasets()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.select_session"><code class="docutils literal notranslate"><span class="pre">select_session()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.short_strings"><code class="docutils literal notranslate"><span class="pre">short_strings()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.stdicon"><code class="docutils literal notranslate"><span class="pre">stdicon()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wonambi.widgets.video.html">wonambi.widgets.video module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.ConfigVideo"><code class="docutils literal notranslate"><span class="pre">ConfigVideo</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.ConfigVideo.create_config"><code class="docutils literal notranslate"><span class="pre">ConfigVideo.create_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video"><code class="docutils literal notranslate"><span class="pre">Video</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.parent"><code class="docutils literal notranslate"><span class="pre">Video.parent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.beg_diff"><code class="docutils literal notranslate"><span class="pre">Video.beg_diff</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.end_diff"><code class="docutils literal notranslate"><span class="pre">Video.end_diff</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.cnt_video"><code class="docutils literal notranslate"><span class="pre">Video.cnt_video</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.n_video"><code class="docutils literal notranslate"><span class="pre">Video.n_video</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.video"><code class="docutils literal notranslate"><span class="pre">Video.video</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.idx_button"><code class="docutils literal notranslate"><span class="pre">Video.idx_button</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.check_if_finished"><code class="docutils literal notranslate"><span class="pre">Video.check_if_finished()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.create_video"><code class="docutils literal notranslate"><span class="pre">Video.create_video()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.next_video"><code class="docutils literal notranslate"><span class="pre">Video.next_video()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.start_stop_video"><code class="docutils literal notranslate"><span class="pre">Video.start_stop_video()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.stop_video"><code class="docutils literal notranslate"><span class="pre">Video.stop_video()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="wonambi.widgets.video.html#wonambi.widgets.video.Video.update_video"><code class="docutils literal notranslate"><span class="pre">Video.update_video()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.utils.simulate.html" class="btn btn-neutral float-left" title="wonambi.utils.simulate module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.widgets.analysis.html" class="btn btn-neutral float-right" title="wonambi.widgets.analysis module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

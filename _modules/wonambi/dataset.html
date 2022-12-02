@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.dataset &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> wonambi
+            <img src="../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.dataset</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.dataset</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module has information about the datasets, not data.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">arange</span><span class="p">,</span> <span class="n">asarray</span><span class="p">,</span> <span class="n">concatenate</span><span class="p">,</span> <span class="n">empty</span><span class="p">,</span> <span class="n">int64</span><span class="p">,</span> <span class="n">zeros</span><span class="p">,</span> <span class="n">ndarray</span>
+
+<span class="kn">from</span> <span class="nn">.ioeeg</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Abf</span><span class="p">,</span>
+                    <span class="n">Edf</span><span class="p">,</span>
+                    <span class="n">Ktlx</span><span class="p">,</span>
+                    <span class="n">BlackRock</span><span class="p">,</span>
+                    <span class="n">EgiMff</span><span class="p">,</span>
+                    <span class="n">EEGLAB</span><span class="p">,</span>
+                    <span class="n">FieldTrip</span><span class="p">,</span>
+                    <span class="n">BrainVision</span><span class="p">,</span>
+                    <span class="n">Moberg</span><span class="p">,</span>
+                    <span class="n">Wonambi</span><span class="p">,</span>
+                    <span class="n">Micromed</span><span class="p">,</span>
+                    <span class="n">BCI2000</span><span class="p">,</span>
+                    <span class="n">OpenEphys</span><span class="p">,</span>
+                    <span class="n">Text</span><span class="p">,</span>
+                    <span class="n">BIDS</span><span class="p">,</span>
+                    <span class="n">LyonRRI</span><span class="p">,</span>
+                    <span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.ioeeg.bci2000</span> <span class="kn">import</span> <span class="n">_read_header_length</span>
+<span class="kn">from</span> <span class="nn">.datatype</span> <span class="kn">import</span> <span class="n">ChanTime</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">UnrecognizedFormat</span>
+
+
+<span class="n">lg</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;wonambi&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_convert_time_to_sample</span><span class="p">(</span><span class="n">abs_time</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert absolute time into samples.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    abs_time : dat</span>
+<span class="sd">        if it&#39;s int or float, it&#39;s assumed it&#39;s s;</span>
+<span class="sd">        if it&#39;s timedelta, it&#39;s assumed from the start of the recording;</span>
+<span class="sd">        if it&#39;s datetime, it&#39;s assumed it&#39;s absolute time.</span>
+<span class="sd">    dataset : instance of wonambi.Dataset</span>
+<span class="sd">        dataset to get sampling frequency and start time</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        sample (from the starting of the recording).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">abs_time</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+        <span class="n">abs_time</span> <span class="o">=</span> <span class="n">abs_time</span> <span class="o">-</span> <span class="n">dataset</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">abs_time</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">abs_time</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">abs_time</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">abs_time</span><span class="p">,</span> <span class="n">int64</span><span class="p">):</span>
+                <span class="c1"># timedelta and int64: http://bugs.python.org/issue5476</span>
+                <span class="n">abs_time</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">abs_time</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">err</span>
+
+    <span class="n">sample</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ceil</span><span class="p">(</span><span class="n">abs_time</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span> <span class="o">*</span> <span class="n">dataset</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">sample</span>
+
+
+<div class="viewcode-block" id="detect_format"><a class="viewcode-back" href="../../api/wonambi.dataset.html#wonambi.dataset.detect_format">[docs]</a><span class="k">def</span> <span class="nf">detect_format</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Detect file format.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str or Path</span>
+<span class="sd">        name of the filename or directory.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    class used to read the data.</span>
+
+<span class="sd">    list : indices of sessions</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sessions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">]</span>  <span class="c1"># start counting from 1</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">list</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.stc&#39;</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">list</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.erd&#39;</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="n">Ktlx</span><span class="p">,</span> <span class="n">sessions</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">filename</span> <span class="o">/</span> <span class="s1">&#39;patient.info&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">Moberg</span><span class="p">,</span> <span class="n">sessions</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">filename</span> <span class="o">/</span> <span class="s1">&#39;info.xml&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">EgiMff</span><span class="p">,</span> <span class="n">sessions</span>
+        <span class="k">elif</span> <span class="nb">list</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.openephys&#39;</span><span class="p">)):</span>
+            <span class="n">sessions</span> <span class="o">=</span> <span class="n">_count_openephys_sessions</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">OpenEphys</span><span class="p">,</span> <span class="n">sessions</span>
+        <span class="k">elif</span> <span class="nb">list</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="n">Text</span><span class="p">,</span> <span class="n">sessions</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnrecognizedFormat</span><span class="p">(</span><span class="s1">&#39;Unrecognized format for directory &#39;</span> <span class="o">+</span>
+                                     <span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.won&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Wonambi</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;.trc&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Micromed</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.set&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">EEGLAB</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.edf&#39;</span><span class="p">,</span> <span class="s1">&#39;.rec&#39;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="n">Edf</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.abf&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Abf</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.vhdr&#39;</span> <span class="ow">or</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.eeg&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">BrainVision</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.dat&#39;</span><span class="p">:</span>  <span class="c1"># very general</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">_read_header_length</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+            <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>  <span class="c1"># there is no HeaderLen</span>
+                <span class="k">pass</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">BCI2000</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">with</span> <span class="n">filename</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">file_header</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">file_header</span> <span class="ow">in</span> <span class="p">(</span><span class="sa">b</span><span class="s1">&#39;NEURALCD&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;NEURALSG&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;NEURALEV&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">BlackRock</span><span class="p">,</span> <span class="n">sessions</span>
+            <span class="k">elif</span> <span class="n">file_header</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="sa">b</span><span class="s1">&#39;MATLAB&#39;</span><span class="p">:</span>  <span class="c1"># we might need to read more</span>
+                <span class="k">return</span> <span class="n">FieldTrip</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;.txt&#39;</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">filename</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;rt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">first_line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+                <span class="k">if</span> <span class="s1">&#39;.rr&#39;</span> <span class="ow">in</span> <span class="n">first_line</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]:</span>
+                    <span class="k">return</span> <span class="n">LyonRRI</span><span class="p">,</span> <span class="n">sessions</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnrecognizedFormat</span><span class="p">(</span><span class="s1">&#39;Unrecognized format for file &#39;</span> <span class="o">+</span>
+                                     <span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Dataset"><a class="viewcode-back" href="../../api/wonambi.dataset.html#wonambi.dataset.Dataset">[docs]</a><span class="k">class</span> <span class="nc">Dataset</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Contain specific information and methods, associated with a dataset.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str or Path</span>
+<span class="sd">        name of the file</span>
+<span class="sd">    IOClass : class</span>
+<span class="sd">        one of the classes of wonambi.ioeeg</span>
+<span class="sd">    bids : bool</span>
+<span class="sd">        whether you give precedence to the information stored in the accompanying</span>
+<span class="sd">        files which are in the BIDS format</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        name of the file</span>
+<span class="sd">    IOClass : class</span>
+<span class="sd">        format of the file</span>
+<span class="sd">    header : dict</span>
+<span class="sd">        - subj_id : str</span>
+<span class="sd">            subject identification code</span>
+<span class="sd">        - start_time : datetime</span>
+<span class="sd">            start time of the dataset. If it cannot get the start time from the</span>
+<span class="sd">            header, wonambi reads it from the timestamp of the file</span>
+<span class="sd">        - s_freq : float</span>
+<span class="sd">            sampling frequency</span>
+<span class="sd">        - chan_name : list of str</span>
+<span class="sd">            list of all the channels</span>
+<span class="sd">        - n_samples : int</span>
+<span class="sd">            number of samples in the dataset</span>
+<span class="sd">        - orig : dict</span>
+<span class="sd">            additional information taken directly from the header</span>
+<span class="sd">    dataset : instance of a class which depends on format,</span>
+<span class="sd">        this requires at least three attributes:</span>
+<span class="sd">          - filename</span>
+<span class="sd">          - return_hdr</span>
+<span class="sd">          - return_dat</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    There is a difference between Dataset.filename and Dataset.dataset.filename</span>
+<span class="sd">    because the former is where the file that you want to read (the argument),</span>
+<span class="sd">    while the latter is the file that you really read. There might be</span>
+<span class="sd">    differences, for example, if the argument points to a file within a</span>
+<span class="sd">    directory, or if the file is mapped to memory.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">IOClass</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bids</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">bids</span><span class="p">:</span>
+            <span class="n">IOClass</span> <span class="o">=</span> <span class="n">BIDS</span>
+
+        <span class="k">if</span> <span class="n">IOClass</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">IOClass</span> <span class="o">=</span> <span class="n">IOClass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">IOClass</span><span class="p">,</span> <span class="n">sessions</span> <span class="o">=</span> <span class="n">detect_format</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">IOClass</span> <span class="ow">in</span> <span class="p">(</span><span class="n">OpenEphys</span><span class="p">,</span> <span class="p">):</span>
+            <span class="k">if</span> <span class="n">session</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">session</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sessions</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">lg</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Multiple sessions in the dataset, selecting the first one. You can specify the session with &quot;session=&quot;&#39;</span><span class="p">)</span>
+
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Reading session </span><span class="si">{</span><span class="n">session</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">IOClass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">IOClass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">return_hdr</span><span class="p">()</span>
+        <span class="n">hdr</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;subj_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;n_samples&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        <span class="n">hdr</span><span class="p">[</span><span class="s1">&#39;orig&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">hdr</span>
+
+<div class="viewcode-block" id="Dataset.read_markers"><a class="viewcode-back" href="../../api/wonambi.dataset.html#wonambi.dataset.Dataset.read_markers">[docs]</a>    <span class="k">def</span> <span class="nf">read_markers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the markers. You can add optional arguments that will be</span>
+<span class="sd">        passed to the method specific for each datafile.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">return_markers</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Dataset.read_videos"><a class="viewcode-back" href="../../api/wonambi.dataset.html#wonambi.dataset.Dataset.read_videos">[docs]</a>    <span class="k">def</span> <span class="nf">read_videos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">begtime</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">endtime</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return list of videos with start and end times for a period.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        begtime : int or timedelta or datetime or list</span>
+<span class="sd">            start of the data to read;</span>
+<span class="sd">            if it&#39;s int, it&#39;s assumed it&#39;s s;</span>
+<span class="sd">            if it&#39;s timedelta, it&#39;s assumed from the start of the recording;</span>
+<span class="sd">            if it&#39;s datetime, it&#39;s assumed it&#39;s absolute time.</span>
+<span class="sd">            It can also be a list of any of the above type.</span>
+<span class="sd">        endtime : int or timedelta or datetime</span>
+<span class="sd">            end of the data to read;</span>
+<span class="sd">            if it&#39;s int, it&#39;s assumed it&#39;s s;</span>
+<span class="sd">            if it&#39;s timedelta, it&#39;s assumed from the start of the recording;</span>
+<span class="sd">            if it&#39;s datetime, it&#39;s assumed it&#39;s absolute time.</span>
+<span class="sd">            It can also be a list of any of the above type.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list of path</span>
+<span class="sd">            list of absolute paths (as str) to the movie files</span>
+<span class="sd">        float</span>
+<span class="sd">            time in s from the beginning of the first movie when the part of</span>
+<span class="sd">            interest starts</span>
+<span class="sd">        float</span>
+<span class="sd">            time in s from the beginning of the last movie when the part of</span>
+<span class="sd">            interest ends</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        OSError</span>
+<span class="sd">            when there are no video files at all</span>
+<span class="sd">        IndexError</span>
+<span class="sd">            when there are video files, but the interval of interest is not in</span>
+<span class="sd">            the list of files.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">begtime</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+            <span class="n">begtime</span> <span class="o">=</span> <span class="n">begtime</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">begtime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">):</span>
+            <span class="n">begtime</span> <span class="o">=</span> <span class="n">begtime</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">endtime</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+            <span class="n">endtime</span> <span class="o">=</span> <span class="n">endtime</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">endtime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">):</span>
+            <span class="n">endtime</span> <span class="o">=</span> <span class="n">endtime</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+
+        <span class="n">videos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">return_videos</span><span class="p">(</span><span class="n">begtime</span><span class="p">,</span> <span class="n">endtime</span><span class="p">)</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        try</span>
+<span class="sd">        except AttributeError:</span>
+<span class="sd">            lg.debug(&#39;This format does not have video&#39;)</span>
+<span class="sd">            videos = None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">videos</span></div>
+
+<div class="viewcode-block" id="Dataset.read_data"><a class="viewcode-back" href="../../api/wonambi.dataset.html#wonambi.dataset.Dataset.read_data">[docs]</a>    <span class="k">def</span> <span class="nf">read_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">begtime</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">endtime</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">begsam</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                  <span class="n">endsam</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">events</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">s_freq</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Read the data and creates a ChanTime instance</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chan : list of strings</span>
+<span class="sd">            names of the channels to read</span>
+<span class="sd">        begtime : int or timedelta or datetime or list</span>
+<span class="sd">            start of the data to read;</span>
+<span class="sd">            if it&#39;s int or float, it&#39;s assumed it&#39;s s;</span>
+<span class="sd">            if it&#39;s timedelta, it&#39;s assumed from the start of the recording;</span>
+<span class="sd">            if it&#39;s datetime, it&#39;s assumed it&#39;s absolute time.</span>
+<span class="sd">            It can also be a list of any of the above type.</span>
+<span class="sd">        endtime : int or timedelta or datetime</span>
+<span class="sd">            end of the data to read;</span>
+<span class="sd">            if it&#39;s int or float, it&#39;s assumed it&#39;s s;</span>
+<span class="sd">            if it&#39;s timedelta, it&#39;s assumed from the start of the recording;</span>
+<span class="sd">            if it&#39;s datetime, it&#39;s assumed it&#39;s absolute time.</span>
+<span class="sd">            It can also be a list of any of the above type.</span>
+<span class="sd">        begsam : int</span>
+<span class="sd">            first sample (this sample will be included)</span>
+<span class="sd">        endsam : int</span>
+<span class="sd">            last sample (this sample will NOT be included)</span>
+<span class="sd">        events : list of int or of timedelta or of datetime</span>
+<span class="sd">            list of the onset time of the events of interest.</span>
+<span class="sd">            This option is useful if you want to run a trial-based analysis.</span>
+<span class="sd">        pre : float</span>
+<span class="sd">            only when &quot;events&quot; is specified, the amount of data before each</span>
+<span class="sd">            event to be included (in s). Use a positive number to indicate</span>
+<span class="sd">            the time before the event.</span>
+<span class="sd">        post : float</span>
+<span class="sd">            only when &quot;events&quot; is specified, the amount of data after each</span>
+<span class="sd">            event to be included (in s).</span>
+<span class="sd">        s_freq : int</span>
+<span class="sd">            sampling frequency of the data</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        An instance of ChanTime</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        begsam and endsam follow Python convention, which starts at zero,</span>
+<span class="sd">        includes begsam but DOES NOT include endsam.</span>
+
+<span class="sd">        If begtime and endtime are a list, the two lists should have the same</span>
+<span class="sd">        length and the data will be stored in trials.</span>
+
+<span class="sd">        If neither begtime or begsam are specified, it starts from the first</span>
+<span class="sd">        sample. If neither endtime or endsam are specified, it reads until the</span>
+<span class="sd">        end.</span>
+
+<span class="sd">        The time axis will indicate the time in seconds from data.start_time,</span>
+<span class="sd">        unless you specify &quot;events&quot;. In that case, time will run from -&quot;pre&quot; to</span>
+<span class="sd">        +&quot;post&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">ChanTime</span><span class="p">()</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">start_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">s_freq</span> <span class="o">=</span> <span class="n">s_freq</span> <span class="o">=</span> <span class="n">s_freq</span> <span class="k">if</span> <span class="n">s_freq</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;s_freq&#39;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">chan</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">chan</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">chan</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">chan</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">chan</span><span class="p">,</span> <span class="n">ndarray</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Parameter &quot;chan&quot; should be a list&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">chan</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span>  <span class="c1"># make sure it&#39;s a list</span>
+        <span class="n">add_ref</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="s1">&#39;_REF&#39;</span> <span class="ow">in</span> <span class="n">chan</span><span class="p">:</span>
+            <span class="n">add_ref</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">chan</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">chan</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;_REF&#39;</span><span class="p">]</span>
+        <span class="n">idx_chan</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;chan_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">chan</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">begtime</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">begsam</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">begsam</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">endtime</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">endsam</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">endsam</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s1">&#39;n_samples&#39;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">eventssam</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_to_list_with_samples</span><span class="p">(</span><span class="n">events</span><span class="p">)</span>
+            <span class="n">presam</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pre</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">)</span>
+            <span class="n">postsam</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">post</span> <span class="o">*</span> <span class="n">s_freq</span><span class="p">)</span>
+            <span class="n">begsam</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span> <span class="o">-</span> <span class="n">presam</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">eventssam</span><span class="p">]</span>
+            <span class="n">endsam</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span> <span class="o">+</span> <span class="n">postsam</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">eventssam</span><span class="p">]</span>
+
+            <span class="n">event_t</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">presam</span><span class="p">,</span> <span class="n">postsam</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq</span>
+
+        <span class="n">begsam</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_to_list_with_samples</span><span class="p">(</span><span class="n">begtime</span><span class="p">,</span> <span class="n">begsam</span><span class="p">)</span>
+        <span class="n">endsam</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_to_list_with_samples</span><span class="p">(</span><span class="n">endtime</span><span class="p">,</span> <span class="n">endsam</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">begsam</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">endsam</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;There should be the same number of start and &#39;</span> <span class="o">+</span>
+                             <span class="s1">&#39;end point&#39;</span><span class="p">)</span>
+        <span class="n">n_trl</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">begsam</span><span class="p">)</span>
+
+        <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="n">n_trl</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="n">n_trl</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">empty</span><span class="p">(</span><span class="n">n_trl</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">one_begsam</span><span class="p">,</span> <span class="n">one_endsam</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_trl</span><span class="p">),</span> <span class="n">begsam</span><span class="p">,</span> <span class="n">endsam</span><span class="p">):</span>
+            <span class="n">dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span>
+            <span class="n">lg</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;begsam </span><span class="si">{0: 6}</span><span class="s1">, endsam </span><span class="si">{1: 6}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">one_begsam</span><span class="p">,</span>
+                     <span class="n">one_endsam</span><span class="p">))</span>
+            <span class="n">dat</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">return_dat</span><span class="p">(</span><span class="n">idx_chan</span><span class="p">,</span> <span class="n">one_begsam</span><span class="p">,</span> <span class="n">one_endsam</span><span class="p">)</span>
+            <span class="n">chan_in_dat</span> <span class="o">=</span> <span class="n">chan</span>
+
+            <span class="k">if</span> <span class="n">add_ref</span><span class="p">:</span>
+                <span class="n">zero_ref</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">one_endsam</span> <span class="o">-</span> <span class="n">one_begsam</span><span class="p">))</span>
+                <span class="n">dat</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">dat</span><span class="p">,</span> <span class="n">zero_ref</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">chan_in_dat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;_REF&#39;</span><span class="p">)</span>
+
+            <span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dat</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;chan&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">chan_in_dat</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">event_t</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="n">one_begsam</span><span class="p">,</span> <span class="n">one_endsam</span><span class="p">)</span> <span class="o">/</span> <span class="n">s_freq</span>
+
+        <span class="k">return</span> <span class="n">data</span></div>
+
+    <span class="k">def</span> <span class="nf">_convert_to_list_with_samples</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">times</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">samples</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Convenience function to convert the input into a list of samples&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">times</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="n">times</span> <span class="o">=</span> <span class="p">[</span><span class="n">times</span><span class="p">]</span>
+            <span class="n">samples</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">one_time</span> <span class="ow">in</span> <span class="n">times</span><span class="p">:</span>
+                <span class="n">samples</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_convert_time_to_sample</span><span class="p">(</span><span class="n">one_time</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">samples</span> <span class="o">=</span> <span class="p">[</span><span class="n">samples</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">samples</span></div>
+
+
+<span class="k">def</span> <span class="nf">_count_openephys_sessions</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Open-ephys can have multiple sessions. We count how many files are in</span>
+<span class="sd">    the format:</span>
+<span class="sd">      - Continuous_Data.openephys</span>
+<span class="sd">      - Continuous_Data_2.openephys</span>
+<span class="sd">      - Continuous_Data_3.openephys</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sessions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filename</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.openephys&#39;</span><span class="p">):</span>
+        <span class="n">session_number</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">stem</span><span class="p">[</span><span class="mi">16</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="n">session_number</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="n">sessions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sessions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">session_number</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">sessions</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

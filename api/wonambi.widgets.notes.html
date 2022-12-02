@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.widgets.notes module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.widgets.overview module" href="wonambi.widgets.overview.html" />
+    <link rel="prev" title="wonambi.widgets.modal_widgets module" href="wonambi.widgets.modal_widgets.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.widgets.html">wonambi.widgets package</a></li>
+      <li class="breadcrumb-item active">wonambi.widgets.notes module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.widgets.notes">
+<span id="wonambi-widgets-notes-module"></span><h1>wonambi.widgets.notes module<a class="headerlink" href="#module-wonambi.widgets.notes" title="Permalink to this heading"></a></h1>
+<p>Widgets containing notes (such as markers, events, and stages).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>bookmarks are unique (might have the same text), are not mutually
+exclusive, have variable duration</p></li>
+<li><p>events are not unique, are not mutually exclusive, have variable duration</p></li>
+<li><p>stages are not unique, are mutually exclusive, have fixed duration</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>maybe it’s better to disable options related to annotations, but it’s a bit
+too complicated. If you do that, you can remove all “if self.annot is None”
+that are marked with “# remove if buttons are disabled”</p>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.ConfigNotes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.notes.</span></span><span class="sig-name descname"><span class="pre">ConfigNotes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update_widget</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#ConfigNotes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.ConfigNotes" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config" title="wonambi.widgets.settings.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a></p>
+<p>Widget with preferences in Settings window for the Annotations.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.ConfigNotes.create_config">
+<span class="sig-name descname"><span class="pre">create_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#ConfigNotes.create_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.ConfigNotes.create_config" title="Permalink to this definition"></a></dt>
+<dd><p>Placeholder: it’ll be replaced with actual layout.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.ExportEventsDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.notes.</span></span><span class="sig-name descname"><span class="pre">ExportEventsDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#ExportEventsDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.ExportEventsDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>Dialog for choosing export dataset options.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.ExportEventsDialog.button_clicked">
+<span class="sig-name descname"><span class="pre">button_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#ExportEventsDialog.button_clicked"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.ExportEventsDialog.button_clicked" title="Permalink to this definition"></a></dt>
+<dd><p>Action when button was clicked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>button</strong> (<em>instance</em><em> of </em><em>QPushButton</em>) – which button was pressed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.ExportEventsDialog.create_dialog">
+<span class="sig-name descname"><span class="pre">create_dialog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#ExportEventsDialog.create_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.ExportEventsDialog.create_dialog" title="Permalink to this definition"></a></dt>
+<dd><p>Create the dialog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.ExportEventsDialog.save_as">
+<span class="sig-name descname"><span class="pre">save_as</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#ExportEventsDialog.save_as"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.ExportEventsDialog.save_as" title="Permalink to this definition"></a></dt>
+<dd><p>Dialog for getting name, location of dataset export.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.ExportEventsDialog.toggle_buttons">
+<span class="sig-name descname"><span class="pre">toggle_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#ExportEventsDialog.toggle_buttons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.ExportEventsDialog.toggle_buttons" title="Permalink to this definition"></a></dt>
+<dd><p>Turn buttons on and off.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.ExportEventsDialog.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#ExportEventsDialog.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.ExportEventsDialog.update" title="Permalink to this definition"></a></dt>
+<dd><p>Update the event types list, info, when dialog is opened.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.notes.</span></span><span class="sig-name descname"><span class="pre">MergeDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#MergeDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<p>Dialog for specifying which events to merge. Events are merged when
+less than a minimum interval separates them. Events can be within-channel
+only or both within- and across-channel. Merged to channel with longest
+event.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.parent" title="Permalink to this definition"></a></dt>
+<dd><p>the main window</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of QMainWindow</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.idx_evt_type">
+<span class="sig-name descname"><span class="pre">idx_evt_type</span></span><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.idx_evt_type" title="Permalink to this definition"></a></dt>
+<dd><p>List of event types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QListWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.idx_merge_to">
+<span class="sig-name descname"><span class="pre">idx_merge_to</span></span><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.idx_merge_to" title="Permalink to this definition"></a></dt>
+<dd><p>Choice of ‘earlier onset event’ or ‘longer duration event’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormMenu" title="wonambi.widgets.utils.FormMenu">FormMenu</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.merge_to">
+<span class="sig-name descname"><span class="pre">merge_to</span></span><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.merge_to" title="Permalink to this definition"></a></dt>
+<dd><p>Current text in idx_merge_to</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.min_interval">
+<span class="sig-name descname"><span class="pre">min_interval</span></span><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.min_interval" title="Permalink to this definition"></a></dt>
+<dd><p>Events separated by this value (in seconds) or less are merged.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormFloat" title="wonambi.widgets.utils.FormFloat">FormFloat</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.cross_chan">
+<span class="sig-name descname"><span class="pre">cross_chan</span></span><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.cross_chan" title="Permalink to this definition"></a></dt>
+<dd><p>For cross-channel merging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.FormBool" title="wonambi.widgets.utils.FormBool">FormBool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.button_clicked">
+<span class="sig-name descname"><span class="pre">button_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#MergeDialog.button_clicked"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.button_clicked" title="Permalink to this definition"></a></dt>
+<dd><p>Action when button was clicked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>button</strong> (<em>instance</em><em> of </em><em>QPushButton</em>) – which button was pressed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.create_dialog">
+<span class="sig-name descname"><span class="pre">create_dialog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#MergeDialog.create_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.create_dialog" title="Permalink to this definition"></a></dt>
+<dd><p>Create the dialog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.MergeDialog.update_event_types">
+<span class="sig-name descname"><span class="pre">update_event_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#MergeDialog.update_event_types"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.MergeDialog.update_event_types" title="Permalink to this definition"></a></dt>
+<dd><p>Update event types in event type box.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.NewUserDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.notes.</span></span><span class="sig-name descname"><span class="pre">NewUserDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_length</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#NewUserDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.NewUserDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QDialog</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.NewUserDialog.button_clicked">
+<span class="sig-name descname"><span class="pre">button_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#NewUserDialog.button_clicked"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.NewUserDialog.button_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.notes.</span></span><span class="sig-name descname"><span class="pre">Notes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QTabWidget</span></code></p>
+<p>Widget that contains information about sleep scoring.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.parent" title="Permalink to this definition"></a></dt>
+<dd><p>the main window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of QMainWindow</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.config">
+<span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.config" title="Permalink to this definition"></a></dt>
+<dd><p>preferences for this widget</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#wonambi.widgets.notes.ConfigNotes" title="wonambi.widgets.notes.ConfigNotes">ConfigNotes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.annot">
+<span class="sig-name descname"><span class="pre">annot</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.annot" title="Permalink to this definition"></a></dt>
+<dd><p>contains the annotations made by the user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="wonambi.attr.annotations.html#wonambi.attr.annotations.Annotations" title="wonambi.attr.annotations.Annotations">Annotations</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_marker">
+<span class="sig-name descname"><span class="pre">idx_marker</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_marker" title="Permalink to this definition"></a></dt>
+<dd><p>table with the markers in the dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QTableWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_summary">
+<span class="sig-name descname"><span class="pre">idx_summary</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_summary" title="Permalink to this definition"></a></dt>
+<dd><p>layout of the “Summary” tab (we add and remove the “Recap” box)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QVBoxLayout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_annotations">
+<span class="sig-name descname"><span class="pre">idx_annotations</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_annotations" title="Permalink to this definition"></a></dt>
+<dd><p>push button with the text of the annotation file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QPushButton</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_rater">
+<span class="sig-name descname"><span class="pre">idx_rater</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_rater" title="Permalink to this definition"></a></dt>
+<dd><p>name of the current rater</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QLabel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_stats">
+<span class="sig-name descname"><span class="pre">idx_stats</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_stats" title="Permalink to this definition"></a></dt>
+<dd><p>layout of the stage statistics</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QFormLayout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_eventtype_scroll">
+<span class="sig-name descname"><span class="pre">idx_eventtype_scroll</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_eventtype_scroll" title="Permalink to this definition"></a></dt>
+<dd><p>area to which you add the QGroupBox with the list of events as checkbox</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QScrollArea</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_eventtype_list">
+<span class="sig-name descname"><span class="pre">idx_eventtype_list</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_eventtype_list" title="Permalink to this definition"></a></dt>
+<dd><p>list of checkboxes with the event types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of QCheckBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_annot_list">
+<span class="sig-name descname"><span class="pre">idx_annot_list</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_annot_list" title="Permalink to this definition"></a></dt>
+<dd><p>table with the bookmarks and events in the annotations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QTableWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_eventtype">
+<span class="sig-name descname"><span class="pre">idx_eventtype</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_eventtype" title="Permalink to this definition"></a></dt>
+<dd><p>Combo box of the event types for the toolbar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QComboBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_stage">
+<span class="sig-name descname"><span class="pre">idx_stage</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_stage" title="Permalink to this definition"></a></dt>
+<dd><p>Combo box of the stages for the toolbar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QComboBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.idx_quality">
+<span class="sig-name descname"><span class="pre">idx_quality</span></span><a class="headerlink" href="#wonambi.widgets.notes.Notes.idx_quality" title="Permalink to this definition"></a></dt>
+<dd><p>Combo box of signal quality (good/poor) for the toolbar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QComboBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.add_bookmark">
+<span class="sig-name descname"><span class="pre">add_bookmark</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.add_bookmark"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.add_bookmark" title="Permalink to this definition"></a></dt>
+<dd><p>Run this function when user adds a new bookmark.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time</strong> (<em>tuple</em><em> of </em><em>float</em>) – start and end of the new bookmark, in s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.add_event">
+<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.add_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.add_event" title="Permalink to this definition"></a></dt>
+<dd><p>Action: add a single event.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.change_event_type">
+<span class="sig-name descname"><span class="pre">change_event_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.change_event_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.change_event_type" title="Permalink to this definition"></a></dt>
+<dd><p>Action: change an event’s type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.clear_annot">
+<span class="sig-name descname"><span class="pre">clear_annot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.clear_annot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.clear_annot" title="Permalink to this definition"></a></dt>
+<dd><p>Action: clear all the annotations (ask for confirmation first).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.clear_cycle_mrkrs">
+<span class="sig-name descname"><span class="pre">clear_cycle_mrkrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.clear_cycle_mrkrs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.clear_cycle_mrkrs" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all cycle markers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.create" title="Permalink to this definition"></a></dt>
+<dd><p>Create the widget layout with all the annotations.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.create_action">
+<span class="sig-name descname"><span class="pre">create_action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.create_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.create_action" title="Permalink to this definition"></a></dt>
+<dd><p>Create actions associated with Annotations.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.delete_eventtype">
+<span class="sig-name descname"><span class="pre">delete_eventtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_type_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.delete_eventtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.delete_eventtype" title="Permalink to this definition"></a></dt>
+<dd><p>Action: create dialog to delete event type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.delete_rater">
+<span class="sig-name descname"><span class="pre">delete_rater</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.delete_rater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.delete_rater" title="Permalink to this definition"></a></dt>
+<dd><p>Action: create dialog to delete rater.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.delete_row">
+<span class="sig-name descname"><span class="pre">delete_row</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.delete_row"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.delete_row" title="Permalink to this definition"></a></dt>
+<dd><p>Delete bookmarks or event from annotations, based on row.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.detect_events">
+<span class="sig-name descname"><span class="pre">detect_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.detect_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.detect_events" title="Permalink to this definition"></a></dt>
+<dd><p>Detect events and display on signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.ChanTime" title="wonambi.datatype.ChanTime"><em>ChanTime</em></a>) – one segment with all channels of interest</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – Method used for detection.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Parameters used for detection.</p></li>
+<li><p><strong>label</strong> (<em>str</em>) – Name of event type, on event labels</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.display_eventtype">
+<span class="sig-name descname"><span class="pre">display_eventtype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.display_eventtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.display_eventtype" title="Permalink to this definition"></a></dt>
+<dd><p>Read the list of event types in the annotations and update widgets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.display_notes">
+<span class="sig-name descname"><span class="pre">display_notes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.display_notes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.display_notes" title="Permalink to this definition"></a></dt>
+<dd><p>Display information about scores and raters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.display_stats">
+<span class="sig-name descname"><span class="pre">display_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.display_stats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.display_stats" title="Permalink to this definition"></a></dt>
+<dd><p>Display summary statistics about duration in each stage.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.enable_events">
+<span class="sig-name descname"><span class="pre">enable_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.enable_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.enable_events" title="Permalink to this definition"></a></dt>
+<dd><p>enable slow wave and spindle detection if both
+annotations and channels are active.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.export">
+<span class="sig-name descname"><span class="pre">export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xformat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'csv'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.export"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.export" title="Permalink to this definition"></a></dt>
+<dd><p>action: export annotations to CSV.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.export_sleeps_stats">
+<span class="sig-name descname"><span class="pre">export_sleeps_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.export_sleeps_stats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.export_sleeps_stats" title="Permalink to this definition"></a></dt>
+<dd><p>action: export sleep statistics CSV.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.find_row">
+<span class="sig-name descname"><span class="pre">find_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ev_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ev_end</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.find_row"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.find_row" title="Permalink to this definition"></a></dt>
+<dd><p>Highlight event row in table from start and end time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ev_start</strong> (<em>float</em>) – start time, in seconds from record start</p></li>
+<li><p><strong>ev_end</strong> (<em>float</em>) – end time, in seconds from record start</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>int</em> – index of event row in idx_annot_list QTableWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.get_cycle_mrkr">
+<span class="sig-name descname"><span class="pre">get_cycle_mrkr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.get_cycle_mrkr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.get_cycle_mrkr" title="Permalink to this definition"></a></dt>
+<dd><p>Mark cycle start or end.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>end</strong> (<em>bool</em>) – If True, marks a cycle end; otherwise, it’s a cycle start</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.get_quality">
+<span class="sig-name descname"><span class="pre">get_quality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qual_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.get_quality"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.get_quality" title="Permalink to this definition"></a></dt>
+<dd><p>Get the signal qualifier, using shortcuts or combobox.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.get_selected_events">
+<span class="sig-name descname"><span class="pre">get_selected_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_selection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.get_selected_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.get_selected_events" title="Permalink to this definition"></a></dt>
+<dd><p>Returns which events are present in one time window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time_selection</strong> (<em>tuple</em><em> of </em><em>float</em>) – start and end of the window of interest</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – list of events in the window of interest</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.get_sleepstage">
+<span class="sig-name descname"><span class="pre">get_sleepstage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.get_sleepstage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.get_sleepstage" title="Permalink to this definition"></a></dt>
+<dd><p>Score the sleep stage, using shortcuts or combobox.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.go_to_marker">
+<span class="sig-name descname"><span class="pre">go_to_marker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.go_to_marker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.go_to_marker" title="Permalink to this definition"></a></dt>
+<dd><p>Move to point in time marked by the marker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<em>QtCore.int</em>) – </p></li>
+<li><p><strong>column</strong> (<em>QtCore.int</em>) – </p></li>
+<li><p><strong>table_type</strong> (<em>str</em>) – ‘dataset’ table or ‘annot’ table, it works on either</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.import_events">
+<span class="sig-name descname"><span class="pre">import_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'wonambi'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.import_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.import_events" title="Permalink to this definition"></a></dt>
+<dd><p>action: import events from text file (Wonambi or RemLogic).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.import_fasst">
+<span class="sig-name descname"><span class="pre">import_fasst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_fasst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_annot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.import_fasst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.import_fasst" title="Permalink to this definition"></a></dt>
+<dd><p>Action: import from FASST .mat file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.import_staging">
+<span class="sig-name descname"><span class="pre">import_staging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staging_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_qual</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_rater</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.import_staging"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.import_staging" title="Permalink to this definition"></a></dt>
+<dd><p>Action: import an external sleep staging file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>str</em>) – Name of program where staging was exported. One of ‘alice’,
+‘compumedics’, ‘domino’, ‘remlogic’, ‘sandman’.</p></li>
+<li><p><strong>staging_start</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Absolute time when staging begins.</p></li>
+<li><p><strong>as_qual</strong> (<em>bool</em>) – if True, scores will be imported as quality</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.load_annot">
+<span class="sig-name descname"><span class="pre">load_annot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.load_annot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.load_annot" title="Permalink to this definition"></a></dt>
+<dd><p>Action: load a file for annotations.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.markers_to_events">
+<span class="sig-name descname"><span class="pre">markers_to_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.markers_to_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.markers_to_events" title="Permalink to this definition"></a></dt>
+<dd><p>Copy all markers in dataset to event type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.new_annot">
+<span class="sig-name descname"><span class="pre">new_annot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.new_annot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.new_annot" title="Permalink to this definition"></a></dt>
+<dd><p>Action: create a new file for annotations.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.new_eventtype">
+<span class="sig-name descname"><span class="pre">new_eventtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_type_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.new_eventtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.new_eventtype" title="Permalink to this definition"></a></dt>
+<dd><p>Action: create dialog to add new event type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.new_rater">
+<span class="sig-name descname"><span class="pre">new_rater</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.new_rater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.new_rater" title="Permalink to this definition"></a></dt>
+<dd><p>Action: add a new rater.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.remove_bookmark">
+<span class="sig-name descname"><span class="pre">remove_bookmark</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.remove_bookmark"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.remove_bookmark" title="Permalink to this definition"></a></dt>
+<dd><p>User removes bookmark.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time</strong> (<em>tuple</em><em> of </em><em>float</em>) – start and end of the new bookmark, in s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.remove_cycle_mrkr">
+<span class="sig-name descname"><span class="pre">remove_cycle_mrkr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.remove_cycle_mrkr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.remove_cycle_mrkr" title="Permalink to this definition"></a></dt>
+<dd><p>Remove cycle marker.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.remove_event">
+<span class="sig-name descname"><span class="pre">remove_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.remove_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.remove_event" title="Permalink to this definition"></a></dt>
+<dd><p>Action: remove single event.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.rename_eventtype">
+<span class="sig-name descname"><span class="pre">rename_eventtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_new_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.rename_eventtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.rename_eventtype" title="Permalink to this definition"></a></dt>
+<dd><p>action: create dialog to rename event type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.rename_rater">
+<span class="sig-name descname"><span class="pre">rename_rater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_new_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.rename_rater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.rename_rater" title="Permalink to this definition"></a></dt>
+<dd><p>action: create dialog to rename event type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all annotations from window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.reset_current_row">
+<span class="sig-name descname"><span class="pre">reset_current_row</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.reset_current_row"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.reset_current_row" title="Permalink to this definition"></a></dt>
+<dd><p>For traces.next_event</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.select_rater">
+<span class="sig-name descname"><span class="pre">select_rater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rater</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.select_rater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.select_rater" title="Permalink to this definition"></a></dt>
+<dd><p>Action: select one rater.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rater</strong> (<em>str</em>) – name of the rater</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.set_quality_index">
+<span class="sig-name descname"><span class="pre">set_quality_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.set_quality_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.set_quality_index" title="Permalink to this definition"></a></dt>
+<dd><p>Set the current signal quality in combobox.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.set_stage_index">
+<span class="sig-name descname"><span class="pre">set_stage_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.set_stage_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.set_stage_index" title="Permalink to this definition"></a></dt>
+<dd><p>Set the current stage in combobox.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.toggle_check_all_eventtype">
+<span class="sig-name descname"><span class="pre">toggle_check_all_eventtype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.toggle_check_all_eventtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.toggle_check_all_eventtype" title="Permalink to this definition"></a></dt>
+<dd><p>Check ‘All’ if all event types are checked in event type scroll.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.toggle_eventtype">
+<span class="sig-name descname"><span class="pre">toggle_eventtype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.toggle_eventtype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.toggle_eventtype" title="Permalink to this definition"></a></dt>
+<dd><p>Check or uncheck all event types in event type scroll.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.update_annotations">
+<span class="sig-name descname"><span class="pre">update_annotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.update_annotations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.update_annotations" title="Permalink to this definition"></a></dt>
+<dd><p>Update annotations made by the user, including bookmarks and events.
+Depending on the settings, it might add the bookmarks to overview and
+traces.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.update_dataset_marker">
+<span class="sig-name descname"><span class="pre">update_dataset_marker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.update_dataset_marker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.update_dataset_marker" title="Permalink to this definition"></a></dt>
+<dd><p>Update markers which are in the dataset. It always updates the list
+of events. Depending on the settings, it might add the markers to
+overview and traces.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.update_notes">
+<span class="sig-name descname"><span class="pre">update_notes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xml_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.update_notes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.update_notes" title="Permalink to this definition"></a></dt>
+<dd><p>Update information about the sleep scoring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xml_file</strong> (<em>str</em>) – file of the new or existing .xml file</p></li>
+<li><p><strong>new</strong> (<em>bool</em>) – if the xml_file should be a new file or an existing one</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.notes.Notes.update_settings">
+<span class="sig-name descname"><span class="pre">update_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/notes.html#Notes.update_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.notes.Notes.update_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Once Settings are applied, update the notes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.widgets.modal_widgets.html" class="btn btn-neutral float-left" title="wonambi.widgets.modal_widgets module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.widgets.overview.html" class="btn btn-neutral float-right" title="wonambi.widgets.overview module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event detection &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Detection methods" href="methods.html" />
+    <link rel="prev" title="Annotations" href="notes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Graphical User Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes.html">Annotations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Graphical User Interface</a></li>
+      <li class="breadcrumb-item active">Event detection</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="event-detection">
+<h1>Event detection<a class="headerlink" href="#event-detection" title="Permalink to this heading"></a></h1>
+<p>Wonambi can automatically detect sleep spindles and slow waves in the signal.</p>
+<p>To detect events, make sure you have first loaded a Montage and an Annotation File.
+In your Montage, create the desired channels for event detection. Note that filters set in the Channels tab are not retained for event detection.
+Now, click on <code class="docutils literal notranslate"><span class="pre">Analysis</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Detect</span></code> and choose the desired event. This will open the detection dialog.</p>
+<p>Let’s start with the <strong>spindle detection dialog</strong>:</p>
+<img alt="../_images/notes_16_spindledialog.png" src="../_images/notes_16_spindledialog.png" />
+<section id="info">
+<h2>Info<a class="headerlink" href="#info" title="Permalink to this heading"></a></h2>
+<p>Under <code class="docutils literal notranslate"><span class="pre">Label</span></code>, enter the name of this event type, which will appear on the trace.
+You may choose an existing event type or create a new one.
+If you choose an existing event type, existing events of this type will be preserved.</p>
+<p>Next, you will see <code class="docutils literal notranslate"><span class="pre">Channel</span> <span class="pre">group</span></code> and <code class="docutils literal notranslate"><span class="pre">Channel(s)</span></code>.
+You may perform automatic detection on several channels at once, within a same group.
+Select the desired group from the drop-down menu, and the desired channel(s).
+Select several channels by holding down the <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> key.</p>
+<p>If you have delimited cycles (see <a class="reference internal" href="notes.html#notes"><span class="std std-ref">Annotations</span></a>), the cycle indices will appear under <code class="docutils literal notranslate"><span class="pre">Cycle(s)</span></code>.
+You may select one or several cycles.
+If no cycle is selected, detection will ignore cycles.</p>
+<p>Under <code class="docutils literal notranslate"><span class="pre">Stage(s)</span></code>, select in which stage or stages to find events.
+If no stage is selected, detection will ignore stages.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you select neither a cycle nor a stage, detection will be carried out over the entire record, even wake!</p>
+</div>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h2>
+<p>You may select among a number of spindle detection algorithms in the <code class="docutils literal notranslate"><span class="pre">Method</span></code> drop-down menu.
+The parameter values will be updated to the values reported in the source literature.
+These values remain fully customizable.</p>
+<p>Note that not all method parameters are applicable to each method.
+In these cases, the method parameter is grayed out and marked <code class="docutils literal notranslate"><span class="pre">N/A</span></code>.</p>
+<p>For details about the implemented algorithms, see below.</p>
+</section>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<p>If you have marked certain epochs as having <em>Poor</em> signal, you may check <code class="docutils literal notranslate"><span class="pre">Exclude</span> <span class="pre">Poor</span> <span class="pre">signal</span> <span class="pre">epochs</span></code> to remove them from the detection signal.</p>
+<p>Similarly, if you have marked events with event type <em>Artefact</em>, you may check the <code class="docutils literal notranslate"><span class="pre">Exclude</span> <span class="pre">Artefact</span> <span class="pre">events</span></code> box to remove them from the detection signal.
+Signal on all selected channels that is concurrent with an <em>Artefact</em> event on any channel will be excluded from detection.</p>
+<p>Signal selection and rejection may result in a fragmented signal, especially when excluding <em>Artefact</em> events.
+You may set a minimum duration for these fragments with <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">subsegment</span> <span class="pre">duration</span></code>.
+Signal fragments shorter than this value will be excluded.
+All remaining fragments are then concatenated (within a same channel) to create the detection signal.</p>
+<p>If you selected several channels, you may choose to merge spindles detected in close proximity across channels with <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">events</span> <span class="pre">across</span> <span class="pre">channels</span></code>.
+When this option is selected, spindles on different channels that are separated by less than a specified delay will be merged onto the channel with the earliest onset spindle.
+The delay is set with <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">interval</span></code>, under <em>Parameters</em>. If <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">interval</span></code> is set to zero, only overlapping spindles will be merged.</p>
+<p>The <strong>slow wave detection dialog</strong> is similar to the spindle detection dialog:</p>
+<img alt="../_images/notes_17_slowwavedialog.png" src="../_images/notes_17_slowwavedialog.png" />
+<p>As in the spindle dialog, you can choose a slow wave detection algorithm from the <code class="docutils literal notranslate"><span class="pre">Method</span></code> drop-down menu, and the parameters will update with default values from the source literature.
+Note that the <code class="docutils literal notranslate"><span class="pre">AASM/Massimini_2004</span></code> method is identical to the <code class="docutils literal notranslate"><span class="pre">Massimini_2004</span></code> algorithm, but with different default values for the method parameters.
+For details about the implemented algorithms, consult the <code class="docutils literal notranslate"><span class="pre">Help</span></code> box, accessible at the bottom of the dialog.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">De-mean</span></code> checkbox subtracts the mean of the detection signal for each channel.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Invert</span> <span class="pre">detection</span></code> checkbox allows you to “flip” the detection algorithm upside-down, so that instead of a “trough-then-peak” pattern, it will look for a “peak-then-trough” pattern.</p>
+<p>For conceptual reasons, there is no option to merge events during slow wave detection.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="notes.html" class="btn btn-neutral float-left" title="Annotations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="methods.html" class="btn btn-neutral float-right" title="Detection methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

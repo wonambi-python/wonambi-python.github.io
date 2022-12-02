@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.trans.extern.dpss &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> wonambi
+            <img src="../../../../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api/wonambi.html">Modules, classes, functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wonambi.trans.extern.dpss</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wonambi.trans.extern.dpss</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;create dpss using nitime code. Scipy v1.1 will have dpss</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="k">as</span> <span class="nn">linalg</span>
+<span class="kn">import</span> <span class="nn">scipy.interpolate</span> <span class="k">as</span> <span class="nn">interpolate</span>
+<span class="kn">import</span> <span class="nn">scipy.fftpack</span> <span class="k">as</span> <span class="nn">fftpack</span>
+
+<div class="viewcode-block" id="dpss_windows"><a class="viewcode-back" href="../../../../api/wonambi.trans.extern.dpss.html#wonambi.trans.extern.dpss.dpss_windows">[docs]</a><span class="k">def</span> <span class="nf">dpss_windows</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">NW</span><span class="p">,</span> <span class="n">Kmax</span><span class="p">,</span> <span class="n">interp_from</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interp_kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the Discrete Prolate Spheroidal Sequences of orders [0,Kmax-1]</span>
+<span class="sd">    for a given frequency-spacing multiple NW and sequence length N.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    N : int</span>
+<span class="sd">        sequence length</span>
+<span class="sd">    NW : float, unitless</span>
+<span class="sd">        standardized half bandwidth corresponding to 2NW = BW/f0 = BW*N*dt</span>
+<span class="sd">        but with dt taken as 1</span>
+<span class="sd">    Kmax : int</span>
+<span class="sd">        number of DPSS windows to return is Kmax (orders 0 through Kmax-1)</span>
+<span class="sd">    interp_from : int (optional)</span>
+<span class="sd">        The dpss can be calculated using interpolation from a set of dpss</span>
+<span class="sd">        with the same NW and Kmax, but shorter N. This is the length of this</span>
+<span class="sd">        shorter set of dpss windows.</span>
+<span class="sd">    interp_kind : str (optional)</span>
+<span class="sd">        This input variable is passed to scipy.interpolate.interp1d and</span>
+<span class="sd">        specifies the kind of interpolation as a string (&#39;linear&#39;, &#39;nearest&#39;,</span>
+<span class="sd">        &#39;zero&#39;, &#39;slinear&#39;, &#39;quadratic, &#39;cubic&#39;) or as an integer specifying the</span>
+<span class="sd">        order of the spline interpolator to use.</span>
+
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    v, e : tuple,</span>
+<span class="sd">        v is an array of DPSS windows shaped (Kmax, N)</span>
+<span class="sd">        e are the eigenvalues</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Tridiagonal form of DPSS calculation from:</span>
+
+<span class="sd">    Slepian, D. Prolate spheroidal wave functions, Fourier analysis, and</span>
+<span class="sd">    uncertainty V: The discrete case. Bell System Technical Journal,</span>
+<span class="sd">    Volume 57 (1978), 1371430</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Kmax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">Kmax</span><span class="p">)</span>
+    <span class="n">W</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">NW</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span>
+    <span class="n">nidx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+
+    <span class="c1"># In this case, we create the dpss windows of the smaller size</span>
+    <span class="c1"># (interp_from) and then interpolate to the larger size (N)</span>
+    <span class="k">if</span> <span class="n">interp_from</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">interp_from</span> <span class="o">&gt;</span> <span class="n">N</span><span class="p">:</span>
+            <span class="n">e_s</span> <span class="o">=</span> <span class="s1">&#39;In dpss_windows, interp_from is: </span><span class="si">%s</span><span class="s1"> &#39;</span> <span class="o">%</span> <span class="n">interp_from</span>
+            <span class="n">e_s</span> <span class="o">+=</span> <span class="s1">&#39;and N is: </span><span class="si">%s</span><span class="s1">. &#39;</span> <span class="o">%</span> <span class="n">N</span>
+            <span class="n">e_s</span> <span class="o">+=</span> <span class="s1">&#39;Please enter interp_from smaller than N.&#39;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">e_s</span><span class="p">)</span>
+        <span class="n">dpss</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">d</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">dpss_windows</span><span class="p">(</span><span class="n">interp_from</span><span class="p">,</span> <span class="n">NW</span><span class="p">,</span> <span class="n">Kmax</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">this_d</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">this_d</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">I</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">this_d</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="n">interp_kind</span><span class="p">)</span>
+            <span class="n">d_temp</span> <span class="o">=</span> <span class="n">I</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">this_d</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+            <span class="c1"># Rescale:</span>
+            <span class="n">d_temp</span> <span class="o">=</span> <span class="n">d_temp</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">d_temp</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+
+            <span class="n">dpss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d_temp</span><span class="p">)</span>
+
+        <span class="n">dpss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dpss</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># here we want to set up an optimization problem to find a sequence</span>
+        <span class="c1"># whose energy is maximally concentrated within band [-W,W].</span>
+        <span class="c1"># Thus, the measure lambda(T,W) is the ratio between the energy within</span>
+        <span class="c1"># that band, and the total energy. This leads to the eigen-system</span>
+        <span class="c1"># (A - (l1)I)v = 0, where the eigenvector corresponding to the largest</span>
+        <span class="c1"># eigenvalue is the sequence with maximally concentrated energy. The</span>
+        <span class="c1"># collection of eigenvectors of this system are called Slepian</span>
+        <span class="c1"># sequences, or discrete prolate spheroidal sequences (DPSS). Only the</span>
+        <span class="c1"># first K, K = 2NW/dt orders of DPSS will exhibit good spectral</span>
+        <span class="c1"># concentration</span>
+        <span class="c1"># [see http://en.wikipedia.org/wiki/Spectral_concentration_problem]</span>
+
+        <span class="c1"># Here I set up an alternative symmetric tri-diagonal eigenvalue</span>
+        <span class="c1"># problem such that</span>
+        <span class="c1"># (B - (l2)I)v = 0, and v are our DPSS (but eigenvalues l2 != l1)</span>
+        <span class="c1"># the main diagonal = ([N-1-2*t]/2)**2 cos(2PIW), t=[0,1,2,...,N-1]</span>
+        <span class="c1"># and the first off-diagonal = t(N-t)/2, t=[1,2,...,N-1]</span>
+        <span class="c1"># [see Percival and Walden, 1993]</span>
+        <span class="n">diagonal</span> <span class="o">=</span> <span class="p">((</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">nidx</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">W</span><span class="p">)</span>
+        <span class="n">off_diag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">nidx</span><span class="p">)</span>
+        <span class="n">off_diag</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">nidx</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="n">nidx</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mf">2.</span>
+        <span class="c1"># put the diagonals in LAPACK &quot;packed&quot; storage</span>
+        <span class="n">ab</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span>
+        <span class="n">ab</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">diagonal</span>
+        <span class="n">ab</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">off_diag</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># only calculate the highest Kmax eigenvalues</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigvals_banded</span><span class="p">(</span><span class="n">ab</span><span class="p">,</span> <span class="n">select</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">,</span>
+                                  <span class="n">select_range</span><span class="o">=</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="n">Kmax</span><span class="p">,</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">w</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># find the corresponding eigenvectors via inverse iteration</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+        <span class="n">dpss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">Kmax</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Kmax</span><span class="p">):</span>
+            <span class="n">dpss</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">tridi_inverse_iteration</span><span class="p">(</span>
+                <span class="n">diagonal</span><span class="p">,</span> <span class="n">off_diag</span><span class="p">,</span> <span class="n">w</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">x0</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">((</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+                <span class="p">)</span>
+
+    <span class="c1"># By convention (Percival and Walden, 1993 pg 379)</span>
+    <span class="c1"># * symmetric tapers (k=0,2,4,...) should have a positive average.</span>
+    <span class="c1"># * antisymmetric tapers should begin with a positive lobe</span>
+    <span class="n">fix_symmetric</span> <span class="o">=</span> <span class="p">(</span><span class="n">dpss</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fix_symmetric</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">dpss</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="c1"># rather than test the sign of one point, test the sign of the</span>
+    <span class="c1"># linear slope up to the first (largest) peak</span>
+    <span class="n">pk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">dpss</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="n">N</span><span class="o">//</span><span class="mi">2</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pk</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dpss</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="n">p</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">dpss</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="c1"># Now find the eigenvalues of the original spectral concentration problem</span>
+    <span class="c1"># Use the autocorr sequence technique from Percival and Walden, 1993 pg 390</span>
+    <span class="n">dpss_rxx</span> <span class="o">=</span> <span class="n">autocorr</span><span class="p">(</span><span class="n">dpss</span><span class="p">)</span> <span class="o">*</span> <span class="n">N</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">W</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sinc</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">W</span> <span class="o">*</span> <span class="n">nidx</span><span class="p">)</span>
+    <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">W</span>
+    <span class="n">eigvals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dpss_rxx</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">dpss</span><span class="p">,</span> <span class="n">eigvals</span></div>
+
+
+<div class="viewcode-block" id="tridi_inverse_iteration"><a class="viewcode-back" href="../../../../api/wonambi.trans.extern.dpss.html#wonambi.trans.extern.dpss.tridi_inverse_iteration">[docs]</a><span class="k">def</span> <span class="nf">tridi_inverse_iteration</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Perform an inverse iteration to find the eigenvector corresponding</span>
+<span class="sd">    to the given eigenvalue in a symmetric tridiagonal system.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    d : ndarray</span>
+<span class="sd">      main diagonal of the tridiagonal system</span>
+<span class="sd">    e : ndarray</span>
+<span class="sd">      offdiagonal stored in e[:-1]</span>
+<span class="sd">    w : float</span>
+<span class="sd">      eigenvalue of the eigenvector</span>
+<span class="sd">    x0 : ndarray</span>
+<span class="sd">      initial point to start the iteration</span>
+<span class="sd">    rtol : float</span>
+<span class="sd">      tolerance for the norm of the difference of iterates</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    e : ndarray</span>
+<span class="sd">      The converged eigenvector</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">eig_diag</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">w</span>
+    <span class="k">if</span> <span class="n">x0</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+    <span class="n">x_prev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+    <span class="n">norm_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+    <span class="c1"># the eigenvector is unique up to sign change, so iterate</span>
+    <span class="c1"># until || |x^(n)| - |x^(n-1)| ||^2 &lt; rtol</span>
+    <span class="n">x0</span> <span class="o">/=</span> <span class="n">norm_x</span>
+    <span class="k">while</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x_prev</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">rtol</span><span class="p">:</span>
+        <span class="n">x_prev</span> <span class="o">=</span> <span class="n">x0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">tridisolve</span><span class="p">(</span><span class="n">eig_diag</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span>
+        <span class="n">norm_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+        <span class="n">x0</span> <span class="o">/=</span> <span class="n">norm_x</span>
+    <span class="k">return</span> <span class="n">x0</span></div>
+
+
+<div class="viewcode-block" id="tridisolve"><a class="viewcode-back" href="../../../../api/wonambi.trans.extern.dpss.html#wonambi.trans.extern.dpss.tridisolve">[docs]</a><span class="k">def</span> <span class="nf">tridisolve</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">overwrite_b</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Symmetric tridiagonal system solver,</span>
+<span class="sd">    from Golub and Van Loan, Matrix Computations pg 157</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    d : ndarray</span>
+<span class="sd">      main diagonal stored in d[:]</span>
+<span class="sd">    e : ndarray</span>
+<span class="sd">      superdiagonal stored in e[:-1]</span>
+<span class="sd">    b : ndarray</span>
+<span class="sd">      RHS vector</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    x : ndarray</span>
+<span class="sd">      Solution to Ax = b (if overwrite_b is False). Otherwise solution is</span>
+<span class="sd">      stored in previous RHS vector b</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="c1"># work vectors</span>
+    <span class="n">dw</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">ew</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">overwrite_b</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">b</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+        <span class="c1"># e^(k-1) = e(k-1) / d(k-1)</span>
+        <span class="c1"># d(k) = d(k) - e^(k-1)e(k-1) / d(k-1)</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">ew</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">ew</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span> <span class="o">/</span> <span class="n">dw</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">dw</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">dw</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">t</span> <span class="o">*</span> <span class="n">ew</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">ew</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">dw</span><span class="p">[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">/</span> <span class="n">dw</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">ew</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">overwrite_b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span></div>
+
+
+<div class="viewcode-block" id="autocorr"><a class="viewcode-back" href="../../../../api/wonambi.trans.extern.dpss.html#wonambi.trans.extern.dpss.autocorr">[docs]</a><span class="k">def</span> <span class="nf">autocorr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the autocorrelation of signal s at all lags.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    x : ndarray</span>
+<span class="sd">    axis : time axis</span>
+<span class="sd">    all_lags : {True/False}</span>
+<span class="sd">       whether to return all nonzero lags, or to clip the length of r_xy</span>
+<span class="sd">       to be the length of x and y. If False, then the zero lag correlation</span>
+<span class="sd">       is at index 0. Otherwise, it is found at (len(x) + len(y) - 1)/2</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    Adheres to the definition</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">    R_{xx}[k]=E\{X[n+k]X^{*}[n]\}</span>
+
+<span class="sd">    where X is a discrete, stationary (ergodic) random process</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># do same computation as autocovariance,</span>
+    <span class="c1"># but without subtracting the mean</span>
+    <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;debias&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">autocov</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="autocov"><a class="viewcode-back" href="../../../../api/wonambi.trans.extern.dpss.html#wonambi.trans.extern.dpss.autocov">[docs]</a><span class="k">def</span> <span class="nf">autocov</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the autocovariance of signal s at all lags.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    x : ndarray</span>
+<span class="sd">    axis : time axis</span>
+<span class="sd">    all_lags : {True/False}</span>
+<span class="sd">       whether to return all nonzero lags, or to clip the length of r_xy</span>
+<span class="sd">       to be the length of x and y. If False, then the zero lag correlation</span>
+<span class="sd">       is at index 0. Otherwise, it is found at (len(x) + len(y) - 1)/2</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    cxx : ndarray</span>
+<span class="sd">       The autocovariance function</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    Adheres to the definition</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">    C_{xx}[k]=E\{(X[n+k]-E\{X\})(X[n]-E\{X\})^{*}\}</span>
+
+<span class="sd">    where X is a discrete, stationary (ergodic) random process</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># only remove the mean once, if needed</span>
+    <span class="n">debias</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;debias&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">axis</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;axis&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">debias</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">remove_bias</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
+    <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;debias&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">crosscov</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="crosscov"><a class="viewcode-back" href="../../../../api/wonambi.trans.extern.dpss.html#wonambi.trans.extern.dpss.crosscov">[docs]</a><span class="k">def</span> <span class="nf">crosscov</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">all_lags</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">debias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the crosscovariance sequence between two ndarrays.</span>
+<span class="sd">    This is performed by calling fftconvolve on x, y[::-1]</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    x : ndarray</span>
+<span class="sd">    y : ndarray</span>
+<span class="sd">    axis : time axis</span>
+<span class="sd">    all_lags : {True/False}</span>
+<span class="sd">       whether to return all nonzero lags, or to clip the length of s_xy</span>
+<span class="sd">       to be the length of x and y. If False, then the zero lag covariance</span>
+<span class="sd">       is at index 0. Otherwise, it is found at (len(x) + len(y) - 1)/2</span>
+<span class="sd">    debias : {True/False}</span>
+<span class="sd">       Always removes an estimate of the mean along the axis, unless</span>
+<span class="sd">       told not to (eg X and Y are known zero-mean)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    cxy : ndarray</span>
+<span class="sd">       The crosscovariance function</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    cross covariance of processes x and y is defined as</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">    C_{xy}[k]=E\{(X(n+k)-E\{X\})(Y(n)-E\{Y\})^{*}\}</span>
+
+<span class="sd">    where X and Y are discrete, stationary (or ergodic) random processes</span>
+
+<span class="sd">    Also note that this routine is the workhorse for all auto/cross/cov/corr</span>
+<span class="sd">    functions.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">!=</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s1">&#39;crosscov() only works on same-length sequences for now&#39;</span>
+            <span class="p">)</span>
+    <span class="k">if</span> <span class="n">debias</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">remove_bias</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">remove_bias</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
+    <span class="n">slicing</span> <span class="o">=</span> <span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">]</span>
+    <span class="n">slicing</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">cxy</span> <span class="o">=</span> <span class="n">fftconvolve</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">slicing</span><span class="p">)]</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">)</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">normalize</span><span class="p">:</span>
+        <span class="n">cxy</span> <span class="o">/=</span> <span class="n">N</span>
+    <span class="k">if</span> <span class="n">all_lags</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cxy</span>
+    <span class="n">slicing</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cxy</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">slicing</span><span class="p">)]</span></div>
+
+
+<div class="viewcode-block" id="fftconvolve"><a class="viewcode-back" href="../../../../api/wonambi.trans.extern.dpss.html#wonambi.trans.extern.dpss.fftconvolve">[docs]</a><span class="k">def</span> <span class="nf">fftconvolve</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">in2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;full&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Convolve two N-dimensional arrays using FFT. See convolve.</span>
+
+<span class="sd">    This is a fix of scipy.signal.fftconvolve, adding an axis argument and</span>
+<span class="sd">    importing locally the stuff only needed for this function</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">in1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">s2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">in2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">complex_result</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">in1</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">complexfloating</span><span class="p">)</span> <span class="ow">or</span>
+                      <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">in2</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">complexfloating</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">fslice</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">sz</span><span class="p">))</span> <span class="k">for</span> <span class="n">sz</span> <span class="ow">in</span> <span class="n">size</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">equal_shapes</span> <span class="o">=</span> <span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span>
+        <span class="c1"># allow equal_shapes[axis] to be False</span>
+        <span class="n">equal_shapes</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">assert</span> <span class="n">equal_shapes</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s1">&#39;Shape mismatch on non-convolving axes&#39;</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">s1</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">+</span> <span class="n">s2</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">fslice</span> <span class="o">=</span> <span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">s1</span><span class="p">]</span>
+        <span class="n">fslice</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">size</span><span class="p">))</span>
+        <span class="n">fslice</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">fslice</span><span class="p">)</span>
+
+    <span class="c1"># Always use 2**n-sized FFT</span>
+    <span class="n">fsize</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">size</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">IN1</span> <span class="o">=</span> <span class="n">fftpack</span><span class="o">.</span><span class="n">fftn</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">fsize</span><span class="p">)</span>
+        <span class="n">IN1</span> <span class="o">*=</span> <span class="n">fftpack</span><span class="o">.</span><span class="n">fftn</span><span class="p">(</span><span class="n">in2</span><span class="p">,</span> <span class="n">fsize</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">fftpack</span><span class="o">.</span><span class="n">ifftn</span><span class="p">(</span><span class="n">IN1</span><span class="p">)[</span><span class="n">fslice</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">IN1</span> <span class="o">=</span> <span class="n">fftpack</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">fsize</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+        <span class="n">IN1</span> <span class="o">*=</span> <span class="n">fftpack</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">in2</span><span class="p">,</span> <span class="n">fsize</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">fftpack</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">IN1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)[</span><span class="n">fslice</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">del</span> <span class="n">IN1</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">complex_result</span><span class="p">:</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">ret</span><span class="o">.</span><span class="n">real</span>
+    <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;full&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ret</span>
+    <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;same&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+            <span class="n">osize</span> <span class="o">=</span> <span class="n">s1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">osize</span> <span class="o">=</span> <span class="n">s2</span>
+        <span class="k">return</span> <span class="n">signaltools</span><span class="o">.</span><span class="n">_centered</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="n">osize</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;valid&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">signaltools</span><span class="o">.</span><span class="n">_centered</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">s2</span> <span class="o">-</span> <span class="n">s1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

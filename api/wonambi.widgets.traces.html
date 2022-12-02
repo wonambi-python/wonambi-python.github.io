@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.widgets.traces module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.widgets.utils module" href="wonambi.widgets.utils.html" />
+    <link rel="prev" title="wonambi.widgets.spectrum module" href="wonambi.widgets.spectrum.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.widgets.html">wonambi.widgets package</a></li>
+      <li class="breadcrumb-item active">wonambi.widgets.traces module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.widgets.traces">
+<span id="wonambi-widgets-traces-module"></span><h1>wonambi.widgets.traces module<a class="headerlink" href="#module-wonambi.widgets.traces" title="Permalink to this heading"></a></h1>
+<p>Definition of the main widgets, with recordings.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.ConfigTraces">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.traces.</span></span><span class="sig-name descname"><span class="pre">ConfigTraces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update_widget</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#ConfigTraces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.ConfigTraces" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="wonambi.widgets.settings.html#wonambi.widgets.settings.Config" title="wonambi.widgets.settings.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a></p>
+<p>Widget with preferences in Settings window for Overview.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.ConfigTraces.create_config">
+<span class="sig-name descname"><span class="pre">create_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#ConfigTraces.create_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.ConfigTraces.create_config" title="Permalink to this definition"></a></dt>
+<dd><p>Placeholder: it’ll be replaced with actual layout.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.widgets.traces.</span></span><span class="sig-name descname"><span class="pre">Traces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QGraphicsView</span></code></p>
+<p>Main widget that contains the recordings to be plotted.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.parent" title="Permalink to this definition"></a></dt>
+<dd><p>the main window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of QMainWindow</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.config">
+<span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.config" title="Permalink to this definition"></a></dt>
+<dd><p>settings for this widget</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of <a class="reference internal" href="#wonambi.widgets.traces.ConfigTraces" title="wonambi.widgets.traces.ConfigTraces">ConfigTraces</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.y_scrollbar_value">
+<span class="sig-name descname"><span class="pre">y_scrollbar_value</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.y_scrollbar_value" title="Permalink to this definition"></a></dt>
+<dd><p>position of the vertical scrollbar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.data" title="Permalink to this definition"></a></dt>
+<dd><p>filtered and reref’ed data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of <a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.ChanTime" title="wonambi.datatype.ChanTime">ChanTime</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.chan">
+<span class="sig-name descname"><span class="pre">chan</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.chan" title="Permalink to this definition"></a></dt>
+<dd><p>list of channels (labels and channel group)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.chan_pos">
+<span class="sig-name descname"><span class="pre">chan_pos</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.chan_pos" title="Permalink to this definition"></a></dt>
+<dd><p>y-position of each channel (based on value at 0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.chan_scale">
+<span class="sig-name descname"><span class="pre">chan_scale</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.chan_scale" title="Permalink to this definition"></a></dt>
+<dd><p>scaling factor for each channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.time_pos">
+<span class="sig-name descname"><span class="pre">time_pos</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.time_pos" title="Permalink to this definition"></a></dt>
+<dd><p>we need to keep track of the position of time label during creation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of QPointF</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.sel_chan">
+<span class="sig-name descname"><span class="pre">sel_chan</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.sel_chan" title="Permalink to this definition"></a></dt>
+<dd><p>index of self.chan of the first selected channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.sel_xy">
+<span class="sig-name descname"><span class="pre">sel_xy</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.sel_xy" title="Permalink to this definition"></a></dt>
+<dd><p>x and y position of the first selected point</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple of 2 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.scene">
+<span class="sig-name descname"><span class="pre">scene</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.scene" title="Permalink to this definition"></a></dt>
+<dd><p>the main scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of QGraphicsScene</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.idx_label">
+<span class="sig-name descname"><span class="pre">idx_label</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.idx_label" title="Permalink to this definition"></a></dt>
+<dd><p>the channel labels on the y-axis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of instance of QGraphicsSimpleTextItem</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.idx_time">
+<span class="sig-name descname"><span class="pre">idx_time</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.idx_time" title="Permalink to this definition"></a></dt>
+<dd><p>the time labels on the x-axis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of instance of QGraphicsSimpleTextItem</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.idx_sel">
+<span class="sig-name descname"><span class="pre">idx_sel</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.idx_sel" title="Permalink to this definition"></a></dt>
+<dd><p>the rectangle showing the selection (both for selection and event)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of QGraphicsRectItem</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.idx_info">
+<span class="sig-name descname"><span class="pre">idx_info</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.idx_info" title="Permalink to this definition"></a></dt>
+<dd><p>the rectangle showing the selection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of QGraphicsSimpleTextItem</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.idx_markers">
+<span class="sig-name descname"><span class="pre">idx_markers</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.idx_markers" title="Permalink to this definition"></a></dt>
+<dd><p>list of markers in the dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of QGraphicsRectItem</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.idx_annot">
+<span class="sig-name descname"><span class="pre">idx_annot</span></span><a class="headerlink" href="#wonambi.widgets.traces.Traces.idx_annot" title="Permalink to this definition"></a></dt>
+<dd><p>list of user-made annotations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of QGraphicsRectItem</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.X_length">
+<span class="sig-name descname"><span class="pre">X_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_window_length</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.X_length"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.X_length" title="Permalink to this definition"></a></dt>
+<dd><p>Use presets for length of the window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.X_less">
+<span class="sig-name descname"><span class="pre">X_less</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.X_less"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.X_less" title="Permalink to this definition"></a></dt>
+<dd><p>Zoom in on the x-axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.X_more">
+<span class="sig-name descname"><span class="pre">X_more</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.X_more"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.X_more" title="Permalink to this definition"></a></dt>
+<dd><p>Zoom out on the x-axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.Y_ampl">
+<span class="sig-name descname"><span class="pre">Y_ampl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_y_scale</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.Y_ampl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.Y_ampl" title="Permalink to this definition"></a></dt>
+<dd><p>Make scaling on Y axis using predefined values</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.Y_dist">
+<span class="sig-name descname"><span class="pre">Y_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_y_distance</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.Y_dist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.Y_dist" title="Permalink to this definition"></a></dt>
+<dd><p>Use preset values for the distance between lines.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.Y_less">
+<span class="sig-name descname"><span class="pre">Y_less</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.Y_less"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.Y_less" title="Permalink to this definition"></a></dt>
+<dd><p>Decrease the scaling.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.Y_more">
+<span class="sig-name descname"><span class="pre">Y_more</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.Y_more"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.Y_more" title="Permalink to this definition"></a></dt>
+<dd><p>Increase the scaling.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.Y_tighter">
+<span class="sig-name descname"><span class="pre">Y_tighter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.Y_tighter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.Y_tighter" title="Permalink to this definition"></a></dt>
+<dd><p>Decrease the distance of the lines.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.Y_wider">
+<span class="sig-name descname"><span class="pre">Y_wider</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.Y_wider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.Y_wider" title="Permalink to this definition"></a></dt>
+<dd><p>Increase the distance of the lines.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.add_chan_labels">
+<span class="sig-name descname"><span class="pre">add_chan_labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.add_chan_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.add_chan_labels" title="Permalink to this definition"></a></dt>
+<dd><p>Add channel labels on the left.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.add_time">
+<span class="sig-name descname"><span class="pre">add_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extra_time</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.add_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.add_time" title="Permalink to this definition"></a></dt>
+<dd><p>Go to the predefined time forward.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.add_time_labels">
+<span class="sig-name descname"><span class="pre">add_time_labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.add_time_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.add_time_labels" title="Permalink to this definition"></a></dt>
+<dd><p>Add time labels at the bottom.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.add_traces">
+<span class="sig-name descname"><span class="pre">add_traces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.add_traces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.add_traces" title="Permalink to this definition"></a></dt>
+<dd><p>Add traces based on self.data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.change_event_type">
+<span class="sig-name descname"><span class="pre">change_event_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.change_event_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.change_event_type" title="Permalink to this definition"></a></dt>
+<dd><p>Action: change highlighted event’s type by cycling through event
+type list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.create_action">
+<span class="sig-name descname"><span class="pre">create_action</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.create_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.create_action" title="Permalink to this definition"></a></dt>
+<dd><p>Create actions associated with this widget.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.create_chan_labels">
+<span class="sig-name descname"><span class="pre">create_chan_labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.create_chan_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.create_chan_labels" title="Permalink to this definition"></a></dt>
+<dd><p>Create the channel labels, but don’t plot them yet.</p>
+<p class="rubric">Notes</p>
+<p>It’s necessary to have the width of the labels, so that we can adjust
+the main scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.create_time_labels">
+<span class="sig-name descname"><span class="pre">create_time_labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.create_time_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.create_time_labels" title="Permalink to this definition"></a></dt>
+<dd><p>Create the time labels, but don’t plot them yet.</p>
+<p class="rubric">Notes</p>
+<p>It’s necessary to have the height of the time labels, so that we can
+adjust the main scene.</p>
+<p>Not very robust, because it uses seconds as integers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.display">
+<span class="sig-name descname"><span class="pre">display</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.display"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.display" title="Permalink to this definition"></a></dt>
+<dd><p>Display the recordings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.display_annotations">
+<span class="sig-name descname"><span class="pre">display_annotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.display_annotations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.display_annotations" title="Permalink to this definition"></a></dt>
+<dd><p>Mark all the bookmarks/events, on top of first plot.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.display_grid">
+<span class="sig-name descname"><span class="pre">display_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.display_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.display_grid" title="Permalink to this definition"></a></dt>
+<dd><p>Display grid on x-axis and y-axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.display_markers">
+<span class="sig-name descname"><span class="pre">display_markers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.display_markers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.display_markers" title="Permalink to this definition"></a></dt>
+<dd><p>Add markers on top of first plot.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.go_to_epoch">
+<span class="sig-name descname"><span class="pre">go_to_epoch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_text_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.go_to_epoch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.go_to_epoch" title="Permalink to this definition"></a></dt>
+<dd><p>Go to any window</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.highlight_event">
+<span class="sig-name descname"><span class="pre">highlight_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annot</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.highlight_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.highlight_event" title="Permalink to this definition"></a></dt>
+<dd><p>Highlight an annotation on the trace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>annot</strong> (<em>intance</em><em> of </em><a class="reference internal" href="wonambi.widgets.utils.html#wonambi.widgets.utils.RectMarker" title="wonambi.widgets.utils.RectMarker"><em>wonambi.widgets.utils.RectMarker</em></a>) – existing annotation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QKeyEvent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.keyPressEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.line_up_with_epoch">
+<span class="sig-name descname"><span class="pre">line_up_with_epoch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.line_up_with_epoch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.line_up_with_epoch" title="Permalink to this definition"></a></dt>
+<dd><p>Go to the start of the present epoch.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.mouseMoveEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.mouseMoveEvent" title="Permalink to this definition"></a></dt>
+<dd><p>When normal selection, update power spectrum with current selection.
+Otherwise, show the range of the new marker.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.mousePressEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.mousePressEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Create a marker or start selection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>instance</em><em> of </em><em>QtCore.QEvent</em>) – it contains the position that was clicked.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.mouseReleaseEvent">
+<span class="sig-name descname"><span class="pre">mouseReleaseEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.mouseReleaseEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.mouseReleaseEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Create a new event or marker, or show the previous power spectrum</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.next_event">
+<span class="sig-name descname"><span class="pre">next_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.next_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.next_event" title="Permalink to this definition"></a></dt>
+<dd><p>Go to next event.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.page_next">
+<span class="sig-name descname"><span class="pre">page_next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.page_next"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.page_next" title="Permalink to this definition"></a></dt>
+<dd><p>Go to the next page.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.page_prev">
+<span class="sig-name descname"><span class="pre">page_prev</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.page_prev"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.page_prev" title="Permalink to this definition"></a></dt>
+<dd><p>Go to the previous page.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.read_data">
+<span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.read_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.read_data" title="Permalink to this definition"></a></dt>
+<dd><p>Read the data to plot.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.reset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.resizeEvent">
+<span class="sig-name descname"><span class="pre">resizeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.resizeEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.resizeEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Resize scene so that it fits the whole widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>instance</em><em> of </em><em>QtCore.QEvent</em>) – not important</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function overwrites Qt function, therefore the non-standard
+name. Argument also depends on Qt.</p>
+<p>The function is used to change the scale of view, so that the scene
+fits the whole scene. There are two problems that I could not fix: 1)
+how to give the width of the label in absolute width, 2) how to strech
+scene just enough that it doesn’t trigger a scrollbar. However, it’s
+pretty good as it is now.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.step_next">
+<span class="sig-name descname"><span class="pre">step_next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.step_next"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.step_next" title="Permalink to this definition"></a></dt>
+<dd><p>Go to the next step.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.Traces.step_prev">
+<span class="sig-name descname"><span class="pre">step_prev</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/widgets/traces.html#Traces.step_prev"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.widgets.traces.Traces.step_prev" title="Permalink to this definition"></a></dt>
+<dd><p>Go to the previous step.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.widgets.traces.take_raw_name">
+<span class="sig-prename descclassname"><span class="pre">wonambi.widgets.traces.</span></span><span class="sig-name descname"><span class="pre">take_raw_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wonambi.widgets.traces.take_raw_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.widgets.spectrum.html" class="btn btn-neutral float-left" title="wonambi.widgets.spectrum module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.widgets.utils.html" class="btn btn-neutral float-right" title="wonambi.widgets.utils module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

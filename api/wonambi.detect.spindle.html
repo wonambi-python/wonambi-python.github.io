@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.detect.spindle module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.ioeeg package" href="wonambi.ioeeg.html" />
+    <link rel="prev" title="wonambi.detect.slowwave module" href="wonambi.detect.slowwave.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.detect.html">wonambi.detect package</a></li>
+      <li class="breadcrumb-item active">wonambi.detect.spindle module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.detect.spindle">
+<span id="wonambi-detect-spindle-module"></span><h1>wonambi.detect.spindle module<a class="headerlink" href="#module-wonambi.detect.spindle" title="Permalink to this heading"></a></h1>
+<p>Module to detect spindles.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.DetectSpindle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">DetectSpindle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Moelle2011'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#DetectSpindle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.DetectSpindle" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Design spindle detection on a single channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>method</strong> (<em>str</em>) – one of the predefined methods</p></li>
+<li><p><strong>frequency</strong> (<em>tuple</em><em> of </em><em>float</em>) – low and high frequency of spindle band</p></li>
+<li><p><strong>duration</strong> (<em>tuple</em><em> of </em><em>float</em>) – min and max duration of spindles</p></li>
+<li><p><strong>merge</strong> (<em>bool</em>) – if True, then after events are detected on every channel, events on
+different channels that are separated by less than min_interval will be
+merged into a single event, with ‘chan’ = the chan of the earlier-onset
+event.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.DetectSpindle.tolerance">
+<span class="sig-name descname"><span class="pre">tolerance</span></span><a class="headerlink" href="#wonambi.detect.spindle.DetectSpindle.tolerance" title="Permalink to this definition"></a></dt>
+<dd><p>during detection and prior to applying the duration criterion,
+candidate events separated by less than this time interval are merged.
+In this way, the detector becomes tolerant to short dips below the
+eligibility threshold (e.g. if the spindle power drops for a split
+second).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.DetectSpindle.min_interval">
+<span class="sig-name descname"><span class="pre">min_interval</span></span><a class="headerlink" href="#wonambi.detect.spindle.DetectSpindle.min_interval" title="Permalink to this definition"></a></dt>
+<dd><p>after the duration criterion is applied, events separated by less than
+this interval are merged into a single event, with ‘chan’ = the chan
+of the earlier-onset event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.DetectSpindle.power_peaks">
+<span class="sig-name descname"><span class="pre">power_peaks</span></span><a class="headerlink" href="#wonambi.detect.spindle.DetectSpindle.power_peaks" title="Permalink to this definition"></a></dt>
+<dd><p>for peak power statistics. ‘peak’ or ‘interval’. If None, values will
+all be NaN</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Notes</p>
+<p>See individual detect_* functions for other attribute descriptions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.define_threshold">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">define_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#define_threshold"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.define_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>Return the value of the threshold based on relative values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data after selection-transformation</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – one of ‘mean’, ‘median’, ‘std’, ‘mean+std’, ‘median+std’, ‘histmax’</p></li>
+<li><p><strong>value</strong> (<em>float</em>) – value to multiply the values for</p></li>
+<li><p><strong>nbins</strong> (<em>int</em>) – for histmax method only, number of bins in the histogram</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>float</em> – threshold in useful units.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_Concordia">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_Concordia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_Concordia"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_Concordia" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection, experimental Concordia method. Similar to Moelle 2011
+and Nir2011.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘det_butter’<span class="classifier">dict</span></dt><dd><p>parameters for ‘butter’,</p>
+</dd>
+<dt>’moving_rms’<span class="classifier">dict</span></dt><dd><p>parameters for ‘moving_rms’</p>
+</dd>
+<dt>’smooth’<span class="classifier">dict</span></dt><dd><p>parameters for ‘smooth’</p>
+</dd>
+<dt>’det_thresh’<span class="classifier">float</span></dt><dd><p>low detection threshold</p>
+</dd>
+<dt>’det_thresh_hi’<span class="classifier">float</span></dt><dd><p>high detection threshold</p>
+</dd>
+<dt>’sel_thresh’<span class="classifier">float</span></dt><dd><p>selection threshold</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’, ‘det_value_hi’ with detection values, ‘sel_value’ with
+selection value</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_FASST">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_FASST</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rms'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_FASST"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_FASST" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on FASST method, itself based on Moelle et al.
+(2002).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘det_butter’<span class="classifier">dict</span></dt><dd><p>parameters for ‘butter’,</p>
+</dd>
+<dt>’moving_rms’<span class="classifier">dict</span></dt><dd><p>parameters for ‘moving_rms’</p>
+</dd>
+<dt>’smooth’<span class="classifier">dict</span></dt><dd><p>parameters for ‘smooth’</p>
+</dd>
+<dt>’det_thresh’<span class="classifier">float</span></dt><dd><p>detection threshold (percentile)</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>submethod</strong> (<em>str</em>) – ‘abs’ (rectified) or ‘rms’ (root-mean-square)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ with nan,
+‘sel_value’ with nan</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Leclercq, Y. et al. Compu. Intel. and Neurosci. (2011).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_Ferrarelli2007">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_Ferrarelli2007</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_Ferrarelli2007"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_Ferrarelli2007" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on Ferrarelli et al. 2007, and scripts obtained
+from Warby et al. (2014).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘det_remez’<span class="classifier">dict</span></dt><dd><p>parameters for ‘remez’,</p>
+</dd>
+<dt>’det_thresh’<span class="classifier">float</span></dt><dd><p>detection threshold</p>
+</dd>
+<dt>’sel_thresh’<span class="classifier">float</span></dt><dd><p>selection threshold</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ with nan,
+‘sel_value’ with selection value</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Ferrarelli, F. et al. Am. J. Psychiatry 164, 483-92 (2007).
+Warby, S. C. et al. Nat. Meth. 11(4), 385-92 (2014).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_Lacourse2018">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_Lacourse2018</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_Lacourse2018"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_Lacourse2018" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on Lacourse et al., 2018</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘det_butter’<span class="classifier">dict</span></dt><dd><p>parameters for ‘butter’,</p>
+</dd>
+<dt>’det_butter2’<span class="classifier">dict</span></dt><dd><p>parameters for ‘butter’,</p>
+</dd>
+<dt>’windowing’ :</dt><dd><p>’step’ for downsampling and ‘dur’ for moving window duration</p>
+</dd>
+<dt>’moving_ms’<span class="classifier">dict</span></dt><dd><p>parameters for ‘moving_rms’</p>
+</dd>
+<dt>’moving_power_ratio’ :</dt><dd><p>parameters for ‘moving_power_ratio’</p>
+</dd>
+<dt>’zscore’ :</dt><dd><p>parameters for ‘moving_zscore’</p>
+</dd>
+<dt>’moving_covar’ :</dt><dd><p>parameters for ‘moving_covar’</p>
+</dd>
+<dt>’moving_sd’ :</dt><dd><p>parameters for ‘moving_sd’</p>
+</dd>
+<dt>’smooth’<span class="classifier">dict</span></dt><dd><p>parameters for ‘smooth’</p>
+</dd>
+<dt>’abs_pow_thresh’<span class="classifier">float</span></dt><dd><p>absolute power threshold</p>
+</dd>
+<dt>’rel_pow_thresh’<span class="classifier">float</span></dt><dd><p>relative power threshold</p>
+</dd>
+<dt>’covar_thresh’<span class="classifier">float</span></dt><dd><p>covariance threshold</p>
+</dd>
+<dt>’corr_thresh’<span class="classifier">float</span></dt><dd><p>coorelation threshold</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ is nan,
+‘sel_value’ is nan (for consistency with other methods)</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Lacourse, K. et al. J. Neurosci. Meth. (2018).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_Martin2013">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_Martin2013</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_Martin2013"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_Martin2013" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on Martin et al. 2013</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘det_remez’<span class="classifier">dict</span></dt><dd><p>parameters for ‘remez’ filter</p>
+</dd>
+<dt>’moving_rms’<span class="classifier">dict</span></dt><dd><p>parameters for ‘moving_rms’</p>
+</dd>
+<dt>’det_thresh’<span class="classifier">float</span></dt><dd><p>percentile for detection threshold</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ is nan,
+‘sel_value’ is nan (for consistency with other methods)</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Martin, N. et al. Neurobio Aging 34(2), 468-76 (2013).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_Moelle2011">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_Moelle2011</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_Moelle2011"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_Moelle2011" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on Moelle et al. 2011</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘det_remez’<span class="classifier">dict</span></dt><dd><p>parameters for ‘remez’,</p>
+</dd>
+<dt>’moving_rms’<span class="classifier">dict</span></dt><dd><p>parameters for ‘moving_rms’</p>
+</dd>
+<dt>’smooth’<span class="classifier">dict</span></dt><dd><p>parameters for ‘smooth’</p>
+</dd>
+<dt>’det_thresh’<span class="classifier">float</span></dt><dd><p>detection threshold</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ with nan,
+‘sel_value’ with nan</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Moelle, M. et al. J. Neurosci. 22(24), 10941-7 (2002).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_Nir2011">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_Nir2011</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_Nir2011"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_Nir2011" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on Nir et al. 2011</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘det_butter’<span class="classifier">dict</span></dt><dd><p>parameters for ‘butter’,</p>
+</dd>
+<dt>’smooth’<span class="classifier">dict</span></dt><dd><p>parameters for ‘gaussian’</p>
+</dd>
+<dt>’det_thresh’<span class="classifier">float</span></dt><dd><p>detection threshold</p>
+</dd>
+<dt>’sel_thresh’<span class="classifier">float</span></dt><dd><p>selection threshold</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ with nan,
+‘sel_value’ with selection value</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This paper also selects channels carefully:
+‘First, the channels with spindle activity in NREM sleep were
+chosen for further analysis.’</p>
+<p>‘Third, those channels, in which an increase in spectral power
+within the detected events was restricted to the spindle-frequency
+range (10-16 Hz) rather than broadband.’</p>
+<p class="rubric">References</p>
+<p>Nir, Y. et al. Neuron 70, 153-69 (2011).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_Ray2015">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_Ray2015</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_Ray2015"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_Ray2015" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on Ray et al., 2015</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘cdemod’<span class="classifier">dict</span></dt><dd><p>parameters for ‘cdemod’ (complex demodulation)</p>
+</dd>
+<dt>’det_butter’<span class="classifier">dict</span></dt><dd><p>parameters for ‘butter’,</p>
+</dd>
+<dt>’det_low_butter’<span class="classifier">dict</span></dt><dd><p>parameters for ‘low_butter’,</p>
+</dd>
+<dt>’smooth’<span class="classifier">dict</span></dt><dd><p>parameters for ‘smooth’</p>
+</dd>
+<dt>’zscore’<span class="classifier">dict</span></dt><dd><p>parameters for ‘moving_zscore’</p>
+</dd>
+<dt>’det_thresh’<span class="classifier">float</span></dt><dd><p>detection threshold</p>
+</dd>
+<dt>’sel_thresh’<span class="classifier">nan</span></dt><dd><p>selection threshold</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ is nan,
+‘sel_value’ is nan (for consistency with other methods)</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Ray, L. B. et al. Front. Hum. Neurosci. 9-16 (2015).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_UCSD">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_UCSD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_UCSD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_UCSD" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on the UCSD method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>det_wavelet<span class="classifier">dict</span></dt><dd><p>parameters for ‘wavelet_real’,</p>
+</dd>
+<dt>det_thres’<span class="classifier">float</span></dt><dd><p>detection threshold</p>
+</dd>
+<dt>sel_wavelet<span class="classifier">dict</span></dt><dd><p>parameters for ‘wavelet_real’</p>
+</dd>
+<dt>sel_thresh<span class="classifier">float</span></dt><dd><p>selection threshold</p>
+</dd>
+<dt>ratio_thresh<span class="classifier">float</span></dt><dd><p>ratio between power inside and outside spindle band to accept them</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ with nan,
+‘sel_value’ with selection value</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_Wamsley2012">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_Wamsley2012</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_Wamsley2012"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_Wamsley2012" title="Permalink to this definition"></a></dt>
+<dd><p>Spindle detection based on Wamsley et al. 2012</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the time points for each sample</p></li>
+<li><p><strong>opts</strong> (<em>instance</em><em> of </em><em>'DetectSpindle'</em>) – <dl class="simple">
+<dt>‘det_wavelet’<span class="classifier">dict</span></dt><dd><p>parameters for ‘morlet’,</p>
+</dd>
+<dt>’smooth’<span class="classifier">dict</span></dt><dd><p>parameters for ‘smooth’</p>
+</dd>
+<dt>’det_thresh’<span class="classifier">float</span></dt><dd><p>detection threshold</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>list of dict</em> – list of detected spindles</p></li>
+<li><p><em>dict</em> – ‘det_value_lo’ with detection value, ‘det_value_hi’ is nan,
+‘sel_value’ is nan (for consistency with other methods)</p></li>
+<li><p><em>float</em> – spindle density, per 30-s epoch</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Wamsley, E. J. et al. Biol. Psychiatry 71, 154-61 (2012).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.detect_events">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">detect_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#detect_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.detect_events" title="Permalink to this definition"></a></dt>
+<dd><p>Detect events using ‘above_thresh’, ‘below_thresh’ or
+‘maxima’ method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data after transformation</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – ‘above_thresh’, ‘below_thresh’ or ‘maxima’</p></li>
+<li><p><strong>value</strong> (<em>float</em><em> or </em><em>tuple</em><em> of </em><em>float</em>) – for ‘above_thresh’ or ‘below_thresh’, it’s the value of threshold for
+the event detection
+for ‘between_thresh’, it’s the lower and upper threshold as tuple
+for ‘maxima’, it’s the distance in s from the peak to find a minimum</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’int’)</em> – N x 3 matrix with start, peak, end samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.make_spindles">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">make_spindles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">powers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dat_det</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dat_orig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#make_spindles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.make_spindles" title="Permalink to this definition"></a></dt>
+<dd><p>Create dict for each spindle, based on events of time points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x 3 matrix with start, peak, end samples, and peak frequency</p></li>
+<li><p><strong>power_peaks</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – peak in power spectrum for each event</p></li>
+<li><p><strong>powers</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – average power in power spectrum for each event</p></li>
+<li><p><strong>dat_det</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data after detection-transformation (to compute peak)</p></li>
+<li><p><strong>dat_orig</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the raw data on which detection was performed</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with time points</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – list of all the spindles, with information about start_time, peak_time,
+end_time (s), peak_val (signal units), area_under_curve
+(signal units * s), peak_freq (Hz)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.merge_close">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">merge_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_to_longer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#merge_close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.merge_close" title="Permalink to this definition"></a></dt>
+<dd><p>Merge events that are separated by a less than a minimum interval.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong> (<em>list</em><em> of </em><em>dict</em>) – events with ‘start’ and ‘end’ times, from one or several channels.
+<strong>Events must be sorted by their start time.</strong></p></li>
+<li><p><strong>min_interval</strong> (<em>float</em>) – minimum delay between consecutive events, in seconds</p></li>
+<li><p><strong>merge_to_longer</strong> (<em>bool</em><em> (</em><em>default: False</em><em>)</em>) – If True, info (chan, peak, etc.) from the longer of the 2 events is
+kept. Otherwise, info from the earlier onset spindle is kept.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>list of dict</em> – original events list with close events merged.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.peak_in_power">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">peak_in_power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#peak_in_power"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.peak_in_power" title="Permalink to this definition"></a></dt>
+<dd><p>Define peak in power of the signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x 3 matrix with start, peak, end samples</p></li>
+<li><p><strong>dat</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the original data</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>method</strong> (<em>str</em><em> or </em><em>None</em>) – ‘peak’ or ‘interval’. If None, values will be all NaN</p></li>
+<li><p><strong>value</strong> (<em>float</em>) – size of the window around peak, or nothing (for ‘interval’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’float’)</em> – vector with peak frequency</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.peaks_in_time">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">peaks_in_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">troughs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#peaks_in_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.peaks_in_time" title="Permalink to this definition"></a></dt>
+<dd><p>Find indices of peaks or troughs in data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data</p></li>
+<li><p><strong>troughs</strong> (<em>bool</em>) – if True, will return indices of troughs instead of peaks</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>nadarray of int</em> – indices of peaks (or troughs) in dat</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function does not deal well with flat signal; when the signal is not
+increasing, it is assumed to be descreasing. As a result, this function
+finds troughs where the signal begins to increase after either decreasing
+or remaining constant</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.power_in_band">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">power_in_band</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#power_in_band"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.power_in_band" title="Permalink to this definition"></a></dt>
+<dd><p>Define power of the signal within frequency band.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x 3 matrix with start, peak, end samples</p></li>
+<li><p><strong>dat</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the original data</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>frequency</strong> (<em>tuple</em><em> of </em><em>float</em>) – low and high frequency of spindle band, for window</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’float’)</em> – vector with power</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.power_ratio">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">power_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_thresh</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#power_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.power_ratio" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate the ratio in power between spindle band and lower frequencies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x 3 matrix with start, peak, end samples</p></li>
+<li><p><strong>dat</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the original data</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>limits</strong> (<em>tuple</em><em> of </em><em>float</em>) – high and low frequencies for spindle band</p></li>
+<li><p><strong>ratio_thresh</strong> (<em>float</em>) – ratio between spindle vs non-spindle amplitude</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’int’)</em> – N x 3 matrix with start, peak, end samples</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In the original matlab script, it uses amplitude, not power.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.remove_straddlers">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">remove_straddlers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#remove_straddlers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.remove_straddlers" title="Permalink to this definition"></a></dt>
+<dd><p>Reject an event if it straddles a stitch, by comparing its
+duration to its timespan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x M matrix with start, …, end samples</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with time points</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>def=0.1</em>) – maximum tolerated difference between event duration and timespan</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’int’)</em> – N x M matrix with start , …, end samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.select_events">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">select_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detected</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#select_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.select_events" title="Permalink to this definition"></a></dt>
+<dd><p>Select start sample and end sample of the events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with the data after selection-transformation</p></li>
+<li><p><strong>detected</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x 3 matrix with start, peak, end samples</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – ‘above_thresh’, ‘below_thresh’, ‘below_thresh_positive’</p></li>
+<li><p><strong>value</strong> (<em>float</em>) – for ‘threshold’, it’s the value of threshold for the spindle selection.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’int’)</em> – N x 3 matrix with start, peak, end samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.transform_signal">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">transform_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_opt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dat2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#transform_signal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.transform_signal" title="Permalink to this definition"></a></dt>
+<dd><p>Transform the data using different methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dat</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with all the data for one channel</p></li>
+<li><p><strong>s_freq</strong> (<em>float</em>) – sampling frequency</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – one of ‘abs’, ‘abs_complex’, ‘butter’, ‘cdemod’, ‘cheby2’,
+‘double_butter’, ‘double_sosbutter’, ‘gaussian’, ‘hilbert’,
+‘high_butter’, ‘low_butter’, ‘morlet’, ‘moving_covar’, ‘moving_ms’,
+‘moving_periodogram’, ‘moving_power_ratio’,  ‘moving_rms’, ‘moving_sd’,
+‘moving_zscore’, ‘remez’, ‘smooth’, ‘sosbutter’, ‘spectrogram’,
+‘wavelet_real’.</p></li>
+<li><p><strong>method_opt</strong> (<em>dict</em>) – depends on methods</p></li>
+<li><p><strong>dat2</strong> (<em>ndarray</em><em>(</em><em>dtype='float'</em><em>)</em>) – second vector with data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’float’)</em> – vector with all the data for one channel</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>double_butter implements an effective bandpass by applying a highpass,
+followed by a lowpass. This method reduces filter instability, due to
+underlying numerical instability arising from nyquist / freq at low freq.</p>
+<p>Wavelets pass only absolute values already, it does not make sense to store
+the complex values.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">butter</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freq<span class="classifier">tuple of float</span></dt><dd><p>low and high values for bandpass</p>
+</dd>
+<dt>order<span class="classifier">int</span></dt><dd><p>filter order (will be effecively doubled by filtfilt)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cdemod</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freq<span class="classifier">float</span></dt><dd><p>carrier frequency for complex demodulation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cheby2</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freq<span class="classifier">tuple of float</span></dt><dd><p>low and high values for bandpass</p>
+</dd>
+<dt>order<span class="classifier">int</span></dt><dd><p>filter order (will be effecively doubled by filtfilt)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">double_butter</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freq<span class="classifier">tuple of float</span></dt><dd><p>low and high values for highpass, then lowpass</p>
+</dd>
+<dt>order<span class="classifier">int</span></dt><dd><p>filter order (will be effecively doubled by filtfilt)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">double_sosbutter</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freq<span class="classifier">tuple of float</span></dt><dd><p>low and high values for highpass, then lowpass</p>
+</dd>
+<dt>order<span class="classifier">int</span></dt><dd><p>filter order (will be effecively doubled by filtfilt)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">gaussian</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>standard deviation of the Gaussian kernel, aka sigma (sec)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">high_butter</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freq<span class="classifier">float</span></dt><dd><p>Highpass (lowcut) frequency, in Hz</p>
+</dd>
+<dt>order<span class="classifier">int</span></dt><dd><p>filter order (will be effecively doubled by filtfilt)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">low_butter</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freq<span class="classifier">float</span></dt><dd><p>Lowpass (highcut) frequency, in Hz</p>
+</dd>
+<dt>order<span class="classifier">int</span></dt><dd><p>filter order (will be effecively doubled by filtfilt)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">morlet</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>f0<span class="classifier">float</span></dt><dd><p>center frequency in Hz</p>
+</dd>
+<dt>sd<span class="classifier">float</span></dt><dd><p>standard deviation of frequency</p>
+</dd>
+<dt>dur<span class="classifier">float</span></dt><dd><p>window length in number of standard deviations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">moving_covar</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the window (sec)</p>
+</dd>
+<dt>step: float</dt><dd><p>step between consecutive windows (sec)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">moving_ms</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the window (sec)</p>
+</dd>
+<dt>step: float</dt><dd><p>step between consecutive windows (sec)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">moving_periodogram</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the z-score sliding window (sec)</p>
+</dd>
+<dt>freq<span class="classifier">tuple of float</span></dt><dd><p>frequency range for periodogram (Hz)</p>
+</dd>
+<dt>step: float</dt><dd><p>step between consecutive windows (sec)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">moving_power_ratio</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the z-score sliding window (sec)</p>
+</dd>
+<dt>freq_narrow<span class="classifier">tuple of float</span></dt><dd><p>frequency range for the narrowband power (Hz)</p>
+</dd>
+<dt>freq_broad<span class="classifier">tuple of float</span></dt><dd><p>frequency range for the broadband power (Hz)</p>
+</dd>
+<dt>fft_dur<span class="classifier">float</span></dt><dd><p>duration of the FFT window (sec)</p>
+</dd>
+<dt>step: float</dt><dd><p>step between consecutive windows (sec)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">moving_rms</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the window (sec)</p>
+</dd>
+<dt>step: float</dt><dd><p>step between consecutive windows (sec)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">moving_sd</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the z-score sliding window (sec)</p>
+</dd>
+<dt>step: float</dt><dd><p>step between consecutive windows (sec)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">moving_zscore</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the z-score sliding window (sec)</p>
+</dd>
+<dt>pcl_range<span class="classifier">tuple of float, or None</span></dt><dd><p>if not None, only data within this percentile range will be used
+for determining the standard deviation for calculation of the
+z-score</p>
+</dd>
+<dt>step: float</dt><dd><p>step between consecutive windows (sec)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">remez</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freq<span class="classifier">tuple of float</span></dt><dd><p>low and high values for bandpass</p>
+</dd>
+<dt>rolloff<span class="classifier">float</span></dt><dd><p>bandwidth, in hertz, between stop and pass frequencies</p>
+</dd>
+<dt>dur<span class="classifier">float</span></dt><dd><p>dur * s_freq = N, where N is the filter order, a.k.a number of taps</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">smooth</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the convolution window (sec). For ‘triangle’, base of
+isosceles triangle.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">wavelet_real</span> <span class="pre">has</span> <span class="pre">parameters:</span></span></dt>
+<dd><dl class="simple">
+<dt>freqs<span class="classifier">ndarray</span></dt><dd><p>vector of wavelet frequencies for spindle detection</p>
+</dd>
+<dt>dur<span class="classifier">float</span></dt><dd><p>duration of the wavelet (sec)</p>
+</dd>
+<dt>width<span class="classifier">float</span></dt><dd><p>wavelet width</p>
+</dd>
+<dt>win<span class="classifier">float</span></dt><dd><p>moving average window length (sec) of wavelet convolution</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.detect.spindle.within_duration">
+<span class="sig-prename descclassname"><span class="pre">wonambi.detect.spindle.</span></span><span class="sig-name descname"><span class="pre">within_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/detect/spindle.html#within_duration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.detect.spindle.within_duration" title="Permalink to this definition"></a></dt>
+<dd><p>Check whether event is within time limits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>events</strong> (<em>ndarray</em><em> (</em><em>dtype='int'</em><em>)</em>) – N x M matrix with start sample first and end samples last on M</p></li>
+<li><p><strong>time</strong> (<em>ndarray</em><em> (</em><em>dtype='float'</em><em>)</em>) – vector with time points</p></li>
+<li><p><strong>limits</strong> (<em>tuple</em><em> of </em><em>float</em>) – low and high limit for spindle duration</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray (dtype=’int’)</em> – N x M matrix with start sample first and end samples last on M</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.detect.slowwave.html" class="btn btn-neutral float-left" title="wonambi.detect.slowwave module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.ioeeg.html" class="btn btn-neutral float-right" title="wonambi.ioeeg package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+wonambi.detect.agreement module
+===============================
+
+.. automodule:: wonambi.detect.agreement
+   :members:
+   :undoc-members:
+   :show-inheritance:

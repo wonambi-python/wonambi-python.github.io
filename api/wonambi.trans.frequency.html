@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wonambi.trans.frequency module &mdash; wonambi 7.11 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/wonambi.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="wonambi.trans.math module" href="wonambi.trans.math.html" />
+    <link rel="prev" title="wonambi.trans.filter module" href="wonambi.trans.filter.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> wonambi
+            <img src="../_static/wonambi.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                7.11
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">WONAMBI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#run-it">Run it!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#change-log">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#optional-requirements">Optional Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#linux-mac-os-x">Linux / Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis/index.html">Tutorial / Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/tutorial.html">Get Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/spectrum.html">Frequency Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/plot3d.html">Plot 3D images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cmd.html">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#wonambi">wonambi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cmd.html#won-convert">won_convert</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gui/index.html">Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/open.html">Open Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/labels.html">Edit Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/channels.html">Plot Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/traces.html">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/notes.html">Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/detect.html">Event detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/methods.html">Detection methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/analysis.html">Analysis console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/screenshot.html">Screenshot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="wonambi.html">Modules, classes, functions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="wonambi.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wonambi.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#prepare-test-environment">Prepare Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#get-files">1. Get Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#run-the-tests">2. Run the Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#coverage">3. Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#documentation">4. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#release">5. Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testing.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-7">Version 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-6">Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-5">Version 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-4">Version 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-3">Version 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-2">Version 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#version-1">Version 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wonambi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="wonambi.html">wonambi package</a></li>
+          <li class="breadcrumb-item"><a href="wonambi.trans.html">wonambi.trans package</a></li>
+      <li class="breadcrumb-item active">wonambi.trans.frequency module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wonambi.trans.frequency">
+<span id="wonambi-trans-frequency-module"></span><h1>wonambi.trans.frequency module<a class="headerlink" href="#module-wonambi.trans.frequency" title="Permalink to this heading"></a></h1>
+<p>Module to compute frequency representation.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.frequency.band_power">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.frequency.</span></span><span class="sig-name descname"><span class="pre">band_power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'power'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_fft</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/frequency.html#band_power"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.frequency.band_power" title="Permalink to this definition"></a></dt>
+<dd><p>Compute power or energy acoss a frequency band, and its peak frequency.
+Power is estimated using the mid-point rectangle rule. Input can be
+ChanTime or ChanFreq.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.ChanTime" title="wonambi.datatype.ChanTime"><em>ChanTime</em></a><em> or </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.ChanFreq" title="wonambi.datatype.ChanFreq"><em>ChanFreq</em></a>) – data to be analyzed, one trial only</p></li>
+<li><p><strong>freq</strong> (<em>tuple</em><em> of </em><em>float</em>) – Frequencies for band of interest. Power will be integrated across this
+band, inclusively, and peak frequency determined within it. If a value
+is None, the band is unbounded in that direction.</p></li>
+<li><p><strong>input_type</strong> (<em>str</em>) – ‘time’ or ‘spectrum’</p></li>
+<li><p><strong>scaling</strong> (<em>str</em>) – ‘power’ or ‘energy’, only used if data is ChanTime</p></li>
+<li><p><strong>n_fft</strong> (<em>int</em>) – length of FFT. if shorter than input signal, signal is truncated; if
+longer, signal is zero-padded to length</p></li>
+<li><p><strong>array_out</strong> (<em>bool</em>) – if True, will return two arrays instead of two dict.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict of float, or ndarray</em> – keys are channels, values are power or energy</p></li>
+<li><p><em>dict of float, or ndarray</em> – keys are channels, values are respective peak frequency</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.frequency.frequency">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.frequency.</span></span><span class="sig-name descname"><span class="pre">frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spectraldensity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'power'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sides</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'one'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">halfbandwidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detrend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_fft</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/frequency.html#frequency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.frequency.frequency" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the
+power spectral density (PSD, output=’spectraldensity’, scaling=’power’), or
+energy spectral density (ESD, output=’spectraldensity’, scaling=’energy’) or
+the complex fourier transform (output=’complex’, sides=’two’)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.ChanTime" title="wonambi.datatype.ChanTime"><em>ChanTime</em></a>) – one of the datatypes</p></li>
+<li><p><strong>detrend</strong> (<em>str</em>) – None (no detrending), ‘constant’ (remove mean), ‘linear’ (remove linear
+trend)</p></li>
+<li><p><strong>output</strong> (<em>str</em>) – ‘spectraldensity’ or ‘csd’ or ‘complex’
+‘spectraldensity’ meaning the autospectrum or auto-spectral density,
+a special case of ‘csd’ (cross-spectral density), where the signal is
+cross-correlated with itself
+if ‘csd’, both channels in data are used as input</p></li>
+<li><p><strong>sides</strong> (<em>str</em>) – ‘one’ or ‘two’, where ‘two’ implies negative frequencies</p></li>
+<li><p><strong>scaling</strong> (<em>str</em>) – ‘power’ (units: V ** 2 / Hz), ‘energy’ (units: V ** 2), ‘fieldtrip’,
+‘chronux’</p></li>
+<li><p><strong>taper</strong> (<em>str</em>) – Taper to use, commonly used tapers are ‘boxcar’, ‘hann’, ‘dpss’</p></li>
+<li><p><strong>halfbandwidth</strong> (<em>int</em>) – (only if taper=’dpss’) Half bandwidth (in Hz), frequency smoothing will
+be from +halfbandwidth to -halfbandwidth</p></li>
+<li><p><strong>NW</strong> (<em>int</em>) – (only if taper=’dpss’) Normalized half bandwidth
+(NW = halfbandwidth * dur). Number of DPSS tapers is 2 * NW - 1.
+If specified, NW takes precedence over halfbandwidth</p></li>
+<li><p><strong>duration</strong> (<em>float</em><em>, </em><em>in s</em>) – If not None, it divides the signal in epochs of this length (in seconds)
+and then average over the PSD / ESD (not the complex result)</p></li>
+<li><p><strong>overlap</strong> (<em>float</em><em>, </em><em>between 0 and 1</em>) – The amount of overlap between epochs (0.5 = 50%, 0.95 = almost complete
+overlap).</p></li>
+<li><p><strong>step</strong> (<em>float</em><em>, </em><em>in s</em>) – step in seconds between epochs (alternative to overlap)</p></li>
+<li><p><strong>n_fft</strong> (<em>int</em>) – Length of FFT, in samples. If less than input axis, input is cropped.
+If longer than input axis, input is padded with zeros. If None, FFT
+length set to axis length.</p></li>
+<li><p><strong>log_trans</strong> (<em>bool</em>) – If True, spectral values will be natural log-transformed. The
+transformation is applied before averaging (or taking the median).</p></li>
+<li><p><strong>centend</strong> (<em>str</em>) – (only if duration is not None). Central tendency measure to use, either
+mean (arithmetic) or median.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of ChanFreq</em> – If output=’complex’, there is an additional dimension (‘taper’) which
+is useful for ‘dpss’ but it’s also present for all the other tapers.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>TypeError</strong> – If the data does not have a ‘time’ axis. It might work in the
+    future on other axes, but I cannot imagine how.</p></li>
+<li><p><strong>ValueError</strong> – If you use duration (to create multiple epochs) and output=’complex’,
+    because it does not average the complex output of multiple epochs.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>See extensive notes at wonambi.trans.frequency._fft</p>
+<p>It uses sampling frequency as specified in s_freq, it does not
+recompute the sampling frequency based on the time axis.</p>
+<p>Use of log or median for Welch’s method is included based on
+recommendations from Izhikevich et al., bioRxiv, 2018.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.frequency.morlet">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.frequency.</span></span><span class="sig-name descname"><span class="pre">morlet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dur_in_sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dur_in_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'wonambi'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/frequency.html#morlet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.frequency.morlet" title="Permalink to this definition"></a></dt>
+<dd><p>Create a Morlet wavelet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>freq</strong> (<em>float</em>) – central frequency of the wavelet</p></li>
+<li><p><strong>s_freq</strong> (<em>int</em>) – sampling frequency</p></li>
+<li><p><strong>ratio</strong> (<em>float</em>) – ratio for a wavelet family ( = freq / sigma_f)</p></li>
+<li><p><strong>sigma_f</strong> (<em>float</em>) – standard deviation of the wavelet in frequency domain</p></li>
+<li><p><strong>dur_in_sd</strong> (<em>float</em>) – duration of the wavelet, given as number of the standard deviation in
+the time domain, in one side.</p></li>
+<li><p><strong>dur_in_s</strong> (<em>float</em>) – total duration of the wavelet, two-sided (i.e. from start to finish)</p></li>
+<li><p><strong>normalization</strong> (<em>str</em>) – ‘wonambi’ (default) returns an amplitude of 1 in frequency-domain for a
+sine wave of amplitude 1 in the time-domain;
+‘juniper’ returns amplitude which is dependent on sampling frequency;
+‘area’ normalizes the area of the Gaussian envelope to be 1;
+‘peak’ normalizes the peak of the Gaussian envelope to be 1.
+Note that the frequency-domain values for ‘area’ and ‘peak’ will
+depend on the carrier frequency of the wavelet (they depend on sigma_f).</p></li>
+<li><p><strong>zero_mean</strong> (<em>bool</em>) – make sure that the wavelet has zero mean (only relevant if ratio &lt; 5)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>ndarray</em> – vector containing the complex Morlet wavelets</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>‘ratio’ and ‘sigma_f’ are mutually exclusive. If you use ‘sigma_f’, the
+standard deviation stays the same for all the frequency. It’s more common
+to specify a constant ratio for the wavelet family, so that the frequency
+resolution changes with the frequency of interest.</p>
+<p>‘dur_in_sd’ and ‘dur_in_s’ are mutually exclusive. ‘dur_in_s’ specifies the
+total duration (from start to finish) of the window. ‘dur_in_sd’ calculates
+the total duration as the length in standard deviations in the time domain:
+dur_in_s = dur_in_sd * 2 * sigma_t, with sigma_t = 1 / (2 * pi * sigma_f)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wonambi.trans.frequency.timefrequency">
+<span class="sig-prename descclassname"><span class="pre">wonambi.trans.frequency.</span></span><span class="sig-name descname"><span class="pre">timefrequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'morlet'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wonambi/trans/frequency.html#timefrequency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wonambi.trans.frequency.timefrequency" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the power spectrum over time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>instance</em><em> of </em><a class="reference internal" href="wonambi.datatype.html#wonambi.datatype.ChanTime" title="wonambi.datatype.ChanTime"><em>ChanTime</em></a>) – data to analyze</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – the method to compute the time-frequency representation, such as
+‘morlet’ (wavelet using complex morlet window),
+‘spectrogram’ (corresponds to ‘spectraldensity’ in frequency()),
+‘stft’ (short-time fourier transform, corresponds to ‘complex’ in
+frequency())</p></li>
+<li><p><strong>options</strong> (<em>dict</em>) – options depend on the method used, see below.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>instance of ChanTimeFreq</em> – data in time-frequency representation. The exact output depends on
+the method. Using ‘morlet’, you get a complex output at each frequency
+where the wavelet was computed.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>The data in ChanTimeFreq are complex and they should stay that way. You
+can also get the magnitude or power the easy way using Math.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">wonambi.trans</span> <span class="kn">import</span> <span class="n">math</span><span class="p">,</span> <span class="n">timefreq</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">timefreq</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">foi</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf_abs</span> <span class="o">=</span> <span class="n">math</span><span class="p">(</span><span class="n">tf</span><span class="p">,</span> <span class="n">operator_name</span><span class="o">=</span><span class="s1">&#39;abs&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf_abs</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">1737.4662329214384)</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>It uses sampling frequency as specified in s_freq, it does not
+recompute the sampling frequency based on the time axis.</p>
+<dl class="simple">
+<dt>For method ‘morlet’, the following options should be specified:</dt><dd><dl class="simple">
+<dt>foi<span class="classifier">ndarray or list or tuple</span></dt><dd><p>vector with frequency of interest</p>
+</dd>
+<dt>ratio<span class="classifier">float</span></dt><dd><p>ratio for a wavelet family ( = freq / sigma_f)</p>
+</dd>
+<dt>sigma_f<span class="classifier">float</span></dt><dd><p>standard deviation of the wavelet in frequency domain</p>
+</dd>
+<dt>dur_in_sd<span class="classifier">float</span></dt><dd><p>duration of the wavelet, given as number of the standard deviation
+in the time domain, in one side.</p>
+</dd>
+<dt>dur_in_s<span class="classifier">float</span></dt><dd><p>total duration of the wavelet, two-sided (i.e. from start to
+finish)</p>
+</dd>
+<dt>normalization<span class="classifier">str</span></dt><dd><p>‘area’ means that energy is normalized to 1, ‘peak’ means that the
+peak of the wavelet is set at 1, ‘max’ is a normalization used by
+nitime where the max value of the output of the convolution remains
+the same even if you change the sigma_f.</p>
+</dd>
+<dt>zero_mean<span class="classifier">bool</span></dt><dd><p>make sure that the wavelet has zero mean (only relevant if ratio
+&lt; 5)</p>
+</dd>
+</dl>
+</dd>
+<dt>For method ‘spectrogram’ or ‘stft’, the following options should be specified:</dt><dd><dl class="simple">
+<dt>duraton<span class="classifier">int</span></dt><dd><p>duration of the window to compute the power spectrum, in s</p>
+</dd>
+<dt>overlap<span class="classifier">int</span></dt><dd><p>amount of overlap (0 -&gt; no overlap, 1 -&gt; full overlap)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wonambi.trans.filter.html" class="btn btn-neutral float-left" title="wonambi.trans.filter module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wonambi.trans.math.html" class="btn btn-neutral float-right" title="wonambi.trans.math module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2022, Gio Piantoni / Jordan O&#39;Byrne.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

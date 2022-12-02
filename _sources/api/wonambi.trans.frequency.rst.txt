@@ -1,0 +1,7 @@
+wonambi.trans.frequency module
+==============================
+
+.. automodule:: wonambi.trans.frequency
+   :members:
+   :undoc-members:
+   :show-inheritance:
